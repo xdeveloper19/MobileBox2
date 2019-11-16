@@ -19,6 +19,7 @@ using System.IO;
 using GeoGeometry.Model.User;
 using GeoGeometry.Model.Box;
 using GeoGeometry.Model;
+using Android.Telephony;
 
 namespace GeoGeometry.Activity.Auth
 {
@@ -109,6 +110,12 @@ namespace GeoGeometry.Activity.Auth
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
 
             string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
+            //var telephonyManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
+            //var signalStrengthListener = new SignalStrength();
+
+          
+
+            //_getGsmSignalStrengthButton.Click += DisplaySignalStrength;
 
             btn_change_container.Click += async delegate
             {
@@ -117,19 +124,16 @@ namespace GeoGeometry.Activity.Auth
                     Intent ContainerSelectionActivty = new Intent(this, typeof(Auth.ContainerSelection));
                     StartActivity(ContainerSelectionActivty);
                     string name = "";
-                    FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate);
+                    FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate);
                     
-                    ListResponse<ContainerResponse> containers = await System.Text.Json.JsonSerializer.DeserializeAsync<ListResponse<ContainerResponse>>(fs);
-                    name = containers.Objects[0].Name;
+                    ContainerResponse container = await System.Text.Json.JsonSerializer.DeserializeAsync<ContainerResponse>(fs);
+                        
                     
-                    RegisterBoxModel register = new RegisterBoxModel
-                    {
-                        Name = name
-                    };
+
 
                     var myHttpClient = new HttpClient();
                     //айди контейнера
-                    var uri = "http://iot.tmc-centert.ru/api/container/getbox?id=" + register.Name;
+                    var uri = "http://iot.tmc-centert.ru/api/container/getbox?id=" + container.SmartBoxId;
 
                     HttpResponseMessage response = await myHttpClient.GetAsync(uri);
 
@@ -144,8 +148,8 @@ namespace GeoGeometry.Activity.Auth
                     //здесь допишешь сам га
                     o_data = JsonConvert.DeserializeObject<AuthApiData<BoxDataResponse>>(s_result);
                     var o_boxes_data = o_data.ResponseData;
-                    StaticBox boxx = new StaticBox();
-                    boxx.AddInfoBox(o_boxes_data);
+
+                    StaticBox.AddInfoBox(o_boxes_data);
                     //добавляем инфу о найденном контейнере
                     container_id.Text = o_boxes_data.Id;                  
                     s_open_close_container.Text = o_boxes_data.IsOpenedBox.ToString();                 
@@ -199,34 +203,48 @@ namespace GeoGeometry.Activity.Auth
                 {
                     preloader.Visibility = Android.Views.ViewStates.Visible;
 
-                    StaticBox parameters = new StaticBox
-                    {
-                        SmartBoxId = container_id.Text,
-                        Temperature = Convert.ToDouble(s_temperature.Text),
-                        Weight = Convert.ToDouble(s_weight.Text),
-                        Light = Convert.ToInt32(s_light.Text),
-                        Wetness = Convert.ToDouble(s_humidity.Text),
-                        Code = s_pin_access_code.Text,
-                        IsOpenedBox = (s_open_close_container.Text == "открыт")? true : false,
-                        //Situation = s_situation.Text,
-                        IsOpenedDoor = (s_lock_unlock_door.Text == " открыта дверь")? true : false,
-                        BatteryPower = Convert.ToDouble(s_battery.Text),                      
 
+
+                    StaticBox.SmartBoxId = container_id.Text;
+                    StaticBox.Temperature = Convert.ToDouble(s_temperature.Text);
+                    StaticBox.Weight = Convert.ToDouble(s_weight.Text);
+                    StaticBox.Light = Convert.ToInt32(s_light.Text);
+                    StaticBox.Wetness = Convert.ToDouble(s_humidity.Text);
+                    StaticBox.Code = s_pin_access_code.Text;
+                    StaticBox.IsOpenedBox = (s_open_close_container.Text == "открыт") ? true : false;
+                    //Situation = s_situation.Text,
+                    StaticBox.IsOpenedDoor = (s_lock_unlock_door.Text == " открыта дверь") ? true : false;
+                    StaticBox.BatteryPower = Convert.ToDouble(s_battery.Text);
+
+                    SmartBox container = new SmartBox
+                    {
+                        Id = StaticBox.SmartBoxId,
+                        Temperature = StaticBox.Temperature,
+                        Weight = StaticBox.Weight,
+                        Light = StaticBox.Light,
+                        Wetness = StaticBox.Wetness,
+                        Code = StaticBox.Code,
+                        IsOpenedBox = StaticBox.IsOpenedBox,
+                        //Situation = s_situation.Text,
+                        IsOpenedDoor = StaticBox.IsOpenedDoor,
+                        BatteryPower = StaticBox.BatteryPower
                 };
                     var myHttpClient = new HttpClient();
 
-                    var uri = (" http://iot-tmc-cen.1gb.ru/api/container/editbox/" + parameters.SmartBoxId + parameters.IsOpenedBox + parameters.IsOpenedDoor + parameters.Weight + parameters.Light + parameters.Code + parameters.Temperature + parameters.Wetness + parameters.BatteryPower);
+                    var uri = ("http://iot-tmc-cen.1gb.ru/api/container/editbox?id=" + StaticBox.SmartBoxId +"&IsOpenedBox="+ StaticBox.IsOpenedBox + "&IsOpenedDoor=" + StaticBox.IsOpenedDoor + "&Weight=" + StaticBox.Weight + "&Light=" + StaticBox.Light + "&Code=" + StaticBox.Code + "&Temperature=" + StaticBox.Temperature + "&Wetness=" + StaticBox.Wetness + "&BatteryPower=" + StaticBox.BatteryPower);
 
 
-                    HttpResponseMessage response = await myHttpClient.GetAsync(uri);
+                    HttpResponseMessage response = await myHttpClient.PutAsync(uri.ToString(), new StringContent(JsonConvert.SerializeObject(container), Encoding.UTF8, "application/json"));
 
-                    AuthApiData<ListResponse<ContainerResponse>> o_data = new AuthApiData<ListResponse<ContainerResponse>>();
+                    AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
 
                     string s_result;
                     using (HttpContent responseContent = response.Content)
                     {
                         s_result = await responseContent.ReadAsStringAsync();
                     }
+
+                    o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
                 }
                 catch (Exception ex)
                 {
@@ -262,6 +280,23 @@ namespace GeoGeometry.Activity.Auth
             s_date.Text = "";
             s_time.Text = "";
         }
+
+        //void DisplaySignalStrength(object sender, EventArgs e)
+        //{
+        //    var telephonyManager.Listen(signalStrengthListener, PhoneStateListenerFlags.SignalStrengths);
+        //    var signalStrengthListener.SignalStrengthChanged += HandleSignalStrengthChanged;
+        //}
+
+        //void HandleSignalStrengthChanged(int strength)
+        //{
+        //    // We want this to be a one-shot thing when the button is pushed. Make sure to unhook everything
+        //    var signalStrengthListener.SignalStrengthChanged -= HandleSignalStrengthChanged;
+        //    var telephonyManager.Listen(signalStrengthListener, PhoneStateListenerFlags.None);
+
+        //    // Update the UI with text and an image.
+        //    var gmsStrengthImageView.SetImageLevel(strength);
+        //    gmsStrengthTextView.Text = string.Format("GPS Signal Strength ({0}):", strength);
+        //}
     }
 }
 

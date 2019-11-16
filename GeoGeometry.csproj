@@ -77,6 +77,7 @@
     <Compile Include="Activity\Squad\SquadSettingsActivity.cs" />
     <Compile Include="Activity\User\UserActivity.cs" />
     <Compile Include="Activity\User\UserSettingsActivity.cs" />
+    <Compile Include="Container\SignalStrength.cs" />
     <Compile Include="Container\StaticBox.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Model\Auth\AuthModel.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Model\Box\BoxDataResponse.cs" />
     <Compile Include="Model\Box\BoxNames.cs" />
     <Compile Include="Model\Box\RegisterBoxModel.cs" />
+    <Compile Include="Model\Box\SmartBox.cs" />
     <Compile Include="Model\GPSLocation\GPSLocationModel.cs" />
     <Compile Include="Model\GPSLocation\GPSLocationResponseData.cs" />
     <Compile Include="Model\GPSLocation\GPSLocationApiData.cs" />
@@ -161,13 +163,16 @@
       <Version>2.2.29</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.2</Version>
+      <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="Refit">
       <Version>4.7.9</Version>
     </PackageReference>
     <PackageReference Include="ServiceStack.Text">
       <Version>5.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encodings.Web">
+      <Version>4.6.0</Version>
     </PackageReference>
     <PackageReference Include="System.Text.Json">
       <Version>4.6.0</Version>

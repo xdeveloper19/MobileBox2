@@ -136,23 +136,23 @@ namespace GeoGeometry.Activity.Auth
 
                     o_data = JsonConvert.DeserializeObject<AuthApiData<ListResponse<ContainerResponse>>>(s_result);
                     var o_boxes_data = o_data.ResponseData;
-                    StaticBox boxx = new StaticBox();
-                    boxx.AddInfoObjects(o_boxes_data);
+
                     //StaticBox.AddInfoObjects(o_boxes_data);
-                    //запись в файл
-                    
+                    //StaticBox.AddInfoObjects(o_boxes_data);
+                    //запись в file
+
                     using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
-                    {
-
+                    { 
                         await System.Text.Json.JsonSerializer.SerializeAsync<ListResponse<ContainerResponse>>(fs, o_boxes_data);
-
+                       
                     }
                     //чтение данных с файла
-                    using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
-                    {
-                        ListResponse<ContainerResponse> containers = await System.Text.Json.JsonSerializer.DeserializeAsync<ListResponse<ContainerResponse>>(fs);
-                        var name = containers.Objects[0].Name;
-                    }
+                    //using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
+                    //{
+                    //    ListResponse<ContainerResponse> containers = await System.Text.Json.JsonSerializer.DeserializeAsync<ListResponse<ContainerResponse>>(fs);
+                        
+                    //    var name = containers.Objects[0].Name;
+                    //}
 
                     var boxes = o_data.ResponseData.Objects.Select(b => new BoxNames
                     {
@@ -218,20 +218,28 @@ namespace GeoGeometry.Activity.Auth
                 //    boxess = Res;
                 //}
                 using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
-                {
+                { 
                     ListResponse<ContainerResponse> containers = await System.Text.Json.JsonSerializer.DeserializeAsync<ListResponse<ContainerResponse>>(fs);
+                    //goЗапускать ?yes
                     var box = containers.Objects.Where(f => f.Name == box_name1.Text).FirstOrDefault();
-                }
+
+                    using (FileStream fl = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
+                    {
+                        await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(fl, box);
+                    }
+
+                }//ok
 
 
 
-                //using (FileStream ddd = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
-                //{
 
-                //    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(ddd, box);
+                    //using (FileStream ddd = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
+                    //{
 
-                //}
-                Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
+                    //    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(ddd, box);
+
+                    //}
+                    Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
                 StartActivity(Driver);
 
                 //var box_name = box_name1.Text;

@@ -15,78 +15,78 @@ using GeoGeometry.Model.User;
 
 namespace GeoGeometry.Container
 {
-    public class StaticBox
+    class StaticBox
     {
         /// <summary>
         /// Id контейнера.
         /// </summary>
-        public string SmartBoxId;
+       static public string SmartBoxId;
 
         /// <summary>
         /// Разложен ли контейнер.
         /// </summary>
-        public bool IsOpenedBox { get; set; }
+        static public bool IsOpenedBox { get; set; }
 
         /// <summary>
         /// Открыта ли дверь.
         /// </summary>
-        public bool IsOpenedDoor { get; set; }
+        static public bool IsOpenedDoor { get; set; }
 
         /// <summary>
         /// Освещённость.
         /// </summary>
-        public int Light { get; set; }
+        static public int Light { get; set; }
 
         /// <summary>
         /// Пин-код для открытия двери.
         /// </summary>
-        public string Code { get; set; }
+        static public string Code { get; set; }
 
         /// <summary>
         /// Температура.
         /// </summary>
-        public double Temperature { get; set; }
+        static public double Temperature { get; set; }
 
         /// <summary>
         /// Влажность.
         /// </summary>
-        public double Wetness { get; set; }
+        static public double Wetness { get; set; }
 
         /// <summary>
         /// Заряд батареи.
         /// </summary>
-        public double BatteryPower { get; set; }
+        static public double BatteryPower { get; set; }
 
         /// <summary>
         /// Наименование контейнера.
         /// </summary>
-        public string Name { get; set; }
+        static public string Name { get; set; }
 
         /// <summary>
         /// Вес контейнера.
         /// </summary>
-        public double Weight { get; set; }
+        static public double Weight { get; set; }
 
-        public List<ContainerResponse> Objects { get; set; }
+        static public List<ContainerResponse> Objects { get; set; }
 
         /// <summary>
         /// Добавляю информацию о клиенте
         /// </summary>
         /// <param name="o_auth">Объект авторизации/регистрации</param>
-        public void AddInfoAuth(ContainerResponse o_auth)
+        public static void AddInfoAuth(ContainerResponse o_auth)
         {
             SmartBoxId = o_auth.SmartBoxId;
             Name = o_auth.Name;
         }
 
-        public void AddInfoObjects(ListResponse<ContainerResponse> boxes)
+        public static void AddInfoObjects(ListResponse<ContainerResponse> boxes)
         {
             Objects = new List<ContainerResponse>();
             Objects = boxes.Objects;
         }
 
         //крч здесь заполнишь все значения сам
-        public void AddInfoBox(BoxDataResponse boxData)
+        public static void AddInfoBox(BoxDataResponse boxData)
         {
             SmartBoxId = boxData.Id;
             IsOpenedDoor = boxData.IsOpenedBox;
