@@ -90,7 +90,8 @@ namespace GeoGeometry.Activity.Auth
                     {
                         s_result = await responseContent.ReadAsStringAsync();
                     }
-                    AuthApiData <ContainerResponse> o_data = JsonConvert.DeserializeObject<AuthApiData<ContainerResponse>>(s_result);
+                    AuthApiData<ContainerResponse> o_data = new AuthApiData<ContainerResponse>();
+                    o_data = JsonConvert.DeserializeObject<AuthApiData<ContainerResponse>>(s_result);
                     //AuthApiData <ListResponse< ContainerResponse >> o_data 
                     if (response.StatusCode == HttpStatusCode.OK)
                     {
@@ -114,23 +115,21 @@ namespace GeoGeometry.Activity.Auth
                             //}
                             using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
                             {
-                                
                                 await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(fs,o_box_data);
-                                
                             }
 
-                            using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
-                            {
-                                ContainerResponse container = await System.Text.Json.JsonSerializer.DeserializeAsync<ContainerResponse>(fs);
-                                var name = container.Name;
-                            }
+                            //using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
+                            //{
+                            //    ContainerResponse container = await System.Text.Json.JsonSerializer.DeserializeAsync<ContainerResponse>(fs);
+                            //    var name = container.Name;
+                            //}
 
                             preloader.Visibility = Android.Views.ViewStates.Invisible;
 
-                            // Переход на главную страницу.
-                            Intent homeActivity = new Intent(this, typeof(Home.HomeActivity));
-                            StartActivity(homeActivity);
-                            this.Finish();
+                            // Переход на страницу водителя.
+                            Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
+                            Driver.PutExtra("idAction", "2");
+                            StartActivity(Driver);
                         }
                         else
                         {

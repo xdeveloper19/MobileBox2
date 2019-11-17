@@ -46,37 +46,41 @@ namespace GeoGeometry.Activity.Auth
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
 
             //Class which encapsulate webservices.
-           /* var _autoCompleteService = new AutoCompleteService();
+            /* var _autoCompleteService = new AutoCompleteService();
 
-            _searchView = v.FindViewById<AutoCompleteTextView>(Resource.Id.SearchBox);
+             _searchView = v.FindViewById<AutoCompleteTextView>(Resource.Id.SearchBox);
 
-            _searchView.TextChanged += async (sender, e) =>
-            {
-                try
-                {
-                    //async call which fetch suggestin from webservices.
-                    var results = await _autoCompleteService.SearchSuggestionAsync(_searchView.Text);
-                    var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, results.ToList());
-                    _searchView.Adapter = adapter;
-                }
-                catch
-                {
-                }
-            };
+             _searchView.TextChanged += async (sender, e) =>
+             {
+                 try
+                 {
+                     //async call which fetch suggestin from webservices.
+                     var results = await _autoCompleteService.SearchSuggestionAsync(_searchView.Text);
+                     var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, results.ToList());
+                     _searchView.Adapter = adapter;
+                 }
+                 catch
+                 {
+                 }
+             };
 
-            _searchView.AfterTextChanged += (sender, e) =>
-            {
-                if (!_searchView.IsPopupShowing && _searchView.Text.Length > 0)
-                {
-                    _searchView.ShowDropDown();
-                }
-            };
+             _searchView.AfterTextChanged += (sender, e) =>
+             {
+                 if (!_searchView.IsPopupShowing && _searchView.Text.Length > 0)
+                 {
+                     _searchView.ShowDropDown();
+                 }
+             };
 
-            SetContentView(Resource.Layout.Main);
-            ////////*/
-    
+             SetContentView(Resource.Layout.Main);
+             ////////*/
+
             //setting the view for the Activity  
             ////////
             SetContentView(Resource.Layout.activity_container_selection);
@@ -121,7 +125,7 @@ namespace GeoGeometry.Activity.Auth
 
                     var myHttpClient = new HttpClient();
 
-                    var uri = ("http://iot.tmc-centert.ru/api/container/getboxesbyname?name=" + box_name1.Text);
+                    var uri = new Uri("http://iot.tmc-centert.ru/api/container/getboxesbyname?name=" + box_name1.Text);
 
 
                     HttpResponseMessage response = await myHttpClient.GetAsync(uri);
@@ -134,18 +138,20 @@ namespace GeoGeometry.Activity.Auth
                         s_result = await responseContent.ReadAsStringAsync();
                     }
 
+                    o_data.ResponseData = new ListResponse<ContainerResponse>();
                     o_data = JsonConvert.DeserializeObject<AuthApiData<ListResponse<ContainerResponse>>>(s_result);
-                    var o_boxes_data = o_data.ResponseData;
+                    ListResponse<ContainerResponse> o_boxes_data = new ListResponse<ContainerResponse>();
+                    o_boxes_data.Objects = o_data.ResponseData.Objects;
 
                     //StaticBox.AddInfoObjects(o_boxes_data);
-                    //StaticBox.AddInfoObjects(o_boxes_data);
+                    StaticBox.AddInfoObjects(o_boxes_data);
                     //запись в file
+                    
 
-                    using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
-                    { 
-                        await System.Text.Json.JsonSerializer.SerializeAsync<ListResponse<ContainerResponse>>(fs, o_boxes_data);
-                       
-                    }
+                    //using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
+                    //{ 
+                    //    await System.Text.Json.JsonSerializer.SerializeAsync<ListResponse<ContainerResponse>>(fs, o_boxes_data, options);
+                    //}
                     //чтение данных с файла
                     //using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
                     //{
@@ -208,7 +214,7 @@ namespace GeoGeometry.Activity.Auth
                 /*
                
                 */
-
+                
 
 
                 //ListResponse<ContainerResponse> boxess = new ListResponse<ContainerResponse>();
@@ -217,29 +223,37 @@ namespace GeoGeometry.Activity.Auth
                 //{
                 //    boxess = Res;
                 //}
-                using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
-                { 
-                    ListResponse<ContainerResponse> containers = await System.Text.Json.JsonSerializer.DeserializeAsync<ListResponse<ContainerResponse>>(fs);
-                    //goЗапускать ?yes
-                    var box = containers.Objects.Where(f => f.Name == box_name1.Text).FirstOrDefault();
+                
+                ContainerResponse box = new ContainerResponse();
+                ListResponse<ContainerResponse> boxes = new ListResponse<ContainerResponse>();
+                foreach (var box1 in StaticBox.Objects)
+                {
+                    boxes.Objects.Add(box1);
+                }
+                box = boxes.Objects.Where(f => f.Name == box_name1.Text).FirstOrDefault();
 
-                    using (FileStream fl = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
-                    {
-                        await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(fl, box);
-                    }
+                //using (FileStream fs = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
+                //{ 
+                //    Objects = (ListResponse<ContainerResponse>)await System.Text.Json.JsonSerializer.DeserializeAsync<ListResponse<ContainerResponse>>(fs);
+                //    box = Objects.Objects.Where(f => f.Name == box_name1.Text).FirstOrDefault();
+                //}
 
-                }//ok
+                using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
+                {
+                    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(fs, box);
+                }
 
 
 
 
-                    //using (FileStream ddd = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
-                    //{
+                //using (FileStream ddd = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
+                //{
 
-                    //    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(ddd, box);
+                //    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(ddd, box);
 
-                    //}
-                    Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
+                //}
+                Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
+                Driver.PutExtra("idAction", "2");
                 StartActivity(Driver);
 
                 //var box_name = box_name1.Text;

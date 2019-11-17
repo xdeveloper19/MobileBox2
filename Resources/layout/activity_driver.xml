@@ -14,22 +14,22 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/fioBox">
-       
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text = "Вы вошли как:"
-            android:id = "@+id/textUser"
-            android:textSize="18dp"
-            android:padding="15dp"
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/fioBox">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Вы вошли как:"
+                    android:id = "@+id/textUser"
+                    android:textSize="18dp"
+                    android:padding="15dp"
         />
 
-        <EditText
+                <EditText
                     android:inputType="text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -37,156 +37,147 @@
                     android:layout_toRightOf = "@+id/textUser"
                     android:text="Водитель" 
         />
-        <Button
-            android:text="Выйти"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_exit_"
-            android:layout_toRightOf = "@+id/s_user"
+                <Button
+                    android:text="Выйти"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_exit_"
+                    android:layout_toRightOf = "@+id/s_user"
         />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text = "Id контейнера:"
-            android:id = "@+id/textIdContainer"
-            android:textSize="18dp"
-            android:padding="15dp"
-            android:layout_below = "@+id/textUser"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Id контейнера:"
+                    android:id = "@+id/textIdContainer"
+                    android:textSize="18dp"
+                    android:padding="15dp"
+                    android:layout_below = "@+id/textUser"
         />
 
-        <EditText
-            android:inputType="number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/container_id"
-            android:layout_toRightOf = "@+id/textIdContainer"
-            android:layout_below = "@+id/s_user"
-            android:padding="15dp"
-        />
-        <Button
-            android:text="Сменить контейнер"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_change_container"
-            android:layout_toRightOf = "@+id/container_id"
-            android:layout_below = "@+id/btn_exit_"
-            android:padding="17dp"
+                <EditText
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/container_id"
+                    android:layout_toRightOf = "@+id/textIdContainer"
+                    android:layout_below = "@+id/s_user"
+                    android:padding="15dp"
         />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text = "Состояние:"
-            android:id = "@+id/textSituation"
-            android:textSize="18dp"
-            android:padding="15dp"
-            android:layout_below = "@+id/textIdContainer"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Состояние:"
+                    android:id = "@+id/textSituation"
+                    android:textSize="18dp"
+                    android:padding="15dp"
+                    android:layout_below = "@+id/textIdContainer"
         />
 
-        <EditText
-            android:inputType="text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/s_situation"
-            android:layout_toRightOf = "@+id/textSituation"
-            android:layout_below = "@+id/container_id"
-            android:padding="15dp"
+                <EditText
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/s_situation"
+                    android:layout_toRightOf = "@+id/textSituation"
+                    android:layout_below = "@+id/container_id"
+                    android:padding="15dp"
         />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text = "Положение:"
-            android:id = "@+id/textOpenCloseBox"
-            android:textSize="18dp"
-            android:padding="15dp"
-            android:layout_below = "@+id/textSituation"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Положение:"
+                    android:id = "@+id/textOpenCloseBox"
+                    android:textSize="18dp"
+                    android:padding="15dp"
+                    android:layout_below = "@+id/textSituation"
         />
 
-        <EditText
-            android:inputType="text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/s_open_close_container"
-            android:layout_toRightOf = "@+id/textOpenCloseBox"
-            android:layout_below = "@+id/s_situation"
-            android:padding="15dp"
+                <EditText
+                    android:inputType="text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/s_open_close_container"
+                    android:layout_toRightOf = "@+id/textOpenCloseBox"
+                    android:layout_below = "@+id/s_situation"
+                    android:padding="15dp"
         />
-        <Button
-            android:text="Раскрыть/Закрыть"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_open_close_container"
-            android:layout_toRightOf = "@+id/s_open_close_container"
-            android:layout_below = "@+id/s_situation"
-            android:padding="17dp"    
-        />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text = "Дверь:"
-            android:id = "@+id/textLockUnlochDoor"
-            android:textSize="18dp"
-            android:padding="15dp"
-            android:layout_below = "@+id/textOpenCloseBox"
+                <Button
+                    android:text="Раскрыть/Закрыть"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_open_close_container"
+                    android:layout_toRightOf = "@+id/s_open_close_container"
+                    android:layout_below = "@+id/s_situation"
+                    android:padding="17dp"    
         />
 
-        <EditText
-            android:inputType="text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/s_lock_unlock_door"
-            android:layout_toRightOf = "@+id/textLockUnlochDoor"
-            android:layout_below = "@+id/s_open_close_container"
-            android:padding="15dp"
-        />
-        <Button
-            android:text="Разблокировать/Заблокировать"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/btn_lock_unlock_door"      
-            android:layout_below = "@+id/s_lock_unlock_door"
-            android:padding="10dp"     
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Дверь:"
+                    android:id = "@+id/textLockUnlochDoor"
+                    android:textSize="18dp"
+                    android:padding="15dp"
+                    android:layout_below = "@+id/textOpenCloseBox"
         />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text = "PIN-код доступа к контейнеру:"
-            android:id = "@+id/textPinCode"
-            android:textSize="18dp"
-            android:padding="15dp"
-            android:layout_below = "@+id/btn_lock_unlock_door"
+                <EditText
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/s_lock_unlock_door"
+                    android:layout_toRightOf = "@+id/textLockUnlochDoor"
+                    android:layout_below = "@+id/s_open_close_container"
+                    android:padding="15dp"
+        />
+                <Button
+                    android:text="Разблокировать/Заблокировать"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btn_lock_unlock_door"
+                    android:layout_below = "@+id/s_lock_unlock_door"
+                    android:padding="10dp"     
         />
 
-        <EditText
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/s_pin_access_code"
-            android:layout_toRightOf = "@+id/textPinCode"
-            android:layout_below = "@+id/btn_lock_unlock_door"
-            android:padding="15dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "PIN-код доступа к контейнеру:"
+                    android:id = "@+id/textPinCode"
+                    android:textSize="18dp"
+                    android:padding="15dp"
+                    android:layout_below = "@+id/btn_lock_unlock_door"
         />
-        <Button
+
+                <EditText
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/s_pin_access_code"
+                    android:layout_toRightOf = "@+id/textPinCode"
+                    android:layout_below = "@+id/btn_lock_unlock_door"
+                    android:padding="15dp"
+        />
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id = "@+id/btn_change_pin_code"
                     android:layout_below = "@+id/textPinCode"
                     android:text="Сменить PIN-код" 
         />
-        <Button
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id = "@+id/btn_change_pin_code"
+                    android:id = "@+id/btn_transfer_access"
                     android:layout_below = "@+id/textPinCode"
-                    android:layout_toRightOf = "@+id/btn_change_pin_code"
+                    android:layout_toRightOf = "@id/btn_change_pin_code"
                     android:text="Передать доступ заказчику" 
         />
-    </RelativeLayout>
+            </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -204,7 +195,7 @@
             android:padding="15dp"
         />        
         <EditText
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/s_weight"
@@ -222,7 +213,7 @@
             
         />
         <EditText
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/TemperatureEdit"
@@ -240,7 +231,7 @@
             android:padding="15dp"
         /> 
         <EditText
-            android:inputType="text"
+            android:inputType="number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/s_light"
@@ -261,7 +252,7 @@
             
         />
         <EditText
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/s_humidity"
@@ -280,7 +271,7 @@
             android:padding="15dp"
         />   
         <EditText
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/s_battery"
@@ -312,9 +303,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_change_parameters" 
-            android:layout_below = "@+id/s_signal_strength"
+            android:layout_below = "@+id/Text4"
             
         />
+
+
+
+                <Button
+                    android:text="Сменить контейнер"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_change_container"
+                    android:layout_toRightOf = "@id/btn_change_parameters"
+                    android:layout_below = "@id/s_signal_strength"
+                    android:padding="17dp"
+                    android:layout_marginLeft="0.0dp" 
+                />
 
 
     </RelativeLayout>

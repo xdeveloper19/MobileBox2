@@ -151,13 +151,14 @@ namespace GeoGeometry.Activity.Auth
 
                         StaticUser.AddInfoAuth(o_user_data);
 
-                        using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.Create, FileAccess.Write))
+                        using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
                         {
                             // преобразуем строку в байты
                             byte[] array = Encoding.Default.GetBytes("0" + JsonConvert.SerializeObject(o_user_data));
                             // запись массива байтов в файл
                             file.Write(array, 0, array.Length);
                         }
+
                         if(register.RoleName == "driver")
                         {
                                 Intent Driver = new Intent(this, typeof(Auth.DriverActivity));

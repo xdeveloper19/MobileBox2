@@ -82,7 +82,10 @@ namespace GeoGeometry.Container
         public static void AddInfoObjects(ListResponse<ContainerResponse> boxes)
         {
             Objects = new List<ContainerResponse>();
-            Objects = boxes.Objects;
+            foreach (var box in boxes.Objects)
+            {
+                Objects.Add(box);
+            }
         }
 
         //крч здесь заполнишь все значения сам

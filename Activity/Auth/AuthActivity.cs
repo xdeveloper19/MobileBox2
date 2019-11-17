@@ -169,7 +169,7 @@ namespace GeoGeometry.Activity.Auth {
 
                                 string is_check = is_remember.Checked ? "1" : "0";
 
-                                using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.Create, FileAccess.Write))
+                                using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
                                 {
                                     // преобразуем строку в байты
                                     byte[] array = Encoding.Default.GetBytes(is_check + JsonConvert.SerializeObject(o_user_data));
