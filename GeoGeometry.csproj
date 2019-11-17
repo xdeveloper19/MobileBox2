@@ -90,6 +90,7 @@
     <Compile Include="Model\Box\BoxNames.cs" />
     <Compile Include="Model\Box\RegisterBoxModel.cs" />
     <Compile Include="Model\Box\SmartBox.cs" />
+    <Compile Include="Model\GPSLocation\BoxLocation.cs" />
     <Compile Include="Model\GPSLocation\GPSLocationModel.cs" />
     <Compile Include="Model\GPSLocation\GPSLocationResponseData.cs" />
     <Compile Include="Model\GPSLocation\GPSLocationApiData.cs" />

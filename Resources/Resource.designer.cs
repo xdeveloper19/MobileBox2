@@ -7771,94 +7771,94 @@ namespace GeoGeometry
 			public const int s_date = 2131296505;
 			
 			// aapt resource value: 0x7F0900FA
-			public const int s_desc = 2131296506;
+			public const int s_date_time = 2131296506;
 			
 			// aapt resource value: 0x7F0900FB
-			public const int s_email = 2131296507;
+			public const int s_desc = 2131296507;
 			
 			// aapt resource value: 0x7F0900FC
-			public const int s_email_check = 2131296508;
+			public const int s_email = 2131296508;
 			
 			// aapt resource value: 0x7F0900FD
-			public const int s_email_wait = 2131296509;
+			public const int s_email_check = 2131296509;
 			
 			// aapt resource value: 0x7F0900FE
-			public const int s_first_name = 2131296510;
+			public const int s_email_wait = 2131296510;
 			
 			// aapt resource value: 0x7F0900FF
-			public const int s_humidity = 2131296511;
+			public const int s_first_name = 2131296511;
 			
 			// aapt resource value: 0x7F090100
-			public const int s_last_name = 2131296512;
+			public const int s_humidity = 2131296512;
 			
 			// aapt resource value: 0x7F090101
-			public const int s_latitude = 2131296513;
+			public const int s_last_name = 2131296513;
 			
 			// aapt resource value: 0x7F090102
-			public const int s_leader = 2131296514;
+			public const int s_latitude = 2131296514;
 			
 			// aapt resource value: 0x7F090103
-			public const int s_light = 2131296515;
+			public const int s_leader = 2131296515;
 			
 			// aapt resource value: 0x7F090104
-			public const int s_lock_unlock_door = 2131296516;
+			public const int s_light = 2131296516;
 			
 			// aapt resource value: 0x7F090105
-			public const int s_login = 2131296517;
+			public const int s_lock_unlock_door = 2131296517;
 			
 			// aapt resource value: 0x7F090106
-			public const int s_longitude = 2131296518;
+			public const int s_login = 2131296518;
 			
 			// aapt resource value: 0x7F090107
-			public const int s_middle_name = 2131296519;
+			public const int s_longitude = 2131296519;
 			
 			// aapt resource value: 0x7F090108
-			public const int s_name = 2131296520;
+			public const int s_middle_name = 2131296520;
 			
 			// aapt resource value: 0x7F090109
-			public const int s_open_close_container = 2131296521;
+			public const int s_name = 2131296521;
 			
 			// aapt resource value: 0x7F09010A
-			public const int s_order_number = 2131296522;
+			public const int s_open_close_container = 2131296522;
 			
 			// aapt resource value: 0x7F09010B
-			public const int s_pass = 2131296523;
+			public const int s_order_number = 2131296523;
 			
 			// aapt resource value: 0x7F09010C
-			public const int s_pass_check = 2131296524;
+			public const int s_pass = 2131296524;
 			
 			// aapt resource value: 0x7F09010D
-			public const int s_phone = 2131296525;
+			public const int s_pass_check = 2131296525;
 			
 			// aapt resource value: 0x7F09010E
-			public const int s_pin_access_code = 2131296526;
+			public const int s_phone = 2131296526;
 			
 			// aapt resource value: 0x7F09010F
-			public const int s_position_pay = 2131296527;
+			public const int s_pin_access_code = 2131296527;
 			
 			// aapt resource value: 0x7F090110
-			public const int s_rang = 2131296528;
+			public const int s_position_pay = 2131296528;
 			
 			// aapt resource value: 0x7F090111
-			public const int s_role_name = 2131296529;
+			public const int s_rang = 2131296529;
 			
 			// aapt resource value: 0x7F090112
-			public const int s_section = 2131296530;
+			public const int s_role_name = 2131296530;
 			
 			// aapt resource value: 0x7F090113
-			public const int s_signal_strength = 2131296531;
+			public const int s_section = 2131296531;
 			
 			// aapt resource value: 0x7F090114
-			public const int s_situation = 2131296532;
+			public const int s_signal_strength = 2131296532;
 			
 			// aapt resource value: 0x7F090115
-			public const int s_social = 2131296533;
+			public const int s_situation = 2131296533;
 			
 			// aapt resource value: 0x7F090116
-			public const int s_team = 2131296534;
+			public const int s_social = 2131296534;
 			
 			// aapt resource value: 0x7F090117
-			public const int s_time = 2131296535;
+			public const int s_team = 2131296535;
 			
 			// aapt resource value: 0x7F090118
 			public const int s_user = 2131296536;

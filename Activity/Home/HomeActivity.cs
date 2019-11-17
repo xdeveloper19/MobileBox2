@@ -60,14 +60,15 @@ namespace GeoGeometry.Activity.Home {
 		FusedLocationProviderClient fusedLocationProviderClient;
 		LocationRequest locationRequest;
 		LocationCallback locationCallback;
+       
 
-		/// <summary>
-		/// Подключение к карте api ключ. 
-		/// https://console.developers.google.com/apis/credentials?project=geogeometry&hl=RU&supportedpurview=project
-		/// информация https://docs.microsoft.com/ru-ru/xamarin/android/platform/maps-and-location/maps/maps-api#google-maps-api-prerequisites
-		/// </summary>
-		public void OnMapReady(GoogleMap googleMap) {
-			_googleMap = googleMap;
+        /// <summary>
+        /// Подключение к карте api ключ. 
+        /// https://console.developers.google.com/apis/credentials?project=geogeometry&hl=RU&supportedpurview=project
+        /// информация https://docs.microsoft.com/ru-ru/xamarin/android/platform/maps-and-location/maps/maps-api#google-maps-api-prerequisites
+        /// </summary>
+        public void OnMapReady(GoogleMap googleMap) {
+			_googleMap = googleMap;////11111
 
 			MarkerOptions markerOptions = new MarkerOptions();
 			LatLng location = new LatLng(StaticUser.Latitude, StaticUser.Longitude);
@@ -162,7 +163,7 @@ namespace GeoGeometry.Activity.Home {
             this.homeActivity = homeActivity;
         }
 
-        public override async void OnLocationResult(LocationResult result)
+        public override async void OnLocationResult(LocationResult result)///1111
         {
             base.OnLocationResult(result);
 

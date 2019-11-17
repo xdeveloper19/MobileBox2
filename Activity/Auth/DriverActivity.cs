@@ -20,6 +20,9 @@ using GeoGeometry.Model.User;
 using GeoGeometry.Model.Box;
 using GeoGeometry.Model;
 using Android.Telephony;
+using Android.Gms.Location;
+using GeoGeometry.Model.GPSLocation;
+using Android.Gms.Maps;
 
 namespace GeoGeometry.Activity.Auth
 {
@@ -65,15 +68,13 @@ namespace GeoGeometry.Activity.Auth
 
         private EditText s_battery;
 
-        private EditText s_signal_strength;
+        private static EditText s_signal_strength;
 
-        private EditText s_longitude;
+        private static EditText s_longitude;
 
-        private EditText s_latitude;
+        private static EditText s_latitude;
 
-        private EditText s_date;
-
-        private EditText s_time;
+        private static EditText s_date_time;
 
         private ProgressBar preloader;
 
@@ -105,8 +106,7 @@ namespace GeoGeometry.Activity.Auth
             s_signal_strength = FindViewById<EditText>(Resource.Id.s_signal_strength);
             s_longitude = FindViewById<EditText>(Resource.Id.s_longitude);
             s_latitude = FindViewById<EditText>(Resource.Id.s_latitude);
-            s_date = FindViewById<EditText>(Resource.Id.s_date);
-            s_time = FindViewById<EditText>(Resource.Id.s_time);
+            s_date_time = FindViewById<EditText>(Resource.Id.s_date_time);
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
 
             string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
@@ -121,6 +121,9 @@ namespace GeoGeometry.Activity.Auth
                 }
                 
             }
+            BuildLocationRequest();
+            BuildLocationCallBack();
+
             //var telephonyManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
             //var signalStrengthListener = new SignalStrength();
             //_getGsmSignalStrengthButton.Click += DisplaySignalStrength;
@@ -148,6 +151,7 @@ namespace GeoGeometry.Activity.Auth
                 {
                     Intent ContainerSelectionActivty = new Intent(this, typeof(Auth.ContainerSelection));
                     StartActivity(ContainerSelectionActivty);
+
                 }
                 catch(Exception ex)
                 {
@@ -340,6 +344,91 @@ namespace GeoGeometry.Activity.Auth
 
         }
 
+        FusedLocationProviderClient fusedLocationProviderClient;
+        LocationRequest locationRequest;
+        LocationCallback locationCallback;
+
+        private void BuildLocationCallBack()
+        {
+            locationCallback = new DriverLocationCallBack(this);
+        }
+
+        private void BuildLocationRequest()
+        {
+            locationRequest = new LocationRequest();
+            locationRequest.SetPriority(LocationRequest.PriorityBalancedPowerAccuracy);
+            locationRequest.SetInterval(1000);
+            locationRequest.SetFastestInterval(3000);
+            locationRequest.SetSmallestDisplacement(10f);
+        }
+
+        /// <summary>
+        /// Подключение к карте api ключ. 
+        /// https://console.developers.google.com/apis/credentials?project=geogeometry&hl=RU&supportedpurview=project
+        /// информация https://docs.microsoft.com/ru-ru/xamarin/android/platform/maps-and-location/maps/maps-api#google-maps-api-prerequisites
+        /// </summary>
+
+        internal class DriverLocationCallBack : LocationCallback
+        {
+            private DriverActivity driverActivity;
+
+            public DriverLocationCallBack(DriverActivity driverActivity)
+            {
+                this.driverActivity = driverActivity;
+            }
+
+            public override async void OnLocationResult(LocationResult result)
+            {
+                base.OnLocationResult(result);
+
+                StaticBox.Latitude = result.LastLocation.Latitude;
+                StaticBox.Longitude = result.LastLocation.Longitude;
+                StaticBox.Signal = 8;
+                StaticBox.Date = DateTime.Now;
+
+                s_longitude.Text = result.LastLocation.Latitude.ToString();
+                s_latitude.Text = result.LastLocation.Longitude.ToString();
+                s_date_time.Text = DateTime.Now.ToString();
+                s_signal_strength.Text = "Хороший";
+
+                // Получаю информацию о клиенте.
+                BoxLocation gpsLocation = new BoxLocation
+                {
+                    id = StaticBox.SmartBoxId,
+                    lat1 = StaticBox.Latitude,
+                    lon1 = StaticBox.Longitude,
+                    signal = StaticBox.Signal,
+                    date = StaticBox.Date
+                };
+
+              
+
+                var myHttpClient = new HttpClient();
+                var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/container/setcontainerlocation/");
+
+                //json структура.
+                var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            {
+                { "Id", gpsLocation.id },
+                { "Lon1", gpsLocation.lon1.ToString()},
+                { "Lat1", gpsLocation.lat1.ToString()}
+            });
+
+                HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), formContent);
+                AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
+
+                string s_result;
+                using (HttpContent responseContent = response.Content)
+                {
+                    s_result = await responseContent.ReadAsStringAsync();
+                }
+
+                o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
+
+                
+        }
+        }
+        
         //очистка всех полей
         void ClearField()
         {
@@ -357,8 +446,7 @@ namespace GeoGeometry.Activity.Auth
             s_signal_strength.Text = "";
             s_longitude.Text = "";
             s_latitude.Text = "";
-            s_date.Text = "";
-            s_time.Text = "";
+            s_date_time.Text = "";
         }
 
         //void DisplaySignalStrength(object sender, EventArgs e)

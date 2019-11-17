@@ -74,10 +74,10 @@ namespace GeoGeometry.Activity.Auth {
                 Finish();
             };
 
-           
 
-            string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string file_data_remember = "0";
+
+            string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
+            string file_data_remember = "0";           
             // Проверяю запомнил ли пользователя.
             if (File.Exists(@"" + dir_path + "user_data.txt"))
             {
@@ -167,15 +167,14 @@ namespace GeoGeometry.Activity.Auth {
 
                                 StaticUser.AddInfoAuth(o_user_data);
 
-                                string is_check = is_remember.Checked ? "1" : "0";
+                                //пример ContainerSelection
 
-                                using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
+                                using (FileStream fs = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate))
                                 {
-                                    // преобразуем строку в байты
-                                    byte[] array = Encoding.Default.GetBytes(is_check + JsonConvert.SerializeObject(o_user_data));
-                                    // запись массива байтов в файл
-                                    file.Write(array, 0, array.Length);
+                                    await System.Text.Json.JsonSerializer.SerializeAsync<AuthResponseData>(fs, o_user_data);
                                 }
+
+                                
                                 //var role = o_data.ResponseData.Role;
                                 //Начинаю собирать информацию о клиенте
                                 preloader.Visibility = Android.Views.ViewStates.Invisible;

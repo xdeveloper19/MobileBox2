@@ -365,25 +365,17 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id = "@+id/s_date"
+            android:id = "@+id/s_date_time"
             android:layout_toRightOf = "@+id/TEXT2"
             android:layout_below = "@+id/s_longitude"
-        />
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id = "@+id/s_time"
-            android:layout_toRightOf = "@+id/s_date"
-            android:layout_below = "@+id/s_latitude"
-        />
+        />      
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id = "@+id/TEXT3"
             android:text = "Текущее положение"
-            android:layout_below = "@+id/s_time"
-            android:padding="15dp"
-                    
+            android:layout_below = "@+id/s_date_time"
+            android:padding="15dp"                   
          />
     </RelativeLayout>
     </RelativeLayout>

@@ -67,6 +67,14 @@ namespace GeoGeometry.Container
         /// </summary>
         static public double Weight { get; set; }
 
+        static public double Longitude { get; set; }
+
+        static public double Latitude { get; set; }
+
+        static public double Signal { get; set; }
+
+        static public DateTime Date { get; set; }
+
         static public List<ContainerResponse> Objects { get; set; }
 
         /// <summary>
