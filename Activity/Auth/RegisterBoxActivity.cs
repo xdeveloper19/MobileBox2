@@ -113,11 +113,18 @@ namespace GeoGeometry.Activity.Auth
                             //    // запись массива байтов в файл
                             //    file.Write(array, 0, array.Length);
                             //}
-                            using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
-                            {
-                                await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(fs,o_box_data);
-                            }
+                            //using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
+                            //{
+                            //    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(fs,o_box_data);
+                            //}
 
+                            using (FileStream file = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
+                            {
+                                // преобразуем строку в байты
+                                byte[] array = Encoding.Default.GetBytes(JsonConvert.SerializeObject(o_box_data));
+                                // запись массива байтов в файл
+                                file.Write(array, 0, array.Length);
+                            }
                             //using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
                             //{
                             //    ContainerResponse container = await System.Text.Json.JsonSerializer.DeserializeAsync<ContainerResponse>(fs);

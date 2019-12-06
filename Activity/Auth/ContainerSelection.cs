@@ -238,12 +238,18 @@ namespace GeoGeometry.Activity.Auth
                 //    box = Objects.Objects.Where(f => f.Name == box_name1.Text).FirstOrDefault();
                 //}
 
-                using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
+                //using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
+                //{
+                //    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(fs, box);
+                //}
+
+                using (FileStream file = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
                 {
-                    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(fs, box);
+                    // преобразуем строку в байты
+                    byte[] array = Encoding.Default.GetBytes(JsonConvert.SerializeObject(box));
+                    // запись массива байтов в файл
+                    file.Write(array, 0, array.Length);
                 }
-
-
 
 
                 //using (FileStream ddd = new FileStream(dir_path + "box_list.txt", FileMode.OpenOrCreate))
@@ -253,7 +259,7 @@ namespace GeoGeometry.Activity.Auth
 
                 //}
                 Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
-                Driver.PutExtra("idAction", "2");
+                Driver.PutExtra("idAction", "2");// через объект идёт обращение к . 
                 StartActivity(Driver);
 
                 //var box_name = box_name1.Text;

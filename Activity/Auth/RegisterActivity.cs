@@ -165,12 +165,12 @@ namespace GeoGeometry.Activity.Auth
                                 StartActivity(Driver);
                                 this.Finish();
                          }
-                        else if(register.RoleName == "user")
-                        {
-                               Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
-                               StartActivity(UserActivity);
-                               this.Finish();
-                        }
+                        //else if(register.RoleName == "user")
+                        //{
+                        //       Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
+                        //       StartActivity(UserActivity);
+                        //       this.Finish();
+                        //}
                          
                             preloader.Visibility = Android.Views.ViewStates.Invisible;
                         // Переход на страницу выбора контейнера.

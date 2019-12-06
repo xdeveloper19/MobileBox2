@@ -15,6 +15,10 @@
     <item>Пользователь</item>
   </string-array>
   <string-array name="a_situation_loaded_container">
-    <item>Контейнер загрузил. Прошу забрать</item>
+    <item>Отсутствует</item>
+    <item>На складе</item>
+    <item>На автомобиле</item>
+    <item>Выгруженным у грузоотправителя</item>
+    <item>После разгрузки у грузополучателя</item>
   </string-array>
 </resources>

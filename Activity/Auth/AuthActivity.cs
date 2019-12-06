@@ -169,12 +169,19 @@ namespace GeoGeometry.Activity.Auth {
 
                                 //пример ContainerSelection
 
-                                using (FileStream fs = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate))
+                                //using (FileStream fs = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate))
+                                //{
+                                //    await System.Text.Json.JsonSerializer.SerializeAsync<AuthResponseData>(fs, o_user_data);
+                                //}
+
+                                using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
                                 {
-                                    await System.Text.Json.JsonSerializer.SerializeAsync<AuthResponseData>(fs, o_user_data);
+                                    // преобразуем строку в байты
+                                    byte[] array = Encoding.Default.GetBytes("0" + JsonConvert.SerializeObject(o_user_data));// 0 связан с запоминанием 
+                                    // запись массива байтов в файл
+                                    file.Write(array, 0, array.Length);
                                 }
 
-                                
                                 //var role = o_data.ResponseData.Role;
                                 //Начинаю собирать информацию о клиенте
                                 preloader.Visibility = Android.Views.ViewStates.Invisible;
@@ -185,12 +192,12 @@ namespace GeoGeometry.Activity.Auth {
                                     StartActivity(Driver);
                                     this.Finish();
                                 }
-                                else if(o_data.ResponseData.Role == "user")
-                                {
-                                    Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
-                                    StartActivity(UserActivity);
-                                    this.Finish();
-                                }
+                                //else if(o_data.ResponseData.Role == "user")
+                                //{
+                                //    Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
+                                //    StartActivity(UserActivity);
+                                //    this.Finish();
+                                //}
 								
                             }
                             else

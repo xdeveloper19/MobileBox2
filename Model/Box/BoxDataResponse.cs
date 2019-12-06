@@ -10,11 +10,13 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using GeoGeometry.Model.Auth;
+using static GeoGeometry.Model.Box.SmartBox;
 
 namespace GeoGeometry.Model.Box
 {
     public class BoxDataResponse: BaseResponseObject
     {
+        public string Name { get; set; }
         public string Id { get; set; }
         public bool IsOpenedBox { get; set; }
         public bool IsOpenedDoor { get; set; }
@@ -24,6 +26,8 @@ namespace GeoGeometry.Model.Box
         public double Temperature { get; set; }
         public double Wetness { get; set; }
         public double BatteryPower { get; set; }
+
+        public ContainerState BoxState { get; set; }
         //public ContainerState Situation { get; set; }
         //public enum ContainerState
         //{

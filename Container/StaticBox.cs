@@ -12,6 +12,7 @@ using Android.Widget;
 using GeoGeometry.Model;
 using GeoGeometry.Model.Box;
 using GeoGeometry.Model.User;
+using static GeoGeometry.Model.Box.SmartBox;
 
 namespace GeoGeometry.Container
 {
@@ -56,6 +57,11 @@ namespace GeoGeometry.Container
         /// Заряд батареи.
         /// </summary>
         static public double BatteryPower { get; set; }
+
+        /// <summary>
+        /// Состояние контейнера.
+        /// </summary>
+        static public ContainerState BoxState { get; set; }
 
         /// <summary>
         /// Наименование контейнера.
@@ -107,6 +113,7 @@ namespace GeoGeometry.Container
             Temperature = boxData.Temperature;
             Wetness = boxData.Wetness;
             BatteryPower = boxData.BatteryPower;
+            BoxState = boxData.BoxState;
         }
     }
 }

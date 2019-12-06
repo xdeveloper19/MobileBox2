@@ -23,6 +23,7 @@ using Android.Telephony;
 using Android.Gms.Location;
 using GeoGeometry.Model.GPSLocation;
 using Android.Gms.Maps;
+using static GeoGeometry.Model.Box.SmartBox;
 
 namespace GeoGeometry.Activity.Auth
 {
@@ -48,9 +49,9 @@ namespace GeoGeometry.Activity.Auth
 
         private EditText s_user;
 
-        private EditText container_id;
+        private EditText container_name;
 
-        private EditText s_situation;
+        private Spinner s_situation;
 
         private EditText s_open_close_container;
 
@@ -76,6 +77,8 @@ namespace GeoGeometry.Activity.Auth
 
         private static EditText s_date_time;
 
+        private string a_situation;
+
         private ProgressBar preloader;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -93,8 +96,8 @@ namespace GeoGeometry.Activity.Auth
             btn_transfer_access = FindViewById<Button>(Resource.Id.btn_transfer_access);
             btn_change_pin_code = FindViewById<Button>(Resource.Id.btn_change_pin_code);
             s_user = FindViewById<EditText>(Resource.Id.s_user);
-            container_id = FindViewById<EditText>(Resource.Id.container_id);
-            s_situation = FindViewById<EditText>(Resource.Id.s_situation);
+            container_name = FindViewById<EditText>(Resource.Id.container_name);
+            s_situation = FindViewById<Spinner>(Resource.Id.s_situation);
             s_open_close_container = FindViewById<EditText>(Resource.Id.s_open_close_container);
             s_lock_unlock_door = FindViewById<EditText>(Resource.Id.s_lock_unlock_door);
             s_pin_access_code = FindViewById<EditText>(Resource.Id.s_pin_access_code);
@@ -108,6 +111,13 @@ namespace GeoGeometry.Activity.Auth
             s_latitude = FindViewById<EditText>(Resource.Id.s_latitude);
             s_date_time = FindViewById<EditText>(Resource.Id.s_date_time);
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
+
+            s_situation.Prompt = "Выбор роли";
+            s_situation.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner_ItemSelected);
+            var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.a_situation_loaded_container, Android.Resource.Layout.SimpleSpinnerItem);
+
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            s_situation.Adapter = adapter;
 
             string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
             
@@ -127,13 +137,13 @@ namespace GeoGeometry.Activity.Auth
             //var telephonyManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
             //var signalStrengthListener = new SignalStrength();
             //_getGsmSignalStrengthButton.Click += DisplaySignalStrength;
-            string id_page = Intent.GetStringExtra("idAction");
+            string id_page = Intent.GetStringExtra("idAction");// !!!
             switch (id_page)
             {
                 case "1": 
                 case "2": //Получение инфы контейнера
                     {
-                        GetInfoAboutBox(dir_path);
+                        GetInfoAboutBox(dir_path);// метод получения данных с контейнера 
                     }
                     break;
                 case "3": 
@@ -235,9 +245,26 @@ namespace GeoGeometry.Activity.Auth
                         BatteryPower = StaticBox.BatteryPower
                     };
 
+                    if (a_situation == "На складе")
+                    {
+                        container.BoxState = ContainerState.onBase;
+                    }
+                    else if (a_situation == "На автомобиле")
+                    {
+                        container.BoxState = ContainerState.onCar;
+                    }
+                    else if (a_situation == "Выгруженным у грузоотправителя")
+                    {
+                        container.BoxState = ContainerState.onConsignee;
+                    }
+                    else if (a_situation == "После разгрузки у грузополучателя")
+                    {
+                        container.BoxState = ContainerState.onShipper;
+                    }
+
                     var myHttpClient = new HttpClient();
 
-                    var uri = ("http://iot-tmc-cen.1gb.ru/api/container/editbox?id=" + container.Id +"&IsOpenedBox="+ container.IsOpenedBox + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower);
+                    var uri = ("http://iot-tmc-cen.1gb.ru/api/container/editbox?id=" + container.Id +"&IsOpenedBox="+ container.IsOpenedBox + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower + "&BoxState=" + container.BoxState);
 
 
                     HttpResponseMessage response = await myHttpClient.PutAsync(uri.ToString(), new StringContent(JsonConvert.SerializeObject(container), Encoding.UTF8, "application/json"));
@@ -286,10 +313,25 @@ namespace GeoGeometry.Activity.Auth
                 ContainerResponse container = new ContainerResponse();
 
                 //извлечение данных контейнера из файла
-                using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
+                //using (FileStream fs = new FileStream(dir_path + "box_data.txt", FileMode.OpenOrCreate))
+                //{
+                //    container = await System.Text.Json.JsonSerializer.DeserializeAsync<ContainerResponse>(fs);
+                //}
+
+                //пример чтения данных с файла
+                string file_data_remember;
+                using (FileStream file = new FileStream(dir_path + "box_data.txt", FileMode.Open, FileAccess.Read))
                 {
-                    container = await System.Text.Json.JsonSerializer.DeserializeAsync<ContainerResponse>(fs);
+                    // преобразуем строку в байты
+                    byte[] array = new byte[file.Length];
+                    // считываем данные
+                    file.Read(array, 0, array.Length);
+                    // декодируем байты в строку
+                    file_data_remember = Encoding.Default.GetString(array);
+                    file.Close();
                 }
+
+                container = JsonConvert.DeserializeObject<ContainerResponse>(file_data_remember);
 
                 var myHttpClient = new HttpClient();
                 
@@ -315,7 +357,7 @@ namespace GeoGeometry.Activity.Auth
 
                         StaticBox.AddInfoBox(exported_data);
                         //добавляем инфу о найденном контейнере
-                        container_id.Text = exported_data.Id;
+                        container_name.Text = container.Name;
                         s_open_close_container.Text = (exported_data.IsOpenedBox == false) ? "закрыт" : "раскрыт";
                         s_weight.Text = exported_data.Weight.ToString();
                         s_lock_unlock_door.Text = (exported_data.IsOpenedDoor == false) ? "заблокирована" : "разблокирована";
@@ -323,7 +365,23 @@ namespace GeoGeometry.Activity.Auth
                         var boxState = s_open_close_container.Text;
                         var doorState = s_lock_unlock_door.Text;
 
-                        s_situation.Text = "Контейнер " + boxState + ". Дверь " + doorState + ". Ожидает передачи доступа заказчику.";
+                        if (exported_data.BoxState == ContainerState.onBase)
+                        {
+                            a_situation = "На складе";
+                        }
+                        else if (exported_data.BoxState == ContainerState.onCar)
+                        {                           
+                            a_situation = "На автомобиле";
+                        }
+                        else if (exported_data.BoxState == ContainerState.onConsignee)
+                        {
+                            a_situation = "Выгруженным у грузоотправителя";
+                        }
+                        else if (exported_data.BoxState == ContainerState.onShipper)
+                        {                         
+                            a_situation = "После разгрузки у грузополучателя";
+                        }                       
+
                         s_temperature.Text = exported_data.Temperature.ToString();
                         s_light.Text = exported_data.Light.ToString();
                         s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : exported_data.Code;
@@ -428,13 +486,41 @@ namespace GeoGeometry.Activity.Auth
                 
         }
         }
-        
+
+        private void Spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            var spinner = sender as Spinner;
+            a_situation = spinner.GetItemAtPosition(e.Position).ToString();
+        }
+
+    //    spinner.setOnItemSelectedListener(new OnItemSelectedListener()
+    //    {
+
+          
+
+    //public void onItemSelected(AdapterView<?> parent, View view, int pos,
+    //        long id)
+    //        {
+    //            // TODO Auto-generated method stub
+    //            ((TextView)parent.getChildAt(0)).setTextColor(Color.MAGENTA);
+    //            ((TextView)parent.getChildAt(0)).setTextSize(12);
+    //        }
+
+           
+
+    //public void onNothingSelected(AdapterView<?> arg0)
+    //        {
+    //            // TODO Auto-generated method stub
+
+    //        }
+    //    });
+
         //очистка всех полей
         void ClearField()
         {
             s_user.Text = "";
-            container_id.Text = "";
-            s_situation.Text = "";
+            container_name.Text = "";
+            //s_situation.Text = "";
             s_open_close_container.Text = "";
             s_lock_unlock_door.Text = "";
             s_pin_access_code.Text = "";
