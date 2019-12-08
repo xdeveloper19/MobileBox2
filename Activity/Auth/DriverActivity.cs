@@ -77,6 +77,8 @@ namespace GeoGeometry.Activity.Auth
 
         private static EditText s_date_time;
 
+        private static EditText s_payment;
+
         private string a_situation;
 
         private ProgressBar preloader;
@@ -87,7 +89,6 @@ namespace GeoGeometry.Activity.Auth
 
             SetContentView(Resource.Layout.activity_driver);
 
-            
             btn_change_container = FindViewById<Button>(Resource.Id.btn_change_container);
             btn_exit_ = FindViewById<Button>(Resource.Id.btn_exit_);
             btn_open_close_container = FindViewById<Button>(Resource.Id.btn_open_close_container);
@@ -110,7 +111,31 @@ namespace GeoGeometry.Activity.Auth
             s_longitude = FindViewById<EditText>(Resource.Id.s_longitude);
             s_latitude = FindViewById<EditText>(Resource.Id.s_latitude);
             s_date_time = FindViewById<EditText>(Resource.Id.s_date_time);
+            s_payment = FindViewById<EditText>(Resource.Id.s_payment);
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
+
+            s_signal_strength.Focusable = false;
+            s_signal_strength.LongClickable = false;
+            s_user.Focusable = false;
+            s_user.LongClickable = false;
+            s_situation.Focusable = false;
+            s_situation.LongClickable = false;
+            s_open_close_container.Focusable = false;
+            s_open_close_container.LongClickable = false;
+            s_lock_unlock_door.Focusable = false;
+            s_lock_unlock_door.LongClickable = false;
+            s_pin_access_code.Focusable = false;
+            s_pin_access_code.LongClickable = false;
+            s_payment.Focusable = false;
+            s_payment.LongClickable = false;
+            s_date_time.Focusable = false;
+            s_date_time.LongClickable = false;
+            s_latitude.Focusable = false;
+            s_latitude.LongClickable = false;
+            s_longitude.Focusable = false;
+            s_longitude.LongClickable = false;
+            container_name.Focusable = false;
+            container_name.LongClickable = false;
 
             s_situation.Prompt = "Выбор роли";
             s_situation.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner_ItemSelected);
@@ -534,6 +559,8 @@ namespace GeoGeometry.Activity.Auth
             s_latitude.Text = "";
             s_date_time.Text = "";
         }
+
+        
 
         //void DisplaySignalStrength(object sender, EventArgs e)
         //{

@@ -61,6 +61,7 @@
 //        private EditText s_light;
 
 //        private EditText s_humidity;
+//        private string a_situation;
 
 //        private ProgressBar preloader;
 
@@ -87,9 +88,9 @@
 //            s_weight = FindViewById<EditText>(Resource.Id.s_weight);
 //            s_temperature = FindViewById<EditText>(Resource.Id.TemperatureEdit);
 //            s_light = FindViewById<EditText>(Resource.Id.s_light);
-//            s_humidity = FindViewById<EditText>(Resource.Id.VlazhnostEdit);            
+//            s_humidity = FindViewById<EditText>(Resource.Id.VlazhnostEdit);
 //            s_longitude = FindViewById<EditText>(Resource.Id.s_longitude);
-//            s_latitude = FindViewById<EditText>(Resource.Id.s_latitude);           
+//            s_latitude = FindViewById<EditText>(Resource.Id.s_latitude);
 //            preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
 
 //            btn_situation_loaded_container.Prompt = "Выберите состояние контейнера";
@@ -106,7 +107,7 @@
 //                StartActivity(ActivityMain);
 //            };
 
-            
+
 //        }
 //        private void Spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
 //        {

@@ -132,17 +132,17 @@
 
                 <EditText
                     android:id="@+id/s_open_close_container"
-                    android:layout_width="87dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/s_situation"
                     android:layout_marginStart="13dp"
-                    android:layout_marginLeft="25.93dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="1dp"
                     android:layout_toEndOf="@+id/textOpenCloseBox"
                     android:layout_toRightOf="@+id/textOpenCloseBox"
                     android:inputType="text"
                     android:padding="12dp"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"/>
 
                 <Button
                     android:id="@+id/btn_open_close_container"
@@ -173,18 +173,18 @@
 
                 <EditText
                     android:id="@+id/s_lock_unlock_door"
-                    android:layout_width="87dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/s_open_close_container"
                     android:layout_marginStart="49dp"
-                    android:layout_marginLeft="61dp"
+                    android:layout_marginLeft="40dp"
                     android:layout_marginTop="5dp"
                     android:layout_toEndOf="@+id/textLockUnlockDoor"
                     android:layout_toRightOf="@+id/textLockUnlockDoor"
                     android:inputType="text"
                     android:padding="12dp"
                     android:textSize="11sp"
-                    android:layout_marginBottom="0.0dp" />
+                    android:layout_marginBottom="0.0dp"/>
 
                 <Button
                     android:id="@+id/btn_lock_unlock_door"
@@ -299,6 +299,7 @@
                     android:inputType="numberDecimal|text"
                     android:padding="13dp"
                     android:textSize="15sp"
+                    android:maxLength = "4"
 
 
                 />
@@ -348,7 +349,8 @@
                     android:layout_toRightOf="@+id/Temperature"
                     android:inputType="numberDecimal|text"
                     android:padding="13dp"
-                    android:textSize="15sp" />
+                    android:textSize="15sp" 
+                    android:maxLength = "2"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -387,7 +389,8 @@
                     android:layout_marginLeft="-6dp"
                     android:inputType="number|text"
                     android:padding="13dp"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:maxLength = "4"/>
 
                 <TextView
                     android:id="@+id/Vlazhnost"
@@ -415,7 +418,8 @@
                     android:layout_toEndOf="@+id/Vlazhnost"
                     android:layout_toRightOf="@+id/Vlazhnost"
                     android:inputType="numberDecimal|text"
-                    android:padding="14dp" />
+                    android:padding="14dp" 
+                    android:maxLength = "3"/>
 
                 <TextView          
                     android:layout_width="wrap_content"
@@ -455,7 +459,8 @@
                     android:inputType="numberDecimal|text"
                     android:layout_marginLeft="-8dp"
                     android:padding="15dp"
-                    android:textSize="15sp" />
+                    android:textSize="15sp" 
+                   android:maxLength = "2"/>
 
                 <TextView          
                     android:layout_width="wrap_content"
