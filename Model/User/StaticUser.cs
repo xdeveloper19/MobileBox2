@@ -100,6 +100,8 @@ namespace GeoGeometry.Model.User
         /// </summary>
         public static double Distance { get; set; }
 
+        public static string UserRole { get; set; }
+
         /// <summary>
         /// Добавляю информацию о клиенте
         /// </summary>
@@ -110,6 +112,7 @@ namespace GeoGeometry.Model.User
             UserName = o_auth.UserName;
             FirstName = o_auth.FirstName;
             LastName = o_auth.LastName;
+            UserRole = o_auth.Role;
         }
 
         /// <summary>

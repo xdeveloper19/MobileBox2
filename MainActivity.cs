@@ -7,6 +7,10 @@ using Com.Karumi.Dexter;
 using Android;
 using Com.Karumi.Dexter.Listener.Single;
 using Com.Karumi.Dexter.Listener;
+using System.IO;
+using System.Text;
+using Newtonsoft.Json;
+using GeoGeometry.Model.Auth;
 
 namespace GeoGeometry.Activity
 {
@@ -32,22 +36,53 @@ namespace GeoGeometry.Activity
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+            string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
+            string file_data_remember;
+            //using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.Open, FileAccess.Read))
+            //{
+            //    // преобразуем строку в байты
+            //    byte[] array = new byte[file.Length];
+            //    // считываем данные
+            //    file.Read(array, 0, array.Length);
+            //    // декодируем байты в строку
+            //    file_data_remember = Encoding.Default.GetString(array);
+            //    file.Close();
+            //}
 
+           //AuthResponseData user = JsonConvert.DeserializeObject<AuthResponseData>(file_data_remember);
+           // if (user.Check == "1")
+           // {
+           //     if (user.RoleName == "driver")
+           //     {
+           //         Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
+           //         StartActivity(Driver);
+           //         this.Finish();
+
+           //     }
+           //     else if (user.RoleName == "user")
+           //     {
+           //         Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
+           //         StartActivity(UserActivity);
+           //         this.Finish();
+           //     }
+           // }
+           
             btn_auth_form = FindViewById<Button>(Resource.Id.btn_auth_form);
             btn_reg_form = FindViewById<Button>(Resource.Id.btn_reg_form);
-     
+
             Dexter.WithActivity(this)
                 .WithPermission(Manifest.Permission.AccessFineLocation)
                 .WithListener(new CompositePermissionListener(new SamplePermissionListener(this))).Check();
 
-            // Переход к форме регистрации.
+                // Переход к форме регистрации.
             btn_reg_form.Click += (s, e) =>
             {
                 Intent registerActivity = new Intent(this, typeof(Auth.RegisterActivity));
                 StartActivity(registerActivity);
             };
 
-            // Переход к форме авторизация.
+                // Переход к форме авторизация
+            
             btn_auth_form.Click += (s, e) =>
             {
                 Intent authActivity = new Intent(this, typeof(Auth.AuthActivity));

@@ -28,5 +28,7 @@ namespace GeoGeometry.Model.Auth
         public string Password { get; set; }
 
         public string RoleName { get; set; }
+
+        public string Check { get; set; }
     }
 }

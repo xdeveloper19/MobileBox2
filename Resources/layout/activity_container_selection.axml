@@ -31,10 +31,10 @@
         android:text="Выбрать" 
     />
     
-    <Button
+    <Button 
 				android:text="Зарегистрировать контейнер"
 				android:textAppearance="?android:attr/textAppearanceSmall" 
-				
+			    
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:textColor="@color/colorMainBlue"			 

@@ -90,7 +90,7 @@ namespace GeoGeometry.Activity.Auth
             s_role_name.Adapter = adapter;
 
 
-            string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
+            string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 
             btn_register.Click += async delegate
             {
@@ -154,7 +154,7 @@ namespace GeoGeometry.Activity.Auth
                         using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
                         {
                             // преобразуем строку в байты
-                            byte[] array = Encoding.Default.GetBytes("0" + JsonConvert.SerializeObject(o_user_data));
+                            byte[] array = Encoding.Default.GetBytes(JsonConvert.SerializeObject(o_user_data));
                             // запись массива байтов в файл
                             file.Write(array, 0, array.Length);
                         }
@@ -164,14 +164,14 @@ namespace GeoGeometry.Activity.Auth
                                 Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
                                 StartActivity(Driver);
                                 this.Finish();
-                         }
-                        //else if(register.RoleName == "user")
-                        //{
-                        //       Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
-                        //       StartActivity(UserActivity);
-                        //       this.Finish();
-                        //}
-                         
+                        }
+                        else if (register.RoleName == "user")
+                        {
+                            Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
+                            StartActivity(UserActivity);
+                            this.Finish();
+                        }
+
                             preloader.Visibility = Android.Views.ViewStates.Invisible;
                         // Переход на страницу выбора контейнера.
                         //Intent ContainerSelectionActivity = new Intent(this, typeof(Auth.ContainerSelection));

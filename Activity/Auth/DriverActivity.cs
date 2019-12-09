@@ -144,8 +144,8 @@ namespace GeoGeometry.Activity.Auth
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             s_situation.Adapter = adapter;
 
-            string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
-            
+            string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+
             if (File.Exists(@"" + dir_path + "box_data.txt"))
             {
                 string[] strok = File.ReadAllLines(dir_path + "box_data.txt");
@@ -158,6 +158,13 @@ namespace GeoGeometry.Activity.Auth
             }
             BuildLocationRequest();
             BuildLocationCallBack();
+
+            fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(this);
+
+            //ResetUser();
+            fusedLocationProviderClient.RequestLocationUpdates(locationRequest,
+                locationCallback, Looper.MyLooper());
+
 
             //var telephonyManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
             //var signalStrengthListener = new SignalStrength();
@@ -466,7 +473,7 @@ namespace GeoGeometry.Activity.Auth
 
                 StaticBox.Latitude = result.LastLocation.Latitude;
                 StaticBox.Longitude = result.LastLocation.Longitude;
-                StaticBox.Signal = 8;
+                StaticBox.Signal = 0;
                 StaticBox.Date = DateTime.Now;
 
                 s_longitude.Text = result.LastLocation.Latitude.ToString();
@@ -484,17 +491,18 @@ namespace GeoGeometry.Activity.Auth
                     date = StaticBox.Date
                 };
 
-              
+
 
                 var myHttpClient = new HttpClient();
-                var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/container/setcontainerlocation/");
-
+                var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/container/setcontainerlocation?id=" + gpsLocation.id + "&lat1=" + gpsLocation.lat1 + "&lon1=" + gpsLocation.lon1 + "&signal=" + gpsLocation.signal + "&date=" + gpsLocation.date);
                 //json структура.
                 var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
                 { "Id", gpsLocation.id },
                 { "Lon1", gpsLocation.lon1.ToString()},
-                { "Lat1", gpsLocation.lat1.ToString()}
+                { "Lat1", gpsLocation.lat1.ToString()},
+                { "Signal", "0"},
+                { "Date", DateTime.Now.ToString()}
             });
 
                 HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), formContent);
@@ -508,8 +516,7 @@ namespace GeoGeometry.Activity.Auth
 
                 o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
 
-                
-        }
+            }
         }
 
         private void Spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)

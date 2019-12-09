@@ -51,7 +51,7 @@ namespace GeoGeometry.Activity.Auth {
 
         private ProgressBar preloader;
 
-   
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -65,9 +65,9 @@ namespace GeoGeometry.Activity.Auth {
 
             s_login = FindViewById<EditText>(Resource.Id.s_login);
             s_pass = FindViewById<EditText>(Resource.Id.s_pass);
-			is_remember = FindViewById<CheckBox>(Resource.Id.is_remember);
-			preloader = FindViewById<ProgressBar>(Resource.Id.loader);
-            
+            is_remember = FindViewById<CheckBox>(Resource.Id.is_remember);
+            preloader = FindViewById<ProgressBar>(Resource.Id.loader);
+
 
             btn_back_a.Click += (s, e) =>
             {
@@ -76,8 +76,8 @@ namespace GeoGeometry.Activity.Auth {
 
 
 
-            string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
-            string file_data_remember = "0";           
+            string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string file_data_remember;
             // Проверяю запомнил ли пользователя.
             if (File.Exists(@"" + dir_path + "user_data.txt"))
             {
@@ -93,49 +93,61 @@ namespace GeoGeometry.Activity.Auth {
                 }
             }
 
-            if (file_data_remember.Substring(0, 1) == "1")
+            //        if (file_data_remember.Substring(0, 1) == "1")
+            //        {
+            //preloader.Visibility = Android.Views.ViewStates.Visible;
+            //file_data_remember = file_data_remember.Remove(0, 1);
+            //            AuthResponseData o_data = JsonConvert.DeserializeObject<AuthResponseData>(file_data_remember);
+
+            //            StaticUser.AddInfoAuth(o_data);
+
+            //preloader.Visibility = Android.Views.ViewStates.Gone;
+
+            //// Переход на главную страницу.
+            //Intent homeActivity = new Intent(this, typeof(Home.HomeActivity));
+            //            StartActivity(homeActivity);
+            //            //this.Finish();
+            //        }
+            //        else
+            //        {
+            // Переход к форме регистрации.
+            btn_register.Click += (s, e) =>
             {
-				preloader.Visibility = Android.Views.ViewStates.Visible;
-				file_data_remember = file_data_remember.Remove(0, 1);
-                AuthResponseData o_data = JsonConvert.DeserializeObject<AuthResponseData>(file_data_remember);
+                Intent registerActivity = new Intent(this, typeof(Auth.RegisterActivity));
+                StartActivity(registerActivity);
+            };
 
-                StaticUser.AddInfoAuth(o_data);
-
-				preloader.Visibility = Android.Views.ViewStates.Gone;
-
-				// Переход на главную страницу.
-				Intent homeActivity = new Intent(this, typeof(Home.HomeActivity));
-                StartActivity(homeActivity);
-                //this.Finish();
-            }
-            else
+            btn_auth.Click += async delegate
             {
-                // Переход к форме регистрации.
-                btn_register.Click += (s, e) =>
+                try
                 {
-                    Intent registerActivity = new Intent(this, typeof(Auth.RegisterActivity));
-                    StartActivity(registerActivity);
-                };
-
-                btn_auth.Click += async delegate
-                {
-                    try
+                    preloader.Visibility = Android.Views.ViewStates.Visible;
+                    // Авторизируюсь клиентом.
+                    string check = "";
+                    if(is_remember.Checked == true)
                     {
-						preloader.Visibility = Android.Views.ViewStates.Visible;
-						// Авторизируюсь клиентом.
-						AuthModel auth = new AuthModel
-                        {
-                            Email = s_login.Text,
-                            Password = s_pass.Text,
-                           
-                        };
+                        check = "1";
 
-                        var myHttpClient = new HttpClient();
-                        var _authHeader = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(Encoding.ASCII.GetBytes(string.Format("{0}:{1}", auth.Email, auth.Password))));
+                    }
+                    else
+                    {
+                        check = "0";
+                    }
+                    AuthModel auth = new AuthModel
+                    {
+                        Email = s_login.Text,
+                        Password = s_pass.Text,
+                        Check = check
+                    };
 
-                        myHttpClient.DefaultRequestHeaders.Authorization = _authHeader;
-                      
-                        var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/auth/login?email=" + auth.Email + "&password="+auth.Password);
+
+
+                    var myHttpClient = new HttpClient();
+                    var _authHeader = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(Encoding.ASCII.GetBytes(string.Format("{0}:{1}", auth.Email, auth.Password))));
+
+                    myHttpClient.DefaultRequestHeaders.Authorization = _authHeader;
+
+                    var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/auth/login?email=" + auth.Email + "&password=" + auth.Password);
                         /*
                         //json структура.
                         var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
@@ -145,27 +157,27 @@ namespace GeoGeometry.Activity.Auth {
                         });
                         */
                         // Поучаю ответ об авторизации [успех или нет]
-                        HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), new StringContent(JsonConvert.SerializeObject(auth),Encoding.UTF8,"application/json"));
+                        HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), new StringContent(JsonConvert.SerializeObject(auth), Encoding.UTF8, "application/json"));
 
-                        string s_result;
-                        using (HttpContent responseContent = response.Content)
-                        {
-                            s_result = await responseContent.ReadAsStringAsync();
-                        }
+                    string s_result;
+                    using (HttpContent responseContent = response.Content)
+                    {
+                        s_result = await responseContent.ReadAsStringAsync();
+                    }
 
-                        AuthApiData<AuthResponseData> o_data = JsonConvert.DeserializeObject<AuthApiData<AuthResponseData>>(s_result);
-                        
+                    AuthApiData<AuthResponseData> o_data = JsonConvert.DeserializeObject<AuthApiData<AuthResponseData>>(s_result);
+
                         //ClearField();
                         if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        if (o_data.Status == "0")
                         {
-                            if (o_data.Status == "0")
-                            {
-                                Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
+                            Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
 
-                                AuthResponseData o_user_data = new AuthResponseData();
-                                o_user_data = o_data.ResponseData;
+                            AuthResponseData o_user_data = new AuthResponseData();
+                            o_user_data = o_data.ResponseData;
 
-                                StaticUser.AddInfoAuth(o_user_data);
+                            StaticUser.AddInfoAuth(o_user_data);
 
                                 //пример ContainerSelection
 
@@ -174,44 +186,43 @@ namespace GeoGeometry.Activity.Auth {
                                 //    await System.Text.Json.JsonSerializer.SerializeAsync<AuthResponseData>(fs, o_user_data);
                                 //}
 
-                                using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
-                                {
+                            using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.OpenOrCreate, FileAccess.Write))
+                            {
                                     // преобразуем строку в байты
-                                    byte[] array = Encoding.Default.GetBytes("0" + JsonConvert.SerializeObject(o_user_data));// 0 связан с запоминанием 
-                                    // запись массива байтов в файл
+                                    byte[] array = Encoding.Default.GetBytes(JsonConvert.SerializeObject(o_user_data));// 0 связан с запоминанием 
+                                                                                                                             // запись массива байтов в файл
                                     file.Write(array, 0, array.Length);
-                                }
+                            }
 
                                 //var role = o_data.ResponseData.Role;
                                 //Начинаю собирать информацию о клиенте
                                 preloader.Visibility = Android.Views.ViewStates.Invisible;
-								// Переход на страницу водителя.
-                                if(o_data.ResponseData.Role == "driver")
-                                {
-                                    Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
-                                    StartActivity(Driver);
-                                    this.Finish();
-                                }
-                                //else if(o_data.ResponseData.Role == "user")
-                                //{
-                                //    Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
-                                //    StartActivity(UserActivity);
-                                //    this.Finish();
-                                //}
-								
-                            }
-                            else
+                                // Переход на страницу водителя.
+                                if (o_data.ResponseData.Role == "driver")
                             {
-                                Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
+                                Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
+                                StartActivity(Driver);
+                                this.Finish();
                             }
-						}
+                            else if (o_data.ResponseData.Role == "user")
+                            {
+                                Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
+                                StartActivity(UserActivity);
+                                this.Finish();
+                            }
+
+                        }
+                        else
+                        {
+                            Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
-                    }
-                };
-            }
+                }
+                catch (Exception ex)
+                {
+                    Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
+                }
+            };
         }
 
         

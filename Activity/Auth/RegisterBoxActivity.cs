@@ -64,8 +64,8 @@ namespace GeoGeometry.Activity.Auth
                 Finish();
             };
 
-            string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
-            string file_data_remember = "0";
+            string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string file_data_remember;
             
 
             btn_registerbox.Click += async delegate

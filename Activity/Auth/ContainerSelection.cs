@@ -24,6 +24,8 @@ using Android.Gms.Common.Apis;
 using System.Xml.Serialization;
 using System.Xml;
 using ServiceStack.Text.Common;
+//using static Android.Bluetooth.BluetoothClass;
+//using Xamarin.Forms;
 
 namespace GeoGeometry.Activity.Auth
 {
@@ -92,14 +94,37 @@ namespace GeoGeometry.Activity.Auth
             btn_back_a = FindViewById<ImageButton>(Resource.Id.btn_back_a);
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
 
-            string dir_path = "/storage/emulated/0/Android/data/GeoGeometry.GeoGeometry/files/";
+            string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            //string file_data_remember;
+            //using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.Open, FileAccess.Read))
+            //{
+            //        // преобразуем строку в байты
+            //        byte[] array = new byte[file.Length];
+            //        // считываем данные
+            //        file.Read(array, 0, array.Length);
+            //        // декодируем байты в строку
+            //        file_data_remember = Encoding.Default.GetString(array);
+            //        file.Close();
+            // }
+
+            var role = StaticUser.UserRole;
+            //AuthResponseData user = JsonConvert.DeserializeObject<AuthResponseData>(file_data_remember);
+
+            if (role == "user")
+            {
+                btn_box_registr.Visibility = ViewStates.Invisible;
+            }
+            else if(role == "driver")
+            {
+                btn_box_registr.Visibility = ViewStates.Visible;
+            }
+
             //string array used for displayling AutoComplete Suggestion   
             /*var names = new string[] { "Anoop", "Arjit", "Akshay", "Ankit", "Rakesh" };
             //Use ArrayAdapter for filling the View in other words AutoCompleteTextView with the list of names(Array).  
             //Use SimpleSpinnerItem(Predefined layout in Android Resources) for displaying the dropdown list  
             ArrayAdapter adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, names);
             box_name1.Adapter = adapter;*/
-
 
             ///////////
             /*SetContentView(Resource.Layout.activity_container_selection);
@@ -258,9 +283,18 @@ namespace GeoGeometry.Activity.Auth
                 //    await System.Text.Json.JsonSerializer.SerializeAsync<ContainerResponse>(ddd, box);
 
                 //}
-                Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
-                Driver.PutExtra("idAction", "2");// через объект идёт обращение к . 
-                StartActivity(Driver);
+                if (role == "driver")
+                {
+                    Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
+                    Driver.PutExtra("idAction", "2");// через объект идёт обращение к . 
+                    StartActivity(Driver);
+                }
+                else
+                {
+                    Intent UserBox = new Intent(this, typeof(Auth.ActivityUserBox));
+                    UserBox.PutExtra("idMethod", "2");// через объект идёт обращение к . 
+                    StartActivity(UserBox);
+                }
 
                 //var box_name = box_name1.Text;
                 //var uri = "http://iot.tmc-centert.ru/api/container/getbox?id=" + id;
@@ -274,9 +308,15 @@ namespace GeoGeometry.Activity.Auth
                 this.Finish();
             };
 
-            
+            btn_back_a.Click += async delegate
+            {
+                Intent ContainerRegisterActivity = new Intent(this, typeof(Auth.RegisterBoxActivity));
+                StartActivity(ContainerRegisterActivity);
+                this.Finish();
+            };
 
-      
+
+
 
         }
         //btn_Submit Click Event  
