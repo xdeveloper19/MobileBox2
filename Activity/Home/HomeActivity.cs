@@ -112,7 +112,8 @@ namespace GeoGeometry.Activity.Home {
 			HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), formContent);
 
 			string s_result;
-			using (HttpContent responseContent = response.Content) {
+			using (HttpContent responseContent = response.Content) 
+            {
 				s_result = await responseContent.ReadAsStringAsync();
 			}
 

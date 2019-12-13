@@ -24,13 +24,14 @@ using Android.Gms.Location;
 using GeoGeometry.Model.GPSLocation;
 using Android.Gms.Maps;
 using static GeoGeometry.Model.Box.SmartBox;
+using Android.Gms.Maps.Model;
 
 namespace GeoGeometry.Activity.Auth
 {
 
     [Activity(Label = "DriverActivity")]
 
-    public class DriverActivity : AppCompatActivity
+    public class DriverActivity : AppCompatActivity, IOnMapReadyCallback
     {
 
         private Button btn_exit_;
@@ -83,6 +84,8 @@ namespace GeoGeometry.Activity.Auth
 
         private ProgressBar preloader;
 
+        GoogleMap _googleMap;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -113,6 +116,9 @@ namespace GeoGeometry.Activity.Auth
             s_date_time = FindViewById<EditText>(Resource.Id.s_date_time);
             s_payment = FindViewById<EditText>(Resource.Id.s_payment);
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
+            
+            MapFragment mapFragment = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.fragmentMap);
+            mapFragment.GetMapAsync(this);
 
             s_signal_strength.Focusable = false;
             s_signal_strength.LongClickable = false;
@@ -123,9 +129,7 @@ namespace GeoGeometry.Activity.Auth
             s_open_close_container.Focusable = false;
             s_open_close_container.LongClickable = false;
             s_lock_unlock_door.Focusable = false;
-            s_lock_unlock_door.LongClickable = false;
-            s_pin_access_code.Focusable = false;
-            s_pin_access_code.LongClickable = false;
+            s_lock_unlock_door.LongClickable = false;           
             s_payment.Focusable = false;
             s_payment.LongClickable = false;
             s_date_time.Focusable = false;
@@ -201,6 +205,12 @@ namespace GeoGeometry.Activity.Auth
                 }
             };
 
+            btn_transfer_access.Click += async delegate
+                {
+                    Intent mapActivity = new Intent(this, typeof(Auth.DriverActivity));
+                    StartActivity(mapActivity);
+                };
+
             //изменение состояния контейнера
             btn_open_close_container.Click += async delegate
             {
@@ -258,6 +268,7 @@ namespace GeoGeometry.Activity.Auth
                     StaticBox.Light = Convert.ToInt32(s_light.Text);
                     StaticBox.Wetness = Convert.ToDouble(s_humidity.Text);
                     StaticBox.Code = s_pin_access_code.Text;
+                    StaticBox.Name = container_name.Text;
                     StaticBox.IsOpenedBox = (s_open_close_container.Text == "раскрыт") ? true : false;
                     //Situation = s_situation.Text,
                     StaticBox.IsOpenedDoor = (s_lock_unlock_door.Text == "разблокирована") ? true : false;
@@ -267,6 +278,7 @@ namespace GeoGeometry.Activity.Auth
                     {
                         Id = StaticBox.SmartBoxId,
                         Temperature = StaticBox.Temperature,
+                        Name = StaticBox.Name,
                         Weight = StaticBox.Weight,
                         Light = StaticBox.Light,
                         Wetness = StaticBox.Wetness,
@@ -296,10 +308,12 @@ namespace GeoGeometry.Activity.Auth
 
                     var myHttpClient = new HttpClient();
 
-                    var uri = ("http://iot-tmc-cen.1gb.ru/api/container/editbox?id=" + container.Id +"&IsOpenedBox="+ container.IsOpenedBox + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower + "&BoxState=" + container.BoxState);
+                    var uri = ("http://iot-tmc-cen.1gb.ru/api/container/editbox?id=" + container.Id +"&IsOpenedBox="+ container.IsOpenedBox + "&Name=" + container.Name + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower + "&BoxState=" + container.BoxState);
+                    var uri2 = ("http://81.177.136.11:8003/sensor?id=" + container.Id + "&IsOpenedBox=" + container.IsOpenedBox + "&Name=" + container.Name + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower + "&BoxState=" + container.BoxState);
 
 
                     HttpResponseMessage response = await myHttpClient.PutAsync(uri.ToString(), new StringContent(JsonConvert.SerializeObject(container), Encoding.UTF8, "application/json"));
+                    HttpResponseMessage responseFromAnotherServer = await myHttpClient.PutAsync(uri2.ToString(), new StringContent(JsonConvert.SerializeObject(container), Encoding.UTF8, "application/json"));
 
                     AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
 
@@ -307,6 +321,12 @@ namespace GeoGeometry.Activity.Auth
                     using (HttpContent responseContent = response.Content)
                     {
                         s_result = await responseContent.ReadAsStringAsync();
+                    }
+
+                    string s_result_from_server;
+                    using (HttpContent responseContent = responseFromAnotherServer.Content)
+                    {
+                        s_result_from_server = await responseContent.ReadAsStringAsync();
                     }
 
                     o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
@@ -327,6 +347,7 @@ namespace GeoGeometry.Activity.Auth
 
             btn_exit_.Click += async delegate
             {
+                File.Delete(dir_path + "user_data.txt");              
                 ClearField();
                 Intent ActivityMain = new Intent(this, typeof(MainActivity));
                 StartActivity(ActivityMain);
@@ -438,6 +459,32 @@ namespace GeoGeometry.Activity.Auth
         LocationRequest locationRequest;
         LocationCallback locationCallback;
 
+
+        public void OnMapReady(GoogleMap googleMap)
+        {
+            _googleMap = googleMap;////11111
+
+            MarkerOptions markerOptions = new MarkerOptions();
+            LatLng location = new LatLng(StaticBox.Latitude, StaticBox.Longitude);
+            markerOptions.SetPosition(location);
+            markerOptions.SetTitle("Я здесь");
+            googleMap.AddMarker(markerOptions);
+
+            CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
+            builder.Target(location);
+            builder.Zoom(18);
+            builder.Bearing(0);
+            builder.Tilt(65);
+
+            CameraPosition cameraPosition = builder.Build();
+            CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
+
+            googleMap.UiSettings.ZoomControlsEnabled = true;
+            googleMap.UiSettings.CompassEnabled = true;
+            googleMap.MoveCamera(cameraUpdate);
+
+            
+        }
         private void BuildLocationCallBack()
         {
             locationCallback = new DriverLocationCallBack(this);
@@ -471,32 +518,35 @@ namespace GeoGeometry.Activity.Auth
             {
                 base.OnLocationResult(result);
 
-                StaticBox.Latitude = result.LastLocation.Latitude;
-                StaticBox.Longitude = result.LastLocation.Longitude;
-                StaticBox.Signal = 0;
-                StaticBox.Date = DateTime.Now;
-
-                s_longitude.Text = result.LastLocation.Latitude.ToString();
-                s_latitude.Text = result.LastLocation.Longitude.ToString();
-                s_date_time.Text = DateTime.Now.ToString();
-                s_signal_strength.Text = "Хороший";
-
-                // Получаю информацию о клиенте.
-                BoxLocation gpsLocation = new BoxLocation
+                try
                 {
-                    id = StaticBox.SmartBoxId,
-                    lat1 = StaticBox.Latitude,
-                    lon1 = StaticBox.Longitude,
-                    signal = StaticBox.Signal,
-                    date = StaticBox.Date
-                };
+                    StaticBox.Latitude = result.LastLocation.Latitude;
+                    StaticBox.Longitude = result.LastLocation.Longitude;
+                    StaticBox.Signal = 0;
+                    StaticBox.Date = DateTime.Now;
+
+                    s_longitude.Text = result.LastLocation.Latitude.ToString();
+                    s_latitude.Text = result.LastLocation.Longitude.ToString();
+                    s_date_time.Text = DateTime.Now.ToString();
+                    s_signal_strength.Text = "Хороший";
+
+                    // Получаю информацию о клиенте.
+                    BoxLocation gpsLocation = new BoxLocation
+                    {
+                        id = StaticBox.SmartBoxId,
+                        lat1 = StaticBox.Latitude,
+                        lon1 = StaticBox.Longitude,
+                        signal = StaticBox.Signal,
+                        date = StaticBox.Date
+                    };
 
 
 
-                var myHttpClient = new HttpClient();
-                var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/container/setcontainerlocation?id=" + gpsLocation.id + "&lat1=" + gpsLocation.lat1 + "&lon1=" + gpsLocation.lon1 + "&signal=" + gpsLocation.signal + "&date=" + gpsLocation.date);
-                //json структура.
-                var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
+                    var myHttpClient = new HttpClient();
+                    var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/container/setcontainerlocation?id=" + gpsLocation.id + "&lat1=" + gpsLocation.lat1 + "&lon1=" + gpsLocation.lon1 + "&signal=" + gpsLocation.signal + "&date=" + gpsLocation.date);
+                    var uri2 = new Uri("http://81.177.136.11:8003/geo?id=" + gpsLocation.id + "&lat1=" + gpsLocation.lat1 + "&lon1=" + gpsLocation.lon1 + "&signal=" + gpsLocation.signal + "&date=" + gpsLocation.date);
+                    //json структура.
+                    var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
             {
                 { "Id", gpsLocation.id },
                 { "Lon1", gpsLocation.lon1.ToString()},
@@ -505,16 +555,30 @@ namespace GeoGeometry.Activity.Auth
                 { "Date", DateTime.Now.ToString()}
             });
 
-                HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), formContent);
-                AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
+                    HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), formContent);
+                    HttpResponseMessage responseFromAnotherServer = await myHttpClient.PostAsync(uri2.ToString(), new StringContent(JsonConvert.SerializeObject(gpsLocation), Encoding.UTF8, "application/json"));
+                    AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
 
-                string s_result;
-                using (HttpContent responseContent = response.Content)
-                {
-                    s_result = await responseContent.ReadAsStringAsync();
+                    string s_result;
+                    using (HttpContent responseContent = response.Content)
+                    {
+                        s_result = await responseContent.ReadAsStringAsync();
+                    }
+
+                    string s_result_from_another_server;
+                    using (HttpContent responseContent = responseFromAnotherServer.Content)
+                    {
+                        s_result_from_another_server = await responseContent.ReadAsStringAsync();
+                    }
+
+                    o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
                 }
-
-                o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
+                catch (Exception ex)
+                {
+                    
+                    throw;
+                }
+                
 
             }
         }

@@ -27,6 +27,10 @@ namespace GeoGeometry.Model.Box
         public double Wetness { get; set; }
         public double BatteryPower { get; set; }
 
+        public string Payment { get; set; }
+        
+        public string Cost { get; set; }
+
         public ContainerState BoxState { get; set; }
         //public ContainerState Situation { get; set; }
         //public enum ContainerState

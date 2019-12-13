@@ -105,6 +105,7 @@ namespace GeoGeometry.Container
         //крч здесь заполнишь все значения сам
         public static void AddInfoBox(BoxDataResponse boxData)
         {
+            //Name = boxData.Name;
             SmartBoxId = boxData.Id;
             IsOpenedDoor = boxData.IsOpenedBox;
             Weight = boxData.Weight;

@@ -22,11 +22,13 @@ using GeoGeometry.Model;
 using static GeoGeometry.Model.Box.SmartBox;
 using Android.Gms.Location;
 using GeoGeometry.Model.GPSLocation;
+using Android.Gms.Maps;
+using Android.Gms.Maps.Model;
 
 namespace GeoGeometry.Activity.Auth
 {
     [Activity(Label = "ActivityUserBox")]
-    class ActivityUserBox : AppCompatActivity
+    class ActivityUserBox : AppCompatActivity, IOnMapReadyCallback
     {
         private Button btn_exit_;
 
@@ -62,11 +64,11 @@ namespace GeoGeometry.Activity.Auth
 
         private static EditText s_latitude;
 
-        private static EditText s_payment;
-
-        private string a_situation;
+        private static EditText s_payment;      
 
         private ProgressBar preloader;
+
+        GoogleMap _googleMap;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -96,34 +98,35 @@ namespace GeoGeometry.Activity.Auth
             s_longitude = FindViewById<EditText>(Resource.Id.s_longitude);
             s_latitude = FindViewById<EditText>(Resource.Id.s_latitude);
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
+            MapFragment mapFragment = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.fragmentMap);
+            mapFragment.GetMapAsync(this);
 
-
-            //s_user.Focusable = false;
-            //s_user.LongClickable = false;
-            //container_name.Focusable = false;
-            //container_name.LongClickable = false;
-            //s_latitude.Focusable = false;
-            //s_latitude.LongClickable = false;
-            //s_longitude.Focusable = false;
-            //s_longitude.LongClickable = false;
-            //s_payment.Focusable = false;
-            //s_payment.LongClickable = false;
-            //s_cost.Focusable = false;
-            //s_cost.LongClickable = false;
-            //s_situation_loaded_container.Focusable = false;
-            //s_situation_loaded_container.LongClickable = false;
-            //s_pin_access_code.Focusable = false;
-            //s_pin_access_code.LongClickable = false;
-            //s_lock_unlock_door.Focusable = false;
-            //s_lock_unlock_door.LongClickable = false;
-            //s_weight.Focusable = false;
-            //s_weight.LongClickable = false;
-            //s_temperature.Focusable = false;
-            //s_temperature.LongClickable = false;
-            //s_light.Focusable = false;
-            //s_light.LongClickable = false;
-            //s_humidity.Focusable = false;
-            //s_humidity.LongClickable = false;
+            container_name.Focusable = false;
+            container_name.LongClickable = false;
+            s_user.Focusable = false;
+            s_user.LongClickable = false;
+            s_latitude.Focusable = false;
+            s_latitude.LongClickable = false;
+            s_longitude.Focusable = false;
+            s_longitude.LongClickable = false;
+            s_payment.Focusable = false;
+            s_payment.LongClickable = false;
+            s_cost.Focusable = false;
+            s_cost.LongClickable = false;
+            s_situation_loaded_container.Focusable = false;
+            s_situation_loaded_container.LongClickable = false;
+            s_pin_access_code.Focusable = false;
+            s_pin_access_code.LongClickable = false;
+            s_lock_unlock_door.Focusable = false;
+            s_lock_unlock_door.LongClickable = false;
+            s_weight.Focusable = false;
+            s_weight.LongClickable = false;
+            s_temperature.Focusable = false;
+            s_temperature.LongClickable = false;
+            s_light.Focusable = false;
+            s_light.LongClickable = false;
+            s_humidity.Focusable = false;
+            s_humidity.LongClickable = false;
 
             string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 
@@ -149,29 +152,37 @@ namespace GeoGeometry.Activity.Auth
             //var telephonyManager = (TelephonyManager)GetSystemService(Context.TelephonyService);
             //var signalStrengthListener = new SignalStrength();
             //_getGsmSignalStrengthButton.Click += DisplaySignalStrength;
-            string id_page = Intent.GetStringExtra("idMethod");// !!!
-            switch (id_page)
-            {
-                case "1":
-                case "2": //Получение инфы контейнера
-                    {
-                        GetInfoAboutBox(dir_path);// метод получения данных с контейнера 
-                    }
-                    break;
-                case "3":
-                    {
+            //string id_page = Intent.GetStringExtra("idMethod");// !!!
+            //switch (id_page)
+            //{
+            //    case "1":
+            //    case "2": //Получение инфы контейнера
+            //        {
+            //            GetInfoAboutBox(dir_path);// метод получения данных с контейнера 
+            //        }
+            //        break;
+            //    case "3":
+            //        {
 
-                    }
-                    break;
-            }
+            //        }
+            //        break;
+            //}
 
-
+            
             btn_change_order.Click += async delegate
             {
                 try
                 {
                     Intent ContainerSelectionActivty = new Intent(this, typeof(Auth.ContainerSelection));
                     StartActivity(ContainerSelectionActivty);
+                    //s_temperature.Text = "****";
+                    //s_light.Text = "****";
+                    //s_humidity.Text = "****";
+                    //s_weight.Text = "****";
+                    //s_pin_access_code.Text = "****";
+                    //s_lock_unlock_door.Text = "****";
+                    //s_cost.Text = "1000";
+                    //s_payment.Text = "Не оплачено";
 
                 }
                 catch (Exception ex)
@@ -180,10 +191,54 @@ namespace GeoGeometry.Activity.Auth
                 }
             };
 
+            //изменение состояния дверей
+            btn_lock_unlock_door.Click += async delegate
+            {
+                if(s_payment.Text == "Оплачено")
+                {
+                    try
+                    {
+                        if (s_lock_unlock_door.Text == "заблокирована")
+                            s_lock_unlock_door.Text = "разблокирована";
+                        else
+                            s_lock_unlock_door.Text = "заблокирована";
+                    }
+                    catch (Exception ex)
+                    {
+                        Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
+                    }
+                }
+                else
+                {
+                    Toast.MakeText(this, "Не произведена оплата", ToastLength.Long).Show();
+                }                
+            };
+
+            btn_pay.Click += async delegate
+            {
+                if(s_payment.Text != "Оплачено")
+                {
+                    if (s_cost.Text == "1000")
+                    {
+                        s_payment.Text = "Оплачено";
+                        Toast.MakeText(this, "Оплата произведена", ToastLength.Long).Show();
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "Контейнер не выбран", ToastLength.Long).Show();
+                    }
+                }
+                else
+                {
+                    Toast.MakeText(this, "Оплата уже была произведена", ToastLength.Long).Show();
+                }
+                
+            };
 
 
             btn_exit_.Click += async delegate
             {
+                File.Delete(dir_path + "user_data.txt");
                 ClearField();
                 Intent ActivityMain = new Intent(this, typeof(MainActivity));
                 StartActivity(ActivityMain);
@@ -192,8 +247,30 @@ namespace GeoGeometry.Activity.Auth
             
 
         }
-        
 
+        public void OnMapReady(GoogleMap googleMap)
+        {
+            _googleMap = googleMap;////11111
+
+            MarkerOptions markerOptions = new MarkerOptions();
+            LatLng location = new LatLng(StaticBox.Latitude, StaticBox.Longitude);
+            markerOptions.SetPosition(location);
+            markerOptions.SetTitle("Я здесь");
+            googleMap.AddMarker(markerOptions);
+
+            CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
+            builder.Target(location);
+            builder.Zoom(18);
+            builder.Bearing(0);
+            builder.Tilt(65);
+
+            CameraPosition cameraPosition = builder.Build();
+            CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
+
+            googleMap.UiSettings.ZoomControlsEnabled = true;
+            googleMap.UiSettings.CompassEnabled = true;
+            googleMap.MoveCamera(cameraUpdate);
+        }
         private async void GetInfoAboutBox(string dir_path)
         {
             try
@@ -221,6 +298,9 @@ namespace GeoGeometry.Activity.Auth
 
                 container = JsonConvert.DeserializeObject<ContainerResponse>(file_data_remember);
 
+                string name = container.Name;//!!!!
+                
+
                 var myHttpClient = new HttpClient();
 
                 var uri = new Uri("http://iot.tmc-centert.ru/api/container/getbox?id=" + container.SmartBoxId);
@@ -245,31 +325,44 @@ namespace GeoGeometry.Activity.Auth
 
                         StaticBox.AddInfoBox(exported_data);
                         //добавляем инфу о найденном контейнере
-                        container_name.Text = container.Name;
+                        //container_name.Text = exported_data.Name.ToString();
+                        container_name.Text = name;
+                        
                         s_temperature.Text = exported_data.Temperature.ToString();
                         s_light.Text = exported_data.Light.ToString();
                         s_humidity.Text = exported_data.Wetness.ToString();
                         s_weight.Text = exported_data.Weight.ToString();
-                        s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : exported_data.Code;// !!!!
+                        s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : exported_data.Code;// !!!!                        
+                        if(exported_data.IsOpenedDoor.ToString() == "true")
+                        {
+                            s_lock_unlock_door.Text = "Открыта";
+                        }
+                        else
+                        {
+                            s_lock_unlock_door.Text = "Закрыта";
+                        }
+                        s_cost.Text = "1000";
+                        s_payment.Text = "Не оплачено";
+
 
                         //var boxState = s_open_close_container.Text;
                         //var doorState = s_lock_unlock_door.Text;
 
                         if (exported_data.BoxState == ContainerState.onBase)
                         {
-                            a_situation = "На складе";
+                            s_situation_loaded_container.Text = "На складе";
                         }
                         else if (exported_data.BoxState == ContainerState.onCar)
                         {
-                            a_situation = "На автомобиле";
+                            s_situation_loaded_container.Text = "На автомобиле";
                         }
                         else if (exported_data.BoxState == ContainerState.onConsignee)
                         {
-                            a_situation = "Выгруженным у грузоотправителя";
+                            s_situation_loaded_container.Text = "Выгруженным у грузоотправителя";
                         }
                         else if (exported_data.BoxState == ContainerState.onShipper)
                         {
-                            a_situation = "После разгрузки у грузополучателя";
+                            s_situation_loaded_container.Text = "После разгрузки у грузополучателя";
                         }                     
                     }
                     else
@@ -291,7 +384,7 @@ namespace GeoGeometry.Activity.Auth
         LocationCallback locationCallback;
         private void BuildLocationCallBack()
         {
-            locationCallback = new DriverLocationCallBack(this);
+            locationCallback = new AuthLocationCallBack(this);
         }
 
         private void BuildLocationRequest()
@@ -304,28 +397,58 @@ namespace GeoGeometry.Activity.Auth
         }
 
 
-        internal class DriverLocationCallBack : LocationCallback // !!!!
+        internal class AuthLocationCallBack : LocationCallback // !!!!
         {
             private ActivityUserBox activityUserBoxy;
 
-            public DriverLocationCallBack(ActivityUserBox activityUserBoxy)
+            public AuthLocationCallBack(ActivityUserBox activityUserBoxy)
             {
                 this.activityUserBoxy = activityUserBoxy;
             }
 
-            public override void OnLocationResult(LocationResult result)
+            public override async void OnLocationResult(LocationResult result)
             {
                 base.OnLocationResult(result);
 
                 StaticBox.Latitude = result.LastLocation.Latitude;
                 StaticBox.Longitude = result.LastLocation.Longitude;
-                StaticBox.Signal = 0;
-                StaticBox.Date = DateTime.Now;
 
                 s_longitude.Text = result.LastLocation.Latitude.ToString();
                 s_latitude.Text = result.LastLocation.Longitude.ToString();
+
+                BoxLocation gpsLocation = new BoxLocation
+                {
+                    id = StaticBox.SmartBoxId,
+                    lat1 = StaticBox.Latitude,
+                    lon1 = StaticBox.Longitude,                   
+                };
+
+
+
+                var myHttpClient = new HttpClient();
+                var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/container/setcontainerlocation?id=" + gpsLocation.id + "&lat1=" + gpsLocation.lat1 + "&lon1=" + gpsLocation.lon1);
+                //json структура.
+                var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            {
+                { "Id", gpsLocation.id },
+                { "Lon1", gpsLocation.lon1.ToString()},
+                { "Lat1", gpsLocation.lat1.ToString()},              
+            });
+
+                HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), formContent);
+                AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
+
+                string s_result;
+                using (HttpContent responseContent = response.Content)
+                {
+                    s_result = await responseContent.ReadAsStringAsync();
+                }
+
+                o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
             }
         }
+
+
 
         void ClearField()
         {

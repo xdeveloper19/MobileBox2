@@ -11,7 +11,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.login.LoginActivity">
 
-    <ScrollView
+     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
         <RelativeLayout
@@ -29,117 +29,86 @@
                     android:id="@+id/textUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="14dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="10dp"
                     android:text="Вы вошли как:"
                     android:textSize="15sp"
-                    android:layout_marginStart="-6dp"
-                    android:layout_marginLeft="-6dp"
+                   
                     />
 
                 <EditText
                     android:id="@+id/s_user"
                     android:layout_width="83dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="9dp"
-                    android:layout_marginStart="9dp"
+                   
                     android:layout_toEndOf="@+id/textUser"
                     android:layout_toRightOf="@+id/textUser"
                     android:inputType="text"
-                    android:padding="15dp"
+                    android:padding="12dp"
                     android:text="Клиент"
                     android:textSize="9sp"
-                   />
+                    android:gravity="center"
+                    />
 
 
                 <Button
                     android:id="@+id/btn_exit_"
-                    android:layout_width="70dp"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginLeft="9dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="6dp"
                     android:layout_toEndOf="@+id/s_user"
                     android:layout_toRightOf="@+id/s_user"
                     android:text="Выйти"
                     android:background="@color/colorMainBlue"
                     android:textColor="@color/colorMainLightBlue"
-                    android:textSize="6sp"
-                    android:layout_marginRight="5.0dp"
-                    android:layout_marginEnd="5.0dp" />
+                    android:textSize="8sp"
+                  />
 
                 <TextView
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
                     android:layout_below="@+id/textUser"
                     android:layout_marginTop="0dp"
-                    android:layout_marginLeft="-6dp"
-                    android:layout_marginStart="-6dp"
-                    android:padding="14dp"
-                    android:text="I№ заказа:"
+                 
+                    android:padding="10dp"
+                    android:text="Имя контейнера:"
                     android:textSize="15sp"
-                     />
+                    />
 
                 <EditText
-                    android:id="@+id/s_order_number"
-                    android:layout_width="84dp"
+                    android:id="@+id/container_name"
+                    android:layout_width="83dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/s_user"
-                    android:layout_marginStart="37dp"
-                    android:layout_marginLeft="37dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="-6dp"
                     android:layout_toEndOf="@+id/text1"
                     android:layout_toRightOf="@+id/text1"
+                    android:gravity="center"
                     android:inputType="text"
                     android:padding="15dp"
-                    android:textSize="11sp" />
+                    android:textSize="9sp" />
 
                 <Button
                     android:id="@+id/btn_change_order"
-                    android:layout_width="70dp"
-                    android:layout_height="28dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
                     android:layout_below="@+id/btn_exit_"
-                    android:layout_marginStart="7.1dp"
-                    android:layout_marginLeft="7.1dp"
-                    android:layout_marginTop="21dp"
-                    android:layout_toEndOf="@+id/s_order_number"
-                    android:layout_toRightOf="@+id/s_order_number"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_toEndOf="@+id/container_name"
+                    android:layout_toRightOf="@+id/container_name"
                     android:background="@color/colorMainBlue"
-                    android:padding="10dp"
                     android:text="Другой заказ"
                     android:textColor="@color/colorMainLightBlue"
-                    android:textSize="6sp"
+                    android:textSize="8sp"
                     tools:ignore="SmallSp" />
 
-                <TextView
-                    android:id="@+id/text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text1"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginLeft="-6dp"
-                    android:layout_marginStart="-6dp"
-                    android:padding="14dp"
-                    android:text="Состояние:"
-                    android:textSize="15sp"
-                     />
 
-                <Spinner
-                    android:id="@+id/s_situation"
-                    android:layout_width="208.5dp"
-                    android:layout_height="43.5dp"
-                    android:layout_below="@+id/s_order_number"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="6.0dp"
-                    android:layout_toEndOf="@+id/text2"
-                    android:layout_toRightOf="@+id/text2"
-                    android:entries="@array/a_situation_loaded_container"
-                    android:inputType="text"
-                    android:padding="12dp"
-                    android:spinnerMode="dialog"
-                    android:textSize="9sp" />
 
             </RelativeLayout>
             <RelativeLayout
@@ -154,11 +123,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:layout_marginLeft="100dp"
-                    android:padding="14dp"
+                    android:layout_marginLeft="95dp"
+                    android:padding="10dp"
                     android:text="Текущее положение"
                     android:textSize="15sp"
                     android:layout_marginStart="100dp" />
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/fragmentMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/Text1"
+                    android:layout_above="@+id/fragmentMainMenu"
+                    class="com.google.android.gms.maps.MapFragment"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -166,29 +144,36 @@
                     android:id = "@+id/Text2"
                     android:textSize="15sp"
                     android:layout_marginTop="0dp"
-                    android:layout_marginLeft="-6dp"
-                    android:padding="14dp"
+                    android:padding="10dp"
+                    android:gravity="left"
                     android:text = "Координаты:"
-                    android:layout_below = "@+id/Text1"
-                    android:layout_marginStart="-6dp" />
+                    android:layout_below = "@+id/fragmentMap" />
                 <EditText
                     android:inputType="number"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/s_longitude"
                     android:layout_toRightOf = "@+id/Text2"
-                    android:layout_below = "@+id/Text1"
+                    android:layout_marginTop="8dp"
+                    android:layout_below = "@+id/fragmentMap"
                     android:padding="10dp"
-                    android:layout_toEndOf="@+id/Text2" />
+                    android:layout_toEndOf="@+id/Text2"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    />
                 <EditText
                     android:inputType="number"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/s_latitude"
                     android:layout_toRightOf = "@+id/s_longitude"
-                    android:layout_below = "@+id/Text1"
+                    android:layout_below = "@+id/fragmentMap"
                     android:padding="10dp"
-                    android:layout_toEndOf="@+id/s_longitude" />
+                    android:layout_toEndOf="@+id/s_longitude"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -196,12 +181,11 @@
                     android:id = "@+id/Text3"
                     android:textSize="15sp"
                     android:layout_marginTop="0dp"
-                    android:layout_marginLeft="-6dp"
-                    android:layout_marginStart="-6dp"
-                    android:padding="14dp"
+                    android:padding="10dp"
+                    android:gravity="left"
                     android:text = "Данные отобразятся после оплаты и прибытия контейнера к месту прибытия"
                     android:layout_below = "@+id/Text2"
-                     />
+                    />
             </RelativeLayout>
 
             <RelativeLayout
@@ -215,9 +199,10 @@
                     android:id="@+id/TEXT"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="-6dp"
-                    android:layout_marginLeft="-6dp"
-                    android:padding="14dp"
+                    android:layout_marginStart="-10dp"
+                    android:layout_marginLeft="-10dp"
+                    android:padding="10dp"
+                    android:gravity="left"
                     android:text="Стоимость:"
                     android:textSize="15sp" />
 
@@ -230,19 +215,22 @@
                     android:layout_toEndOf="@+id/TEXT"
                     android:padding="10dp"
                     android:layout_marginStart="-10dp"
-                    android:layout_marginLeft="-10dp"/>
+                    android:layout_marginLeft="-10dp"
+                    android:layout_marginTop="3dp"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    />
 
                 <Button
                     android:id="@+id/btn_pay"
-                    android:layout_width="70dp"
-                    android:layout_height="28dp"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
                     android:layout_marginStart="1dp"
                     android:layout_marginLeft="1dp"
                     android:layout_marginTop="10dp"
                     android:layout_toEndOf="@+id/s_cost"
                     android:layout_toRightOf="@+id/s_cost"
                     android:background="@color/colorMainBlue"
-                    android:padding="10dp"
                     android:text="Оплатить"
                     android:textColor="@color/colorMainLightBlue"
                     android:textSize="6sp" />
@@ -253,22 +241,26 @@
                     android:text = "Статус:"
                     android:id = "@+id/TEXT1"
                     android:textSize="15sp"
-                    android:padding="14dp"
-                    android:layout_marginStart="-10dp"
-                    android:layout_marginLeft="-10dp"
+                    android:padding="10dp"
+                    android:layout_marginStart="-5dp"
+                    android:layout_marginLeft="-5dp"
                     android:layout_toRightOf = "@+id/btn_pay"
                     android:layout_toEndOf="@+id/btn_pay" />
 
                 <EditText
                     android:inputType="text"
-                    android:layout_width="60dp"
-                    android:layout_height="43dp"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/s_payment"
                     android:layout_toRightOf = "@+id/TEXT1"
                     android:layout_toEndOf="@+id/TEXT1"
                     android:layout_marginStart="-10dp"
                     android:layout_marginLeft="-10dp"
-                    android:layout_marginTop="1dp"/>
+                    android:layout_marginTop="3dp"
+                    android:textSize="9sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -276,21 +268,22 @@
                     android:text = "Ваш PIN-код доступа:"
                     android:id = "@+id/TEXT2"
                     android:textSize="15sp"
-                    android:padding="14dp"
+                    android:padding="10dp"
                     android:layout_below = "@+id/TEXT"
                     android:layout_marginStart="60dp"
                     android:layout_marginLeft="60dp"
                     />
 
                 <EditText
-                    android:inputType="text"
+                    android:inputType="number"
                     android:layout_width="60dp"
-                    android:layout_height="55dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/s_pin_access_code"
                     android:layout_toRightOf = "@+id/TEXT2"
                     android:layout_below = "@+id/btn_pay"
-                    android:textSize="15sp"
-                    android:padding="14dp"
+                    android:textSize="9sp"
+                    android:padding="17dp"
+                    android:gravity="center"
                     android:layout_toEndOf="@+id/TEXT2" />
 
                 <TextView
@@ -299,40 +292,40 @@
                     android:text = "Дверь:"
                     android:id = "@+id/TEXT3"
                     android:textSize="15sp"
-                    android:padding="14dp"
-                    android:layout_marginStart="-6dp"
-                    android:layout_marginLeft="-6dp"
+                    android:padding="10dp"
+                    android:gravity="left"
                     android:layout_below = "@+id/TEXT2"
                     />
 
                 <EditText
                     android:id="@+id/s_lock_unlock_door"
-                    android:layout_width="60dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/TEXT2"
-                    android:layout_marginStart="45dp"
-                    android:layout_marginLeft="45dp"
-                    android:layout_marginTop="0dp"
+                    android:layout_marginTop="3dp"
                     android:layout_toEndOf="@+id/TEXT3"
                     android:layout_toRightOf="@+id/TEXT3"
-                    android:inputType="text"
-                    android:padding="10dp" />
+                    android:inputType="number"
+                    android:textSize="9sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    />
 
                 <Button
                     android:id="@+id/btn_lock_unlock_door"
-                    android:layout_width="116dp"
-                    android:layout_height="32dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
                     android:layout_below="@+id/s_pin_access_code"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="6dp"
+                    android:padding="5dp"
                     android:layout_toEndOf="@+id/s_lock_unlock_door"
                     android:layout_toRightOf="@+id/s_lock_unlock_door"
                     android:background="@color/colorMainBlue"
-                    android:padding="8dp"
                     android:text="Разблокировать/Заблокировать"
                     android:textColor="@color/colorMainLightBlue"
-                    android:textSize="6sp" />
+                    android:textSize="8sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -341,47 +334,82 @@
                     android:id="@+id/TEXT4"
                     android:layout_below = "@+id/TEXT3"
                     android:textSize="15sp"
-                    android:padding="14dp"
-                    android:layout_marginStart="-6dp"
-                    android:layout_marginLeft="-6dp"
+                    android:padding="10dp"
+                    android:gravity="left"
+                    android:layout_marginTop="6dp"
                     />
 
                 <EditText
                     android:id="@+id/s_weight"
                     android:layout_width="60dp"
-                    android:layout_height="55dp"
-                    android:layout_below="@+id/btn_lock_unlock_door"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginLeft="22dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/s_lock_unlock_door"
                     android:layout_toEndOf="@+id/TEXT4"
                     android:layout_toRightOf="@+id/TEXT4"
-                    android:padding="13dp" />
+                    android:textSize="9sp"
+                    android:padding="17dp"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
 
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id = "@+id/kg"
+                    android:layout_below="@+id/s_lock_unlock_door"
+                    android:gravity="center"
+                    android:layout_marginLeft="-10dp"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:maxLength = "6"
+                    android:layout_toEndOf="@+id/s_weight"
+                    android:layout_toRightOf="@+id/s_weight"
+                    android:layout_marginTop="5dp"
+                    android:text="кг"
+
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text = "Темп.:"
                     android:id="@+id/Temperatur"
-                    android:layout_toRightOf = "@+id/s_weight"
                     android:layout_below = "@+id/btn_lock_unlock_door"
                     android:textSize="15sp"
-                    android:padding="14dp"
-                    android:layout_toEndOf="@+id/s_weight"
+                    android:padding="10dp"
+                    android:layout_toEndOf="@+id/kg"
+                    android:layout_toRightOf = "@+id/kg"
                     android:layout_marginStart="-10dp"
                     android:layout_marginLeft="-10dp"
-                    android:layout_marginTop="9.5dp"/>
+                    android:layout_marginTop="17dp"/>
                 <EditText
-                    android:inputType="text"
                     android:layout_width="60dp"
-                    android:layout_height="55dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/s_temperature"
                     android:layout_toRightOf = "@+id/Temperatur"
                     android:layout_below = "@+id/btn_lock_unlock_door"
-                    android:padding="13dp"
-                    android:layout_marginStart="-5dp"
-                    android:layout_marginLeft="-5dp"
-                    android:layout_toEndOf="@+id/Temperatur" />
+                    android:textSize="9sp"
+                    android:padding="21dp"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:layout_toEndOf="@+id/Temperatur"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id = "@+id/grad"
+                    android:layout_below="@+id/btn_lock_unlock_door"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_marginTop="13dp"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:layout_toEndOf="@+id/s_temperature"
+                    android:layout_toRightOf="@+id/s_temperature"
+                    android:text="°C"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -390,9 +418,8 @@
                     android:id="@+id/TEXT5"
                     android:layout_below = "@+id/TEXT4"
                     android:textSize="15sp"
-                    android:padding="14dp"
-                    android:layout_marginStart="-6dp"
-                    android:layout_marginLeft="-6dp"
+                    android:padding="10dp"
+                    android:gravity="left"
                     />
 
                 <EditText
@@ -400,13 +427,13 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/s_weight"
-                    android:layout_marginStart="-4dp"
-                    android:layout_marginLeft="-4dp"
-                    android:layout_marginTop="-6dp"
                     android:layout_toEndOf="@+id/TEXT5"
                     android:layout_toRightOf="@+id/TEXT5"
                     android:inputType="text"
-                    android:padding="15dp" />
+                    android:padding="13dp"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -416,22 +443,39 @@
                     android:layout_toRightOf = "@+id/s_light"
                     android:layout_below = "@+id/Temperatur"
                     android:textSize="15sp"
-                    android:padding="14dp"
+                    android:padding="10dp"
                     android:layout_marginStart="-10dp"
                     android:layout_marginLeft="-10dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="0dp"
                     android:layout_toEndOf="@+id/s_light" />
                 <EditText
-                    android:inputType="text"
+                   
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/s_humidity"
                     android:layout_toRightOf = "@+id/Vlazhnost"
                     android:layout_below = "@+id/s_temperature"
                     android:padding="13dp"
-                    android:layout_marginStart="-5dp"
-                    android:layout_marginLeft="-5dp"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
                     android:layout_toEndOf="@+id/Vlazhnost" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id = "@+id/prozW"
+                    android:layout_below="@+id/grad"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="-10dp"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:layout_toEndOf="@+id/s_humidity"
+                    android:layout_toRightOf="@+id/s_humidity"
+
+                    android:text="%"
+
+
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -439,32 +483,35 @@
                     android:layout_below = "@+id/TEXT5"
                     android:id = "@+id/TEXT6"
                     android:textSize="15sp"
-                    android:padding="14dp"
-                    android:layout_marginStart="-6dp"
-                    android:layout_marginLeft="-6dp"
+                    android:padding="10dp"
+                    android:gravity="left"
                     />
                 <EditText
-               
                     android:spinnerMode="dialog"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:padding="13dp"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    android:inputType = "text"
+                    android:layout_marginTop="6dp"
                     android:layout_below = "@+id/TEXT6"
                     android:id="@+id/s_situation_loaded_container"
-                
-                />
+
+                    />
                 <Button
                     android:text="Передать службе доставки"
-                    android:layout_width="116dp"
-                    android:layout_height="32dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
                     android:padding="8dp"
-                    android:textSize="6sp"
+                    android:textSize="8sp"
                     android:id="@+id/btn_pass_delivery_service"
                     android:layout_below = "@+id/TEXT6"
                     android:layout_toRightOf = "@+id/s_situation_loaded_container"
-                    android:layout_toEndOf="@+id/btn_situation_loaded_container"
+                    android:layout_toEndOf="@+id/s_situation_loaded_container"
                     android:background="@color/colorMainBlue"
-                    android:textColor="@color/colorMainLightBlue"/>
+                    android:textColor="@color/colorMainLightBlue"
+                    android:layout_marginTop="10dp"/>
 
             </RelativeLayout>
 
@@ -481,3 +528,4 @@
 
 
 </RelativeLayout>
+

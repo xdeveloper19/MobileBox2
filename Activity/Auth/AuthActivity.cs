@@ -123,21 +123,11 @@ namespace GeoGeometry.Activity.Auth {
                 {
                     preloader.Visibility = Android.Views.ViewStates.Visible;
                     // Авторизируюсь клиентом.
-                    string check = "";
-                    if(is_remember.Checked == true)
-                    {
-                        check = "1";
-
-                    }
-                    else
-                    {
-                        check = "0";
-                    }
+                    
                     AuthModel auth = new AuthModel
                     {
                         Email = s_login.Text,
                         Password = s_pass.Text,
-                        Check = check
                     };
 
 
@@ -147,7 +137,7 @@ namespace GeoGeometry.Activity.Auth {
 
                     myHttpClient.DefaultRequestHeaders.Authorization = _authHeader;
 
-                    var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/auth/login?email=" + auth.Email + "&password=" + auth.Password);
+                    var uri = new Uri("http://iot.tmc-centert.ru/api/auth/login?email=" + auth.Email + "&password=" + auth.Password);
                         /*
                         //json структура.
                         var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
@@ -167,6 +157,7 @@ namespace GeoGeometry.Activity.Auth {
 
                     AuthApiData<AuthResponseData> o_data = JsonConvert.DeserializeObject<AuthApiData<AuthResponseData>>(s_result);
 
+                    
                         //ClearField();
                         if (response.StatusCode == HttpStatusCode.OK)
                     {
@@ -176,6 +167,17 @@ namespace GeoGeometry.Activity.Auth {
 
                             AuthResponseData o_user_data = new AuthResponseData();
                             o_user_data = o_data.ResponseData;
+                            
+                            if (is_remember.Checked == true)
+                            {
+                                o_user_data.Check = "1";
+
+                            }
+                            else
+                            {
+                                o_user_data.Check = "0";
+                            }
+                           
 
                             StaticUser.AddInfoAuth(o_user_data);
 

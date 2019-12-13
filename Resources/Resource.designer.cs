@@ -3659,6 +3659,1354 @@ namespace GeoGeometry
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ViewStubCompat_android_id = global::GeoGeometry.Resource.Styleable.ViewStubCompat_android_id;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::GeoGeometry.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ViewStubCompat_android_layout = global::GeoGeometry.Resource.Styleable.ViewStubCompat_android_layout;
+			global::XLabs.Forms.Resource.Animation.abc_fade_in = global::GeoGeometry.Resource.Animation.abc_fade_in;
+			global::XLabs.Forms.Resource.Animation.abc_fade_out = global::GeoGeometry.Resource.Animation.abc_fade_out;
+			global::XLabs.Forms.Resource.Animation.abc_grow_fade_in_from_bottom = global::GeoGeometry.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::XLabs.Forms.Resource.Animation.abc_popup_enter = global::GeoGeometry.Resource.Animation.abc_popup_enter;
+			global::XLabs.Forms.Resource.Animation.abc_popup_exit = global::GeoGeometry.Resource.Animation.abc_popup_exit;
+			global::XLabs.Forms.Resource.Animation.abc_shrink_fade_out_from_bottom = global::GeoGeometry.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::XLabs.Forms.Resource.Animation.abc_slide_in_bottom = global::GeoGeometry.Resource.Animation.abc_slide_in_bottom;
+			global::XLabs.Forms.Resource.Animation.abc_slide_in_top = global::GeoGeometry.Resource.Animation.abc_slide_in_top;
+			global::XLabs.Forms.Resource.Animation.abc_slide_out_bottom = global::GeoGeometry.Resource.Animation.abc_slide_out_bottom;
+			global::XLabs.Forms.Resource.Animation.abc_slide_out_top = global::GeoGeometry.Resource.Animation.abc_slide_out_top;
+			global::XLabs.Forms.Resource.Animation.design_snackbar_in = global::GeoGeometry.Resource.Animation.design_snackbar_in;
+			global::XLabs.Forms.Resource.Animation.design_snackbar_out = global::GeoGeometry.Resource.Animation.design_snackbar_out;
+			global::XLabs.Forms.Resource.Attribute.actionBarDivider = global::GeoGeometry.Resource.Attribute.actionBarDivider;
+			global::XLabs.Forms.Resource.Attribute.actionBarItemBackground = global::GeoGeometry.Resource.Attribute.actionBarItemBackground;
+			global::XLabs.Forms.Resource.Attribute.actionBarPopupTheme = global::GeoGeometry.Resource.Attribute.actionBarPopupTheme;
+			global::XLabs.Forms.Resource.Attribute.actionBarSize = global::GeoGeometry.Resource.Attribute.actionBarSize;
+			global::XLabs.Forms.Resource.Attribute.actionBarSplitStyle = global::GeoGeometry.Resource.Attribute.actionBarSplitStyle;
+			global::XLabs.Forms.Resource.Attribute.actionBarStyle = global::GeoGeometry.Resource.Attribute.actionBarStyle;
+			global::XLabs.Forms.Resource.Attribute.actionBarTabBarStyle = global::GeoGeometry.Resource.Attribute.actionBarTabBarStyle;
+			global::XLabs.Forms.Resource.Attribute.actionBarTabStyle = global::GeoGeometry.Resource.Attribute.actionBarTabStyle;
+			global::XLabs.Forms.Resource.Attribute.actionBarTabTextStyle = global::GeoGeometry.Resource.Attribute.actionBarTabTextStyle;
+			global::XLabs.Forms.Resource.Attribute.actionBarTheme = global::GeoGeometry.Resource.Attribute.actionBarTheme;
+			global::XLabs.Forms.Resource.Attribute.actionBarWidgetTheme = global::GeoGeometry.Resource.Attribute.actionBarWidgetTheme;
+			global::XLabs.Forms.Resource.Attribute.actionButtonStyle = global::GeoGeometry.Resource.Attribute.actionButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.actionDropDownStyle = global::GeoGeometry.Resource.Attribute.actionDropDownStyle;
+			global::XLabs.Forms.Resource.Attribute.actionLayout = global::GeoGeometry.Resource.Attribute.actionLayout;
+			global::XLabs.Forms.Resource.Attribute.actionMenuTextAppearance = global::GeoGeometry.Resource.Attribute.actionMenuTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.actionMenuTextColor = global::GeoGeometry.Resource.Attribute.actionMenuTextColor;
+			global::XLabs.Forms.Resource.Attribute.actionModeBackground = global::GeoGeometry.Resource.Attribute.actionModeBackground;
+			global::XLabs.Forms.Resource.Attribute.actionModeCloseButtonStyle = global::GeoGeometry.Resource.Attribute.actionModeCloseButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.actionModeCloseDrawable = global::GeoGeometry.Resource.Attribute.actionModeCloseDrawable;
+			global::XLabs.Forms.Resource.Attribute.actionModeCopyDrawable = global::GeoGeometry.Resource.Attribute.actionModeCopyDrawable;
+			global::XLabs.Forms.Resource.Attribute.actionModeCutDrawable = global::GeoGeometry.Resource.Attribute.actionModeCutDrawable;
+			global::XLabs.Forms.Resource.Attribute.actionModeFindDrawable = global::GeoGeometry.Resource.Attribute.actionModeFindDrawable;
+			global::XLabs.Forms.Resource.Attribute.actionModePasteDrawable = global::GeoGeometry.Resource.Attribute.actionModePasteDrawable;
+			global::XLabs.Forms.Resource.Attribute.actionModePopupWindowStyle = global::GeoGeometry.Resource.Attribute.actionModePopupWindowStyle;
+			global::XLabs.Forms.Resource.Attribute.actionModeSelectAllDrawable = global::GeoGeometry.Resource.Attribute.actionModeSelectAllDrawable;
+			global::XLabs.Forms.Resource.Attribute.actionModeShareDrawable = global::GeoGeometry.Resource.Attribute.actionModeShareDrawable;
+			global::XLabs.Forms.Resource.Attribute.actionModeSplitBackground = global::GeoGeometry.Resource.Attribute.actionModeSplitBackground;
+			global::XLabs.Forms.Resource.Attribute.actionModeStyle = global::GeoGeometry.Resource.Attribute.actionModeStyle;
+			global::XLabs.Forms.Resource.Attribute.actionModeWebSearchDrawable = global::GeoGeometry.Resource.Attribute.actionModeWebSearchDrawable;
+			global::XLabs.Forms.Resource.Attribute.actionOverflowButtonStyle = global::GeoGeometry.Resource.Attribute.actionOverflowButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.actionOverflowMenuStyle = global::GeoGeometry.Resource.Attribute.actionOverflowMenuStyle;
+			global::XLabs.Forms.Resource.Attribute.actionProviderClass = global::GeoGeometry.Resource.Attribute.actionProviderClass;
+			global::XLabs.Forms.Resource.Attribute.actionViewClass = global::GeoGeometry.Resource.Attribute.actionViewClass;
+			global::XLabs.Forms.Resource.Attribute.activityChooserViewStyle = global::GeoGeometry.Resource.Attribute.activityChooserViewStyle;
+			global::XLabs.Forms.Resource.Attribute.alertDialogButtonGroupStyle = global::GeoGeometry.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::XLabs.Forms.Resource.Attribute.alertDialogCenterButtons = global::GeoGeometry.Resource.Attribute.alertDialogCenterButtons;
+			global::XLabs.Forms.Resource.Attribute.alertDialogStyle = global::GeoGeometry.Resource.Attribute.alertDialogStyle;
+			global::XLabs.Forms.Resource.Attribute.alertDialogTheme = global::GeoGeometry.Resource.Attribute.alertDialogTheme;
+			global::XLabs.Forms.Resource.Attribute.arrowHeadLength = global::GeoGeometry.Resource.Attribute.arrowHeadLength;
+			global::XLabs.Forms.Resource.Attribute.arrowShaftLength = global::GeoGeometry.Resource.Attribute.arrowShaftLength;
+			global::XLabs.Forms.Resource.Attribute.autoCompleteTextViewStyle = global::GeoGeometry.Resource.Attribute.autoCompleteTextViewStyle;
+			global::XLabs.Forms.Resource.Attribute.background = global::GeoGeometry.Resource.Attribute.background;
+			global::XLabs.Forms.Resource.Attribute.backgroundSplit = global::GeoGeometry.Resource.Attribute.backgroundSplit;
+			global::XLabs.Forms.Resource.Attribute.backgroundStacked = global::GeoGeometry.Resource.Attribute.backgroundStacked;
+			global::XLabs.Forms.Resource.Attribute.backgroundTint = global::GeoGeometry.Resource.Attribute.backgroundTint;
+			global::XLabs.Forms.Resource.Attribute.backgroundTintMode = global::GeoGeometry.Resource.Attribute.backgroundTintMode;
+			global::XLabs.Forms.Resource.Attribute.barLength = global::GeoGeometry.Resource.Attribute.barLength;
+			global::XLabs.Forms.Resource.Attribute.behavior_overlapTop = global::GeoGeometry.Resource.Attribute.behavior_overlapTop;
+			global::XLabs.Forms.Resource.Attribute.borderWidth = global::GeoGeometry.Resource.Attribute.borderWidth;
+			global::XLabs.Forms.Resource.Attribute.borderlessButtonStyle = global::GeoGeometry.Resource.Attribute.borderlessButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.buttonBarButtonStyle = global::GeoGeometry.Resource.Attribute.buttonBarButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.buttonBarNegativeButtonStyle = global::GeoGeometry.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.buttonBarNeutralButtonStyle = global::GeoGeometry.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.buttonBarPositiveButtonStyle = global::GeoGeometry.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.buttonBarStyle = global::GeoGeometry.Resource.Attribute.buttonBarStyle;
+			global::XLabs.Forms.Resource.Attribute.buttonPanelSideLayout = global::GeoGeometry.Resource.Attribute.buttonPanelSideLayout;
+			global::XLabs.Forms.Resource.Attribute.buttonStyle = global::GeoGeometry.Resource.Attribute.buttonStyle;
+			global::XLabs.Forms.Resource.Attribute.buttonStyleSmall = global::GeoGeometry.Resource.Attribute.buttonStyleSmall;
+			global::XLabs.Forms.Resource.Attribute.buttonTint = global::GeoGeometry.Resource.Attribute.buttonTint;
+			global::XLabs.Forms.Resource.Attribute.buttonTintMode = global::GeoGeometry.Resource.Attribute.buttonTintMode;
+			global::XLabs.Forms.Resource.Attribute.cardBackgroundColor = global::GeoGeometry.Resource.Attribute.cardBackgroundColor;
+			global::XLabs.Forms.Resource.Attribute.cardCornerRadius = global::GeoGeometry.Resource.Attribute.cardCornerRadius;
+			global::XLabs.Forms.Resource.Attribute.cardElevation = global::GeoGeometry.Resource.Attribute.cardElevation;
+			global::XLabs.Forms.Resource.Attribute.cardMaxElevation = global::GeoGeometry.Resource.Attribute.cardMaxElevation;
+			global::XLabs.Forms.Resource.Attribute.cardPreventCornerOverlap = global::GeoGeometry.Resource.Attribute.cardPreventCornerOverlap;
+			global::XLabs.Forms.Resource.Attribute.cardUseCompatPadding = global::GeoGeometry.Resource.Attribute.cardUseCompatPadding;
+			global::XLabs.Forms.Resource.Attribute.checkboxStyle = global::GeoGeometry.Resource.Attribute.checkboxStyle;
+			global::XLabs.Forms.Resource.Attribute.checkedTextViewStyle = global::GeoGeometry.Resource.Attribute.checkedTextViewStyle;
+			global::XLabs.Forms.Resource.Attribute.closeIcon = global::GeoGeometry.Resource.Attribute.closeIcon;
+			global::XLabs.Forms.Resource.Attribute.closeItemLayout = global::GeoGeometry.Resource.Attribute.closeItemLayout;
+			global::XLabs.Forms.Resource.Attribute.collapseContentDescription = global::GeoGeometry.Resource.Attribute.collapseContentDescription;
+			global::XLabs.Forms.Resource.Attribute.collapseIcon = global::GeoGeometry.Resource.Attribute.collapseIcon;
+			global::XLabs.Forms.Resource.Attribute.collapsedTitleGravity = global::GeoGeometry.Resource.Attribute.collapsedTitleGravity;
+			global::XLabs.Forms.Resource.Attribute.collapsedTitleTextAppearance = global::GeoGeometry.Resource.Attribute.collapsedTitleTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.color = global::GeoGeometry.Resource.Attribute.color;
+			global::XLabs.Forms.Resource.Attribute.colorAccent = global::GeoGeometry.Resource.Attribute.colorAccent;
+			global::XLabs.Forms.Resource.Attribute.colorButtonNormal = global::GeoGeometry.Resource.Attribute.colorButtonNormal;
+			global::XLabs.Forms.Resource.Attribute.colorControlActivated = global::GeoGeometry.Resource.Attribute.colorControlActivated;
+			global::XLabs.Forms.Resource.Attribute.colorControlHighlight = global::GeoGeometry.Resource.Attribute.colorControlHighlight;
+			global::XLabs.Forms.Resource.Attribute.colorControlNormal = global::GeoGeometry.Resource.Attribute.colorControlNormal;
+			global::XLabs.Forms.Resource.Attribute.colorPrimary = global::GeoGeometry.Resource.Attribute.colorPrimary;
+			global::XLabs.Forms.Resource.Attribute.colorPrimaryDark = global::GeoGeometry.Resource.Attribute.colorPrimaryDark;
+			global::XLabs.Forms.Resource.Attribute.colorSwitchThumbNormal = global::GeoGeometry.Resource.Attribute.colorSwitchThumbNormal;
+			global::XLabs.Forms.Resource.Attribute.commitIcon = global::GeoGeometry.Resource.Attribute.commitIcon;
+			global::XLabs.Forms.Resource.Attribute.contentInsetEnd = global::GeoGeometry.Resource.Attribute.contentInsetEnd;
+			global::XLabs.Forms.Resource.Attribute.contentInsetLeft = global::GeoGeometry.Resource.Attribute.contentInsetLeft;
+			global::XLabs.Forms.Resource.Attribute.contentInsetRight = global::GeoGeometry.Resource.Attribute.contentInsetRight;
+			global::XLabs.Forms.Resource.Attribute.contentInsetStart = global::GeoGeometry.Resource.Attribute.contentInsetStart;
+			global::XLabs.Forms.Resource.Attribute.contentPadding = global::GeoGeometry.Resource.Attribute.contentPadding;
+			global::XLabs.Forms.Resource.Attribute.contentPaddingBottom = global::GeoGeometry.Resource.Attribute.contentPaddingBottom;
+			global::XLabs.Forms.Resource.Attribute.contentPaddingLeft = global::GeoGeometry.Resource.Attribute.contentPaddingLeft;
+			global::XLabs.Forms.Resource.Attribute.contentPaddingRight = global::GeoGeometry.Resource.Attribute.contentPaddingRight;
+			global::XLabs.Forms.Resource.Attribute.contentPaddingTop = global::GeoGeometry.Resource.Attribute.contentPaddingTop;
+			global::XLabs.Forms.Resource.Attribute.contentScrim = global::GeoGeometry.Resource.Attribute.contentScrim;
+			global::XLabs.Forms.Resource.Attribute.controlBackground = global::GeoGeometry.Resource.Attribute.controlBackground;
+			global::XLabs.Forms.Resource.Attribute.customNavigationLayout = global::GeoGeometry.Resource.Attribute.customNavigationLayout;
+			global::XLabs.Forms.Resource.Attribute.defaultQueryHint = global::GeoGeometry.Resource.Attribute.defaultQueryHint;
+			global::XLabs.Forms.Resource.Attribute.dialogPreferredPadding = global::GeoGeometry.Resource.Attribute.dialogPreferredPadding;
+			global::XLabs.Forms.Resource.Attribute.dialogTheme = global::GeoGeometry.Resource.Attribute.dialogTheme;
+			global::XLabs.Forms.Resource.Attribute.displayOptions = global::GeoGeometry.Resource.Attribute.displayOptions;
+			global::XLabs.Forms.Resource.Attribute.divider = global::GeoGeometry.Resource.Attribute.divider;
+			global::XLabs.Forms.Resource.Attribute.dividerHorizontal = global::GeoGeometry.Resource.Attribute.dividerHorizontal;
+			global::XLabs.Forms.Resource.Attribute.dividerPadding = global::GeoGeometry.Resource.Attribute.dividerPadding;
+			global::XLabs.Forms.Resource.Attribute.dividerVertical = global::GeoGeometry.Resource.Attribute.dividerVertical;
+			global::XLabs.Forms.Resource.Attribute.drawableSize = global::GeoGeometry.Resource.Attribute.drawableSize;
+			global::XLabs.Forms.Resource.Attribute.drawerArrowStyle = global::GeoGeometry.Resource.Attribute.drawerArrowStyle;
+			global::XLabs.Forms.Resource.Attribute.dropDownListViewStyle = global::GeoGeometry.Resource.Attribute.dropDownListViewStyle;
+			global::XLabs.Forms.Resource.Attribute.dropdownListPreferredItemHeight = global::GeoGeometry.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::XLabs.Forms.Resource.Attribute.editTextBackground = global::GeoGeometry.Resource.Attribute.editTextBackground;
+			global::XLabs.Forms.Resource.Attribute.editTextColor = global::GeoGeometry.Resource.Attribute.editTextColor;
+			global::XLabs.Forms.Resource.Attribute.editTextStyle = global::GeoGeometry.Resource.Attribute.editTextStyle;
+			global::XLabs.Forms.Resource.Attribute.elevation = global::GeoGeometry.Resource.Attribute.elevation;
+			global::XLabs.Forms.Resource.Attribute.errorEnabled = global::GeoGeometry.Resource.Attribute.errorEnabled;
+			global::XLabs.Forms.Resource.Attribute.errorTextAppearance = global::GeoGeometry.Resource.Attribute.errorTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.expandActivityOverflowButtonDrawable = global::GeoGeometry.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::XLabs.Forms.Resource.Attribute.expanded = global::GeoGeometry.Resource.Attribute.expanded;
+			global::XLabs.Forms.Resource.Attribute.expandedTitleGravity = global::GeoGeometry.Resource.Attribute.expandedTitleGravity;
+			global::XLabs.Forms.Resource.Attribute.expandedTitleMargin = global::GeoGeometry.Resource.Attribute.expandedTitleMargin;
+			global::XLabs.Forms.Resource.Attribute.expandedTitleMarginBottom = global::GeoGeometry.Resource.Attribute.expandedTitleMarginBottom;
+			global::XLabs.Forms.Resource.Attribute.expandedTitleMarginEnd = global::GeoGeometry.Resource.Attribute.expandedTitleMarginEnd;
+			global::XLabs.Forms.Resource.Attribute.expandedTitleMarginStart = global::GeoGeometry.Resource.Attribute.expandedTitleMarginStart;
+			global::XLabs.Forms.Resource.Attribute.expandedTitleMarginTop = global::GeoGeometry.Resource.Attribute.expandedTitleMarginTop;
+			global::XLabs.Forms.Resource.Attribute.expandedTitleTextAppearance = global::GeoGeometry.Resource.Attribute.expandedTitleTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.externalRouteEnabledDrawable = global::GeoGeometry.Resource.Attribute.externalRouteEnabledDrawable;
+			global::XLabs.Forms.Resource.Attribute.fabSize = global::GeoGeometry.Resource.Attribute.fabSize;
+			global::XLabs.Forms.Resource.Attribute.gapBetweenBars = global::GeoGeometry.Resource.Attribute.gapBetweenBars;
+			global::XLabs.Forms.Resource.Attribute.goIcon = global::GeoGeometry.Resource.Attribute.goIcon;
+			global::XLabs.Forms.Resource.Attribute.headerLayout = global::GeoGeometry.Resource.Attribute.headerLayout;
+			global::XLabs.Forms.Resource.Attribute.height = global::GeoGeometry.Resource.Attribute.height;
+			global::XLabs.Forms.Resource.Attribute.hideOnContentScroll = global::GeoGeometry.Resource.Attribute.hideOnContentScroll;
+			global::XLabs.Forms.Resource.Attribute.hintAnimationEnabled = global::GeoGeometry.Resource.Attribute.hintAnimationEnabled;
+			global::XLabs.Forms.Resource.Attribute.hintTextAppearance = global::GeoGeometry.Resource.Attribute.hintTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.homeAsUpIndicator = global::GeoGeometry.Resource.Attribute.homeAsUpIndicator;
+			global::XLabs.Forms.Resource.Attribute.homeLayout = global::GeoGeometry.Resource.Attribute.homeLayout;
+			global::XLabs.Forms.Resource.Attribute.icon = global::GeoGeometry.Resource.Attribute.icon;
+			global::XLabs.Forms.Resource.Attribute.iconifiedByDefault = global::GeoGeometry.Resource.Attribute.iconifiedByDefault;
+			global::XLabs.Forms.Resource.Attribute.indeterminateProgressStyle = global::GeoGeometry.Resource.Attribute.indeterminateProgressStyle;
+			global::XLabs.Forms.Resource.Attribute.initialActivityCount = global::GeoGeometry.Resource.Attribute.initialActivityCount;
+			global::XLabs.Forms.Resource.Attribute.insetForeground = global::GeoGeometry.Resource.Attribute.insetForeground;
+			global::XLabs.Forms.Resource.Attribute.isLightTheme = global::GeoGeometry.Resource.Attribute.isLightTheme;
+			global::XLabs.Forms.Resource.Attribute.itemBackground = global::GeoGeometry.Resource.Attribute.itemBackground;
+			global::XLabs.Forms.Resource.Attribute.itemIconTint = global::GeoGeometry.Resource.Attribute.itemIconTint;
+			global::XLabs.Forms.Resource.Attribute.itemPadding = global::GeoGeometry.Resource.Attribute.itemPadding;
+			global::XLabs.Forms.Resource.Attribute.itemTextAppearance = global::GeoGeometry.Resource.Attribute.itemTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.itemTextColor = global::GeoGeometry.Resource.Attribute.itemTextColor;
+			global::XLabs.Forms.Resource.Attribute.keylines = global::GeoGeometry.Resource.Attribute.keylines;
+			global::XLabs.Forms.Resource.Attribute.layout = global::GeoGeometry.Resource.Attribute.layout;
+			global::XLabs.Forms.Resource.Attribute.layout_anchor = global::GeoGeometry.Resource.Attribute.layout_anchor;
+			global::XLabs.Forms.Resource.Attribute.layout_anchorGravity = global::GeoGeometry.Resource.Attribute.layout_anchorGravity;
+			global::XLabs.Forms.Resource.Attribute.layout_behavior = global::GeoGeometry.Resource.Attribute.layout_behavior;
+			global::XLabs.Forms.Resource.Attribute.layout_collapseMode = global::GeoGeometry.Resource.Attribute.layout_collapseMode;
+			global::XLabs.Forms.Resource.Attribute.layout_collapseParallaxMultiplier = global::GeoGeometry.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::XLabs.Forms.Resource.Attribute.layout_keyline = global::GeoGeometry.Resource.Attribute.layout_keyline;
+			global::XLabs.Forms.Resource.Attribute.layout_scrollFlags = global::GeoGeometry.Resource.Attribute.layout_scrollFlags;
+			global::XLabs.Forms.Resource.Attribute.layout_scrollInterpolator = global::GeoGeometry.Resource.Attribute.layout_scrollInterpolator;
+			global::XLabs.Forms.Resource.Attribute.listChoiceBackgroundIndicator = global::GeoGeometry.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::XLabs.Forms.Resource.Attribute.listDividerAlertDialog = global::GeoGeometry.Resource.Attribute.listDividerAlertDialog;
+			global::XLabs.Forms.Resource.Attribute.listItemLayout = global::GeoGeometry.Resource.Attribute.listItemLayout;
+			global::XLabs.Forms.Resource.Attribute.listLayout = global::GeoGeometry.Resource.Attribute.listLayout;
+			global::XLabs.Forms.Resource.Attribute.listPopupWindowStyle = global::GeoGeometry.Resource.Attribute.listPopupWindowStyle;
+			global::XLabs.Forms.Resource.Attribute.listPreferredItemHeight = global::GeoGeometry.Resource.Attribute.listPreferredItemHeight;
+			global::XLabs.Forms.Resource.Attribute.listPreferredItemHeightLarge = global::GeoGeometry.Resource.Attribute.listPreferredItemHeightLarge;
+			global::XLabs.Forms.Resource.Attribute.listPreferredItemHeightSmall = global::GeoGeometry.Resource.Attribute.listPreferredItemHeightSmall;
+			global::XLabs.Forms.Resource.Attribute.listPreferredItemPaddingLeft = global::GeoGeometry.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::XLabs.Forms.Resource.Attribute.listPreferredItemPaddingRight = global::GeoGeometry.Resource.Attribute.listPreferredItemPaddingRight;
+			global::XLabs.Forms.Resource.Attribute.logo = global::GeoGeometry.Resource.Attribute.logo;
+			global::XLabs.Forms.Resource.Attribute.logoDescription = global::GeoGeometry.Resource.Attribute.logoDescription;
+			global::XLabs.Forms.Resource.Attribute.maxActionInlineWidth = global::GeoGeometry.Resource.Attribute.maxActionInlineWidth;
+			global::XLabs.Forms.Resource.Attribute.maxButtonHeight = global::GeoGeometry.Resource.Attribute.maxButtonHeight;
+			global::XLabs.Forms.Resource.Attribute.measureWithLargestChild = global::GeoGeometry.Resource.Attribute.measureWithLargestChild;
+			global::XLabs.Forms.Resource.Attribute.mediaRouteButtonStyle = global::GeoGeometry.Resource.Attribute.mediaRouteButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.mediaRoutePauseDrawable = global::GeoGeometry.Resource.Attribute.mediaRoutePauseDrawable;
+			global::XLabs.Forms.Resource.Attribute.mediaRoutePlayDrawable = global::GeoGeometry.Resource.Attribute.mediaRoutePlayDrawable;
+			global::XLabs.Forms.Resource.Attribute.menu = global::GeoGeometry.Resource.Attribute.menu;
+			global::XLabs.Forms.Resource.Attribute.multiChoiceItemLayout = global::GeoGeometry.Resource.Attribute.multiChoiceItemLayout;
+			global::XLabs.Forms.Resource.Attribute.navigationContentDescription = global::GeoGeometry.Resource.Attribute.navigationContentDescription;
+			global::XLabs.Forms.Resource.Attribute.navigationIcon = global::GeoGeometry.Resource.Attribute.navigationIcon;
+			global::XLabs.Forms.Resource.Attribute.navigationMode = global::GeoGeometry.Resource.Attribute.navigationMode;
+			global::XLabs.Forms.Resource.Attribute.overlapAnchor = global::GeoGeometry.Resource.Attribute.overlapAnchor;
+			global::XLabs.Forms.Resource.Attribute.paddingEnd = global::GeoGeometry.Resource.Attribute.paddingEnd;
+			global::XLabs.Forms.Resource.Attribute.paddingStart = global::GeoGeometry.Resource.Attribute.paddingStart;
+			global::XLabs.Forms.Resource.Attribute.panelBackground = global::GeoGeometry.Resource.Attribute.panelBackground;
+			global::XLabs.Forms.Resource.Attribute.panelMenuListTheme = global::GeoGeometry.Resource.Attribute.panelMenuListTheme;
+			global::XLabs.Forms.Resource.Attribute.panelMenuListWidth = global::GeoGeometry.Resource.Attribute.panelMenuListWidth;
+			global::XLabs.Forms.Resource.Attribute.popupMenuStyle = global::GeoGeometry.Resource.Attribute.popupMenuStyle;
+			global::XLabs.Forms.Resource.Attribute.popupTheme = global::GeoGeometry.Resource.Attribute.popupTheme;
+			global::XLabs.Forms.Resource.Attribute.popupWindowStyle = global::GeoGeometry.Resource.Attribute.popupWindowStyle;
+			global::XLabs.Forms.Resource.Attribute.preserveIconSpacing = global::GeoGeometry.Resource.Attribute.preserveIconSpacing;
+			global::XLabs.Forms.Resource.Attribute.pressedTranslationZ = global::GeoGeometry.Resource.Attribute.pressedTranslationZ;
+			global::XLabs.Forms.Resource.Attribute.progressBarPadding = global::GeoGeometry.Resource.Attribute.progressBarPadding;
+			global::XLabs.Forms.Resource.Attribute.progressBarStyle = global::GeoGeometry.Resource.Attribute.progressBarStyle;
+			global::XLabs.Forms.Resource.Attribute.queryBackground = global::GeoGeometry.Resource.Attribute.queryBackground;
+			global::XLabs.Forms.Resource.Attribute.queryHint = global::GeoGeometry.Resource.Attribute.queryHint;
+			global::XLabs.Forms.Resource.Attribute.radioButtonStyle = global::GeoGeometry.Resource.Attribute.radioButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.ratingBarStyle = global::GeoGeometry.Resource.Attribute.ratingBarStyle;
+			global::XLabs.Forms.Resource.Attribute.rippleColor = global::GeoGeometry.Resource.Attribute.rippleColor;
+			global::XLabs.Forms.Resource.Attribute.searchHintIcon = global::GeoGeometry.Resource.Attribute.searchHintIcon;
+			global::XLabs.Forms.Resource.Attribute.searchIcon = global::GeoGeometry.Resource.Attribute.searchIcon;
+			global::XLabs.Forms.Resource.Attribute.searchViewStyle = global::GeoGeometry.Resource.Attribute.searchViewStyle;
+			global::XLabs.Forms.Resource.Attribute.selectableItemBackground = global::GeoGeometry.Resource.Attribute.selectableItemBackground;
+			global::XLabs.Forms.Resource.Attribute.selectableItemBackgroundBorderless = global::GeoGeometry.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::XLabs.Forms.Resource.Attribute.showAsAction = global::GeoGeometry.Resource.Attribute.showAsAction;
+			global::XLabs.Forms.Resource.Attribute.showDividers = global::GeoGeometry.Resource.Attribute.showDividers;
+			global::XLabs.Forms.Resource.Attribute.showText = global::GeoGeometry.Resource.Attribute.showText;
+			global::XLabs.Forms.Resource.Attribute.singleChoiceItemLayout = global::GeoGeometry.Resource.Attribute.singleChoiceItemLayout;
+			global::XLabs.Forms.Resource.Attribute.spinBars = global::GeoGeometry.Resource.Attribute.spinBars;
+			global::XLabs.Forms.Resource.Attribute.spinnerDropDownItemStyle = global::GeoGeometry.Resource.Attribute.spinnerDropDownItemStyle;
+			global::XLabs.Forms.Resource.Attribute.spinnerStyle = global::GeoGeometry.Resource.Attribute.spinnerStyle;
+			global::XLabs.Forms.Resource.Attribute.splitTrack = global::GeoGeometry.Resource.Attribute.splitTrack;
+			global::XLabs.Forms.Resource.Attribute.state_above_anchor = global::GeoGeometry.Resource.Attribute.state_above_anchor;
+			global::XLabs.Forms.Resource.Attribute.statusBarBackground = global::GeoGeometry.Resource.Attribute.statusBarBackground;
+			global::XLabs.Forms.Resource.Attribute.statusBarScrim = global::GeoGeometry.Resource.Attribute.statusBarScrim;
+			global::XLabs.Forms.Resource.Attribute.submitBackground = global::GeoGeometry.Resource.Attribute.submitBackground;
+			global::XLabs.Forms.Resource.Attribute.subtitle = global::GeoGeometry.Resource.Attribute.subtitle;
+			global::XLabs.Forms.Resource.Attribute.subtitleTextAppearance = global::GeoGeometry.Resource.Attribute.subtitleTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.subtitleTextColor = global::GeoGeometry.Resource.Attribute.subtitleTextColor;
+			global::XLabs.Forms.Resource.Attribute.subtitleTextStyle = global::GeoGeometry.Resource.Attribute.subtitleTextStyle;
+			global::XLabs.Forms.Resource.Attribute.suggestionRowLayout = global::GeoGeometry.Resource.Attribute.suggestionRowLayout;
+			global::XLabs.Forms.Resource.Attribute.switchMinWidth = global::GeoGeometry.Resource.Attribute.switchMinWidth;
+			global::XLabs.Forms.Resource.Attribute.switchPadding = global::GeoGeometry.Resource.Attribute.switchPadding;
+			global::XLabs.Forms.Resource.Attribute.switchStyle = global::GeoGeometry.Resource.Attribute.switchStyle;
+			global::XLabs.Forms.Resource.Attribute.switchTextAppearance = global::GeoGeometry.Resource.Attribute.switchTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.tabBackground = global::GeoGeometry.Resource.Attribute.tabBackground;
+			global::XLabs.Forms.Resource.Attribute.tabContentStart = global::GeoGeometry.Resource.Attribute.tabContentStart;
+			global::XLabs.Forms.Resource.Attribute.tabGravity = global::GeoGeometry.Resource.Attribute.tabGravity;
+			global::XLabs.Forms.Resource.Attribute.tabIndicatorColor = global::GeoGeometry.Resource.Attribute.tabIndicatorColor;
+			global::XLabs.Forms.Resource.Attribute.tabIndicatorHeight = global::GeoGeometry.Resource.Attribute.tabIndicatorHeight;
+			global::XLabs.Forms.Resource.Attribute.tabMaxWidth = global::GeoGeometry.Resource.Attribute.tabMaxWidth;
+			global::XLabs.Forms.Resource.Attribute.tabMinWidth = global::GeoGeometry.Resource.Attribute.tabMinWidth;
+			global::XLabs.Forms.Resource.Attribute.tabMode = global::GeoGeometry.Resource.Attribute.tabMode;
+			global::XLabs.Forms.Resource.Attribute.tabPadding = global::GeoGeometry.Resource.Attribute.tabPadding;
+			global::XLabs.Forms.Resource.Attribute.tabPaddingBottom = global::GeoGeometry.Resource.Attribute.tabPaddingBottom;
+			global::XLabs.Forms.Resource.Attribute.tabPaddingEnd = global::GeoGeometry.Resource.Attribute.tabPaddingEnd;
+			global::XLabs.Forms.Resource.Attribute.tabPaddingStart = global::GeoGeometry.Resource.Attribute.tabPaddingStart;
+			global::XLabs.Forms.Resource.Attribute.tabPaddingTop = global::GeoGeometry.Resource.Attribute.tabPaddingTop;
+			global::XLabs.Forms.Resource.Attribute.tabSelectedTextColor = global::GeoGeometry.Resource.Attribute.tabSelectedTextColor;
+			global::XLabs.Forms.Resource.Attribute.tabTextAppearance = global::GeoGeometry.Resource.Attribute.tabTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.tabTextColor = global::GeoGeometry.Resource.Attribute.tabTextColor;
+			global::XLabs.Forms.Resource.Attribute.textAllCaps = global::GeoGeometry.Resource.Attribute.textAllCaps;
+			global::XLabs.Forms.Resource.Attribute.textAppearanceLargePopupMenu = global::GeoGeometry.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::XLabs.Forms.Resource.Attribute.textAppearanceListItem = global::GeoGeometry.Resource.Attribute.textAppearanceListItem;
+			global::XLabs.Forms.Resource.Attribute.textAppearanceListItemSmall = global::GeoGeometry.Resource.Attribute.textAppearanceListItemSmall;
+			global::XLabs.Forms.Resource.Attribute.textAppearanceSearchResultSubtitle = global::GeoGeometry.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::XLabs.Forms.Resource.Attribute.textAppearanceSearchResultTitle = global::GeoGeometry.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::XLabs.Forms.Resource.Attribute.textAppearanceSmallPopupMenu = global::GeoGeometry.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::XLabs.Forms.Resource.Attribute.textColorAlertDialogListItem = global::GeoGeometry.Resource.Attribute.textColorAlertDialogListItem;
+			global::XLabs.Forms.Resource.Attribute.textColorSearchUrl = global::GeoGeometry.Resource.Attribute.textColorSearchUrl;
+			global::XLabs.Forms.Resource.Attribute.theme = global::GeoGeometry.Resource.Attribute.theme;
+			global::XLabs.Forms.Resource.Attribute.thickness = global::GeoGeometry.Resource.Attribute.thickness;
+			global::XLabs.Forms.Resource.Attribute.thumbTextPadding = global::GeoGeometry.Resource.Attribute.thumbTextPadding;
+			global::XLabs.Forms.Resource.Attribute.title = global::GeoGeometry.Resource.Attribute.title;
+			global::XLabs.Forms.Resource.Attribute.titleEnabled = global::GeoGeometry.Resource.Attribute.titleEnabled;
+			global::XLabs.Forms.Resource.Attribute.titleMarginBottom = global::GeoGeometry.Resource.Attribute.titleMarginBottom;
+			global::XLabs.Forms.Resource.Attribute.titleMarginEnd = global::GeoGeometry.Resource.Attribute.titleMarginEnd;
+			global::XLabs.Forms.Resource.Attribute.titleMarginStart = global::GeoGeometry.Resource.Attribute.titleMarginStart;
+			global::XLabs.Forms.Resource.Attribute.titleMarginTop = global::GeoGeometry.Resource.Attribute.titleMarginTop;
+			global::XLabs.Forms.Resource.Attribute.titleMargins = global::GeoGeometry.Resource.Attribute.titleMargins;
+			global::XLabs.Forms.Resource.Attribute.titleTextAppearance = global::GeoGeometry.Resource.Attribute.titleTextAppearance;
+			global::XLabs.Forms.Resource.Attribute.titleTextColor = global::GeoGeometry.Resource.Attribute.titleTextColor;
+			global::XLabs.Forms.Resource.Attribute.titleTextStyle = global::GeoGeometry.Resource.Attribute.titleTextStyle;
+			global::XLabs.Forms.Resource.Attribute.toolbarId = global::GeoGeometry.Resource.Attribute.toolbarId;
+			global::XLabs.Forms.Resource.Attribute.toolbarNavigationButtonStyle = global::GeoGeometry.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::XLabs.Forms.Resource.Attribute.toolbarStyle = global::GeoGeometry.Resource.Attribute.toolbarStyle;
+			global::XLabs.Forms.Resource.Attribute.track = global::GeoGeometry.Resource.Attribute.track;
+			global::XLabs.Forms.Resource.Attribute.voiceIcon = global::GeoGeometry.Resource.Attribute.voiceIcon;
+			global::XLabs.Forms.Resource.Attribute.windowActionBar = global::GeoGeometry.Resource.Attribute.windowActionBar;
+			global::XLabs.Forms.Resource.Attribute.windowActionBarOverlay = global::GeoGeometry.Resource.Attribute.windowActionBarOverlay;
+			global::XLabs.Forms.Resource.Attribute.windowActionModeOverlay = global::GeoGeometry.Resource.Attribute.windowActionModeOverlay;
+			global::XLabs.Forms.Resource.Attribute.windowFixedHeightMajor = global::GeoGeometry.Resource.Attribute.windowFixedHeightMajor;
+			global::XLabs.Forms.Resource.Attribute.windowFixedHeightMinor = global::GeoGeometry.Resource.Attribute.windowFixedHeightMinor;
+			global::XLabs.Forms.Resource.Attribute.windowFixedWidthMajor = global::GeoGeometry.Resource.Attribute.windowFixedWidthMajor;
+			global::XLabs.Forms.Resource.Attribute.windowFixedWidthMinor = global::GeoGeometry.Resource.Attribute.windowFixedWidthMinor;
+			global::XLabs.Forms.Resource.Attribute.windowMinWidthMajor = global::GeoGeometry.Resource.Attribute.windowMinWidthMajor;
+			global::XLabs.Forms.Resource.Attribute.windowMinWidthMinor = global::GeoGeometry.Resource.Attribute.windowMinWidthMinor;
+			global::XLabs.Forms.Resource.Attribute.windowNoTitle = global::GeoGeometry.Resource.Attribute.windowNoTitle;
+			global::XLabs.Forms.Resource.Boolean.abc_action_bar_embed_tabs = global::GeoGeometry.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::XLabs.Forms.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::GeoGeometry.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::XLabs.Forms.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::GeoGeometry.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::XLabs.Forms.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::GeoGeometry.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::XLabs.Forms.Resource.Color.abc_background_cache_hint_selector_material_dark = global::GeoGeometry.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::XLabs.Forms.Resource.Color.abc_background_cache_hint_selector_material_light = global::GeoGeometry.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::XLabs.Forms.Resource.Color.abc_color_highlight_material = global::GeoGeometry.Resource.Color.abc_color_highlight_material;
+			global::XLabs.Forms.Resource.Color.abc_input_method_navigation_guard = global::GeoGeometry.Resource.Color.abc_input_method_navigation_guard;
+			global::XLabs.Forms.Resource.Color.abc_primary_text_disable_only_material_dark = global::GeoGeometry.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::XLabs.Forms.Resource.Color.abc_primary_text_disable_only_material_light = global::GeoGeometry.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::XLabs.Forms.Resource.Color.abc_primary_text_material_dark = global::GeoGeometry.Resource.Color.abc_primary_text_material_dark;
+			global::XLabs.Forms.Resource.Color.abc_primary_text_material_light = global::GeoGeometry.Resource.Color.abc_primary_text_material_light;
+			global::XLabs.Forms.Resource.Color.abc_search_url_text = global::GeoGeometry.Resource.Color.abc_search_url_text;
+			global::XLabs.Forms.Resource.Color.abc_search_url_text_normal = global::GeoGeometry.Resource.Color.abc_search_url_text_normal;
+			global::XLabs.Forms.Resource.Color.abc_search_url_text_pressed = global::GeoGeometry.Resource.Color.abc_search_url_text_pressed;
+			global::XLabs.Forms.Resource.Color.abc_search_url_text_selected = global::GeoGeometry.Resource.Color.abc_search_url_text_selected;
+			global::XLabs.Forms.Resource.Color.abc_secondary_text_material_dark = global::GeoGeometry.Resource.Color.abc_secondary_text_material_dark;
+			global::XLabs.Forms.Resource.Color.abc_secondary_text_material_light = global::GeoGeometry.Resource.Color.abc_secondary_text_material_light;
+			global::XLabs.Forms.Resource.Color.accent_material_dark = global::GeoGeometry.Resource.Color.accent_material_dark;
+			global::XLabs.Forms.Resource.Color.accent_material_light = global::GeoGeometry.Resource.Color.accent_material_light;
+			global::XLabs.Forms.Resource.Color.background_floating_material_dark = global::GeoGeometry.Resource.Color.background_floating_material_dark;
+			global::XLabs.Forms.Resource.Color.background_floating_material_light = global::GeoGeometry.Resource.Color.background_floating_material_light;
+			global::XLabs.Forms.Resource.Color.background_material_dark = global::GeoGeometry.Resource.Color.background_material_dark;
+			global::XLabs.Forms.Resource.Color.background_material_light = global::GeoGeometry.Resource.Color.background_material_light;
+			global::XLabs.Forms.Resource.Color.bright_foreground_disabled_material_dark = global::GeoGeometry.Resource.Color.bright_foreground_disabled_material_dark;
+			global::XLabs.Forms.Resource.Color.bright_foreground_disabled_material_light = global::GeoGeometry.Resource.Color.bright_foreground_disabled_material_light;
+			global::XLabs.Forms.Resource.Color.bright_foreground_inverse_material_dark = global::GeoGeometry.Resource.Color.bright_foreground_inverse_material_dark;
+			global::XLabs.Forms.Resource.Color.bright_foreground_inverse_material_light = global::GeoGeometry.Resource.Color.bright_foreground_inverse_material_light;
+			global::XLabs.Forms.Resource.Color.bright_foreground_material_dark = global::GeoGeometry.Resource.Color.bright_foreground_material_dark;
+			global::XLabs.Forms.Resource.Color.bright_foreground_material_light = global::GeoGeometry.Resource.Color.bright_foreground_material_light;
+			global::XLabs.Forms.Resource.Color.button_material_dark = global::GeoGeometry.Resource.Color.button_material_dark;
+			global::XLabs.Forms.Resource.Color.button_material_light = global::GeoGeometry.Resource.Color.button_material_light;
+			global::XLabs.Forms.Resource.Color.calendar_active_month_bg = global::GeoGeometry.Resource.Color.calendar_active_month_bg;
+			global::XLabs.Forms.Resource.Color.calendar_bg = global::GeoGeometry.Resource.Color.calendar_bg;
+			global::XLabs.Forms.Resource.Color.calendar_divider = global::GeoGeometry.Resource.Color.calendar_divider;
+			global::XLabs.Forms.Resource.Color.calendar_highlighted_day_bg = global::GeoGeometry.Resource.Color.calendar_highlighted_day_bg;
+			global::XLabs.Forms.Resource.Color.calendar_inactive_month_bg = global::GeoGeometry.Resource.Color.calendar_inactive_month_bg;
+			global::XLabs.Forms.Resource.Color.calendar_selected_day_bg = global::GeoGeometry.Resource.Color.calendar_selected_day_bg;
+			global::XLabs.Forms.Resource.Color.calendar_selected_range_bg = global::GeoGeometry.Resource.Color.calendar_selected_range_bg;
+			global::XLabs.Forms.Resource.Color.calendar_text_active = global::GeoGeometry.Resource.Color.calendar_text_active;
+			global::XLabs.Forms.Resource.Color.calendar_text_inactive = global::GeoGeometry.Resource.Color.calendar_text_inactive;
+			global::XLabs.Forms.Resource.Color.calendar_text_selected = global::GeoGeometry.Resource.Color.calendar_text_selected;
+			global::XLabs.Forms.Resource.Color.calendar_text_selector = global::GeoGeometry.Resource.Color.calendar_text_selector;
+			global::XLabs.Forms.Resource.Color.calendar_text_unselectable = global::GeoGeometry.Resource.Color.calendar_text_unselectable;
+			global::XLabs.Forms.Resource.Color.cardview_dark_background = global::GeoGeometry.Resource.Color.cardview_dark_background;
+			global::XLabs.Forms.Resource.Color.cardview_light_background = global::GeoGeometry.Resource.Color.cardview_light_background;
+			global::XLabs.Forms.Resource.Color.cardview_shadow_end_color = global::GeoGeometry.Resource.Color.cardview_shadow_end_color;
+			global::XLabs.Forms.Resource.Color.cardview_shadow_start_color = global::GeoGeometry.Resource.Color.cardview_shadow_start_color;
+			global::XLabs.Forms.Resource.Color.design_fab_shadow_end_color = global::GeoGeometry.Resource.Color.design_fab_shadow_end_color;
+			global::XLabs.Forms.Resource.Color.design_fab_shadow_mid_color = global::GeoGeometry.Resource.Color.design_fab_shadow_mid_color;
+			global::XLabs.Forms.Resource.Color.design_fab_shadow_start_color = global::GeoGeometry.Resource.Color.design_fab_shadow_start_color;
+			global::XLabs.Forms.Resource.Color.design_fab_stroke_end_inner_color = global::GeoGeometry.Resource.Color.design_fab_stroke_end_inner_color;
+			global::XLabs.Forms.Resource.Color.design_fab_stroke_end_outer_color = global::GeoGeometry.Resource.Color.design_fab_stroke_end_outer_color;
+			global::XLabs.Forms.Resource.Color.design_fab_stroke_top_inner_color = global::GeoGeometry.Resource.Color.design_fab_stroke_top_inner_color;
+			global::XLabs.Forms.Resource.Color.design_fab_stroke_top_outer_color = global::GeoGeometry.Resource.Color.design_fab_stroke_top_outer_color;
+			global::XLabs.Forms.Resource.Color.design_snackbar_background_color = global::GeoGeometry.Resource.Color.design_snackbar_background_color;
+			global::XLabs.Forms.Resource.Color.dim_foreground_disabled_material_dark = global::GeoGeometry.Resource.Color.dim_foreground_disabled_material_dark;
+			global::XLabs.Forms.Resource.Color.dim_foreground_disabled_material_light = global::GeoGeometry.Resource.Color.dim_foreground_disabled_material_light;
+			global::XLabs.Forms.Resource.Color.dim_foreground_material_dark = global::GeoGeometry.Resource.Color.dim_foreground_material_dark;
+			global::XLabs.Forms.Resource.Color.dim_foreground_material_light = global::GeoGeometry.Resource.Color.dim_foreground_material_light;
+			global::XLabs.Forms.Resource.Color.foreground_material_dark = global::GeoGeometry.Resource.Color.foreground_material_dark;
+			global::XLabs.Forms.Resource.Color.foreground_material_light = global::GeoGeometry.Resource.Color.foreground_material_light;
+			global::XLabs.Forms.Resource.Color.highlighted_text_material_dark = global::GeoGeometry.Resource.Color.highlighted_text_material_dark;
+			global::XLabs.Forms.Resource.Color.highlighted_text_material_light = global::GeoGeometry.Resource.Color.highlighted_text_material_light;
+			global::XLabs.Forms.Resource.Color.material_blue_grey_800 = global::GeoGeometry.Resource.Color.material_blue_grey_800;
+			global::XLabs.Forms.Resource.Color.material_blue_grey_900 = global::GeoGeometry.Resource.Color.material_blue_grey_900;
+			global::XLabs.Forms.Resource.Color.material_blue_grey_950 = global::GeoGeometry.Resource.Color.material_blue_grey_950;
+			global::XLabs.Forms.Resource.Color.material_deep_teal_200 = global::GeoGeometry.Resource.Color.material_deep_teal_200;
+			global::XLabs.Forms.Resource.Color.material_deep_teal_500 = global::GeoGeometry.Resource.Color.material_deep_teal_500;
+			global::XLabs.Forms.Resource.Color.material_grey_100 = global::GeoGeometry.Resource.Color.material_grey_100;
+			global::XLabs.Forms.Resource.Color.material_grey_300 = global::GeoGeometry.Resource.Color.material_grey_300;
+			global::XLabs.Forms.Resource.Color.material_grey_50 = global::GeoGeometry.Resource.Color.material_grey_50;
+			global::XLabs.Forms.Resource.Color.material_grey_600 = global::GeoGeometry.Resource.Color.material_grey_600;
+			global::XLabs.Forms.Resource.Color.material_grey_800 = global::GeoGeometry.Resource.Color.material_grey_800;
+			global::XLabs.Forms.Resource.Color.material_grey_850 = global::GeoGeometry.Resource.Color.material_grey_850;
+			global::XLabs.Forms.Resource.Color.material_grey_900 = global::GeoGeometry.Resource.Color.material_grey_900;
+			global::XLabs.Forms.Resource.Color.primary_dark_material_dark = global::GeoGeometry.Resource.Color.primary_dark_material_dark;
+			global::XLabs.Forms.Resource.Color.primary_dark_material_light = global::GeoGeometry.Resource.Color.primary_dark_material_light;
+			global::XLabs.Forms.Resource.Color.primary_material_dark = global::GeoGeometry.Resource.Color.primary_material_dark;
+			global::XLabs.Forms.Resource.Color.primary_material_light = global::GeoGeometry.Resource.Color.primary_material_light;
+			global::XLabs.Forms.Resource.Color.primary_text_default_material_dark = global::GeoGeometry.Resource.Color.primary_text_default_material_dark;
+			global::XLabs.Forms.Resource.Color.primary_text_default_material_light = global::GeoGeometry.Resource.Color.primary_text_default_material_light;
+			global::XLabs.Forms.Resource.Color.primary_text_disabled_material_dark = global::GeoGeometry.Resource.Color.primary_text_disabled_material_dark;
+			global::XLabs.Forms.Resource.Color.primary_text_disabled_material_light = global::GeoGeometry.Resource.Color.primary_text_disabled_material_light;
+			global::XLabs.Forms.Resource.Color.ripple_material_dark = global::GeoGeometry.Resource.Color.ripple_material_dark;
+			global::XLabs.Forms.Resource.Color.ripple_material_light = global::GeoGeometry.Resource.Color.ripple_material_light;
+			global::XLabs.Forms.Resource.Color.secondary_text_default_material_dark = global::GeoGeometry.Resource.Color.secondary_text_default_material_dark;
+			global::XLabs.Forms.Resource.Color.secondary_text_default_material_light = global::GeoGeometry.Resource.Color.secondary_text_default_material_light;
+			global::XLabs.Forms.Resource.Color.secondary_text_disabled_material_dark = global::GeoGeometry.Resource.Color.secondary_text_disabled_material_dark;
+			global::XLabs.Forms.Resource.Color.secondary_text_disabled_material_light = global::GeoGeometry.Resource.Color.secondary_text_disabled_material_light;
+			global::XLabs.Forms.Resource.Color.switch_thumb_disabled_material_dark = global::GeoGeometry.Resource.Color.switch_thumb_disabled_material_dark;
+			global::XLabs.Forms.Resource.Color.switch_thumb_disabled_material_light = global::GeoGeometry.Resource.Color.switch_thumb_disabled_material_light;
+			global::XLabs.Forms.Resource.Color.switch_thumb_material_dark = global::GeoGeometry.Resource.Color.switch_thumb_material_dark;
+			global::XLabs.Forms.Resource.Color.switch_thumb_material_light = global::GeoGeometry.Resource.Color.switch_thumb_material_light;
+			global::XLabs.Forms.Resource.Color.switch_thumb_normal_material_dark = global::GeoGeometry.Resource.Color.switch_thumb_normal_material_dark;
+			global::XLabs.Forms.Resource.Color.switch_thumb_normal_material_light = global::GeoGeometry.Resource.Color.switch_thumb_normal_material_light;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_content_inset_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_default_height_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_default_height_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_default_padding_end_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_default_padding_start_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_progress_bar_size = global::GeoGeometry.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_stacked_max_height = global::GeoGeometry.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::GeoGeometry.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::GeoGeometry.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_button_min_height_material = global::GeoGeometry.Resource.Dimension.abc_action_button_min_height_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_button_min_width_material = global::GeoGeometry.Resource.Dimension.abc_action_button_min_width_material;
+			global::XLabs.Forms.Resource.Dimension.abc_action_button_min_width_overflow_material = global::GeoGeometry.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::XLabs.Forms.Resource.Dimension.abc_alert_dialog_button_bar_height = global::GeoGeometry.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::XLabs.Forms.Resource.Dimension.abc_button_inset_horizontal_material = global::GeoGeometry.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::XLabs.Forms.Resource.Dimension.abc_button_inset_vertical_material = global::GeoGeometry.Resource.Dimension.abc_button_inset_vertical_material;
+			global::XLabs.Forms.Resource.Dimension.abc_button_padding_horizontal_material = global::GeoGeometry.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::XLabs.Forms.Resource.Dimension.abc_button_padding_vertical_material = global::GeoGeometry.Resource.Dimension.abc_button_padding_vertical_material;
+			global::XLabs.Forms.Resource.Dimension.abc_config_prefDialogWidth = global::GeoGeometry.Resource.Dimension.abc_config_prefDialogWidth;
+			global::XLabs.Forms.Resource.Dimension.abc_control_corner_material = global::GeoGeometry.Resource.Dimension.abc_control_corner_material;
+			global::XLabs.Forms.Resource.Dimension.abc_control_inset_material = global::GeoGeometry.Resource.Dimension.abc_control_inset_material;
+			global::XLabs.Forms.Resource.Dimension.abc_control_padding_material = global::GeoGeometry.Resource.Dimension.abc_control_padding_material;
+			global::XLabs.Forms.Resource.Dimension.abc_dialog_min_width_major = global::GeoGeometry.Resource.Dimension.abc_dialog_min_width_major;
+			global::XLabs.Forms.Resource.Dimension.abc_dialog_min_width_minor = global::GeoGeometry.Resource.Dimension.abc_dialog_min_width_minor;
+			global::XLabs.Forms.Resource.Dimension.abc_dialog_padding_material = global::GeoGeometry.Resource.Dimension.abc_dialog_padding_material;
+			global::XLabs.Forms.Resource.Dimension.abc_dialog_padding_top_material = global::GeoGeometry.Resource.Dimension.abc_dialog_padding_top_material;
+			global::XLabs.Forms.Resource.Dimension.abc_disabled_alpha_material_dark = global::GeoGeometry.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::XLabs.Forms.Resource.Dimension.abc_disabled_alpha_material_light = global::GeoGeometry.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::XLabs.Forms.Resource.Dimension.abc_dropdownitem_icon_width = global::GeoGeometry.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::XLabs.Forms.Resource.Dimension.abc_dropdownitem_text_padding_left = global::GeoGeometry.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::XLabs.Forms.Resource.Dimension.abc_dropdownitem_text_padding_right = global::GeoGeometry.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::XLabs.Forms.Resource.Dimension.abc_edit_text_inset_bottom_material = global::GeoGeometry.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::XLabs.Forms.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::GeoGeometry.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::XLabs.Forms.Resource.Dimension.abc_edit_text_inset_top_material = global::GeoGeometry.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::XLabs.Forms.Resource.Dimension.abc_floating_window_z = global::GeoGeometry.Resource.Dimension.abc_floating_window_z;
+			global::XLabs.Forms.Resource.Dimension.abc_list_item_padding_horizontal_material = global::GeoGeometry.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::XLabs.Forms.Resource.Dimension.abc_panel_menu_list_width = global::GeoGeometry.Resource.Dimension.abc_panel_menu_list_width;
+			global::XLabs.Forms.Resource.Dimension.abc_search_view_preferred_width = global::GeoGeometry.Resource.Dimension.abc_search_view_preferred_width;
+			global::XLabs.Forms.Resource.Dimension.abc_switch_padding = global::GeoGeometry.Resource.Dimension.abc_switch_padding;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_body_1_material = global::GeoGeometry.Resource.Dimension.abc_text_size_body_1_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_body_2_material = global::GeoGeometry.Resource.Dimension.abc_text_size_body_2_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_button_material = global::GeoGeometry.Resource.Dimension.abc_text_size_button_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_caption_material = global::GeoGeometry.Resource.Dimension.abc_text_size_caption_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_display_1_material = global::GeoGeometry.Resource.Dimension.abc_text_size_display_1_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_display_2_material = global::GeoGeometry.Resource.Dimension.abc_text_size_display_2_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_display_3_material = global::GeoGeometry.Resource.Dimension.abc_text_size_display_3_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_display_4_material = global::GeoGeometry.Resource.Dimension.abc_text_size_display_4_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_headline_material = global::GeoGeometry.Resource.Dimension.abc_text_size_headline_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_large_material = global::GeoGeometry.Resource.Dimension.abc_text_size_large_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_medium_material = global::GeoGeometry.Resource.Dimension.abc_text_size_medium_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_menu_material = global::GeoGeometry.Resource.Dimension.abc_text_size_menu_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_small_material = global::GeoGeometry.Resource.Dimension.abc_text_size_small_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_subhead_material = global::GeoGeometry.Resource.Dimension.abc_text_size_subhead_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::GeoGeometry.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_title_material = global::GeoGeometry.Resource.Dimension.abc_text_size_title_material;
+			global::XLabs.Forms.Resource.Dimension.abc_text_size_title_material_toolbar = global::GeoGeometry.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::XLabs.Forms.Resource.Dimension.calendar_day_headers_paddingbottom = global::GeoGeometry.Resource.Dimension.calendar_day_headers_paddingbottom;
+			global::XLabs.Forms.Resource.Dimension.calendar_month_title_bottommargin = global::GeoGeometry.Resource.Dimension.calendar_month_title_bottommargin;
+			global::XLabs.Forms.Resource.Dimension.calendar_month_topmargin = global::GeoGeometry.Resource.Dimension.calendar_month_topmargin;
+			global::XLabs.Forms.Resource.Dimension.calendar_text_medium = global::GeoGeometry.Resource.Dimension.calendar_text_medium;
+			global::XLabs.Forms.Resource.Dimension.calendar_text_small = global::GeoGeometry.Resource.Dimension.calendar_text_small;
+			global::XLabs.Forms.Resource.Dimension.cardview_compat_inset_shadow = global::GeoGeometry.Resource.Dimension.cardview_compat_inset_shadow;
+			global::XLabs.Forms.Resource.Dimension.cardview_default_elevation = global::GeoGeometry.Resource.Dimension.cardview_default_elevation;
+			global::XLabs.Forms.Resource.Dimension.cardview_default_radius = global::GeoGeometry.Resource.Dimension.cardview_default_radius;
+			global::XLabs.Forms.Resource.Dimension.design_appbar_elevation = global::GeoGeometry.Resource.Dimension.design_appbar_elevation;
+			global::XLabs.Forms.Resource.Dimension.design_fab_border_width = global::GeoGeometry.Resource.Dimension.design_fab_border_width;
+			global::XLabs.Forms.Resource.Dimension.design_fab_elevation = global::GeoGeometry.Resource.Dimension.design_fab_elevation;
+			global::XLabs.Forms.Resource.Dimension.design_fab_size_mini = global::GeoGeometry.Resource.Dimension.design_fab_size_mini;
+			global::XLabs.Forms.Resource.Dimension.design_fab_size_normal = global::GeoGeometry.Resource.Dimension.design_fab_size_normal;
+			global::XLabs.Forms.Resource.Dimension.design_fab_translation_z_pressed = global::GeoGeometry.Resource.Dimension.design_fab_translation_z_pressed;
+			global::XLabs.Forms.Resource.Dimension.design_navigation_elevation = global::GeoGeometry.Resource.Dimension.design_navigation_elevation;
+			global::XLabs.Forms.Resource.Dimension.design_navigation_icon_padding = global::GeoGeometry.Resource.Dimension.design_navigation_icon_padding;
+			global::XLabs.Forms.Resource.Dimension.design_navigation_icon_size = global::GeoGeometry.Resource.Dimension.design_navigation_icon_size;
+			global::XLabs.Forms.Resource.Dimension.design_navigation_max_width = global::GeoGeometry.Resource.Dimension.design_navigation_max_width;
+			global::XLabs.Forms.Resource.Dimension.design_navigation_padding_bottom = global::GeoGeometry.Resource.Dimension.design_navigation_padding_bottom;
+			global::XLabs.Forms.Resource.Dimension.design_navigation_separator_vertical_padding = global::GeoGeometry.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_action_inline_max_width = global::GeoGeometry.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_background_corner_radius = global::GeoGeometry.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_elevation = global::GeoGeometry.Resource.Dimension.design_snackbar_elevation;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::GeoGeometry.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_max_width = global::GeoGeometry.Resource.Dimension.design_snackbar_max_width;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_min_width = global::GeoGeometry.Resource.Dimension.design_snackbar_min_width;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_padding_horizontal = global::GeoGeometry.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_padding_vertical = global::GeoGeometry.Resource.Dimension.design_snackbar_padding_vertical;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::GeoGeometry.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::XLabs.Forms.Resource.Dimension.design_snackbar_text_size = global::GeoGeometry.Resource.Dimension.design_snackbar_text_size;
+			global::XLabs.Forms.Resource.Dimension.design_tab_max_width = global::GeoGeometry.Resource.Dimension.design_tab_max_width;
+			global::XLabs.Forms.Resource.Dimension.disabled_alpha_material_dark = global::GeoGeometry.Resource.Dimension.disabled_alpha_material_dark;
+			global::XLabs.Forms.Resource.Dimension.disabled_alpha_material_light = global::GeoGeometry.Resource.Dimension.disabled_alpha_material_light;
+			global::XLabs.Forms.Resource.Dimension.highlight_alpha_material_colored = global::GeoGeometry.Resource.Dimension.highlight_alpha_material_colored;
+			global::XLabs.Forms.Resource.Dimension.highlight_alpha_material_dark = global::GeoGeometry.Resource.Dimension.highlight_alpha_material_dark;
+			global::XLabs.Forms.Resource.Dimension.highlight_alpha_material_light = global::GeoGeometry.Resource.Dimension.highlight_alpha_material_light;
+			global::XLabs.Forms.Resource.Dimension.notification_large_icon_height = global::GeoGeometry.Resource.Dimension.notification_large_icon_height;
+			global::XLabs.Forms.Resource.Dimension.notification_large_icon_width = global::GeoGeometry.Resource.Dimension.notification_large_icon_width;
+			global::XLabs.Forms.Resource.Dimension.notification_subtext_size = global::GeoGeometry.Resource.Dimension.notification_subtext_size;
+			global::XLabs.Forms.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_action_bar_item_background_material = global::GeoGeometry.Resource.Drawable.abc_action_bar_item_background_material;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_borderless_material = global::GeoGeometry.Resource.Drawable.abc_btn_borderless_material;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_check_material = global::GeoGeometry.Resource.Drawable.abc_btn_check_material;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::GeoGeometry.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::GeoGeometry.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_colored_material = global::GeoGeometry.Resource.Drawable.abc_btn_colored_material;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_default_mtrl_shape = global::GeoGeometry.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_radio_material = global::GeoGeometry.Resource.Drawable.abc_btn_radio_material;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::GeoGeometry.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::GeoGeometry.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::GeoGeometry.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::XLabs.Forms.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::GeoGeometry.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::XLabs.Forms.Resource.Drawable.abc_cab_background_internal_bg = global::GeoGeometry.Resource.Drawable.abc_cab_background_internal_bg;
+			global::XLabs.Forms.Resource.Drawable.abc_cab_background_top_material = global::GeoGeometry.Resource.Drawable.abc_cab_background_top_material;
+			global::XLabs.Forms.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_control_background_material = global::GeoGeometry.Resource.Drawable.abc_control_background_material;
+			global::XLabs.Forms.Resource.Drawable.abc_edit_text_material = global::GeoGeometry.Resource.Drawable.abc_edit_text_material;
+			global::XLabs.Forms.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::GeoGeometry.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::GeoGeometry.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_item_background_holo_dark = global::GeoGeometry.Resource.Drawable.abc_item_background_holo_dark;
+			global::XLabs.Forms.Resource.Drawable.abc_item_background_holo_light = global::GeoGeometry.Resource.Drawable.abc_item_background_holo_light;
+			global::XLabs.Forms.Resource.Drawable.abc_list_divider_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_list_focused_holo = global::GeoGeometry.Resource.Drawable.abc_list_focused_holo;
+			global::XLabs.Forms.Resource.Drawable.abc_list_longpressed_holo = global::GeoGeometry.Resource.Drawable.abc_list_longpressed_holo;
+			global::XLabs.Forms.Resource.Drawable.abc_list_pressed_holo_dark = global::GeoGeometry.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::XLabs.Forms.Resource.Drawable.abc_list_pressed_holo_light = global::GeoGeometry.Resource.Drawable.abc_list_pressed_holo_light;
+			global::XLabs.Forms.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::GeoGeometry.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::XLabs.Forms.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::GeoGeometry.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::XLabs.Forms.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::GeoGeometry.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::XLabs.Forms.Resource.Drawable.abc_list_selector_disabled_holo_light = global::GeoGeometry.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::XLabs.Forms.Resource.Drawable.abc_list_selector_holo_dark = global::GeoGeometry.Resource.Drawable.abc_list_selector_holo_dark;
+			global::XLabs.Forms.Resource.Drawable.abc_list_selector_holo_light = global::GeoGeometry.Resource.Drawable.abc_list_selector_holo_light;
+			global::XLabs.Forms.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::GeoGeometry.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::XLabs.Forms.Resource.Drawable.abc_popup_background_mtrl_mult = global::GeoGeometry.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::XLabs.Forms.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::GeoGeometry.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_spinner_textfield_background_material = global::GeoGeometry.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::XLabs.Forms.Resource.Drawable.abc_switch_thumb_material = global::GeoGeometry.Resource.Drawable.abc_switch_thumb_material;
+			global::XLabs.Forms.Resource.Drawable.abc_switch_track_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_tab_indicator_material = global::GeoGeometry.Resource.Drawable.abc_tab_indicator_material;
+			global::XLabs.Forms.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_text_cursor_material = global::GeoGeometry.Resource.Drawable.abc_text_cursor_material;
+			global::XLabs.Forms.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::GeoGeometry.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::XLabs.Forms.Resource.Drawable.abc_textfield_search_material = global::GeoGeometry.Resource.Drawable.abc_textfield_search_material;
+			global::XLabs.Forms.Resource.Drawable.ad16 = global::GeoGeometry.Resource.Drawable.ad16;
+			global::XLabs.Forms.Resource.Drawable.calendar_bg_selector = global::GeoGeometry.Resource.Drawable.calendar_bg_selector;
+			global::XLabs.Forms.Resource.Drawable.design_fab_background = global::GeoGeometry.Resource.Drawable.design_fab_background;
+			global::XLabs.Forms.Resource.Drawable.design_snackbar_background = global::GeoGeometry.Resource.Drawable.design_snackbar_background;
+			global::XLabs.Forms.Resource.Drawable.notification_template_icon_bg = global::GeoGeometry.Resource.Drawable.notification_template_icon_bg;
+			global::XLabs.Forms.Resource.Id.action0 = global::GeoGeometry.Resource.Id.action0;
+			global::XLabs.Forms.Resource.Id.action_bar = global::GeoGeometry.Resource.Id.action_bar;
+			global::XLabs.Forms.Resource.Id.action_bar_activity_content = global::GeoGeometry.Resource.Id.action_bar_activity_content;
+			global::XLabs.Forms.Resource.Id.action_bar_container = global::GeoGeometry.Resource.Id.action_bar_container;
+			global::XLabs.Forms.Resource.Id.action_bar_root = global::GeoGeometry.Resource.Id.action_bar_root;
+			global::XLabs.Forms.Resource.Id.action_bar_spinner = global::GeoGeometry.Resource.Id.action_bar_spinner;
+			global::XLabs.Forms.Resource.Id.action_bar_subtitle = global::GeoGeometry.Resource.Id.action_bar_subtitle;
+			global::XLabs.Forms.Resource.Id.action_bar_title = global::GeoGeometry.Resource.Id.action_bar_title;
+			global::XLabs.Forms.Resource.Id.action_context_bar = global::GeoGeometry.Resource.Id.action_context_bar;
+			global::XLabs.Forms.Resource.Id.action_divider = global::GeoGeometry.Resource.Id.action_divider;
+			global::XLabs.Forms.Resource.Id.action_menu_divider = global::GeoGeometry.Resource.Id.action_menu_divider;
+			global::XLabs.Forms.Resource.Id.action_menu_presenter = global::GeoGeometry.Resource.Id.action_menu_presenter;
+			global::XLabs.Forms.Resource.Id.action_mode_bar = global::GeoGeometry.Resource.Id.action_mode_bar;
+			global::XLabs.Forms.Resource.Id.action_mode_bar_stub = global::GeoGeometry.Resource.Id.action_mode_bar_stub;
+			global::XLabs.Forms.Resource.Id.action_mode_close_button = global::GeoGeometry.Resource.Id.action_mode_close_button;
+			global::XLabs.Forms.Resource.Id.activity_chooser_view_content = global::GeoGeometry.Resource.Id.activity_chooser_view_content;
+			global::XLabs.Forms.Resource.Id.alertTitle = global::GeoGeometry.Resource.Id.alertTitle;
+			global::XLabs.Forms.Resource.Id.always = global::GeoGeometry.Resource.Id.always;
+			global::XLabs.Forms.Resource.Id.beginning = global::GeoGeometry.Resource.Id.beginning;
+			global::XLabs.Forms.Resource.Id.bottom = global::GeoGeometry.Resource.Id.bottom;
+			global::XLabs.Forms.Resource.Id.buttonPanel = global::GeoGeometry.Resource.Id.buttonPanel;
+			global::XLabs.Forms.Resource.Id.calendar_grid = global::GeoGeometry.Resource.Id.calendar_grid;
+			global::XLabs.Forms.Resource.Id.calendar_view = global::GeoGeometry.Resource.Id.calendar_view;
+			global::XLabs.Forms.Resource.Id.cancel_action = global::GeoGeometry.Resource.Id.cancel_action;
+			global::XLabs.Forms.Resource.Id.center = global::GeoGeometry.Resource.Id.center;
+			global::XLabs.Forms.Resource.Id.center_horizontal = global::GeoGeometry.Resource.Id.center_horizontal;
+			global::XLabs.Forms.Resource.Id.center_vertical = global::GeoGeometry.Resource.Id.center_vertical;
+			global::XLabs.Forms.Resource.Id.checkbox = global::GeoGeometry.Resource.Id.checkbox;
+			global::XLabs.Forms.Resource.Id.chronometer = global::GeoGeometry.Resource.Id.chronometer;
+			global::XLabs.Forms.Resource.Id.clip_horizontal = global::GeoGeometry.Resource.Id.clip_horizontal;
+			global::XLabs.Forms.Resource.Id.clip_vertical = global::GeoGeometry.Resource.Id.clip_vertical;
+			global::XLabs.Forms.Resource.Id.collapseActionView = global::GeoGeometry.Resource.Id.collapseActionView;
+			global::XLabs.Forms.Resource.Id.contentPanel = global::GeoGeometry.Resource.Id.contentPanel;
+			global::XLabs.Forms.Resource.Id.custom = global::GeoGeometry.Resource.Id.custom;
+			global::XLabs.Forms.Resource.Id.customPanel = global::GeoGeometry.Resource.Id.customPanel;
+			global::XLabs.Forms.Resource.Id.decor_content_parent = global::GeoGeometry.Resource.Id.decor_content_parent;
+			global::XLabs.Forms.Resource.Id.default_activity_button = global::GeoGeometry.Resource.Id.default_activity_button;
+			global::XLabs.Forms.Resource.Id.disableHome = global::GeoGeometry.Resource.Id.disableHome;
+			global::XLabs.Forms.Resource.Id.edit_query = global::GeoGeometry.Resource.Id.edit_query;
+			global::XLabs.Forms.Resource.Id.end = global::GeoGeometry.Resource.Id.end;
+			global::XLabs.Forms.Resource.Id.end_padder = global::GeoGeometry.Resource.Id.end_padder;
+			global::XLabs.Forms.Resource.Id.enterAlways = global::GeoGeometry.Resource.Id.enterAlways;
+			global::XLabs.Forms.Resource.Id.enterAlwaysCollapsed = global::GeoGeometry.Resource.Id.enterAlwaysCollapsed;
+			global::XLabs.Forms.Resource.Id.exitUntilCollapsed = global::GeoGeometry.Resource.Id.exitUntilCollapsed;
+			global::XLabs.Forms.Resource.Id.expand_activities_button = global::GeoGeometry.Resource.Id.expand_activities_button;
+			global::XLabs.Forms.Resource.Id.expanded_menu = global::GeoGeometry.Resource.Id.expanded_menu;
+			global::XLabs.Forms.Resource.Id.fill = global::GeoGeometry.Resource.Id.fill;
+			global::XLabs.Forms.Resource.Id.fill_horizontal = global::GeoGeometry.Resource.Id.fill_horizontal;
+			global::XLabs.Forms.Resource.Id.fill_vertical = global::GeoGeometry.Resource.Id.fill_vertical;
+			global::XLabs.Forms.Resource.Id.@fixed = global::GeoGeometry.Resource.Id.@fixed;
+			global::XLabs.Forms.Resource.Id.home = global::GeoGeometry.Resource.Id.home;
+			global::XLabs.Forms.Resource.Id.homeAsUp = global::GeoGeometry.Resource.Id.homeAsUp;
+			global::XLabs.Forms.Resource.Id.icon = global::GeoGeometry.Resource.Id.icon;
+			global::XLabs.Forms.Resource.Id.ifRoom = global::GeoGeometry.Resource.Id.ifRoom;
+			global::XLabs.Forms.Resource.Id.image = global::GeoGeometry.Resource.Id.image;
+			global::XLabs.Forms.Resource.Id.info = global::GeoGeometry.Resource.Id.info;
+			global::XLabs.Forms.Resource.Id.left = global::GeoGeometry.Resource.Id.left;
+			global::XLabs.Forms.Resource.Id.left_arrow = global::GeoGeometry.Resource.Id.left_arrow;
+			global::XLabs.Forms.Resource.Id.line1 = global::GeoGeometry.Resource.Id.line1;
+			global::XLabs.Forms.Resource.Id.line3 = global::GeoGeometry.Resource.Id.line3;
+			global::XLabs.Forms.Resource.Id.listMode = global::GeoGeometry.Resource.Id.listMode;
+			global::XLabs.Forms.Resource.Id.list_item = global::GeoGeometry.Resource.Id.list_item;
+			global::XLabs.Forms.Resource.Id.media_actions = global::GeoGeometry.Resource.Id.media_actions;
+			global::XLabs.Forms.Resource.Id.middle = global::GeoGeometry.Resource.Id.middle;
+			global::XLabs.Forms.Resource.Id.mini = global::GeoGeometry.Resource.Id.mini;
+			global::XLabs.Forms.Resource.Id.multiply = global::GeoGeometry.Resource.Id.multiply;
+			global::XLabs.Forms.Resource.Id.never = global::GeoGeometry.Resource.Id.never;
+			global::XLabs.Forms.Resource.Id.none = global::GeoGeometry.Resource.Id.none;
+			global::XLabs.Forms.Resource.Id.normal = global::GeoGeometry.Resource.Id.normal;
+			global::XLabs.Forms.Resource.Id.parallax = global::GeoGeometry.Resource.Id.parallax;
+			global::XLabs.Forms.Resource.Id.parentPanel = global::GeoGeometry.Resource.Id.parentPanel;
+			global::XLabs.Forms.Resource.Id.pin = global::GeoGeometry.Resource.Id.pin;
+			global::XLabs.Forms.Resource.Id.progress_circular = global::GeoGeometry.Resource.Id.progress_circular;
+			global::XLabs.Forms.Resource.Id.progress_horizontal = global::GeoGeometry.Resource.Id.progress_horizontal;
+			global::XLabs.Forms.Resource.Id.radio = global::GeoGeometry.Resource.Id.radio;
+			global::XLabs.Forms.Resource.Id.right = global::GeoGeometry.Resource.Id.right;
+			global::XLabs.Forms.Resource.Id.right_arrow = global::GeoGeometry.Resource.Id.right_arrow;
+			global::XLabs.Forms.Resource.Id.screen = global::GeoGeometry.Resource.Id.screen;
+			global::XLabs.Forms.Resource.Id.scroll = global::GeoGeometry.Resource.Id.scroll;
+			global::XLabs.Forms.Resource.Id.scrollView = global::GeoGeometry.Resource.Id.scrollView;
+			global::XLabs.Forms.Resource.Id.scrollable = global::GeoGeometry.Resource.Id.scrollable;
+			global::XLabs.Forms.Resource.Id.search_badge = global::GeoGeometry.Resource.Id.search_badge;
+			global::XLabs.Forms.Resource.Id.search_bar = global::GeoGeometry.Resource.Id.search_bar;
+			global::XLabs.Forms.Resource.Id.search_button = global::GeoGeometry.Resource.Id.search_button;
+			global::XLabs.Forms.Resource.Id.search_close_btn = global::GeoGeometry.Resource.Id.search_close_btn;
+			global::XLabs.Forms.Resource.Id.search_edit_frame = global::GeoGeometry.Resource.Id.search_edit_frame;
+			global::XLabs.Forms.Resource.Id.search_go_btn = global::GeoGeometry.Resource.Id.search_go_btn;
+			global::XLabs.Forms.Resource.Id.search_mag_icon = global::GeoGeometry.Resource.Id.search_mag_icon;
+			global::XLabs.Forms.Resource.Id.search_plate = global::GeoGeometry.Resource.Id.search_plate;
+			global::XLabs.Forms.Resource.Id.search_src_text = global::GeoGeometry.Resource.Id.search_src_text;
+			global::XLabs.Forms.Resource.Id.search_voice_btn = global::GeoGeometry.Resource.Id.search_voice_btn;
+			global::XLabs.Forms.Resource.Id.select_dialog_listview = global::GeoGeometry.Resource.Id.select_dialog_listview;
+			global::XLabs.Forms.Resource.Id.shortcut = global::GeoGeometry.Resource.Id.shortcut;
+			global::XLabs.Forms.Resource.Id.showCustom = global::GeoGeometry.Resource.Id.showCustom;
+			global::XLabs.Forms.Resource.Id.showHome = global::GeoGeometry.Resource.Id.showHome;
+			global::XLabs.Forms.Resource.Id.showTitle = global::GeoGeometry.Resource.Id.showTitle;
+			global::XLabs.Forms.Resource.Id.snackbar_action = global::GeoGeometry.Resource.Id.snackbar_action;
+			global::XLabs.Forms.Resource.Id.snackbar_text = global::GeoGeometry.Resource.Id.snackbar_text;
+			global::XLabs.Forms.Resource.Id.split_action_bar = global::GeoGeometry.Resource.Id.split_action_bar;
+			global::XLabs.Forms.Resource.Id.src_atop = global::GeoGeometry.Resource.Id.src_atop;
+			global::XLabs.Forms.Resource.Id.src_in = global::GeoGeometry.Resource.Id.src_in;
+			global::XLabs.Forms.Resource.Id.src_over = global::GeoGeometry.Resource.Id.src_over;
+			global::XLabs.Forms.Resource.Id.start = global::GeoGeometry.Resource.Id.start;
+			global::XLabs.Forms.Resource.Id.status_bar_latest_event_content = global::GeoGeometry.Resource.Id.status_bar_latest_event_content;
+			global::XLabs.Forms.Resource.Id.submit_area = global::GeoGeometry.Resource.Id.submit_area;
+			global::XLabs.Forms.Resource.Id.tabMode = global::GeoGeometry.Resource.Id.tabMode;
+			global::XLabs.Forms.Resource.Id.text = global::GeoGeometry.Resource.Id.text;
+			global::XLabs.Forms.Resource.Id.text2 = global::GeoGeometry.Resource.Id.text2;
+			global::XLabs.Forms.Resource.Id.textSpacerNoButtons = global::GeoGeometry.Resource.Id.textSpacerNoButtons;
+			global::XLabs.Forms.Resource.Id.time = global::GeoGeometry.Resource.Id.time;
+			global::XLabs.Forms.Resource.Id.title = global::GeoGeometry.Resource.Id.title;
+			global::XLabs.Forms.Resource.Id.title_template = global::GeoGeometry.Resource.Id.title_template;
+			global::XLabs.Forms.Resource.Id.top = global::GeoGeometry.Resource.Id.top;
+			global::XLabs.Forms.Resource.Id.topPanel = global::GeoGeometry.Resource.Id.topPanel;
+			global::XLabs.Forms.Resource.Id.up = global::GeoGeometry.Resource.Id.up;
+			global::XLabs.Forms.Resource.Id.useLogo = global::GeoGeometry.Resource.Id.useLogo;
+			global::XLabs.Forms.Resource.Id.view_offset_helper = global::GeoGeometry.Resource.Id.view_offset_helper;
+			global::XLabs.Forms.Resource.Id.withText = global::GeoGeometry.Resource.Id.withText;
+			global::XLabs.Forms.Resource.Id.wrap_content = global::GeoGeometry.Resource.Id.wrap_content;
+			global::XLabs.Forms.Resource.Integer.abc_config_activityDefaultDur = global::GeoGeometry.Resource.Integer.abc_config_activityDefaultDur;
+			global::XLabs.Forms.Resource.Integer.abc_config_activityShortDur = global::GeoGeometry.Resource.Integer.abc_config_activityShortDur;
+			global::XLabs.Forms.Resource.Integer.cancel_button_image_alpha = global::GeoGeometry.Resource.Integer.cancel_button_image_alpha;
+			global::XLabs.Forms.Resource.Integer.design_snackbar_text_max_lines = global::GeoGeometry.Resource.Integer.design_snackbar_text_max_lines;
+			global::XLabs.Forms.Resource.Integer.status_bar_notification_info_maxnum = global::GeoGeometry.Resource.Integer.status_bar_notification_info_maxnum;
+			global::XLabs.Forms.Resource.Layout.abc_action_bar_title_item = global::GeoGeometry.Resource.Layout.abc_action_bar_title_item;
+			global::XLabs.Forms.Resource.Layout.abc_action_bar_up_container = global::GeoGeometry.Resource.Layout.abc_action_bar_up_container;
+			global::XLabs.Forms.Resource.Layout.abc_action_menu_item_layout = global::GeoGeometry.Resource.Layout.abc_action_menu_item_layout;
+			global::XLabs.Forms.Resource.Layout.abc_action_menu_layout = global::GeoGeometry.Resource.Layout.abc_action_menu_layout;
+			global::XLabs.Forms.Resource.Layout.abc_action_mode_bar = global::GeoGeometry.Resource.Layout.abc_action_mode_bar;
+			global::XLabs.Forms.Resource.Layout.abc_action_mode_close_item_material = global::GeoGeometry.Resource.Layout.abc_action_mode_close_item_material;
+			global::XLabs.Forms.Resource.Layout.abc_activity_chooser_view = global::GeoGeometry.Resource.Layout.abc_activity_chooser_view;
+			global::XLabs.Forms.Resource.Layout.abc_activity_chooser_view_list_item = global::GeoGeometry.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::XLabs.Forms.Resource.Layout.abc_alert_dialog_material = global::GeoGeometry.Resource.Layout.abc_alert_dialog_material;
+			global::XLabs.Forms.Resource.Layout.abc_dialog_title_material = global::GeoGeometry.Resource.Layout.abc_dialog_title_material;
+			global::XLabs.Forms.Resource.Layout.abc_expanded_menu_layout = global::GeoGeometry.Resource.Layout.abc_expanded_menu_layout;
+			global::XLabs.Forms.Resource.Layout.abc_list_menu_item_checkbox = global::GeoGeometry.Resource.Layout.abc_list_menu_item_checkbox;
+			global::XLabs.Forms.Resource.Layout.abc_list_menu_item_icon = global::GeoGeometry.Resource.Layout.abc_list_menu_item_icon;
+			global::XLabs.Forms.Resource.Layout.abc_list_menu_item_layout = global::GeoGeometry.Resource.Layout.abc_list_menu_item_layout;
+			global::XLabs.Forms.Resource.Layout.abc_list_menu_item_radio = global::GeoGeometry.Resource.Layout.abc_list_menu_item_radio;
+			global::XLabs.Forms.Resource.Layout.abc_popup_menu_item_layout = global::GeoGeometry.Resource.Layout.abc_popup_menu_item_layout;
+			global::XLabs.Forms.Resource.Layout.abc_screen_content_include = global::GeoGeometry.Resource.Layout.abc_screen_content_include;
+			global::XLabs.Forms.Resource.Layout.abc_screen_simple = global::GeoGeometry.Resource.Layout.abc_screen_simple;
+			global::XLabs.Forms.Resource.Layout.abc_screen_simple_overlay_action_mode = global::GeoGeometry.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::XLabs.Forms.Resource.Layout.abc_screen_toolbar = global::GeoGeometry.Resource.Layout.abc_screen_toolbar;
+			global::XLabs.Forms.Resource.Layout.abc_search_dropdown_item_icons_2line = global::GeoGeometry.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::XLabs.Forms.Resource.Layout.abc_search_view = global::GeoGeometry.Resource.Layout.abc_search_view;
+			global::XLabs.Forms.Resource.Layout.abc_select_dialog_material = global::GeoGeometry.Resource.Layout.abc_select_dialog_material;
+			global::XLabs.Forms.Resource.Layout.calendar_pager_layout = global::GeoGeometry.Resource.Layout.calendar_pager_layout;
+			global::XLabs.Forms.Resource.Layout.calendar_picker = global::GeoGeometry.Resource.Layout.calendar_picker;
+			global::XLabs.Forms.Resource.Layout.design_layout_snackbar = global::GeoGeometry.Resource.Layout.design_layout_snackbar;
+			global::XLabs.Forms.Resource.Layout.design_layout_snackbar_include = global::GeoGeometry.Resource.Layout.design_layout_snackbar_include;
+			global::XLabs.Forms.Resource.Layout.design_layout_tab_icon = global::GeoGeometry.Resource.Layout.design_layout_tab_icon;
+			global::XLabs.Forms.Resource.Layout.design_layout_tab_text = global::GeoGeometry.Resource.Layout.design_layout_tab_text;
+			global::XLabs.Forms.Resource.Layout.design_navigation_item = global::GeoGeometry.Resource.Layout.design_navigation_item;
+			global::XLabs.Forms.Resource.Layout.design_navigation_item_header = global::GeoGeometry.Resource.Layout.design_navigation_item_header;
+			global::XLabs.Forms.Resource.Layout.design_navigation_item_separator = global::GeoGeometry.Resource.Layout.design_navigation_item_separator;
+			global::XLabs.Forms.Resource.Layout.design_navigation_item_subheader = global::GeoGeometry.Resource.Layout.design_navigation_item_subheader;
+			global::XLabs.Forms.Resource.Layout.design_navigation_menu = global::GeoGeometry.Resource.Layout.design_navigation_menu;
+			global::XLabs.Forms.Resource.Layout.dialog = global::GeoGeometry.Resource.Layout.dialog;
+			global::XLabs.Forms.Resource.Layout.month = global::GeoGeometry.Resource.Layout.month;
+			global::XLabs.Forms.Resource.Layout.notification_media_action = global::GeoGeometry.Resource.Layout.notification_media_action;
+			global::XLabs.Forms.Resource.Layout.notification_media_cancel_action = global::GeoGeometry.Resource.Layout.notification_media_cancel_action;
+			global::XLabs.Forms.Resource.Layout.notification_template_big_media = global::GeoGeometry.Resource.Layout.notification_template_big_media;
+			global::XLabs.Forms.Resource.Layout.notification_template_big_media_narrow = global::GeoGeometry.Resource.Layout.notification_template_big_media_narrow;
+			global::XLabs.Forms.Resource.Layout.notification_template_media = global::GeoGeometry.Resource.Layout.notification_template_media;
+			global::XLabs.Forms.Resource.Layout.notification_template_part_chronometer = global::GeoGeometry.Resource.Layout.notification_template_part_chronometer;
+			global::XLabs.Forms.Resource.Layout.notification_template_part_time = global::GeoGeometry.Resource.Layout.notification_template_part_time;
+			global::XLabs.Forms.Resource.Layout.select_dialog_item_material = global::GeoGeometry.Resource.Layout.select_dialog_item_material;
+			global::XLabs.Forms.Resource.Layout.select_dialog_multichoice_material = global::GeoGeometry.Resource.Layout.select_dialog_multichoice_material;
+			global::XLabs.Forms.Resource.Layout.select_dialog_singlechoice_material = global::GeoGeometry.Resource.Layout.select_dialog_singlechoice_material;
+			global::XLabs.Forms.Resource.Layout.support_simple_spinner_dropdown_item = global::GeoGeometry.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::XLabs.Forms.Resource.Layout.week = global::GeoGeometry.Resource.Layout.week;
+			global::XLabs.Forms.Resource.String.ApplicationName = global::GeoGeometry.Resource.String.ApplicationName;
+			global::XLabs.Forms.Resource.String.Hello = global::GeoGeometry.Resource.String.Hello;
+			global::XLabs.Forms.Resource.String.abc_action_bar_home_description = global::GeoGeometry.Resource.String.abc_action_bar_home_description;
+			global::XLabs.Forms.Resource.String.abc_action_bar_up_description = global::GeoGeometry.Resource.String.abc_action_bar_up_description;
+			global::XLabs.Forms.Resource.String.abc_action_menu_overflow_description = global::GeoGeometry.Resource.String.abc_action_menu_overflow_description;
+			global::XLabs.Forms.Resource.String.abc_action_mode_done = global::GeoGeometry.Resource.String.abc_action_mode_done;
+			global::XLabs.Forms.Resource.String.abc_activity_chooser_view_see_all = global::GeoGeometry.Resource.String.abc_activity_chooser_view_see_all;
+			global::XLabs.Forms.Resource.String.abc_activitychooserview_choose_application = global::GeoGeometry.Resource.String.abc_activitychooserview_choose_application;
+			global::XLabs.Forms.Resource.String.abc_search_hint = global::GeoGeometry.Resource.String.abc_search_hint;
+			global::XLabs.Forms.Resource.String.abc_searchview_description_clear = global::GeoGeometry.Resource.String.abc_searchview_description_clear;
+			global::XLabs.Forms.Resource.String.abc_searchview_description_query = global::GeoGeometry.Resource.String.abc_searchview_description_query;
+			global::XLabs.Forms.Resource.String.abc_searchview_description_search = global::GeoGeometry.Resource.String.abc_searchview_description_search;
+			global::XLabs.Forms.Resource.String.abc_searchview_description_submit = global::GeoGeometry.Resource.String.abc_searchview_description_submit;
+			global::XLabs.Forms.Resource.String.abc_searchview_description_voice = global::GeoGeometry.Resource.String.abc_searchview_description_voice;
+			global::XLabs.Forms.Resource.String.abc_shareactionprovider_share_with = global::GeoGeometry.Resource.String.abc_shareactionprovider_share_with;
+			global::XLabs.Forms.Resource.String.abc_shareactionprovider_share_with_application = global::GeoGeometry.Resource.String.abc_shareactionprovider_share_with_application;
+			global::XLabs.Forms.Resource.String.abc_toolbar_collapse_description = global::GeoGeometry.Resource.String.abc_toolbar_collapse_description;
+			global::XLabs.Forms.Resource.String.appbar_scrolling_view_behavior = global::GeoGeometry.Resource.String.appbar_scrolling_view_behavior;
+			global::XLabs.Forms.Resource.String.day_name_format = global::GeoGeometry.Resource.String.day_name_format;
+			global::XLabs.Forms.Resource.String.full_date_format = global::GeoGeometry.Resource.String.full_date_format;
+			global::XLabs.Forms.Resource.String.invalid_date = global::GeoGeometry.Resource.String.invalid_date;
+			global::XLabs.Forms.Resource.String.library_name = global::GeoGeometry.Resource.String.library_name;
+			global::XLabs.Forms.Resource.String.month_name_format = global::GeoGeometry.Resource.String.month_name_format;
+			global::XLabs.Forms.Resource.String.mr_system_route_name = global::GeoGeometry.Resource.String.mr_system_route_name;
+			global::XLabs.Forms.Resource.String.mr_user_route_category_name = global::GeoGeometry.Resource.String.mr_user_route_category_name;
+			global::XLabs.Forms.Resource.String.status_bar_notification_info_overflow = global::GeoGeometry.Resource.String.status_bar_notification_info_overflow;
+			global::XLabs.Forms.Resource.Style.AlertDialog_AppCompat = global::GeoGeometry.Resource.Style.AlertDialog_AppCompat;
+			global::XLabs.Forms.Resource.Style.AlertDialog_AppCompat_Light = global::GeoGeometry.Resource.Style.AlertDialog_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Animation_AppCompat_Dialog = global::GeoGeometry.Resource.Style.Animation_AppCompat_Dialog;
+			global::XLabs.Forms.Resource.Style.Animation_AppCompat_DropDownUp = global::GeoGeometry.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::XLabs.Forms.Resource.Style.Base_AlertDialog_AppCompat = global::GeoGeometry.Resource.Style.Base_AlertDialog_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_AlertDialog_AppCompat_Light = global::GeoGeometry.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Base_Animation_AppCompat_Dialog = global::GeoGeometry.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::GeoGeometry.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::XLabs.Forms.Resource.Style.Base_DialogWindowTitle_AppCompat = global::GeoGeometry.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::GeoGeometry.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Button = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Large = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Small = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Title = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::GeoGeometry.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::GeoGeometry.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::GeoGeometry.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XLabs.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::GeoGeometry.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Dialog = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Light = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XLabs.Forms.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::GeoGeometry.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::XLabs.Forms.Resource.Style.Base_ThemeOverlay_AppCompat = global::GeoGeometry.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::GeoGeometry.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::XLabs.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::GeoGeometry.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::XLabs.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::GeoGeometry.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XLabs.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::GeoGeometry.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::GeoGeometry.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::GeoGeometry.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::GeoGeometry.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::XLabs.Forms.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::GeoGeometry.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::XLabs.Forms.Resource.Style.Base_V21_Theme_AppCompat = global::GeoGeometry.Resource.Style.Base_V21_Theme_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::GeoGeometry.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_V21_Theme_AppCompat_Light = global::GeoGeometry.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::GeoGeometry.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_V22_Theme_AppCompat = global::GeoGeometry.Resource.Style.Base_V22_Theme_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_V22_Theme_AppCompat_Light = global::GeoGeometry.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Base_V23_Theme_AppCompat = global::GeoGeometry.Resource.Style.Base_V23_Theme_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_V23_Theme_AppCompat_Light = global::GeoGeometry.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Base_V7_Theme_AppCompat = global::GeoGeometry.Resource.Style.Base_V7_Theme_AppCompat;
+			global::XLabs.Forms.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::GeoGeometry.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_V7_Theme_AppCompat_Light = global::GeoGeometry.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::GeoGeometry.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::XLabs.Forms.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::GeoGeometry.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::XLabs.Forms.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::GeoGeometry.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActionMode = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Button = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Button;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Button_Small = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_EditText = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ListView = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_RatingBar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_SearchView = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Spinner = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Toolbar = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::XLabs.Forms.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::GeoGeometry.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XLabs.Forms.Resource.Style.Base_Widget_Design_TabLayout = global::GeoGeometry.Resource.Style.Base_Widget_Design_TabLayout;
+			global::XLabs.Forms.Resource.Style.CalendarCell = global::GeoGeometry.Resource.Style.CalendarCell;
+			global::XLabs.Forms.Resource.Style.CalendarCell_CalendarDate = global::GeoGeometry.Resource.Style.CalendarCell_CalendarDate;
+			global::XLabs.Forms.Resource.Style.CalendarCell_DayHeader = global::GeoGeometry.Resource.Style.CalendarCell_DayHeader;
+			global::XLabs.Forms.Resource.Style.CalendarTitle = global::GeoGeometry.Resource.Style.CalendarTitle;
+			global::XLabs.Forms.Resource.Style.CardView = global::GeoGeometry.Resource.Style.CardView;
+			global::XLabs.Forms.Resource.Style.CardView_Dark = global::GeoGeometry.Resource.Style.CardView_Dark;
+			global::XLabs.Forms.Resource.Style.CardView_Light = global::GeoGeometry.Resource.Style.CardView_Light;
+			global::XLabs.Forms.Resource.Style.Platform_AppCompat = global::GeoGeometry.Resource.Style.Platform_AppCompat;
+			global::XLabs.Forms.Resource.Style.Platform_AppCompat_Light = global::GeoGeometry.Resource.Style.Platform_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat = global::GeoGeometry.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::XLabs.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::GeoGeometry.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::XLabs.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::GeoGeometry.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Platform_V11_AppCompat = global::GeoGeometry.Resource.Style.Platform_V11_AppCompat;
+			global::XLabs.Forms.Resource.Style.Platform_V11_AppCompat_Light = global::GeoGeometry.Resource.Style.Platform_V11_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Platform_V14_AppCompat = global::GeoGeometry.Resource.Style.Platform_V14_AppCompat;
+			global::XLabs.Forms.Resource.Style.Platform_V14_AppCompat_Light = global::GeoGeometry.Resource.Style.Platform_V14_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Platform_Widget_AppCompat_Spinner = global::GeoGeometry.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::GeoGeometry.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::XLabs.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::GeoGeometry.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Body1 = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Body2 = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Button = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Button;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Caption = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Display1 = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Display2 = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Display3 = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Display4 = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Headline = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Large = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Large;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Medium = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Menu = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Small = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Small;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Subhead = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Title = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Title;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::XLabs.Forms.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::GeoGeometry.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XLabs.Forms.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::GeoGeometry.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::XLabs.Forms.Resource.Style.TextAppearance_Design_Error = global::GeoGeometry.Resource.Style.TextAppearance_Design_Error;
+			global::XLabs.Forms.Resource.Style.TextAppearance_Design_Hint = global::GeoGeometry.Resource.Style.TextAppearance_Design_Hint;
+			global::XLabs.Forms.Resource.Style.TextAppearance_Design_Snackbar_Message = global::GeoGeometry.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::XLabs.Forms.Resource.Style.TextAppearance_Design_Tab = global::GeoGeometry.Resource.Style.TextAppearance_Design_Tab;
+			global::XLabs.Forms.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::GeoGeometry.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XLabs.Forms.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::GeoGeometry.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XLabs.Forms.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::GeoGeometry.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat = global::GeoGeometry.Resource.Style.Theme_AppCompat;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_CompactMenu = global::GeoGeometry.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Dialog = global::GeoGeometry.Resource.Style.Theme_AppCompat_Dialog;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Dialog_Alert = global::GeoGeometry.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::GeoGeometry.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::GeoGeometry.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Light = global::GeoGeometry.Resource.Style.Theme_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::GeoGeometry.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Light_Dialog = global::GeoGeometry.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::GeoGeometry.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::GeoGeometry.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::GeoGeometry.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::GeoGeometry.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::XLabs.Forms.Resource.Style.Theme_AppCompat_NoActionBar = global::GeoGeometry.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::XLabs.Forms.Resource.Style.Theme_MediaRouter = global::GeoGeometry.Resource.Style.Theme_MediaRouter;
+			global::XLabs.Forms.Resource.Style.Theme_MediaRouter_Light = global::GeoGeometry.Resource.Style.Theme_MediaRouter_Light;
+			global::XLabs.Forms.Resource.Style.ThemeOverlay_AppCompat = global::GeoGeometry.Resource.Style.ThemeOverlay_AppCompat;
+			global::XLabs.Forms.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::GeoGeometry.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::XLabs.Forms.Resource.Style.ThemeOverlay_AppCompat_Dark = global::GeoGeometry.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::XLabs.Forms.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::GeoGeometry.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XLabs.Forms.Resource.Style.ThemeOverlay_AppCompat_Light = global::GeoGeometry.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionButton = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionButton;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActionMode = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActionMode;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ActivityChooserView = global::GeoGeometry.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::GeoGeometry.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Button = global::GeoGeometry.Resource.Style.Widget_AppCompat_Button;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Button_Borderless = global::GeoGeometry.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::GeoGeometry.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::GeoGeometry.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Button_Colored = global::GeoGeometry.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Button_Small = global::GeoGeometry.Resource.Style.Widget_AppCompat_Button_Small;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ButtonBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::GeoGeometry.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::GeoGeometry.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::GeoGeometry.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::GeoGeometry.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::GeoGeometry.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::GeoGeometry.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_EditText = global::GeoGeometry.Resource.Style.Widget_AppCompat_EditText;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_SearchView = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ListPopupWindow = global::GeoGeometry.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ListView = global::GeoGeometry.Resource.Style.Widget_AppCompat_ListView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ListView_DropDown = global::GeoGeometry.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ListView_Menu = global::GeoGeometry.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_PopupMenu = global::GeoGeometry.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::GeoGeometry.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_PopupWindow = global::GeoGeometry.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ProgressBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::GeoGeometry.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_RatingBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_RatingBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_SearchView = global::GeoGeometry.Resource.Style.Widget_AppCompat_SearchView;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Spinner = global::GeoGeometry.Resource.Style.Widget_AppCompat_Spinner;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::GeoGeometry.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::GeoGeometry.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::GeoGeometry.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::GeoGeometry.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Toolbar = global::GeoGeometry.Resource.Style.Widget_AppCompat_Toolbar;
+			global::XLabs.Forms.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::GeoGeometry.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XLabs.Forms.Resource.Style.Widget_Design_AppBarLayout = global::GeoGeometry.Resource.Style.Widget_Design_AppBarLayout;
+			global::XLabs.Forms.Resource.Style.Widget_Design_CollapsingToolbar = global::GeoGeometry.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::XLabs.Forms.Resource.Style.Widget_Design_CoordinatorLayout = global::GeoGeometry.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::XLabs.Forms.Resource.Style.Widget_Design_FloatingActionButton = global::GeoGeometry.Resource.Style.Widget_Design_FloatingActionButton;
+			global::XLabs.Forms.Resource.Style.Widget_Design_NavigationView = global::GeoGeometry.Resource.Style.Widget_Design_NavigationView;
+			global::XLabs.Forms.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::GeoGeometry.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::XLabs.Forms.Resource.Style.Widget_Design_Snackbar = global::GeoGeometry.Resource.Style.Widget_Design_Snackbar;
+			global::XLabs.Forms.Resource.Style.Widget_Design_TabLayout = global::GeoGeometry.Resource.Style.Widget_Design_TabLayout;
+			global::XLabs.Forms.Resource.Style.Widget_Design_TextInputLayout = global::GeoGeometry.Resource.Style.Widget_Design_TextInputLayout;
+			global::XLabs.Forms.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::GeoGeometry.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::XLabs.Forms.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::GeoGeometry.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::XLabs.Forms.Resource.Styleable.ActionBar = global::GeoGeometry.Resource.Styleable.ActionBar;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_background = global::GeoGeometry.Resource.Styleable.ActionBar_background;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_backgroundSplit = global::GeoGeometry.Resource.Styleable.ActionBar_backgroundSplit;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_backgroundStacked = global::GeoGeometry.Resource.Styleable.ActionBar_backgroundStacked;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_contentInsetEnd = global::GeoGeometry.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_contentInsetLeft = global::GeoGeometry.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_contentInsetRight = global::GeoGeometry.Resource.Styleable.ActionBar_contentInsetRight;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_contentInsetStart = global::GeoGeometry.Resource.Styleable.ActionBar_contentInsetStart;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_customNavigationLayout = global::GeoGeometry.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_displayOptions = global::GeoGeometry.Resource.Styleable.ActionBar_displayOptions;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_divider = global::GeoGeometry.Resource.Styleable.ActionBar_divider;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_elevation = global::GeoGeometry.Resource.Styleable.ActionBar_elevation;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_height = global::GeoGeometry.Resource.Styleable.ActionBar_height;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_hideOnContentScroll = global::GeoGeometry.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_homeAsUpIndicator = global::GeoGeometry.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_homeLayout = global::GeoGeometry.Resource.Styleable.ActionBar_homeLayout;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_icon = global::GeoGeometry.Resource.Styleable.ActionBar_icon;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::GeoGeometry.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_itemPadding = global::GeoGeometry.Resource.Styleable.ActionBar_itemPadding;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_logo = global::GeoGeometry.Resource.Styleable.ActionBar_logo;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_navigationMode = global::GeoGeometry.Resource.Styleable.ActionBar_navigationMode;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_popupTheme = global::GeoGeometry.Resource.Styleable.ActionBar_popupTheme;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_progressBarPadding = global::GeoGeometry.Resource.Styleable.ActionBar_progressBarPadding;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_progressBarStyle = global::GeoGeometry.Resource.Styleable.ActionBar_progressBarStyle;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_subtitle = global::GeoGeometry.Resource.Styleable.ActionBar_subtitle;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_subtitleTextStyle = global::GeoGeometry.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_title = global::GeoGeometry.Resource.Styleable.ActionBar_title;
+			global::XLabs.Forms.Resource.Styleable.ActionBar_titleTextStyle = global::GeoGeometry.Resource.Styleable.ActionBar_titleTextStyle;
+			global::XLabs.Forms.Resource.Styleable.ActionBarLayout = global::GeoGeometry.Resource.Styleable.ActionBarLayout;
+			global::XLabs.Forms.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::GeoGeometry.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::XLabs.Forms.Resource.Styleable.ActionMenuItemView = global::GeoGeometry.Resource.Styleable.ActionMenuItemView;
+			global::XLabs.Forms.Resource.Styleable.ActionMenuItemView_android_minWidth = global::GeoGeometry.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::XLabs.Forms.Resource.Styleable.ActionMenuView = global::GeoGeometry.Resource.Styleable.ActionMenuView;
+			global::XLabs.Forms.Resource.Styleable.ActionMode = global::GeoGeometry.Resource.Styleable.ActionMode;
+			global::XLabs.Forms.Resource.Styleable.ActionMode_background = global::GeoGeometry.Resource.Styleable.ActionMode_background;
+			global::XLabs.Forms.Resource.Styleable.ActionMode_backgroundSplit = global::GeoGeometry.Resource.Styleable.ActionMode_backgroundSplit;
+			global::XLabs.Forms.Resource.Styleable.ActionMode_closeItemLayout = global::GeoGeometry.Resource.Styleable.ActionMode_closeItemLayout;
+			global::XLabs.Forms.Resource.Styleable.ActionMode_height = global::GeoGeometry.Resource.Styleable.ActionMode_height;
+			global::XLabs.Forms.Resource.Styleable.ActionMode_subtitleTextStyle = global::GeoGeometry.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::XLabs.Forms.Resource.Styleable.ActionMode_titleTextStyle = global::GeoGeometry.Resource.Styleable.ActionMode_titleTextStyle;
+			global::XLabs.Forms.Resource.Styleable.ActivityChooserView = global::GeoGeometry.Resource.Styleable.ActivityChooserView;
+			global::XLabs.Forms.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::GeoGeometry.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::XLabs.Forms.Resource.Styleable.ActivityChooserView_initialActivityCount = global::GeoGeometry.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::XLabs.Forms.Resource.Styleable.AlertDialog = global::GeoGeometry.Resource.Styleable.AlertDialog;
+			global::XLabs.Forms.Resource.Styleable.AlertDialog_android_layout = global::GeoGeometry.Resource.Styleable.AlertDialog_android_layout;
+			global::XLabs.Forms.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::GeoGeometry.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::XLabs.Forms.Resource.Styleable.AlertDialog_listItemLayout = global::GeoGeometry.Resource.Styleable.AlertDialog_listItemLayout;
+			global::XLabs.Forms.Resource.Styleable.AlertDialog_listLayout = global::GeoGeometry.Resource.Styleable.AlertDialog_listLayout;
+			global::XLabs.Forms.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::GeoGeometry.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::XLabs.Forms.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::GeoGeometry.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::XLabs.Forms.Resource.Styleable.AppBarLayout = global::GeoGeometry.Resource.Styleable.AppBarLayout;
+			global::XLabs.Forms.Resource.Styleable.AppBarLayout_android_background = global::GeoGeometry.Resource.Styleable.AppBarLayout_android_background;
+			global::XLabs.Forms.Resource.Styleable.AppBarLayout_elevation = global::GeoGeometry.Resource.Styleable.AppBarLayout_elevation;
+			global::XLabs.Forms.Resource.Styleable.AppBarLayout_expanded = global::GeoGeometry.Resource.Styleable.AppBarLayout_expanded;
+			global::XLabs.Forms.Resource.Styleable.AppCompatTextView = global::GeoGeometry.Resource.Styleable.AppCompatTextView;
+			global::XLabs.Forms.Resource.Styleable.AppCompatTextView_android_textAppearance = global::GeoGeometry.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::XLabs.Forms.Resource.Styleable.AppCompatTextView_textAllCaps = global::GeoGeometry.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::XLabs.Forms.Resource.Styleable.CardView = global::GeoGeometry.Resource.Styleable.CardView;
+			global::XLabs.Forms.Resource.Styleable.CardView_cardBackgroundColor = global::GeoGeometry.Resource.Styleable.CardView_cardBackgroundColor;
+			global::XLabs.Forms.Resource.Styleable.CardView_cardCornerRadius = global::GeoGeometry.Resource.Styleable.CardView_cardCornerRadius;
+			global::XLabs.Forms.Resource.Styleable.CardView_cardElevation = global::GeoGeometry.Resource.Styleable.CardView_cardElevation;
+			global::XLabs.Forms.Resource.Styleable.CardView_cardMaxElevation = global::GeoGeometry.Resource.Styleable.CardView_cardMaxElevation;
+			global::XLabs.Forms.Resource.Styleable.CardView_cardPreventCornerOverlap = global::GeoGeometry.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::XLabs.Forms.Resource.Styleable.CardView_cardUseCompatPadding = global::GeoGeometry.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::XLabs.Forms.Resource.Styleable.CardView_contentPadding = global::GeoGeometry.Resource.Styleable.CardView_contentPadding;
+			global::XLabs.Forms.Resource.Styleable.CardView_contentPaddingBottom = global::GeoGeometry.Resource.Styleable.CardView_contentPaddingBottom;
+			global::XLabs.Forms.Resource.Styleable.CardView_contentPaddingLeft = global::GeoGeometry.Resource.Styleable.CardView_contentPaddingLeft;
+			global::XLabs.Forms.Resource.Styleable.CardView_contentPaddingRight = global::GeoGeometry.Resource.Styleable.CardView_contentPaddingRight;
+			global::XLabs.Forms.Resource.Styleable.CardView_contentPaddingTop = global::GeoGeometry.Resource.Styleable.CardView_contentPaddingTop;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_title = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::XLabs.Forms.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::GeoGeometry.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::XLabs.Forms.Resource.Styleable.CompoundButton = global::GeoGeometry.Resource.Styleable.CompoundButton;
+			global::XLabs.Forms.Resource.Styleable.CompoundButton_android_button = global::GeoGeometry.Resource.Styleable.CompoundButton_android_button;
+			global::XLabs.Forms.Resource.Styleable.CompoundButton_buttonTint = global::GeoGeometry.Resource.Styleable.CompoundButton_buttonTint;
+			global::XLabs.Forms.Resource.Styleable.CompoundButton_buttonTintMode = global::GeoGeometry.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::XLabs.Forms.Resource.Styleable.CoordinatorLayout = global::GeoGeometry.Resource.Styleable.CoordinatorLayout;
+			global::XLabs.Forms.Resource.Styleable.CoordinatorLayout_keylines = global::GeoGeometry.Resource.Styleable.CoordinatorLayout_keylines;
+			global::XLabs.Forms.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::GeoGeometry.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle_barLength = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle_color = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle_color;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle_drawableSize = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle_spinBars = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::XLabs.Forms.Resource.Styleable.DrawerArrowToggle_thickness = global::GeoGeometry.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::XLabs.Forms.Resource.Styleable.FloatingActionButton = global::GeoGeometry.Resource.Styleable.FloatingActionButton;
+			global::XLabs.Forms.Resource.Styleable.FloatingActionButton_backgroundTint = global::GeoGeometry.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::XLabs.Forms.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::GeoGeometry.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::XLabs.Forms.Resource.Styleable.FloatingActionButton_borderWidth = global::GeoGeometry.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::XLabs.Forms.Resource.Styleable.FloatingActionButton_elevation = global::GeoGeometry.Resource.Styleable.FloatingActionButton_elevation;
+			global::XLabs.Forms.Resource.Styleable.FloatingActionButton_fabSize = global::GeoGeometry.Resource.Styleable.FloatingActionButton_fabSize;
+			global::XLabs.Forms.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::GeoGeometry.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::XLabs.Forms.Resource.Styleable.FloatingActionButton_rippleColor = global::GeoGeometry.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_android_gravity = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_android_orientation = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_divider = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_divider;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_showDividers = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_Layout = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::XLabs.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::GeoGeometry.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::XLabs.Forms.Resource.Styleable.ListPopupWindow = global::GeoGeometry.Resource.Styleable.ListPopupWindow;
+			global::XLabs.Forms.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::GeoGeometry.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::XLabs.Forms.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::GeoGeometry.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::XLabs.Forms.Resource.Styleable.MediaRouteButton = global::GeoGeometry.Resource.Styleable.MediaRouteButton;
+			global::XLabs.Forms.Resource.Styleable.MediaRouteButton_android_minHeight = global::GeoGeometry.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::XLabs.Forms.Resource.Styleable.MediaRouteButton_android_minWidth = global::GeoGeometry.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::XLabs.Forms.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::GeoGeometry.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::XLabs.Forms.Resource.Styleable.MenuGroup = global::GeoGeometry.Resource.Styleable.MenuGroup;
+			global::XLabs.Forms.Resource.Styleable.MenuGroup_android_checkableBehavior = global::GeoGeometry.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::XLabs.Forms.Resource.Styleable.MenuGroup_android_enabled = global::GeoGeometry.Resource.Styleable.MenuGroup_android_enabled;
+			global::XLabs.Forms.Resource.Styleable.MenuGroup_android_id = global::GeoGeometry.Resource.Styleable.MenuGroup_android_id;
+			global::XLabs.Forms.Resource.Styleable.MenuGroup_android_menuCategory = global::GeoGeometry.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::XLabs.Forms.Resource.Styleable.MenuGroup_android_orderInCategory = global::GeoGeometry.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::XLabs.Forms.Resource.Styleable.MenuGroup_android_visible = global::GeoGeometry.Resource.Styleable.MenuGroup_android_visible;
+			global::XLabs.Forms.Resource.Styleable.MenuItem = global::GeoGeometry.Resource.Styleable.MenuItem;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_actionLayout = global::GeoGeometry.Resource.Styleable.MenuItem_actionLayout;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_actionProviderClass = global::GeoGeometry.Resource.Styleable.MenuItem_actionProviderClass;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_actionViewClass = global::GeoGeometry.Resource.Styleable.MenuItem_actionViewClass;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::GeoGeometry.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_checkable = global::GeoGeometry.Resource.Styleable.MenuItem_android_checkable;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_checked = global::GeoGeometry.Resource.Styleable.MenuItem_android_checked;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_enabled = global::GeoGeometry.Resource.Styleable.MenuItem_android_enabled;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_icon = global::GeoGeometry.Resource.Styleable.MenuItem_android_icon;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_id = global::GeoGeometry.Resource.Styleable.MenuItem_android_id;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_menuCategory = global::GeoGeometry.Resource.Styleable.MenuItem_android_menuCategory;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_numericShortcut = global::GeoGeometry.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_onClick = global::GeoGeometry.Resource.Styleable.MenuItem_android_onClick;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_orderInCategory = global::GeoGeometry.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_title = global::GeoGeometry.Resource.Styleable.MenuItem_android_title;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_titleCondensed = global::GeoGeometry.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_android_visible = global::GeoGeometry.Resource.Styleable.MenuItem_android_visible;
+			global::XLabs.Forms.Resource.Styleable.MenuItem_showAsAction = global::GeoGeometry.Resource.Styleable.MenuItem_showAsAction;
+			global::XLabs.Forms.Resource.Styleable.MenuView = global::GeoGeometry.Resource.Styleable.MenuView;
+			global::XLabs.Forms.Resource.Styleable.MenuView_android_headerBackground = global::GeoGeometry.Resource.Styleable.MenuView_android_headerBackground;
+			global::XLabs.Forms.Resource.Styleable.MenuView_android_horizontalDivider = global::GeoGeometry.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::XLabs.Forms.Resource.Styleable.MenuView_android_itemBackground = global::GeoGeometry.Resource.Styleable.MenuView_android_itemBackground;
+			global::XLabs.Forms.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::GeoGeometry.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::XLabs.Forms.Resource.Styleable.MenuView_android_itemTextAppearance = global::GeoGeometry.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.MenuView_android_verticalDivider = global::GeoGeometry.Resource.Styleable.MenuView_android_verticalDivider;
+			global::XLabs.Forms.Resource.Styleable.MenuView_android_windowAnimationStyle = global::GeoGeometry.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::XLabs.Forms.Resource.Styleable.MenuView_preserveIconSpacing = global::GeoGeometry.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::XLabs.Forms.Resource.Styleable.NavigationView = global::GeoGeometry.Resource.Styleable.NavigationView;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_android_background = global::GeoGeometry.Resource.Styleable.NavigationView_android_background;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::GeoGeometry.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_android_maxWidth = global::GeoGeometry.Resource.Styleable.NavigationView_android_maxWidth;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_elevation = global::GeoGeometry.Resource.Styleable.NavigationView_elevation;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_headerLayout = global::GeoGeometry.Resource.Styleable.NavigationView_headerLayout;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_itemBackground = global::GeoGeometry.Resource.Styleable.NavigationView_itemBackground;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_itemIconTint = global::GeoGeometry.Resource.Styleable.NavigationView_itemIconTint;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_itemTextAppearance = global::GeoGeometry.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_itemTextColor = global::GeoGeometry.Resource.Styleable.NavigationView_itemTextColor;
+			global::XLabs.Forms.Resource.Styleable.NavigationView_menu = global::GeoGeometry.Resource.Styleable.NavigationView_menu;
+			global::XLabs.Forms.Resource.Styleable.PopupWindow = global::GeoGeometry.Resource.Styleable.PopupWindow;
+			global::XLabs.Forms.Resource.Styleable.PopupWindow_android_popupBackground = global::GeoGeometry.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::XLabs.Forms.Resource.Styleable.PopupWindow_overlapAnchor = global::GeoGeometry.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::XLabs.Forms.Resource.Styleable.PopupWindowBackgroundState = global::GeoGeometry.Resource.Styleable.PopupWindowBackgroundState;
+			global::XLabs.Forms.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::GeoGeometry.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::XLabs.Forms.Resource.Styleable.ScrimInsetsFrameLayout = global::GeoGeometry.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::XLabs.Forms.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::GeoGeometry.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::XLabs.Forms.Resource.Styleable.SearchView = global::GeoGeometry.Resource.Styleable.SearchView;
+			global::XLabs.Forms.Resource.Styleable.SearchView_android_focusable = global::GeoGeometry.Resource.Styleable.SearchView_android_focusable;
+			global::XLabs.Forms.Resource.Styleable.SearchView_android_imeOptions = global::GeoGeometry.Resource.Styleable.SearchView_android_imeOptions;
+			global::XLabs.Forms.Resource.Styleable.SearchView_android_inputType = global::GeoGeometry.Resource.Styleable.SearchView_android_inputType;
+			global::XLabs.Forms.Resource.Styleable.SearchView_android_maxWidth = global::GeoGeometry.Resource.Styleable.SearchView_android_maxWidth;
+			global::XLabs.Forms.Resource.Styleable.SearchView_closeIcon = global::GeoGeometry.Resource.Styleable.SearchView_closeIcon;
+			global::XLabs.Forms.Resource.Styleable.SearchView_commitIcon = global::GeoGeometry.Resource.Styleable.SearchView_commitIcon;
+			global::XLabs.Forms.Resource.Styleable.SearchView_defaultQueryHint = global::GeoGeometry.Resource.Styleable.SearchView_defaultQueryHint;
+			global::XLabs.Forms.Resource.Styleable.SearchView_goIcon = global::GeoGeometry.Resource.Styleable.SearchView_goIcon;
+			global::XLabs.Forms.Resource.Styleable.SearchView_iconifiedByDefault = global::GeoGeometry.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::XLabs.Forms.Resource.Styleable.SearchView_layout = global::GeoGeometry.Resource.Styleable.SearchView_layout;
+			global::XLabs.Forms.Resource.Styleable.SearchView_queryBackground = global::GeoGeometry.Resource.Styleable.SearchView_queryBackground;
+			global::XLabs.Forms.Resource.Styleable.SearchView_queryHint = global::GeoGeometry.Resource.Styleable.SearchView_queryHint;
+			global::XLabs.Forms.Resource.Styleable.SearchView_searchHintIcon = global::GeoGeometry.Resource.Styleable.SearchView_searchHintIcon;
+			global::XLabs.Forms.Resource.Styleable.SearchView_searchIcon = global::GeoGeometry.Resource.Styleable.SearchView_searchIcon;
+			global::XLabs.Forms.Resource.Styleable.SearchView_submitBackground = global::GeoGeometry.Resource.Styleable.SearchView_submitBackground;
+			global::XLabs.Forms.Resource.Styleable.SearchView_suggestionRowLayout = global::GeoGeometry.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::XLabs.Forms.Resource.Styleable.SearchView_voiceIcon = global::GeoGeometry.Resource.Styleable.SearchView_voiceIcon;
+			global::XLabs.Forms.Resource.Styleable.SnackbarLayout = global::GeoGeometry.Resource.Styleable.SnackbarLayout;
+			global::XLabs.Forms.Resource.Styleable.SnackbarLayout_android_maxWidth = global::GeoGeometry.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::XLabs.Forms.Resource.Styleable.SnackbarLayout_elevation = global::GeoGeometry.Resource.Styleable.SnackbarLayout_elevation;
+			global::XLabs.Forms.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::GeoGeometry.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::XLabs.Forms.Resource.Styleable.Spinner = global::GeoGeometry.Resource.Styleable.Spinner;
+			global::XLabs.Forms.Resource.Styleable.Spinner_android_dropDownWidth = global::GeoGeometry.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::XLabs.Forms.Resource.Styleable.Spinner_android_popupBackground = global::GeoGeometry.Resource.Styleable.Spinner_android_popupBackground;
+			global::XLabs.Forms.Resource.Styleable.Spinner_android_prompt = global::GeoGeometry.Resource.Styleable.Spinner_android_prompt;
+			global::XLabs.Forms.Resource.Styleable.Spinner_popupTheme = global::GeoGeometry.Resource.Styleable.Spinner_popupTheme;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat = global::GeoGeometry.Resource.Styleable.SwitchCompat;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_android_textOff = global::GeoGeometry.Resource.Styleable.SwitchCompat_android_textOff;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_android_textOn = global::GeoGeometry.Resource.Styleable.SwitchCompat_android_textOn;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_android_thumb = global::GeoGeometry.Resource.Styleable.SwitchCompat_android_thumb;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_showText = global::GeoGeometry.Resource.Styleable.SwitchCompat_showText;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_splitTrack = global::GeoGeometry.Resource.Styleable.SwitchCompat_splitTrack;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_switchMinWidth = global::GeoGeometry.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_switchPadding = global::GeoGeometry.Resource.Styleable.SwitchCompat_switchPadding;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_switchTextAppearance = global::GeoGeometry.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_thumbTextPadding = global::GeoGeometry.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::XLabs.Forms.Resource.Styleable.SwitchCompat_track = global::GeoGeometry.Resource.Styleable.SwitchCompat_track;
+			global::XLabs.Forms.Resource.Styleable.TabLayout = global::GeoGeometry.Resource.Styleable.TabLayout;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabBackground = global::GeoGeometry.Resource.Styleable.TabLayout_tabBackground;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabContentStart = global::GeoGeometry.Resource.Styleable.TabLayout_tabContentStart;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabGravity = global::GeoGeometry.Resource.Styleable.TabLayout_tabGravity;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabIndicatorColor = global::GeoGeometry.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabIndicatorHeight = global::GeoGeometry.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabMaxWidth = global::GeoGeometry.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabMinWidth = global::GeoGeometry.Resource.Styleable.TabLayout_tabMinWidth;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabMode = global::GeoGeometry.Resource.Styleable.TabLayout_tabMode;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabPadding = global::GeoGeometry.Resource.Styleable.TabLayout_tabPadding;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabPaddingBottom = global::GeoGeometry.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabPaddingEnd = global::GeoGeometry.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabPaddingStart = global::GeoGeometry.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabPaddingTop = global::GeoGeometry.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabSelectedTextColor = global::GeoGeometry.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabTextAppearance = global::GeoGeometry.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.TabLayout_tabTextColor = global::GeoGeometry.Resource.Styleable.TabLayout_tabTextColor;
+			global::XLabs.Forms.Resource.Styleable.TextAppearance = global::GeoGeometry.Resource.Styleable.TextAppearance;
+			global::XLabs.Forms.Resource.Styleable.TextAppearance_android_textColor = global::GeoGeometry.Resource.Styleable.TextAppearance_android_textColor;
+			global::XLabs.Forms.Resource.Styleable.TextAppearance_android_textSize = global::GeoGeometry.Resource.Styleable.TextAppearance_android_textSize;
+			global::XLabs.Forms.Resource.Styleable.TextAppearance_android_textStyle = global::GeoGeometry.Resource.Styleable.TextAppearance_android_textStyle;
+			global::XLabs.Forms.Resource.Styleable.TextAppearance_android_typeface = global::GeoGeometry.Resource.Styleable.TextAppearance_android_typeface;
+			global::XLabs.Forms.Resource.Styleable.TextAppearance_textAllCaps = global::GeoGeometry.Resource.Styleable.TextAppearance_textAllCaps;
+			global::XLabs.Forms.Resource.Styleable.TextInputLayout = global::GeoGeometry.Resource.Styleable.TextInputLayout;
+			global::XLabs.Forms.Resource.Styleable.TextInputLayout_android_hint = global::GeoGeometry.Resource.Styleable.TextInputLayout_android_hint;
+			global::XLabs.Forms.Resource.Styleable.TextInputLayout_android_textColorHint = global::GeoGeometry.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::XLabs.Forms.Resource.Styleable.TextInputLayout_errorEnabled = global::GeoGeometry.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::XLabs.Forms.Resource.Styleable.TextInputLayout_errorTextAppearance = global::GeoGeometry.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::GeoGeometry.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::XLabs.Forms.Resource.Styleable.TextInputLayout_hintTextAppearance = global::GeoGeometry.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.Toolbar = global::GeoGeometry.Resource.Styleable.Toolbar;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_android_gravity = global::GeoGeometry.Resource.Styleable.Toolbar_android_gravity;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_android_minHeight = global::GeoGeometry.Resource.Styleable.Toolbar_android_minHeight;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_collapseContentDescription = global::GeoGeometry.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_collapseIcon = global::GeoGeometry.Resource.Styleable.Toolbar_collapseIcon;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_contentInsetEnd = global::GeoGeometry.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_contentInsetLeft = global::GeoGeometry.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_contentInsetRight = global::GeoGeometry.Resource.Styleable.Toolbar_contentInsetRight;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_contentInsetStart = global::GeoGeometry.Resource.Styleable.Toolbar_contentInsetStart;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_logo = global::GeoGeometry.Resource.Styleable.Toolbar_logo;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_logoDescription = global::GeoGeometry.Resource.Styleable.Toolbar_logoDescription;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_maxButtonHeight = global::GeoGeometry.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_navigationContentDescription = global::GeoGeometry.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_navigationIcon = global::GeoGeometry.Resource.Styleable.Toolbar_navigationIcon;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_popupTheme = global::GeoGeometry.Resource.Styleable.Toolbar_popupTheme;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_subtitle = global::GeoGeometry.Resource.Styleable.Toolbar_subtitle;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_subtitleTextAppearance = global::GeoGeometry.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_subtitleTextColor = global::GeoGeometry.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_title = global::GeoGeometry.Resource.Styleable.Toolbar_title;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_titleMarginBottom = global::GeoGeometry.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_titleMarginEnd = global::GeoGeometry.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_titleMarginStart = global::GeoGeometry.Resource.Styleable.Toolbar_titleMarginStart;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_titleMarginTop = global::GeoGeometry.Resource.Styleable.Toolbar_titleMarginTop;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_titleMargins = global::GeoGeometry.Resource.Styleable.Toolbar_titleMargins;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_titleTextAppearance = global::GeoGeometry.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::XLabs.Forms.Resource.Styleable.Toolbar_titleTextColor = global::GeoGeometry.Resource.Styleable.Toolbar_titleTextColor;
+			global::XLabs.Forms.Resource.Styleable.View = global::GeoGeometry.Resource.Styleable.View;
+			global::XLabs.Forms.Resource.Styleable.View_android_focusable = global::GeoGeometry.Resource.Styleable.View_android_focusable;
+			global::XLabs.Forms.Resource.Styleable.View_android_theme = global::GeoGeometry.Resource.Styleable.View_android_theme;
+			global::XLabs.Forms.Resource.Styleable.View_paddingEnd = global::GeoGeometry.Resource.Styleable.View_paddingEnd;
+			global::XLabs.Forms.Resource.Styleable.View_paddingStart = global::GeoGeometry.Resource.Styleable.View_paddingStart;
+			global::XLabs.Forms.Resource.Styleable.View_theme = global::GeoGeometry.Resource.Styleable.View_theme;
+			global::XLabs.Forms.Resource.Styleable.ViewBackgroundHelper = global::GeoGeometry.Resource.Styleable.ViewBackgroundHelper;
+			global::XLabs.Forms.Resource.Styleable.ViewBackgroundHelper_android_background = global::GeoGeometry.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::XLabs.Forms.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::GeoGeometry.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::XLabs.Forms.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::GeoGeometry.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::XLabs.Forms.Resource.Styleable.ViewStubCompat = global::GeoGeometry.Resource.Styleable.ViewStubCompat;
+			global::XLabs.Forms.Resource.Styleable.ViewStubCompat_android_id = global::GeoGeometry.Resource.Styleable.ViewStubCompat_android_id;
+			global::XLabs.Forms.Resource.Styleable.ViewStubCompat_android_inflatedId = global::GeoGeometry.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::XLabs.Forms.Resource.Styleable.ViewStubCompat_android_layout = global::GeoGeometry.Resource.Styleable.ViewStubCompat_android_layout;
+			global::XLabs.Platform.Resource.String.ApplicationName = global::GeoGeometry.Resource.String.ApplicationName;
+			global::XLabs.Platform.Resource.String.Hello = global::GeoGeometry.Resource.String.Hello;
 		}
 		
 		public partial class Animation
@@ -5143,241 +6491,277 @@ namespace GeoGeometry
 			public const int button_material_light = 2131099685;
 			
 			// aapt resource value: 0x7F060026
-			public const int cardview_dark_background = 2131099686;
+			public const int calendar_active_month_bg = 2131099686;
 			
 			// aapt resource value: 0x7F060027
-			public const int cardview_light_background = 2131099687;
+			public const int calendar_bg = 2131099687;
 			
 			// aapt resource value: 0x7F060028
-			public const int cardview_shadow_end_color = 2131099688;
+			public const int calendar_divider = 2131099688;
 			
 			// aapt resource value: 0x7F060029
-			public const int cardview_shadow_start_color = 2131099689;
+			public const int calendar_highlighted_day_bg = 2131099689;
 			
 			// aapt resource value: 0x7F06002A
-			public const int colorAccent = 2131099690;
+			public const int calendar_inactive_month_bg = 2131099690;
 			
 			// aapt resource value: 0x7F06002B
-			public const int colorMainBlue = 2131099691;
+			public const int calendar_selected_day_bg = 2131099691;
 			
 			// aapt resource value: 0x7F06002C
-			public const int colorMainLightBlue = 2131099692;
+			public const int calendar_selected_range_bg = 2131099692;
 			
 			// aapt resource value: 0x7F06002D
-			public const int colorPrimary = 2131099693;
+			public const int calendar_text_active = 2131099693;
 			
 			// aapt resource value: 0x7F06002E
-			public const int colorPrimaryDark = 2131099694;
+			public const int calendar_text_inactive = 2131099694;
 			
 			// aapt resource value: 0x7F06002F
-			public const int common_google_signin_btn_text_dark = 2131099695;
+			public const int calendar_text_selected = 2131099695;
 			
 			// aapt resource value: 0x7F060030
-			public const int common_google_signin_btn_text_dark_default = 2131099696;
+			public const int calendar_text_selector = 2131099696;
 			
 			// aapt resource value: 0x7F060031
-			public const int common_google_signin_btn_text_dark_disabled = 2131099697;
+			public const int calendar_text_unselectable = 2131099697;
 			
 			// aapt resource value: 0x7F060032
-			public const int common_google_signin_btn_text_dark_focused = 2131099698;
+			public const int cardview_dark_background = 2131099698;
 			
 			// aapt resource value: 0x7F060033
-			public const int common_google_signin_btn_text_dark_pressed = 2131099699;
+			public const int cardview_light_background = 2131099699;
 			
 			// aapt resource value: 0x7F060034
-			public const int common_google_signin_btn_text_light = 2131099700;
+			public const int cardview_shadow_end_color = 2131099700;
 			
 			// aapt resource value: 0x7F060035
-			public const int common_google_signin_btn_text_light_default = 2131099701;
+			public const int cardview_shadow_start_color = 2131099701;
 			
 			// aapt resource value: 0x7F060036
-			public const int common_google_signin_btn_text_light_disabled = 2131099702;
+			public const int colorAccent = 2131099702;
 			
 			// aapt resource value: 0x7F060037
-			public const int common_google_signin_btn_text_light_focused = 2131099703;
+			public const int colorMainBlue = 2131099703;
 			
 			// aapt resource value: 0x7F060038
-			public const int common_google_signin_btn_text_light_pressed = 2131099704;
+			public const int colorMainLightBlue = 2131099704;
 			
 			// aapt resource value: 0x7F060039
-			public const int common_google_signin_btn_tint = 2131099705;
+			public const int colorPrimary = 2131099705;
 			
 			// aapt resource value: 0x7F06003A
-			public const int design_bottom_navigation_shadow_color = 2131099706;
+			public const int colorPrimaryDark = 2131099706;
 			
 			// aapt resource value: 0x7F06003B
-			public const int design_error = 2131099707;
+			public const int common_google_signin_btn_text_dark = 2131099707;
 			
 			// aapt resource value: 0x7F06003C
-			public const int design_fab_shadow_end_color = 2131099708;
+			public const int common_google_signin_btn_text_dark_default = 2131099708;
 			
 			// aapt resource value: 0x7F06003D
-			public const int design_fab_shadow_mid_color = 2131099709;
+			public const int common_google_signin_btn_text_dark_disabled = 2131099709;
 			
 			// aapt resource value: 0x7F06003E
-			public const int design_fab_shadow_start_color = 2131099710;
+			public const int common_google_signin_btn_text_dark_focused = 2131099710;
 			
 			// aapt resource value: 0x7F06003F
-			public const int design_fab_stroke_end_inner_color = 2131099711;
+			public const int common_google_signin_btn_text_dark_pressed = 2131099711;
 			
 			// aapt resource value: 0x7F060040
-			public const int design_fab_stroke_end_outer_color = 2131099712;
+			public const int common_google_signin_btn_text_light = 2131099712;
 			
 			// aapt resource value: 0x7F060041
-			public const int design_fab_stroke_top_inner_color = 2131099713;
+			public const int common_google_signin_btn_text_light_default = 2131099713;
 			
 			// aapt resource value: 0x7F060042
-			public const int design_fab_stroke_top_outer_color = 2131099714;
+			public const int common_google_signin_btn_text_light_disabled = 2131099714;
 			
 			// aapt resource value: 0x7F060043
-			public const int design_snackbar_background_color = 2131099715;
+			public const int common_google_signin_btn_text_light_focused = 2131099715;
 			
 			// aapt resource value: 0x7F060044
-			public const int design_tint_password_toggle = 2131099716;
+			public const int common_google_signin_btn_text_light_pressed = 2131099716;
 			
 			// aapt resource value: 0x7F060045
-			public const int dim_foreground_disabled_material_dark = 2131099717;
+			public const int common_google_signin_btn_tint = 2131099717;
 			
 			// aapt resource value: 0x7F060046
-			public const int dim_foreground_disabled_material_light = 2131099718;
+			public const int design_bottom_navigation_shadow_color = 2131099718;
 			
 			// aapt resource value: 0x7F060047
-			public const int dim_foreground_material_dark = 2131099719;
+			public const int design_error = 2131099719;
 			
 			// aapt resource value: 0x7F060048
-			public const int dim_foreground_material_light = 2131099720;
+			public const int design_fab_shadow_end_color = 2131099720;
 			
 			// aapt resource value: 0x7F060049
-			public const int error_color_material = 2131099721;
+			public const int design_fab_shadow_mid_color = 2131099721;
 			
 			// aapt resource value: 0x7F06004A
-			public const int foreground_material_dark = 2131099722;
+			public const int design_fab_shadow_start_color = 2131099722;
 			
 			// aapt resource value: 0x7F06004B
-			public const int foreground_material_light = 2131099723;
+			public const int design_fab_stroke_end_inner_color = 2131099723;
 			
 			// aapt resource value: 0x7F06004C
-			public const int highlighted_text_material_dark = 2131099724;
+			public const int design_fab_stroke_end_outer_color = 2131099724;
 			
 			// aapt resource value: 0x7F06004D
-			public const int highlighted_text_material_light = 2131099725;
+			public const int design_fab_stroke_top_inner_color = 2131099725;
 			
 			// aapt resource value: 0x7F06004E
-			public const int ic_launcher_background = 2131099726;
+			public const int design_fab_stroke_top_outer_color = 2131099726;
 			
 			// aapt resource value: 0x7F06004F
-			public const int material_blue_grey_800 = 2131099727;
+			public const int design_snackbar_background_color = 2131099727;
 			
 			// aapt resource value: 0x7F060050
-			public const int material_blue_grey_900 = 2131099728;
+			public const int design_tint_password_toggle = 2131099728;
 			
 			// aapt resource value: 0x7F060051
-			public const int material_blue_grey_950 = 2131099729;
+			public const int dim_foreground_disabled_material_dark = 2131099729;
 			
 			// aapt resource value: 0x7F060052
-			public const int material_deep_teal_200 = 2131099730;
+			public const int dim_foreground_disabled_material_light = 2131099730;
 			
 			// aapt resource value: 0x7F060053
-			public const int material_deep_teal_500 = 2131099731;
+			public const int dim_foreground_material_dark = 2131099731;
 			
 			// aapt resource value: 0x7F060054
-			public const int material_grey_100 = 2131099732;
+			public const int dim_foreground_material_light = 2131099732;
 			
 			// aapt resource value: 0x7F060055
-			public const int material_grey_300 = 2131099733;
+			public const int error_color_material = 2131099733;
 			
 			// aapt resource value: 0x7F060056
-			public const int material_grey_50 = 2131099734;
+			public const int foreground_material_dark = 2131099734;
 			
 			// aapt resource value: 0x7F060057
-			public const int material_grey_600 = 2131099735;
+			public const int foreground_material_light = 2131099735;
 			
 			// aapt resource value: 0x7F060058
-			public const int material_grey_800 = 2131099736;
+			public const int highlighted_text_material_dark = 2131099736;
 			
 			// aapt resource value: 0x7F060059
-			public const int material_grey_850 = 2131099737;
+			public const int highlighted_text_material_light = 2131099737;
 			
 			// aapt resource value: 0x7F06005A
-			public const int material_grey_900 = 2131099738;
+			public const int ic_launcher_background = 2131099738;
 			
 			// aapt resource value: 0x7F06005B
-			public const int notification_action_color_filter = 2131099739;
+			public const int material_blue_grey_800 = 2131099739;
 			
 			// aapt resource value: 0x7F06005C
-			public const int notification_icon_bg_color = 2131099740;
+			public const int material_blue_grey_900 = 2131099740;
 			
 			// aapt resource value: 0x7F06005D
-			public const int notification_material_background_media_default_color = 2131099741;
+			public const int material_blue_grey_950 = 2131099741;
 			
 			// aapt resource value: 0x7F06005E
-			public const int primary_dark_material_dark = 2131099742;
+			public const int material_deep_teal_200 = 2131099742;
 			
 			// aapt resource value: 0x7F06005F
-			public const int primary_dark_material_light = 2131099743;
+			public const int material_deep_teal_500 = 2131099743;
 			
 			// aapt resource value: 0x7F060060
-			public const int primary_material_dark = 2131099744;
+			public const int material_grey_100 = 2131099744;
 			
 			// aapt resource value: 0x7F060061
-			public const int primary_material_light = 2131099745;
+			public const int material_grey_300 = 2131099745;
 			
 			// aapt resource value: 0x7F060062
-			public const int primary_text_default_material_dark = 2131099746;
+			public const int material_grey_50 = 2131099746;
 			
 			// aapt resource value: 0x7F060063
-			public const int primary_text_default_material_light = 2131099747;
+			public const int material_grey_600 = 2131099747;
 			
 			// aapt resource value: 0x7F060064
-			public const int primary_text_disabled_material_dark = 2131099748;
+			public const int material_grey_800 = 2131099748;
 			
 			// aapt resource value: 0x7F060065
-			public const int primary_text_disabled_material_light = 2131099749;
+			public const int material_grey_850 = 2131099749;
 			
 			// aapt resource value: 0x7F060066
-			public const int ripple_material_dark = 2131099750;
+			public const int material_grey_900 = 2131099750;
 			
 			// aapt resource value: 0x7F060067
-			public const int ripple_material_light = 2131099751;
+			public const int notification_action_color_filter = 2131099751;
 			
 			// aapt resource value: 0x7F060068
-			public const int secondary_text_default_material_dark = 2131099752;
+			public const int notification_icon_bg_color = 2131099752;
 			
 			// aapt resource value: 0x7F060069
-			public const int secondary_text_default_material_light = 2131099753;
+			public const int notification_material_background_media_default_color = 2131099753;
 			
 			// aapt resource value: 0x7F06006A
-			public const int secondary_text_disabled_material_dark = 2131099754;
+			public const int primary_dark_material_dark = 2131099754;
 			
 			// aapt resource value: 0x7F06006B
-			public const int secondary_text_disabled_material_light = 2131099755;
+			public const int primary_dark_material_light = 2131099755;
 			
 			// aapt resource value: 0x7F06006C
-			public const int spots_dialog_color = 2131099756;
+			public const int primary_material_dark = 2131099756;
 			
 			// aapt resource value: 0x7F06006D
-			public const int switch_thumb_disabled_material_dark = 2131099757;
+			public const int primary_material_light = 2131099757;
 			
 			// aapt resource value: 0x7F06006E
-			public const int switch_thumb_disabled_material_light = 2131099758;
+			public const int primary_text_default_material_dark = 2131099758;
 			
 			// aapt resource value: 0x7F06006F
-			public const int switch_thumb_material_dark = 2131099759;
+			public const int primary_text_default_material_light = 2131099759;
 			
 			// aapt resource value: 0x7F060070
-			public const int switch_thumb_material_light = 2131099760;
+			public const int primary_text_disabled_material_dark = 2131099760;
 			
 			// aapt resource value: 0x7F060071
-			public const int switch_thumb_normal_material_dark = 2131099761;
+			public const int primary_text_disabled_material_light = 2131099761;
 			
 			// aapt resource value: 0x7F060072
-			public const int switch_thumb_normal_material_light = 2131099762;
+			public const int ripple_material_dark = 2131099762;
 			
 			// aapt resource value: 0x7F060073
-			public const int tooltip_background_dark = 2131099763;
+			public const int ripple_material_light = 2131099763;
 			
 			// aapt resource value: 0x7F060074
-			public const int tooltip_background_light = 2131099764;
+			public const int secondary_text_default_material_dark = 2131099764;
+			
+			// aapt resource value: 0x7F060075
+			public const int secondary_text_default_material_light = 2131099765;
+			
+			// aapt resource value: 0x7F060076
+			public const int secondary_text_disabled_material_dark = 2131099766;
+			
+			// aapt resource value: 0x7F060077
+			public const int secondary_text_disabled_material_light = 2131099767;
+			
+			// aapt resource value: 0x7F060078
+			public const int spots_dialog_color = 2131099768;
+			
+			// aapt resource value: 0x7F060079
+			public const int switch_thumb_disabled_material_dark = 2131099769;
+			
+			// aapt resource value: 0x7F06007A
+			public const int switch_thumb_disabled_material_light = 2131099770;
+			
+			// aapt resource value: 0x7F06007B
+			public const int switch_thumb_material_dark = 2131099771;
+			
+			// aapt resource value: 0x7F06007C
+			public const int switch_thumb_material_light = 2131099772;
+			
+			// aapt resource value: 0x7F06007D
+			public const int switch_thumb_normal_material_dark = 2131099773;
+			
+			// aapt resource value: 0x7F06007E
+			public const int switch_thumb_normal_material_light = 2131099774;
+			
+			// aapt resource value: 0x7F06007F
+			public const int tooltip_background_dark = 2131099775;
+			
+			// aapt resource value: 0x7F060080
+			public const int tooltip_background_light = 2131099776;
 			
 			static Color()
 			{
@@ -5621,289 +7005,304 @@ namespace GeoGeometry
 			public const int activity_vertical_margin = 2131165259;
 			
 			// aapt resource value: 0x7F07004C
-			public const int cardview_compat_inset_shadow = 2131165260;
+			public const int calendar_day_headers_paddingbottom = 2131165260;
 			
 			// aapt resource value: 0x7F07004D
-			public const int cardview_default_elevation = 2131165261;
+			public const int calendar_month_title_bottommargin = 2131165261;
 			
 			// aapt resource value: 0x7F07004E
-			public const int cardview_default_radius = 2131165262;
+			public const int calendar_month_topmargin = 2131165262;
 			
 			// aapt resource value: 0x7F07004F
-			public const int compat_button_inset_horizontal_material = 2131165263;
+			public const int calendar_text_medium = 2131165263;
 			
 			// aapt resource value: 0x7F070050
-			public const int compat_button_inset_vertical_material = 2131165264;
+			public const int calendar_text_small = 2131165264;
 			
 			// aapt resource value: 0x7F070051
-			public const int compat_button_padding_horizontal_material = 2131165265;
+			public const int cardview_compat_inset_shadow = 2131165265;
 			
 			// aapt resource value: 0x7F070052
-			public const int compat_button_padding_vertical_material = 2131165266;
+			public const int cardview_default_elevation = 2131165266;
 			
 			// aapt resource value: 0x7F070053
-			public const int compat_control_corner_material = 2131165267;
+			public const int cardview_default_radius = 2131165267;
 			
 			// aapt resource value: 0x7F070054
-			public const int design_appbar_elevation = 2131165268;
+			public const int compat_button_inset_horizontal_material = 2131165268;
 			
 			// aapt resource value: 0x7F070055
-			public const int design_bottom_navigation_active_item_max_width = 2131165269;
+			public const int compat_button_inset_vertical_material = 2131165269;
 			
 			// aapt resource value: 0x7F070056
-			public const int design_bottom_navigation_active_text_size = 2131165270;
+			public const int compat_button_padding_horizontal_material = 2131165270;
 			
 			// aapt resource value: 0x7F070057
-			public const int design_bottom_navigation_elevation = 2131165271;
+			public const int compat_button_padding_vertical_material = 2131165271;
 			
 			// aapt resource value: 0x7F070058
-			public const int design_bottom_navigation_height = 2131165272;
+			public const int compat_control_corner_material = 2131165272;
 			
 			// aapt resource value: 0x7F070059
-			public const int design_bottom_navigation_item_max_width = 2131165273;
+			public const int design_appbar_elevation = 2131165273;
 			
 			// aapt resource value: 0x7F07005A
-			public const int design_bottom_navigation_item_min_width = 2131165274;
+			public const int design_bottom_navigation_active_item_max_width = 2131165274;
 			
 			// aapt resource value: 0x7F07005B
-			public const int design_bottom_navigation_margin = 2131165275;
+			public const int design_bottom_navigation_active_text_size = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int design_bottom_navigation_shadow_height = 2131165276;
+			public const int design_bottom_navigation_elevation = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int design_bottom_navigation_text_size = 2131165277;
+			public const int design_bottom_navigation_height = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int design_bottom_sheet_modal_elevation = 2131165278;
+			public const int design_bottom_navigation_item_max_width = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int design_bottom_sheet_peek_height_min = 2131165279;
+			public const int design_bottom_navigation_item_min_width = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int design_fab_border_width = 2131165280;
+			public const int design_bottom_navigation_margin = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int design_fab_elevation = 2131165281;
+			public const int design_bottom_navigation_shadow_height = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int design_fab_image_size = 2131165282;
+			public const int design_bottom_navigation_text_size = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int design_fab_size_mini = 2131165283;
+			public const int design_bottom_sheet_modal_elevation = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int design_fab_size_normal = 2131165284;
+			public const int design_bottom_sheet_peek_height_min = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int design_fab_translation_z_pressed = 2131165285;
+			public const int design_fab_border_width = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int design_navigation_elevation = 2131165286;
+			public const int design_fab_elevation = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int design_navigation_icon_padding = 2131165287;
+			public const int design_fab_image_size = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int design_navigation_icon_size = 2131165288;
+			public const int design_fab_size_mini = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int design_navigation_max_width = 2131165289;
+			public const int design_fab_size_normal = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int design_navigation_padding_bottom = 2131165290;
+			public const int design_fab_translation_z_pressed = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int design_navigation_separator_vertical_padding = 2131165291;
+			public const int design_navigation_elevation = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int design_snackbar_action_inline_max_width = 2131165292;
+			public const int design_navigation_icon_padding = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int design_snackbar_background_corner_radius = 2131165293;
+			public const int design_navigation_icon_size = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int design_snackbar_elevation = 2131165294;
+			public const int design_navigation_max_width = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int design_snackbar_extra_spacing_horizontal = 2131165295;
+			public const int design_navigation_padding_bottom = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int design_snackbar_max_width = 2131165296;
+			public const int design_navigation_separator_vertical_padding = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int design_snackbar_min_width = 2131165297;
+			public const int design_snackbar_action_inline_max_width = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int design_snackbar_padding_horizontal = 2131165298;
+			public const int design_snackbar_background_corner_radius = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int design_snackbar_padding_vertical = 2131165299;
+			public const int design_snackbar_elevation = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int design_snackbar_padding_vertical_2lines = 2131165300;
+			public const int design_snackbar_extra_spacing_horizontal = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int design_snackbar_text_size = 2131165301;
+			public const int design_snackbar_max_width = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int design_tab_max_width = 2131165302;
+			public const int design_snackbar_min_width = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int design_tab_scrollable_min_width = 2131165303;
+			public const int design_snackbar_padding_horizontal = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int design_tab_text_size = 2131165304;
+			public const int design_snackbar_padding_vertical = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int design_tab_text_size_2line = 2131165305;
+			public const int design_snackbar_padding_vertical_2lines = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int disabled_alpha_material_dark = 2131165306;
+			public const int design_snackbar_text_size = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int disabled_alpha_material_light = 2131165307;
+			public const int design_tab_max_width = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int fastscroll_default_thickness = 2131165308;
+			public const int design_tab_scrollable_min_width = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int fastscroll_margin = 2131165309;
+			public const int design_tab_text_size = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int fastscroll_minimum_range = 2131165310;
+			public const int design_tab_text_size_2line = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int highlight_alpha_material_colored = 2131165311;
+			public const int disabled_alpha_material_dark = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int highlight_alpha_material_dark = 2131165312;
+			public const int disabled_alpha_material_light = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int highlight_alpha_material_light = 2131165313;
+			public const int fastscroll_default_thickness = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int hint_alpha_material_dark = 2131165314;
+			public const int fastscroll_margin = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int hint_alpha_material_light = 2131165315;
+			public const int fastscroll_minimum_range = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int hint_pressed_alpha_material_dark = 2131165316;
+			public const int highlight_alpha_material_colored = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int hint_pressed_alpha_material_light = 2131165317;
+			public const int highlight_alpha_material_dark = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int item_touch_helper_max_drag_scroll_per_frame = 2131165318;
+			public const int highlight_alpha_material_light = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int item_touch_helper_swipe_escape_max_velocity = 2131165319;
+			public const int hint_alpha_material_dark = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int item_touch_helper_swipe_escape_velocity = 2131165320;
+			public const int hint_alpha_material_light = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int mr_controller_volume_group_list_item_height = 2131165321;
+			public const int hint_pressed_alpha_material_dark = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int mr_controller_volume_group_list_item_icon_size = 2131165322;
+			public const int hint_pressed_alpha_material_light = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int mr_controller_volume_group_list_max_height = 2131165323;
+			public const int item_touch_helper_max_drag_scroll_per_frame = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int mr_controller_volume_group_list_padding_top = 2131165324;
+			public const int item_touch_helper_swipe_escape_max_velocity = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int mr_dialog_fixed_width_major = 2131165325;
+			public const int item_touch_helper_swipe_escape_velocity = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int mr_dialog_fixed_width_minor = 2131165326;
+			public const int mr_controller_volume_group_list_item_height = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int notification_action_icon_size = 2131165327;
+			public const int mr_controller_volume_group_list_item_icon_size = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int notification_action_text_size = 2131165328;
+			public const int mr_controller_volume_group_list_max_height = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int notification_big_circle_margin = 2131165329;
+			public const int mr_controller_volume_group_list_padding_top = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int notification_content_margin_start = 2131165330;
+			public const int mr_dialog_fixed_width_major = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int notification_large_icon_height = 2131165331;
+			public const int mr_dialog_fixed_width_minor = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_large_icon_width = 2131165332;
+			public const int notification_action_icon_size = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_main_column_padding_top = 2131165333;
+			public const int notification_action_text_size = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notification_media_narrow_margin = 2131165334;
+			public const int notification_big_circle_margin = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int notification_right_icon_size = 2131165335;
+			public const int notification_content_margin_start = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int notification_right_side_padding_top = 2131165336;
+			public const int notification_large_icon_height = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int notification_small_icon_background_padding = 2131165337;
+			public const int notification_large_icon_width = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int notification_small_icon_size_as_large = 2131165338;
+			public const int notification_main_column_padding_top = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int notification_subtext_size = 2131165339;
+			public const int notification_media_narrow_margin = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int notification_top_pad = 2131165340;
+			public const int notification_right_icon_size = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int notification_top_pad_large_text = 2131165341;
+			public const int notification_right_side_padding_top = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int progress_margin = 2131165342;
+			public const int notification_small_icon_background_padding = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int progress_width = 2131165343;
+			public const int notification_small_icon_size_as_large = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int spot_size = 2131165344;
+			public const int notification_subtext_size = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int title_margin = 2131165345;
+			public const int notification_top_pad = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int title_padding = 2131165346;
+			public const int notification_top_pad_large_text = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int tooltip_corner_radius = 2131165347;
+			public const int progress_margin = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int tooltip_horizontal_padding = 2131165348;
+			public const int progress_width = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int tooltip_margin = 2131165349;
+			public const int spot_size = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int tooltip_precise_anchor_extra_offset = 2131165350;
+			public const int title_margin = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int tooltip_precise_anchor_threshold = 2131165351;
+			public const int title_padding = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int tooltip_vertical_padding = 2131165352;
+			public const int tooltip_corner_radius = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int tooltip_y_offset_non_touch = 2131165353;
+			public const int tooltip_horizontal_padding = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int tooltip_y_offset_touch = 2131165354;
+			public const int tooltip_margin = 2131165354;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int tooltip_precise_anchor_extra_offset = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int tooltip_precise_anchor_threshold = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int tooltip_vertical_padding = 2131165357;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int tooltip_y_offset_non_touch = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int tooltip_y_offset_touch = 2131165359;
 			
 			static Dimension()
 			{
@@ -6168,769 +7567,775 @@ namespace GeoGeometry
 			public const int abc_vector_test = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int avd_hide_password = 2131230809;
+			public const int ad16 = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int avd_show_password = 2131230810;
+			public const int avd_hide_password = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int btnBack = 2131230811;
+			public const int avd_show_password = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int camera = 2131230812;
+			public const int btnBack = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int camera32 = 2131230813;
+			public const int calendar_bg_selector = 2131230813;
 			
 			// aapt resource value: 0x7F08005E
-			public const int @checked = 2131230814;
+			public const int camera = 2131230814;
 			
 			// aapt resource value: 0x7F08005F
-			public const int common_full_open_on_phone = 2131230815;
+			public const int camera32 = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int common_google_signin_btn_icon_dark = 2131230816;
+			public const int @checked = 2131230816;
 			
 			// aapt resource value: 0x7F080061
-			public const int common_google_signin_btn_icon_dark_focused = 2131230817;
+			public const int common_full_open_on_phone = 2131230817;
 			
 			// aapt resource value: 0x7F080062
-			public const int common_google_signin_btn_icon_dark_normal = 2131230818;
+			public const int common_google_signin_btn_icon_dark = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int common_google_signin_btn_icon_dark_normal_background = 2131230819;
+			public const int common_google_signin_btn_icon_dark_focused = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int common_google_signin_btn_icon_disabled = 2131230820;
+			public const int common_google_signin_btn_icon_dark_normal = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int common_google_signin_btn_icon_light = 2131230821;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int common_google_signin_btn_icon_light_focused = 2131230822;
+			public const int common_google_signin_btn_icon_disabled = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int common_google_signin_btn_icon_light_normal = 2131230823;
+			public const int common_google_signin_btn_icon_light = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int common_google_signin_btn_icon_light_normal_background = 2131230824;
+			public const int common_google_signin_btn_icon_light_focused = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int common_google_signin_btn_text_dark = 2131230825;
+			public const int common_google_signin_btn_icon_light_normal = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int common_google_signin_btn_text_dark_focused = 2131230826;
+			public const int common_google_signin_btn_icon_light_normal_background = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int common_google_signin_btn_text_dark_normal = 2131230827;
+			public const int common_google_signin_btn_text_dark = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int common_google_signin_btn_text_dark_normal_background = 2131230828;
+			public const int common_google_signin_btn_text_dark_focused = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int common_google_signin_btn_text_disabled = 2131230829;
+			public const int common_google_signin_btn_text_dark_normal = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int common_google_signin_btn_text_light = 2131230830;
+			public const int common_google_signin_btn_text_dark_normal_background = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int common_google_signin_btn_text_light_focused = 2131230831;
+			public const int common_google_signin_btn_text_disabled = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int common_google_signin_btn_text_light_normal = 2131230832;
+			public const int common_google_signin_btn_text_light = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int common_google_signin_btn_text_light_normal_background = 2131230833;
+			public const int common_google_signin_btn_text_light_focused = 2131230833;
 			
 			// aapt resource value: 0x7F080072
-			public const int default_user = 2131230834;
+			public const int common_google_signin_btn_text_light_normal = 2131230834;
 			
 			// aapt resource value: 0x7F080073
-			public const int design_bottom_navigation_item_background = 2131230835;
+			public const int common_google_signin_btn_text_light_normal_background = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int design_fab_background = 2131230836;
+			public const int default_user = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int design_ic_visibility = 2131230837;
+			public const int design_bottom_navigation_item_background = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int design_ic_visibility_off = 2131230838;
+			public const int design_fab_background = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int design_password_eye = 2131230839;
+			public const int design_ic_visibility = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int design_snackbar_background = 2131230840;
+			public const int design_ic_visibility_off = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int googleg_disabled_color_18 = 2131230841;
+			public const int design_password_eye = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int googleg_standard_color_18 = 2131230842;
-			
-			// aapt resource value: 0x7F08012C
-			public const int icon = 2131231020;
+			public const int design_snackbar_background = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int ic_audiotrack_dark = 2131230843;
+			public const int googleg_disabled_color_18 = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int ic_audiotrack_light = 2131230844;
-			
-			// aapt resource value: 0x7F08007D
-			public const int ic_dialog_close_dark = 2131230845;
-			
-			// aapt resource value: 0x7F08007E
-			public const int ic_dialog_close_light = 2131230846;
-			
-			// aapt resource value: 0x7F08007F
-			public const int ic_group_collapse_00 = 2131230847;
-			
-			// aapt resource value: 0x7F080080
-			public const int ic_group_collapse_01 = 2131230848;
-			
-			// aapt resource value: 0x7F080081
-			public const int ic_group_collapse_02 = 2131230849;
-			
-			// aapt resource value: 0x7F080082
-			public const int ic_group_collapse_03 = 2131230850;
-			
-			// aapt resource value: 0x7F080083
-			public const int ic_group_collapse_04 = 2131230851;
-			
-			// aapt resource value: 0x7F080084
-			public const int ic_group_collapse_05 = 2131230852;
-			
-			// aapt resource value: 0x7F080085
-			public const int ic_group_collapse_06 = 2131230853;
-			
-			// aapt resource value: 0x7F080086
-			public const int ic_group_collapse_07 = 2131230854;
-			
-			// aapt resource value: 0x7F080087
-			public const int ic_group_collapse_08 = 2131230855;
-			
-			// aapt resource value: 0x7F080088
-			public const int ic_group_collapse_09 = 2131230856;
-			
-			// aapt resource value: 0x7F080089
-			public const int ic_group_collapse_10 = 2131230857;
-			
-			// aapt resource value: 0x7F08008A
-			public const int ic_group_collapse_11 = 2131230858;
-			
-			// aapt resource value: 0x7F08008B
-			public const int ic_group_collapse_12 = 2131230859;
-			
-			// aapt resource value: 0x7F08008C
-			public const int ic_group_collapse_13 = 2131230860;
-			
-			// aapt resource value: 0x7F08008D
-			public const int ic_group_collapse_14 = 2131230861;
-			
-			// aapt resource value: 0x7F08008E
-			public const int ic_group_collapse_15 = 2131230862;
-			
-			// aapt resource value: 0x7F08008F
-			public const int ic_group_expand_00 = 2131230863;
-			
-			// aapt resource value: 0x7F080090
-			public const int ic_group_expand_01 = 2131230864;
-			
-			// aapt resource value: 0x7F080091
-			public const int ic_group_expand_02 = 2131230865;
-			
-			// aapt resource value: 0x7F080092
-			public const int ic_group_expand_03 = 2131230866;
-			
-			// aapt resource value: 0x7F080093
-			public const int ic_group_expand_04 = 2131230867;
-			
-			// aapt resource value: 0x7F080094
-			public const int ic_group_expand_05 = 2131230868;
-			
-			// aapt resource value: 0x7F080095
-			public const int ic_group_expand_06 = 2131230869;
-			
-			// aapt resource value: 0x7F080096
-			public const int ic_group_expand_07 = 2131230870;
-			
-			// aapt resource value: 0x7F080097
-			public const int ic_group_expand_08 = 2131230871;
-			
-			// aapt resource value: 0x7F080098
-			public const int ic_group_expand_09 = 2131230872;
-			
-			// aapt resource value: 0x7F080099
-			public const int ic_group_expand_10 = 2131230873;
-			
-			// aapt resource value: 0x7F08009A
-			public const int ic_group_expand_11 = 2131230874;
-			
-			// aapt resource value: 0x7F08009B
-			public const int ic_group_expand_12 = 2131230875;
-			
-			// aapt resource value: 0x7F08009C
-			public const int ic_group_expand_13 = 2131230876;
-			
-			// aapt resource value: 0x7F08009D
-			public const int ic_group_expand_14 = 2131230877;
-			
-			// aapt resource value: 0x7F08009E
-			public const int ic_group_expand_15 = 2131230878;
-			
-			// aapt resource value: 0x7F08009F
-			public const int ic_media_pause_dark = 2131230879;
-			
-			// aapt resource value: 0x7F0800A0
-			public const int ic_media_pause_light = 2131230880;
-			
-			// aapt resource value: 0x7F0800A1
-			public const int ic_media_play_dark = 2131230881;
-			
-			// aapt resource value: 0x7F0800A2
-			public const int ic_media_play_light = 2131230882;
-			
-			// aapt resource value: 0x7F0800A3
-			public const int ic_media_stop_dark = 2131230883;
-			
-			// aapt resource value: 0x7F0800A4
-			public const int ic_media_stop_light = 2131230884;
-			
-			// aapt resource value: 0x7F0800A5
-			public const int ic_mr_button_connected_00_dark = 2131230885;
-			
-			// aapt resource value: 0x7F0800A6
-			public const int ic_mr_button_connected_00_light = 2131230886;
-			
-			// aapt resource value: 0x7F0800A7
-			public const int ic_mr_button_connected_01_dark = 2131230887;
-			
-			// aapt resource value: 0x7F0800A8
-			public const int ic_mr_button_connected_01_light = 2131230888;
-			
-			// aapt resource value: 0x7F0800A9
-			public const int ic_mr_button_connected_02_dark = 2131230889;
-			
-			// aapt resource value: 0x7F0800AA
-			public const int ic_mr_button_connected_02_light = 2131230890;
-			
-			// aapt resource value: 0x7F0800AB
-			public const int ic_mr_button_connected_03_dark = 2131230891;
-			
-			// aapt resource value: 0x7F0800AC
-			public const int ic_mr_button_connected_03_light = 2131230892;
-			
-			// aapt resource value: 0x7F0800AD
-			public const int ic_mr_button_connected_04_dark = 2131230893;
-			
-			// aapt resource value: 0x7F0800AE
-			public const int ic_mr_button_connected_04_light = 2131230894;
-			
-			// aapt resource value: 0x7F0800AF
-			public const int ic_mr_button_connected_05_dark = 2131230895;
-			
-			// aapt resource value: 0x7F0800B0
-			public const int ic_mr_button_connected_05_light = 2131230896;
-			
-			// aapt resource value: 0x7F0800B1
-			public const int ic_mr_button_connected_06_dark = 2131230897;
-			
-			// aapt resource value: 0x7F0800B2
-			public const int ic_mr_button_connected_06_light = 2131230898;
-			
-			// aapt resource value: 0x7F0800B3
-			public const int ic_mr_button_connected_07_dark = 2131230899;
-			
-			// aapt resource value: 0x7F0800B4
-			public const int ic_mr_button_connected_07_light = 2131230900;
-			
-			// aapt resource value: 0x7F0800B5
-			public const int ic_mr_button_connected_08_dark = 2131230901;
-			
-			// aapt resource value: 0x7F0800B6
-			public const int ic_mr_button_connected_08_light = 2131230902;
-			
-			// aapt resource value: 0x7F0800B7
-			public const int ic_mr_button_connected_09_dark = 2131230903;
-			
-			// aapt resource value: 0x7F0800B8
-			public const int ic_mr_button_connected_09_light = 2131230904;
-			
-			// aapt resource value: 0x7F0800B9
-			public const int ic_mr_button_connected_10_dark = 2131230905;
-			
-			// aapt resource value: 0x7F0800BA
-			public const int ic_mr_button_connected_10_light = 2131230906;
-			
-			// aapt resource value: 0x7F0800BB
-			public const int ic_mr_button_connected_11_dark = 2131230907;
-			
-			// aapt resource value: 0x7F0800BC
-			public const int ic_mr_button_connected_11_light = 2131230908;
-			
-			// aapt resource value: 0x7F0800BD
-			public const int ic_mr_button_connected_12_dark = 2131230909;
-			
-			// aapt resource value: 0x7F0800BE
-			public const int ic_mr_button_connected_12_light = 2131230910;
-			
-			// aapt resource value: 0x7F0800BF
-			public const int ic_mr_button_connected_13_dark = 2131230911;
-			
-			// aapt resource value: 0x7F0800C0
-			public const int ic_mr_button_connected_13_light = 2131230912;
-			
-			// aapt resource value: 0x7F0800C1
-			public const int ic_mr_button_connected_14_dark = 2131230913;
-			
-			// aapt resource value: 0x7F0800C2
-			public const int ic_mr_button_connected_14_light = 2131230914;
-			
-			// aapt resource value: 0x7F0800C3
-			public const int ic_mr_button_connected_15_dark = 2131230915;
-			
-			// aapt resource value: 0x7F0800C4
-			public const int ic_mr_button_connected_15_light = 2131230916;
-			
-			// aapt resource value: 0x7F0800C5
-			public const int ic_mr_button_connected_16_dark = 2131230917;
-			
-			// aapt resource value: 0x7F0800C6
-			public const int ic_mr_button_connected_16_light = 2131230918;
-			
-			// aapt resource value: 0x7F0800C7
-			public const int ic_mr_button_connected_17_dark = 2131230919;
-			
-			// aapt resource value: 0x7F0800C8
-			public const int ic_mr_button_connected_17_light = 2131230920;
-			
-			// aapt resource value: 0x7F0800C9
-			public const int ic_mr_button_connected_18_dark = 2131230921;
-			
-			// aapt resource value: 0x7F0800CA
-			public const int ic_mr_button_connected_18_light = 2131230922;
-			
-			// aapt resource value: 0x7F0800CB
-			public const int ic_mr_button_connected_19_dark = 2131230923;
-			
-			// aapt resource value: 0x7F0800CC
-			public const int ic_mr_button_connected_19_light = 2131230924;
-			
-			// aapt resource value: 0x7F0800CD
-			public const int ic_mr_button_connected_20_dark = 2131230925;
-			
-			// aapt resource value: 0x7F0800CE
-			public const int ic_mr_button_connected_20_light = 2131230926;
-			
-			// aapt resource value: 0x7F0800CF
-			public const int ic_mr_button_connected_21_dark = 2131230927;
-			
-			// aapt resource value: 0x7F0800D0
-			public const int ic_mr_button_connected_21_light = 2131230928;
-			
-			// aapt resource value: 0x7F0800D1
-			public const int ic_mr_button_connected_22_dark = 2131230929;
-			
-			// aapt resource value: 0x7F0800D2
-			public const int ic_mr_button_connected_22_light = 2131230930;
-			
-			// aapt resource value: 0x7F0800D3
-			public const int ic_mr_button_connected_23_dark = 2131230931;
-			
-			// aapt resource value: 0x7F0800D4
-			public const int ic_mr_button_connected_23_light = 2131230932;
-			
-			// aapt resource value: 0x7F0800D5
-			public const int ic_mr_button_connected_24_dark = 2131230933;
-			
-			// aapt resource value: 0x7F0800D6
-			public const int ic_mr_button_connected_24_light = 2131230934;
-			
-			// aapt resource value: 0x7F0800D7
-			public const int ic_mr_button_connected_25_dark = 2131230935;
-			
-			// aapt resource value: 0x7F0800D8
-			public const int ic_mr_button_connected_25_light = 2131230936;
-			
-			// aapt resource value: 0x7F0800D9
-			public const int ic_mr_button_connected_26_dark = 2131230937;
-			
-			// aapt resource value: 0x7F0800DA
-			public const int ic_mr_button_connected_26_light = 2131230938;
-			
-			// aapt resource value: 0x7F0800DB
-			public const int ic_mr_button_connected_27_dark = 2131230939;
-			
-			// aapt resource value: 0x7F0800DC
-			public const int ic_mr_button_connected_27_light = 2131230940;
-			
-			// aapt resource value: 0x7F0800DD
-			public const int ic_mr_button_connected_28_dark = 2131230941;
-			
-			// aapt resource value: 0x7F0800DE
-			public const int ic_mr_button_connected_28_light = 2131230942;
-			
-			// aapt resource value: 0x7F0800DF
-			public const int ic_mr_button_connected_29_dark = 2131230943;
-			
-			// aapt resource value: 0x7F0800E0
-			public const int ic_mr_button_connected_29_light = 2131230944;
-			
-			// aapt resource value: 0x7F0800E1
-			public const int ic_mr_button_connected_30_dark = 2131230945;
-			
-			// aapt resource value: 0x7F0800E2
-			public const int ic_mr_button_connected_30_light = 2131230946;
-			
-			// aapt resource value: 0x7F0800E3
-			public const int ic_mr_button_connecting_00_dark = 2131230947;
-			
-			// aapt resource value: 0x7F0800E4
-			public const int ic_mr_button_connecting_00_light = 2131230948;
-			
-			// aapt resource value: 0x7F0800E5
-			public const int ic_mr_button_connecting_01_dark = 2131230949;
-			
-			// aapt resource value: 0x7F0800E6
-			public const int ic_mr_button_connecting_01_light = 2131230950;
-			
-			// aapt resource value: 0x7F0800E7
-			public const int ic_mr_button_connecting_02_dark = 2131230951;
-			
-			// aapt resource value: 0x7F0800E8
-			public const int ic_mr_button_connecting_02_light = 2131230952;
-			
-			// aapt resource value: 0x7F0800E9
-			public const int ic_mr_button_connecting_03_dark = 2131230953;
-			
-			// aapt resource value: 0x7F0800EA
-			public const int ic_mr_button_connecting_03_light = 2131230954;
-			
-			// aapt resource value: 0x7F0800EB
-			public const int ic_mr_button_connecting_04_dark = 2131230955;
-			
-			// aapt resource value: 0x7F0800EC
-			public const int ic_mr_button_connecting_04_light = 2131230956;
-			
-			// aapt resource value: 0x7F0800ED
-			public const int ic_mr_button_connecting_05_dark = 2131230957;
-			
-			// aapt resource value: 0x7F0800EE
-			public const int ic_mr_button_connecting_05_light = 2131230958;
-			
-			// aapt resource value: 0x7F0800EF
-			public const int ic_mr_button_connecting_06_dark = 2131230959;
-			
-			// aapt resource value: 0x7F0800F0
-			public const int ic_mr_button_connecting_06_light = 2131230960;
-			
-			// aapt resource value: 0x7F0800F1
-			public const int ic_mr_button_connecting_07_dark = 2131230961;
-			
-			// aapt resource value: 0x7F0800F2
-			public const int ic_mr_button_connecting_07_light = 2131230962;
-			
-			// aapt resource value: 0x7F0800F3
-			public const int ic_mr_button_connecting_08_dark = 2131230963;
-			
-			// aapt resource value: 0x7F0800F4
-			public const int ic_mr_button_connecting_08_light = 2131230964;
-			
-			// aapt resource value: 0x7F0800F5
-			public const int ic_mr_button_connecting_09_dark = 2131230965;
-			
-			// aapt resource value: 0x7F0800F6
-			public const int ic_mr_button_connecting_09_light = 2131230966;
-			
-			// aapt resource value: 0x7F0800F7
-			public const int ic_mr_button_connecting_10_dark = 2131230967;
-			
-			// aapt resource value: 0x7F0800F8
-			public const int ic_mr_button_connecting_10_light = 2131230968;
-			
-			// aapt resource value: 0x7F0800F9
-			public const int ic_mr_button_connecting_11_dark = 2131230969;
-			
-			// aapt resource value: 0x7F0800FA
-			public const int ic_mr_button_connecting_11_light = 2131230970;
-			
-			// aapt resource value: 0x7F0800FB
-			public const int ic_mr_button_connecting_12_dark = 2131230971;
-			
-			// aapt resource value: 0x7F0800FC
-			public const int ic_mr_button_connecting_12_light = 2131230972;
-			
-			// aapt resource value: 0x7F0800FD
-			public const int ic_mr_button_connecting_13_dark = 2131230973;
-			
-			// aapt resource value: 0x7F0800FE
-			public const int ic_mr_button_connecting_13_light = 2131230974;
-			
-			// aapt resource value: 0x7F0800FF
-			public const int ic_mr_button_connecting_14_dark = 2131230975;
-			
-			// aapt resource value: 0x7F080100
-			public const int ic_mr_button_connecting_14_light = 2131230976;
-			
-			// aapt resource value: 0x7F080101
-			public const int ic_mr_button_connecting_15_dark = 2131230977;
-			
-			// aapt resource value: 0x7F080102
-			public const int ic_mr_button_connecting_15_light = 2131230978;
-			
-			// aapt resource value: 0x7F080103
-			public const int ic_mr_button_connecting_16_dark = 2131230979;
-			
-			// aapt resource value: 0x7F080104
-			public const int ic_mr_button_connecting_16_light = 2131230980;
-			
-			// aapt resource value: 0x7F080105
-			public const int ic_mr_button_connecting_17_dark = 2131230981;
-			
-			// aapt resource value: 0x7F080106
-			public const int ic_mr_button_connecting_17_light = 2131230982;
-			
-			// aapt resource value: 0x7F080107
-			public const int ic_mr_button_connecting_18_dark = 2131230983;
-			
-			// aapt resource value: 0x7F080108
-			public const int ic_mr_button_connecting_18_light = 2131230984;
-			
-			// aapt resource value: 0x7F080109
-			public const int ic_mr_button_connecting_19_dark = 2131230985;
-			
-			// aapt resource value: 0x7F08010A
-			public const int ic_mr_button_connecting_19_light = 2131230986;
-			
-			// aapt resource value: 0x7F08010B
-			public const int ic_mr_button_connecting_20_dark = 2131230987;
-			
-			// aapt resource value: 0x7F08010C
-			public const int ic_mr_button_connecting_20_light = 2131230988;
-			
-			// aapt resource value: 0x7F08010D
-			public const int ic_mr_button_connecting_21_dark = 2131230989;
-			
-			// aapt resource value: 0x7F08010E
-			public const int ic_mr_button_connecting_21_light = 2131230990;
-			
-			// aapt resource value: 0x7F08010F
-			public const int ic_mr_button_connecting_22_dark = 2131230991;
-			
-			// aapt resource value: 0x7F080110
-			public const int ic_mr_button_connecting_22_light = 2131230992;
-			
-			// aapt resource value: 0x7F080111
-			public const int ic_mr_button_connecting_23_dark = 2131230993;
-			
-			// aapt resource value: 0x7F080112
-			public const int ic_mr_button_connecting_23_light = 2131230994;
-			
-			// aapt resource value: 0x7F080113
-			public const int ic_mr_button_connecting_24_dark = 2131230995;
-			
-			// aapt resource value: 0x7F080114
-			public const int ic_mr_button_connecting_24_light = 2131230996;
-			
-			// aapt resource value: 0x7F080115
-			public const int ic_mr_button_connecting_25_dark = 2131230997;
-			
-			// aapt resource value: 0x7F080116
-			public const int ic_mr_button_connecting_25_light = 2131230998;
-			
-			// aapt resource value: 0x7F080117
-			public const int ic_mr_button_connecting_26_dark = 2131230999;
-			
-			// aapt resource value: 0x7F080118
-			public const int ic_mr_button_connecting_26_light = 2131231000;
-			
-			// aapt resource value: 0x7F080119
-			public const int ic_mr_button_connecting_27_dark = 2131231001;
-			
-			// aapt resource value: 0x7F08011A
-			public const int ic_mr_button_connecting_27_light = 2131231002;
-			
-			// aapt resource value: 0x7F08011B
-			public const int ic_mr_button_connecting_28_dark = 2131231003;
-			
-			// aapt resource value: 0x7F08011C
-			public const int ic_mr_button_connecting_28_light = 2131231004;
-			
-			// aapt resource value: 0x7F08011D
-			public const int ic_mr_button_connecting_29_dark = 2131231005;
-			
-			// aapt resource value: 0x7F08011E
-			public const int ic_mr_button_connecting_29_light = 2131231006;
-			
-			// aapt resource value: 0x7F08011F
-			public const int ic_mr_button_connecting_30_dark = 2131231007;
-			
-			// aapt resource value: 0x7F080120
-			public const int ic_mr_button_connecting_30_light = 2131231008;
-			
-			// aapt resource value: 0x7F080121
-			public const int ic_mr_button_disabled_dark = 2131231009;
-			
-			// aapt resource value: 0x7F080122
-			public const int ic_mr_button_disabled_light = 2131231010;
-			
-			// aapt resource value: 0x7F080123
-			public const int ic_mr_button_disconnected_dark = 2131231011;
-			
-			// aapt resource value: 0x7F080124
-			public const int ic_mr_button_disconnected_light = 2131231012;
-			
-			// aapt resource value: 0x7F080125
-			public const int ic_mr_button_grey = 2131231013;
-			
-			// aapt resource value: 0x7F080126
-			public const int ic_vol_type_speaker_dark = 2131231014;
-			
-			// aapt resource value: 0x7F080127
-			public const int ic_vol_type_speaker_group_dark = 2131231015;
-			
-			// aapt resource value: 0x7F080128
-			public const int ic_vol_type_speaker_group_light = 2131231016;
-			
-			// aapt resource value: 0x7F080129
-			public const int ic_vol_type_speaker_light = 2131231017;
-			
-			// aapt resource value: 0x7F08012A
-			public const int ic_vol_type_tv_dark = 2131231018;
-			
-			// aapt resource value: 0x7F08012B
-			public const int ic_vol_type_tv_light = 2131231019;
-			
-			// aapt resource value: 0x7F08012D
-			public const int mainbg = 2131231021;
+			public const int googleg_standard_color_18 = 2131230844;
 			
 			// aapt resource value: 0x7F08012E
-			public const int map = 2131231022;
+			public const int icon = 2131231022;
+			
+			// aapt resource value: 0x7F08007D
+			public const int ic_audiotrack_dark = 2131230845;
+			
+			// aapt resource value: 0x7F08007E
+			public const int ic_audiotrack_light = 2131230846;
+			
+			// aapt resource value: 0x7F08007F
+			public const int ic_dialog_close_dark = 2131230847;
+			
+			// aapt resource value: 0x7F080080
+			public const int ic_dialog_close_light = 2131230848;
+			
+			// aapt resource value: 0x7F080081
+			public const int ic_group_collapse_00 = 2131230849;
+			
+			// aapt resource value: 0x7F080082
+			public const int ic_group_collapse_01 = 2131230850;
+			
+			// aapt resource value: 0x7F080083
+			public const int ic_group_collapse_02 = 2131230851;
+			
+			// aapt resource value: 0x7F080084
+			public const int ic_group_collapse_03 = 2131230852;
+			
+			// aapt resource value: 0x7F080085
+			public const int ic_group_collapse_04 = 2131230853;
+			
+			// aapt resource value: 0x7F080086
+			public const int ic_group_collapse_05 = 2131230854;
+			
+			// aapt resource value: 0x7F080087
+			public const int ic_group_collapse_06 = 2131230855;
+			
+			// aapt resource value: 0x7F080088
+			public const int ic_group_collapse_07 = 2131230856;
+			
+			// aapt resource value: 0x7F080089
+			public const int ic_group_collapse_08 = 2131230857;
+			
+			// aapt resource value: 0x7F08008A
+			public const int ic_group_collapse_09 = 2131230858;
+			
+			// aapt resource value: 0x7F08008B
+			public const int ic_group_collapse_10 = 2131230859;
+			
+			// aapt resource value: 0x7F08008C
+			public const int ic_group_collapse_11 = 2131230860;
+			
+			// aapt resource value: 0x7F08008D
+			public const int ic_group_collapse_12 = 2131230861;
+			
+			// aapt resource value: 0x7F08008E
+			public const int ic_group_collapse_13 = 2131230862;
+			
+			// aapt resource value: 0x7F08008F
+			public const int ic_group_collapse_14 = 2131230863;
+			
+			// aapt resource value: 0x7F080090
+			public const int ic_group_collapse_15 = 2131230864;
+			
+			// aapt resource value: 0x7F080091
+			public const int ic_group_expand_00 = 2131230865;
+			
+			// aapt resource value: 0x7F080092
+			public const int ic_group_expand_01 = 2131230866;
+			
+			// aapt resource value: 0x7F080093
+			public const int ic_group_expand_02 = 2131230867;
+			
+			// aapt resource value: 0x7F080094
+			public const int ic_group_expand_03 = 2131230868;
+			
+			// aapt resource value: 0x7F080095
+			public const int ic_group_expand_04 = 2131230869;
+			
+			// aapt resource value: 0x7F080096
+			public const int ic_group_expand_05 = 2131230870;
+			
+			// aapt resource value: 0x7F080097
+			public const int ic_group_expand_06 = 2131230871;
+			
+			// aapt resource value: 0x7F080098
+			public const int ic_group_expand_07 = 2131230872;
+			
+			// aapt resource value: 0x7F080099
+			public const int ic_group_expand_08 = 2131230873;
+			
+			// aapt resource value: 0x7F08009A
+			public const int ic_group_expand_09 = 2131230874;
+			
+			// aapt resource value: 0x7F08009B
+			public const int ic_group_expand_10 = 2131230875;
+			
+			// aapt resource value: 0x7F08009C
+			public const int ic_group_expand_11 = 2131230876;
+			
+			// aapt resource value: 0x7F08009D
+			public const int ic_group_expand_12 = 2131230877;
+			
+			// aapt resource value: 0x7F08009E
+			public const int ic_group_expand_13 = 2131230878;
+			
+			// aapt resource value: 0x7F08009F
+			public const int ic_group_expand_14 = 2131230879;
+			
+			// aapt resource value: 0x7F0800A0
+			public const int ic_group_expand_15 = 2131230880;
+			
+			// aapt resource value: 0x7F0800A1
+			public const int ic_media_pause_dark = 2131230881;
+			
+			// aapt resource value: 0x7F0800A2
+			public const int ic_media_pause_light = 2131230882;
+			
+			// aapt resource value: 0x7F0800A3
+			public const int ic_media_play_dark = 2131230883;
+			
+			// aapt resource value: 0x7F0800A4
+			public const int ic_media_play_light = 2131230884;
+			
+			// aapt resource value: 0x7F0800A5
+			public const int ic_media_stop_dark = 2131230885;
+			
+			// aapt resource value: 0x7F0800A6
+			public const int ic_media_stop_light = 2131230886;
+			
+			// aapt resource value: 0x7F0800A7
+			public const int ic_mr_button_connected_00_dark = 2131230887;
+			
+			// aapt resource value: 0x7F0800A8
+			public const int ic_mr_button_connected_00_light = 2131230888;
+			
+			// aapt resource value: 0x7F0800A9
+			public const int ic_mr_button_connected_01_dark = 2131230889;
+			
+			// aapt resource value: 0x7F0800AA
+			public const int ic_mr_button_connected_01_light = 2131230890;
+			
+			// aapt resource value: 0x7F0800AB
+			public const int ic_mr_button_connected_02_dark = 2131230891;
+			
+			// aapt resource value: 0x7F0800AC
+			public const int ic_mr_button_connected_02_light = 2131230892;
+			
+			// aapt resource value: 0x7F0800AD
+			public const int ic_mr_button_connected_03_dark = 2131230893;
+			
+			// aapt resource value: 0x7F0800AE
+			public const int ic_mr_button_connected_03_light = 2131230894;
+			
+			// aapt resource value: 0x7F0800AF
+			public const int ic_mr_button_connected_04_dark = 2131230895;
+			
+			// aapt resource value: 0x7F0800B0
+			public const int ic_mr_button_connected_04_light = 2131230896;
+			
+			// aapt resource value: 0x7F0800B1
+			public const int ic_mr_button_connected_05_dark = 2131230897;
+			
+			// aapt resource value: 0x7F0800B2
+			public const int ic_mr_button_connected_05_light = 2131230898;
+			
+			// aapt resource value: 0x7F0800B3
+			public const int ic_mr_button_connected_06_dark = 2131230899;
+			
+			// aapt resource value: 0x7F0800B4
+			public const int ic_mr_button_connected_06_light = 2131230900;
+			
+			// aapt resource value: 0x7F0800B5
+			public const int ic_mr_button_connected_07_dark = 2131230901;
+			
+			// aapt resource value: 0x7F0800B6
+			public const int ic_mr_button_connected_07_light = 2131230902;
+			
+			// aapt resource value: 0x7F0800B7
+			public const int ic_mr_button_connected_08_dark = 2131230903;
+			
+			// aapt resource value: 0x7F0800B8
+			public const int ic_mr_button_connected_08_light = 2131230904;
+			
+			// aapt resource value: 0x7F0800B9
+			public const int ic_mr_button_connected_09_dark = 2131230905;
+			
+			// aapt resource value: 0x7F0800BA
+			public const int ic_mr_button_connected_09_light = 2131230906;
+			
+			// aapt resource value: 0x7F0800BB
+			public const int ic_mr_button_connected_10_dark = 2131230907;
+			
+			// aapt resource value: 0x7F0800BC
+			public const int ic_mr_button_connected_10_light = 2131230908;
+			
+			// aapt resource value: 0x7F0800BD
+			public const int ic_mr_button_connected_11_dark = 2131230909;
+			
+			// aapt resource value: 0x7F0800BE
+			public const int ic_mr_button_connected_11_light = 2131230910;
+			
+			// aapt resource value: 0x7F0800BF
+			public const int ic_mr_button_connected_12_dark = 2131230911;
+			
+			// aapt resource value: 0x7F0800C0
+			public const int ic_mr_button_connected_12_light = 2131230912;
+			
+			// aapt resource value: 0x7F0800C1
+			public const int ic_mr_button_connected_13_dark = 2131230913;
+			
+			// aapt resource value: 0x7F0800C2
+			public const int ic_mr_button_connected_13_light = 2131230914;
+			
+			// aapt resource value: 0x7F0800C3
+			public const int ic_mr_button_connected_14_dark = 2131230915;
+			
+			// aapt resource value: 0x7F0800C4
+			public const int ic_mr_button_connected_14_light = 2131230916;
+			
+			// aapt resource value: 0x7F0800C5
+			public const int ic_mr_button_connected_15_dark = 2131230917;
+			
+			// aapt resource value: 0x7F0800C6
+			public const int ic_mr_button_connected_15_light = 2131230918;
+			
+			// aapt resource value: 0x7F0800C7
+			public const int ic_mr_button_connected_16_dark = 2131230919;
+			
+			// aapt resource value: 0x7F0800C8
+			public const int ic_mr_button_connected_16_light = 2131230920;
+			
+			// aapt resource value: 0x7F0800C9
+			public const int ic_mr_button_connected_17_dark = 2131230921;
+			
+			// aapt resource value: 0x7F0800CA
+			public const int ic_mr_button_connected_17_light = 2131230922;
+			
+			// aapt resource value: 0x7F0800CB
+			public const int ic_mr_button_connected_18_dark = 2131230923;
+			
+			// aapt resource value: 0x7F0800CC
+			public const int ic_mr_button_connected_18_light = 2131230924;
+			
+			// aapt resource value: 0x7F0800CD
+			public const int ic_mr_button_connected_19_dark = 2131230925;
+			
+			// aapt resource value: 0x7F0800CE
+			public const int ic_mr_button_connected_19_light = 2131230926;
+			
+			// aapt resource value: 0x7F0800CF
+			public const int ic_mr_button_connected_20_dark = 2131230927;
+			
+			// aapt resource value: 0x7F0800D0
+			public const int ic_mr_button_connected_20_light = 2131230928;
+			
+			// aapt resource value: 0x7F0800D1
+			public const int ic_mr_button_connected_21_dark = 2131230929;
+			
+			// aapt resource value: 0x7F0800D2
+			public const int ic_mr_button_connected_21_light = 2131230930;
+			
+			// aapt resource value: 0x7F0800D3
+			public const int ic_mr_button_connected_22_dark = 2131230931;
+			
+			// aapt resource value: 0x7F0800D4
+			public const int ic_mr_button_connected_22_light = 2131230932;
+			
+			// aapt resource value: 0x7F0800D5
+			public const int ic_mr_button_connected_23_dark = 2131230933;
+			
+			// aapt resource value: 0x7F0800D6
+			public const int ic_mr_button_connected_23_light = 2131230934;
+			
+			// aapt resource value: 0x7F0800D7
+			public const int ic_mr_button_connected_24_dark = 2131230935;
+			
+			// aapt resource value: 0x7F0800D8
+			public const int ic_mr_button_connected_24_light = 2131230936;
+			
+			// aapt resource value: 0x7F0800D9
+			public const int ic_mr_button_connected_25_dark = 2131230937;
+			
+			// aapt resource value: 0x7F0800DA
+			public const int ic_mr_button_connected_25_light = 2131230938;
+			
+			// aapt resource value: 0x7F0800DB
+			public const int ic_mr_button_connected_26_dark = 2131230939;
+			
+			// aapt resource value: 0x7F0800DC
+			public const int ic_mr_button_connected_26_light = 2131230940;
+			
+			// aapt resource value: 0x7F0800DD
+			public const int ic_mr_button_connected_27_dark = 2131230941;
+			
+			// aapt resource value: 0x7F0800DE
+			public const int ic_mr_button_connected_27_light = 2131230942;
+			
+			// aapt resource value: 0x7F0800DF
+			public const int ic_mr_button_connected_28_dark = 2131230943;
+			
+			// aapt resource value: 0x7F0800E0
+			public const int ic_mr_button_connected_28_light = 2131230944;
+			
+			// aapt resource value: 0x7F0800E1
+			public const int ic_mr_button_connected_29_dark = 2131230945;
+			
+			// aapt resource value: 0x7F0800E2
+			public const int ic_mr_button_connected_29_light = 2131230946;
+			
+			// aapt resource value: 0x7F0800E3
+			public const int ic_mr_button_connected_30_dark = 2131230947;
+			
+			// aapt resource value: 0x7F0800E4
+			public const int ic_mr_button_connected_30_light = 2131230948;
+			
+			// aapt resource value: 0x7F0800E5
+			public const int ic_mr_button_connecting_00_dark = 2131230949;
+			
+			// aapt resource value: 0x7F0800E6
+			public const int ic_mr_button_connecting_00_light = 2131230950;
+			
+			// aapt resource value: 0x7F0800E7
+			public const int ic_mr_button_connecting_01_dark = 2131230951;
+			
+			// aapt resource value: 0x7F0800E8
+			public const int ic_mr_button_connecting_01_light = 2131230952;
+			
+			// aapt resource value: 0x7F0800E9
+			public const int ic_mr_button_connecting_02_dark = 2131230953;
+			
+			// aapt resource value: 0x7F0800EA
+			public const int ic_mr_button_connecting_02_light = 2131230954;
+			
+			// aapt resource value: 0x7F0800EB
+			public const int ic_mr_button_connecting_03_dark = 2131230955;
+			
+			// aapt resource value: 0x7F0800EC
+			public const int ic_mr_button_connecting_03_light = 2131230956;
+			
+			// aapt resource value: 0x7F0800ED
+			public const int ic_mr_button_connecting_04_dark = 2131230957;
+			
+			// aapt resource value: 0x7F0800EE
+			public const int ic_mr_button_connecting_04_light = 2131230958;
+			
+			// aapt resource value: 0x7F0800EF
+			public const int ic_mr_button_connecting_05_dark = 2131230959;
+			
+			// aapt resource value: 0x7F0800F0
+			public const int ic_mr_button_connecting_05_light = 2131230960;
+			
+			// aapt resource value: 0x7F0800F1
+			public const int ic_mr_button_connecting_06_dark = 2131230961;
+			
+			// aapt resource value: 0x7F0800F2
+			public const int ic_mr_button_connecting_06_light = 2131230962;
+			
+			// aapt resource value: 0x7F0800F3
+			public const int ic_mr_button_connecting_07_dark = 2131230963;
+			
+			// aapt resource value: 0x7F0800F4
+			public const int ic_mr_button_connecting_07_light = 2131230964;
+			
+			// aapt resource value: 0x7F0800F5
+			public const int ic_mr_button_connecting_08_dark = 2131230965;
+			
+			// aapt resource value: 0x7F0800F6
+			public const int ic_mr_button_connecting_08_light = 2131230966;
+			
+			// aapt resource value: 0x7F0800F7
+			public const int ic_mr_button_connecting_09_dark = 2131230967;
+			
+			// aapt resource value: 0x7F0800F8
+			public const int ic_mr_button_connecting_09_light = 2131230968;
+			
+			// aapt resource value: 0x7F0800F9
+			public const int ic_mr_button_connecting_10_dark = 2131230969;
+			
+			// aapt resource value: 0x7F0800FA
+			public const int ic_mr_button_connecting_10_light = 2131230970;
+			
+			// aapt resource value: 0x7F0800FB
+			public const int ic_mr_button_connecting_11_dark = 2131230971;
+			
+			// aapt resource value: 0x7F0800FC
+			public const int ic_mr_button_connecting_11_light = 2131230972;
+			
+			// aapt resource value: 0x7F0800FD
+			public const int ic_mr_button_connecting_12_dark = 2131230973;
+			
+			// aapt resource value: 0x7F0800FE
+			public const int ic_mr_button_connecting_12_light = 2131230974;
+			
+			// aapt resource value: 0x7F0800FF
+			public const int ic_mr_button_connecting_13_dark = 2131230975;
+			
+			// aapt resource value: 0x7F080100
+			public const int ic_mr_button_connecting_13_light = 2131230976;
+			
+			// aapt resource value: 0x7F080101
+			public const int ic_mr_button_connecting_14_dark = 2131230977;
+			
+			// aapt resource value: 0x7F080102
+			public const int ic_mr_button_connecting_14_light = 2131230978;
+			
+			// aapt resource value: 0x7F080103
+			public const int ic_mr_button_connecting_15_dark = 2131230979;
+			
+			// aapt resource value: 0x7F080104
+			public const int ic_mr_button_connecting_15_light = 2131230980;
+			
+			// aapt resource value: 0x7F080105
+			public const int ic_mr_button_connecting_16_dark = 2131230981;
+			
+			// aapt resource value: 0x7F080106
+			public const int ic_mr_button_connecting_16_light = 2131230982;
+			
+			// aapt resource value: 0x7F080107
+			public const int ic_mr_button_connecting_17_dark = 2131230983;
+			
+			// aapt resource value: 0x7F080108
+			public const int ic_mr_button_connecting_17_light = 2131230984;
+			
+			// aapt resource value: 0x7F080109
+			public const int ic_mr_button_connecting_18_dark = 2131230985;
+			
+			// aapt resource value: 0x7F08010A
+			public const int ic_mr_button_connecting_18_light = 2131230986;
+			
+			// aapt resource value: 0x7F08010B
+			public const int ic_mr_button_connecting_19_dark = 2131230987;
+			
+			// aapt resource value: 0x7F08010C
+			public const int ic_mr_button_connecting_19_light = 2131230988;
+			
+			// aapt resource value: 0x7F08010D
+			public const int ic_mr_button_connecting_20_dark = 2131230989;
+			
+			// aapt resource value: 0x7F08010E
+			public const int ic_mr_button_connecting_20_light = 2131230990;
+			
+			// aapt resource value: 0x7F08010F
+			public const int ic_mr_button_connecting_21_dark = 2131230991;
+			
+			// aapt resource value: 0x7F080110
+			public const int ic_mr_button_connecting_21_light = 2131230992;
+			
+			// aapt resource value: 0x7F080111
+			public const int ic_mr_button_connecting_22_dark = 2131230993;
+			
+			// aapt resource value: 0x7F080112
+			public const int ic_mr_button_connecting_22_light = 2131230994;
+			
+			// aapt resource value: 0x7F080113
+			public const int ic_mr_button_connecting_23_dark = 2131230995;
+			
+			// aapt resource value: 0x7F080114
+			public const int ic_mr_button_connecting_23_light = 2131230996;
+			
+			// aapt resource value: 0x7F080115
+			public const int ic_mr_button_connecting_24_dark = 2131230997;
+			
+			// aapt resource value: 0x7F080116
+			public const int ic_mr_button_connecting_24_light = 2131230998;
+			
+			// aapt resource value: 0x7F080117
+			public const int ic_mr_button_connecting_25_dark = 2131230999;
+			
+			// aapt resource value: 0x7F080118
+			public const int ic_mr_button_connecting_25_light = 2131231000;
+			
+			// aapt resource value: 0x7F080119
+			public const int ic_mr_button_connecting_26_dark = 2131231001;
+			
+			// aapt resource value: 0x7F08011A
+			public const int ic_mr_button_connecting_26_light = 2131231002;
+			
+			// aapt resource value: 0x7F08011B
+			public const int ic_mr_button_connecting_27_dark = 2131231003;
+			
+			// aapt resource value: 0x7F08011C
+			public const int ic_mr_button_connecting_27_light = 2131231004;
+			
+			// aapt resource value: 0x7F08011D
+			public const int ic_mr_button_connecting_28_dark = 2131231005;
+			
+			// aapt resource value: 0x7F08011E
+			public const int ic_mr_button_connecting_28_light = 2131231006;
+			
+			// aapt resource value: 0x7F08011F
+			public const int ic_mr_button_connecting_29_dark = 2131231007;
+			
+			// aapt resource value: 0x7F080120
+			public const int ic_mr_button_connecting_29_light = 2131231008;
+			
+			// aapt resource value: 0x7F080121
+			public const int ic_mr_button_connecting_30_dark = 2131231009;
+			
+			// aapt resource value: 0x7F080122
+			public const int ic_mr_button_connecting_30_light = 2131231010;
+			
+			// aapt resource value: 0x7F080123
+			public const int ic_mr_button_disabled_dark = 2131231011;
+			
+			// aapt resource value: 0x7F080124
+			public const int ic_mr_button_disabled_light = 2131231012;
+			
+			// aapt resource value: 0x7F080125
+			public const int ic_mr_button_disconnected_dark = 2131231013;
+			
+			// aapt resource value: 0x7F080126
+			public const int ic_mr_button_disconnected_light = 2131231014;
+			
+			// aapt resource value: 0x7F080127
+			public const int ic_mr_button_grey = 2131231015;
+			
+			// aapt resource value: 0x7F080128
+			public const int ic_vol_type_speaker_dark = 2131231016;
+			
+			// aapt resource value: 0x7F080129
+			public const int ic_vol_type_speaker_group_dark = 2131231017;
+			
+			// aapt resource value: 0x7F08012A
+			public const int ic_vol_type_speaker_group_light = 2131231018;
+			
+			// aapt resource value: 0x7F08012B
+			public const int ic_vol_type_speaker_light = 2131231019;
+			
+			// aapt resource value: 0x7F08012C
+			public const int ic_vol_type_tv_dark = 2131231020;
+			
+			// aapt resource value: 0x7F08012D
+			public const int ic_vol_type_tv_light = 2131231021;
 			
 			// aapt resource value: 0x7F08012F
-			public const int map32 = 2131231023;
+			public const int mainbg = 2131231023;
 			
 			// aapt resource value: 0x7F080130
-			public const int menu = 2131231024;
+			public const int map = 2131231024;
 			
 			// aapt resource value: 0x7F080131
-			public const int mr_button_connected_dark = 2131231025;
+			public const int map32 = 2131231025;
 			
 			// aapt resource value: 0x7F080132
-			public const int mr_button_connected_light = 2131231026;
+			public const int menu = 2131231026;
 			
 			// aapt resource value: 0x7F080133
-			public const int mr_button_connecting_dark = 2131231027;
+			public const int mr_button_connected_dark = 2131231027;
 			
 			// aapt resource value: 0x7F080134
-			public const int mr_button_connecting_light = 2131231028;
+			public const int mr_button_connected_light = 2131231028;
 			
 			// aapt resource value: 0x7F080135
-			public const int mr_button_dark = 2131231029;
+			public const int mr_button_connecting_dark = 2131231029;
 			
 			// aapt resource value: 0x7F080136
-			public const int mr_button_light = 2131231030;
+			public const int mr_button_connecting_light = 2131231030;
 			
 			// aapt resource value: 0x7F080137
-			public const int mr_dialog_close_dark = 2131231031;
+			public const int mr_button_dark = 2131231031;
 			
 			// aapt resource value: 0x7F080138
-			public const int mr_dialog_close_light = 2131231032;
+			public const int mr_button_light = 2131231032;
 			
 			// aapt resource value: 0x7F080139
-			public const int mr_dialog_material_background_dark = 2131231033;
+			public const int mr_dialog_close_dark = 2131231033;
 			
 			// aapt resource value: 0x7F08013A
-			public const int mr_dialog_material_background_light = 2131231034;
+			public const int mr_dialog_close_light = 2131231034;
 			
 			// aapt resource value: 0x7F08013B
-			public const int mr_group_collapse = 2131231035;
+			public const int mr_dialog_material_background_dark = 2131231035;
 			
 			// aapt resource value: 0x7F08013C
-			public const int mr_group_expand = 2131231036;
+			public const int mr_dialog_material_background_light = 2131231036;
 			
 			// aapt resource value: 0x7F08013D
-			public const int mr_media_pause_dark = 2131231037;
+			public const int mr_group_collapse = 2131231037;
 			
 			// aapt resource value: 0x7F08013E
-			public const int mr_media_pause_light = 2131231038;
+			public const int mr_group_expand = 2131231038;
 			
 			// aapt resource value: 0x7F08013F
-			public const int mr_media_play_dark = 2131231039;
+			public const int mr_media_pause_dark = 2131231039;
 			
 			// aapt resource value: 0x7F080140
-			public const int mr_media_play_light = 2131231040;
+			public const int mr_media_pause_light = 2131231040;
 			
 			// aapt resource value: 0x7F080141
-			public const int mr_media_stop_dark = 2131231041;
+			public const int mr_media_play_dark = 2131231041;
 			
 			// aapt resource value: 0x7F080142
-			public const int mr_media_stop_light = 2131231042;
+			public const int mr_media_play_light = 2131231042;
 			
 			// aapt resource value: 0x7F080143
-			public const int mr_vol_type_audiotrack_dark = 2131231043;
+			public const int mr_media_stop_dark = 2131231043;
 			
 			// aapt resource value: 0x7F080144
-			public const int mr_vol_type_audiotrack_light = 2131231044;
+			public const int mr_media_stop_light = 2131231044;
 			
 			// aapt resource value: 0x7F080145
-			public const int navigation_empty_icon = 2131231045;
+			public const int mr_vol_type_audiotrack_dark = 2131231045;
 			
 			// aapt resource value: 0x7F080146
-			public const int notification_action_background = 2131231046;
+			public const int mr_vol_type_audiotrack_light = 2131231046;
 			
 			// aapt resource value: 0x7F080147
-			public const int notification_bg = 2131231047;
+			public const int navigation_empty_icon = 2131231047;
 			
 			// aapt resource value: 0x7F080148
-			public const int notification_bg_low = 2131231048;
+			public const int notification_action_background = 2131231048;
 			
 			// aapt resource value: 0x7F080149
-			public const int notification_bg_low_normal = 2131231049;
+			public const int notification_bg = 2131231049;
 			
 			// aapt resource value: 0x7F08014A
-			public const int notification_bg_low_pressed = 2131231050;
+			public const int notification_bg_low = 2131231050;
 			
 			// aapt resource value: 0x7F08014B
-			public const int notification_bg_normal = 2131231051;
+			public const int notification_bg_low_normal = 2131231051;
 			
 			// aapt resource value: 0x7F08014C
-			public const int notification_bg_normal_pressed = 2131231052;
+			public const int notification_bg_low_pressed = 2131231052;
 			
 			// aapt resource value: 0x7F08014D
-			public const int notification_icon_background = 2131231053;
+			public const int notification_bg_normal = 2131231053;
 			
 			// aapt resource value: 0x7F08014E
-			public const int notification_template_icon_bg = 2131231054;
+			public const int notification_bg_normal_pressed = 2131231054;
 			
 			// aapt resource value: 0x7F08014F
-			public const int notification_template_icon_low_bg = 2131231055;
+			public const int notification_icon_background = 2131231055;
 			
 			// aapt resource value: 0x7F080150
-			public const int notification_tile_bg = 2131231056;
+			public const int notification_template_icon_bg = 2131231056;
 			
 			// aapt resource value: 0x7F080151
-			public const int notify_panel_notification_icon_bg = 2131231057;
+			public const int notification_template_icon_low_bg = 2131231057;
 			
 			// aapt resource value: 0x7F080152
-			public const int team = 2131231058;
+			public const int notification_tile_bg = 2131231058;
 			
 			// aapt resource value: 0x7F080153
-			public const int team32 = 2131231059;
+			public const int notify_panel_notification_icon_bg = 2131231059;
 			
 			// aapt resource value: 0x7F080154
-			public const int tooltip_frame_dark = 2131231060;
+			public const int team = 2131231060;
 			
 			// aapt resource value: 0x7F080155
-			public const int tooltip_frame_light = 2131231061;
+			public const int team32 = 2131231061;
 			
 			// aapt resource value: 0x7F080156
-			public const int user = 2131231062;
+			public const int tooltip_frame_dark = 2131231062;
 			
 			// aapt resource value: 0x7F080157
-			public const int user32 = 2131231063;
+			public const int tooltip_frame_light = 2131231063;
+			
+			// aapt resource value: 0x7F080158
+			public const int user = 2131231064;
+			
+			// aapt resource value: 0x7F080159
+			public const int user32 = 2131231065;
 			
 			static Drawable()
 			{
@@ -7132,772 +8537,778 @@ namespace GeoGeometry
 			public const int btn_settings_squad = 2131296338;
 			
 			// aapt resource value: 0x7F090053
-			public const int btn_situation_loaded_container = 2131296339;
+			public const int btn_squad = 2131296339;
 			
 			// aapt resource value: 0x7F090054
-			public const int btn_squad = 2131296340;
+			public const int btn_transfer_access = 2131296340;
 			
 			// aapt resource value: 0x7F090055
-			public const int btn_transfer_access = 2131296341;
+			public const int btn_upload_img = 2131296341;
 			
 			// aapt resource value: 0x7F090056
-			public const int btn_upload_img = 2131296342;
+			public const int btn_user = 2131296342;
 			
 			// aapt resource value: 0x7F090057
-			public const int btn_user = 2131296343;
+			public const int buttonPanel = 2131296343;
 			
 			// aapt resource value: 0x7F090058
-			public const int buttonPanel = 2131296344;
+			public const int calendar_grid = 2131296344;
 			
 			// aapt resource value: 0x7F090059
-			public const int cancel_action = 2131296345;
+			public const int calendar_view = 2131296345;
 			
 			// aapt resource value: 0x7F09005A
-			public const int center = 2131296346;
+			public const int cancel_action = 2131296346;
 			
 			// aapt resource value: 0x7F09005B
-			public const int center_horizontal = 2131296347;
+			public const int center = 2131296347;
 			
 			// aapt resource value: 0x7F09005C
-			public const int center_vertical = 2131296348;
+			public const int center_horizontal = 2131296348;
 			
 			// aapt resource value: 0x7F09005D
-			public const int checkbox = 2131296349;
+			public const int center_vertical = 2131296349;
 			
 			// aapt resource value: 0x7F09005E
-			public const int chronometer = 2131296350;
+			public const int checkbox = 2131296350;
 			
 			// aapt resource value: 0x7F09005F
-			public const int clip_horizontal = 2131296351;
+			public const int chronometer = 2131296351;
 			
 			// aapt resource value: 0x7F090060
-			public const int clip_vertical = 2131296352;
+			public const int clip_horizontal = 2131296352;
 			
 			// aapt resource value: 0x7F090061
-			public const int collapseActionView = 2131296353;
+			public const int clip_vertical = 2131296353;
 			
 			// aapt resource value: 0x7F090062
-			public const int container = 2131296354;
+			public const int collapseActionView = 2131296354;
 			
 			// aapt resource value: 0x7F090063
-			public const int containerAuth = 2131296355;
+			public const int container = 2131296355;
 			
 			// aapt resource value: 0x7F090064
-			public const int containerRegister = 2131296356;
+			public const int containerAuth = 2131296356;
 			
 			// aapt resource value: 0x7F090065
-			public const int containerSquad = 2131296357;
+			public const int containerRegister = 2131296357;
 			
 			// aapt resource value: 0x7F090066
-			public const int containerUser = 2131296358;
+			public const int containerSquad = 2131296358;
 			
 			// aapt resource value: 0x7F090067
-			public const int container_email = 2131296359;
+			public const int containerUser = 2131296359;
 			
 			// aapt resource value: 0x7F090068
-			public const int container_header = 2131296360;
+			public const int container_email = 2131296360;
 			
 			// aapt resource value: 0x7F090069
-			public const int container_info = 2131296361;
+			public const int container_header = 2131296361;
 			
 			// aapt resource value: 0x7F09006A
-			public const int container_middle_name = 2131296362;
+			public const int container_info = 2131296362;
 			
 			// aapt resource value: 0x7F09006B
-			public const int container_name = 2131296363;
+			public const int container_middle_name = 2131296363;
 			
 			// aapt resource value: 0x7F09006C
-			public const int contentPanel = 2131296364;
+			public const int container_name = 2131296364;
 			
 			// aapt resource value: 0x7F09006D
-			public const int coordinator = 2131296365;
+			public const int contentPanel = 2131296365;
+			
+			// aapt resource value: 0x7F09006E
+			public const int coordinator = 2131296366;
 			
 			// aapt resource value: 0x7F090001
 			public const int CTRL = 2131296257;
 			
-			// aapt resource value: 0x7F09006E
-			public const int custom = 2131296366;
-			
 			// aapt resource value: 0x7F09006F
-			public const int customPanel = 2131296367;
+			public const int custom = 2131296367;
 			
 			// aapt resource value: 0x7F090070
-			public const int dark = 2131296368;
+			public const int customPanel = 2131296368;
 			
 			// aapt resource value: 0x7F090071
-			public const int decor_content_parent = 2131296369;
+			public const int dark = 2131296369;
 			
 			// aapt resource value: 0x7F090072
-			public const int default_activity_button = 2131296370;
+			public const int decor_content_parent = 2131296370;
 			
 			// aapt resource value: 0x7F090073
-			public const int design_bottom_sheet = 2131296371;
+			public const int default_activity_button = 2131296371;
 			
 			// aapt resource value: 0x7F090074
-			public const int design_menu_item_action_area = 2131296372;
+			public const int design_bottom_sheet = 2131296372;
 			
 			// aapt resource value: 0x7F090075
-			public const int design_menu_item_action_area_stub = 2131296373;
+			public const int design_menu_item_action_area = 2131296373;
 			
 			// aapt resource value: 0x7F090076
-			public const int design_menu_item_text = 2131296374;
+			public const int design_menu_item_action_area_stub = 2131296374;
 			
 			// aapt resource value: 0x7F090077
-			public const int design_navigation_view = 2131296375;
+			public const int design_menu_item_text = 2131296375;
 			
 			// aapt resource value: 0x7F090078
-			public const int disableHome = 2131296376;
+			public const int design_navigation_view = 2131296376;
 			
 			// aapt resource value: 0x7F090079
-			public const int dt_date = 2131296377;
+			public const int disableHome = 2131296377;
 			
 			// aapt resource value: 0x7F09007A
-			public const int edit_query = 2131296378;
+			public const int dt_date = 2131296378;
 			
 			// aapt resource value: 0x7F09007B
-			public const int end = 2131296379;
+			public const int edit_query = 2131296379;
 			
 			// aapt resource value: 0x7F09007C
-			public const int end_padder = 2131296380;
+			public const int end = 2131296380;
 			
 			// aapt resource value: 0x7F09007D
-			public const int enterAlways = 2131296381;
+			public const int end_padder = 2131296381;
 			
 			// aapt resource value: 0x7F09007E
-			public const int enterAlwaysCollapsed = 2131296382;
+			public const int enterAlways = 2131296382;
 			
 			// aapt resource value: 0x7F09007F
-			public const int exitUntilCollapsed = 2131296383;
-			
-			// aapt resource value: 0x7F090081
-			public const int expanded_menu = 2131296385;
+			public const int enterAlwaysCollapsed = 2131296383;
 			
 			// aapt resource value: 0x7F090080
-			public const int expand_activities_button = 2131296384;
+			public const int exitUntilCollapsed = 2131296384;
 			
 			// aapt resource value: 0x7F090082
-			public const int fill = 2131296386;
+			public const int expanded_menu = 2131296386;
+			
+			// aapt resource value: 0x7F090081
+			public const int expand_activities_button = 2131296385;
 			
 			// aapt resource value: 0x7F090083
-			public const int fill_horizontal = 2131296387;
+			public const int fill = 2131296387;
 			
 			// aapt resource value: 0x7F090084
-			public const int fill_vertical = 2131296388;
+			public const int fill_horizontal = 2131296388;
 			
 			// aapt resource value: 0x7F090085
-			public const int fioBox = 2131296389;
+			public const int fill_vertical = 2131296389;
 			
 			// aapt resource value: 0x7F090086
-			public const int fioBox1 = 2131296390;
+			public const int fioBox = 2131296390;
 			
 			// aapt resource value: 0x7F090087
-			public const int fioBox2 = 2131296391;
+			public const int fioBox1 = 2131296391;
 			
 			// aapt resource value: 0x7F090088
-			public const int @fixed = 2131296392;
+			public const int fioBox2 = 2131296392;
 			
 			// aapt resource value: 0x7F090089
-			public const int flyoutcontent_appbar = 2131296393;
+			public const int @fixed = 2131296393;
 			
 			// aapt resource value: 0x7F09008A
-			public const int flyoutcontent_recycler = 2131296394;
+			public const int flyoutcontent_appbar = 2131296394;
 			
 			// aapt resource value: 0x7F09008B
-			public const int forever = 2131296395;
+			public const int flyoutcontent_recycler = 2131296395;
 			
 			// aapt resource value: 0x7F09008C
-			public const int fragmentMainMenu = 2131296396;
+			public const int forever = 2131296396;
 			
 			// aapt resource value: 0x7F09008D
-			public const int fragmentMap = 2131296397;
+			public const int fragmentMainMenu = 2131296397;
+			
+			// aapt resource value: 0x7F09008E
+			public const int fragmentMap = 2131296398;
 			
 			// aapt resource value: 0x7F090002
 			public const int FUNCTION = 2131296258;
 			
-			// aapt resource value: 0x7F09008E
-			public const int ghost_view = 2131296398;
-			
 			// aapt resource value: 0x7F09008F
-			public const int grad = 2131296399;
+			public const int ghost_view = 2131296399;
 			
 			// aapt resource value: 0x7F090090
-			public const int home = 2131296400;
+			public const int grad = 2131296400;
 			
 			// aapt resource value: 0x7F090091
-			public const int homeAsUp = 2131296401;
+			public const int home = 2131296401;
 			
 			// aapt resource value: 0x7F090092
-			public const int home_container = 2131296402;
+			public const int homeAsUp = 2131296402;
 			
 			// aapt resource value: 0x7F090093
-			public const int hybrid = 2131296403;
+			public const int home_container = 2131296403;
 			
 			// aapt resource value: 0x7F090094
-			public const int icon = 2131296404;
+			public const int hybrid = 2131296404;
 			
 			// aapt resource value: 0x7F090095
-			public const int icon_group = 2131296405;
+			public const int icon = 2131296405;
 			
 			// aapt resource value: 0x7F090096
-			public const int icon_only = 2131296406;
+			public const int icon_group = 2131296406;
 			
 			// aapt resource value: 0x7F090097
-			public const int ifRoom = 2131296407;
+			public const int icon_only = 2131296407;
 			
 			// aapt resource value: 0x7F090098
-			public const int image = 2131296408;
+			public const int ifRoom = 2131296408;
 			
 			// aapt resource value: 0x7F090099
-			public const int img_bg = 2131296409;
+			public const int image = 2131296409;
 			
 			// aapt resource value: 0x7F09009A
-			public const int img_squad = 2131296410;
+			public const int img_bg = 2131296410;
 			
 			// aapt resource value: 0x7F09009B
-			public const int img_user = 2131296411;
+			public const int img_squad = 2131296411;
 			
 			// aapt resource value: 0x7F09009C
-			public const int info = 2131296412;
+			public const int img_user = 2131296412;
 			
 			// aapt resource value: 0x7F09009D
-			public const int is_remember = 2131296413;
+			public const int info = 2131296413;
 			
 			// aapt resource value: 0x7F09009E
-			public const int italic = 2131296414;
+			public const int is_remember = 2131296414;
 			
 			// aapt resource value: 0x7F09009F
-			public const int item_touch_helper_previous_elevation = 2131296415;
+			public const int italic = 2131296415;
 			
 			// aapt resource value: 0x7F0900A0
-			public const int kg = 2131296416;
+			public const int item_touch_helper_previous_elevation = 2131296416;
 			
 			// aapt resource value: 0x7F0900A1
-			public const int label_city = 2131296417;
+			public const int kg = 2131296417;
 			
 			// aapt resource value: 0x7F0900A2
-			public const int label_date = 2131296418;
+			public const int label_city = 2131296418;
 			
 			// aapt resource value: 0x7F0900A3
-			public const int label_desc = 2131296419;
+			public const int label_date = 2131296419;
 			
 			// aapt resource value: 0x7F0900A4
-			public const int label_email = 2131296420;
-			
-			// aapt resource value: 0x7F0900A6
-			public const int label_first_name = 2131296422;
+			public const int label_desc = 2131296420;
 			
 			// aapt resource value: 0x7F0900A5
-			public const int label_f_name = 2131296421;
-			
-			// aapt resource value: 0x7F0900A8
-			public const int label_last_name = 2131296424;
-			
-			// aapt resource value: 0x7F0900A9
-			public const int label_login = 2131296425;
+			public const int label_email = 2131296421;
 			
 			// aapt resource value: 0x7F0900A7
-			public const int label_l_name = 2131296423;
+			public const int label_first_name = 2131296423;
+			
+			// aapt resource value: 0x7F0900A6
+			public const int label_f_name = 2131296422;
+			
+			// aapt resource value: 0x7F0900A9
+			public const int label_last_name = 2131296425;
 			
 			// aapt resource value: 0x7F0900AA
-			public const int label_middle_name = 2131296426;
+			public const int label_login = 2131296426;
+			
+			// aapt resource value: 0x7F0900A8
+			public const int label_l_name = 2131296424;
 			
 			// aapt resource value: 0x7F0900AB
-			public const int label_name = 2131296427;
+			public const int label_middle_name = 2131296427;
 			
 			// aapt resource value: 0x7F0900AC
-			public const int label_number = 2131296428;
+			public const int label_name = 2131296428;
 			
 			// aapt resource value: 0x7F0900AD
-			public const int label_pass = 2131296429;
+			public const int label_number = 2131296429;
 			
 			// aapt resource value: 0x7F0900AE
-			public const int label_pass_check = 2131296430;
+			public const int label_pass = 2131296430;
 			
 			// aapt resource value: 0x7F0900AF
-			public const int label_rang = 2131296431;
+			public const int label_pass_check = 2131296431;
 			
 			// aapt resource value: 0x7F0900B0
-			public const int label_section = 2131296432;
+			public const int label_rang = 2131296432;
 			
 			// aapt resource value: 0x7F0900B1
-			public const int label_social = 2131296433;
+			public const int label_section = 2131296433;
 			
 			// aapt resource value: 0x7F0900B2
-			public const int label_squad_list = 2131296434;
+			public const int label_social = 2131296434;
 			
 			// aapt resource value: 0x7F0900B3
-			public const int label_team = 2131296435;
+			public const int label_squad_list = 2131296435;
 			
 			// aapt resource value: 0x7F0900B4
-			public const int largeLabel = 2131296436;
+			public const int label_team = 2131296436;
 			
 			// aapt resource value: 0x7F0900B5
-			public const int left = 2131296437;
+			public const int largeLabel = 2131296437;
 			
 			// aapt resource value: 0x7F0900B6
-			public const int light = 2131296438;
+			public const int left = 2131296438;
 			
 			// aapt resource value: 0x7F0900B7
-			public const int line1 = 2131296439;
+			public const int left_arrow = 2131296439;
 			
 			// aapt resource value: 0x7F0900B8
-			public const int line3 = 2131296440;
+			public const int light = 2131296440;
 			
 			// aapt resource value: 0x7F0900B9
-			public const int listMode = 2131296441;
+			public const int line1 = 2131296441;
 			
 			// aapt resource value: 0x7F0900BA
-			public const int list_item = 2131296442;
+			public const int line3 = 2131296442;
 			
 			// aapt resource value: 0x7F0900BB
-			public const int loader = 2131296443;
+			public const int listMode = 2131296443;
 			
 			// aapt resource value: 0x7F0900BC
-			public const int main_appbar = 2131296444;
-			
-			// aapt resource value: 0x7F0900C0
-			public const int main_container = 2131296448;
-			
-			// aapt resource value: 0x7F0900C1
-			public const int main_driver = 2131296449;
-			
-			// aapt resource value: 0x7F0900C2
-			public const int main_form = 2131296450;
+			public const int list_item = 2131296444;
 			
 			// aapt resource value: 0x7F0900BD
-			public const int main_scrollview = 2131296445;
+			public const int loader = 2131296445;
 			
 			// aapt resource value: 0x7F0900BE
-			public const int main_tablayout = 2131296446;
+			public const int main_appbar = 2131296446;
 			
-			// aapt resource value: 0x7F0900BF
-			public const int main_toolbar = 2131296447;
+			// aapt resource value: 0x7F0900C2
+			public const int main_container = 2131296450;
 			
 			// aapt resource value: 0x7F0900C3
-			public const int marker_progress = 2131296451;
+			public const int main_driver = 2131296451;
 			
 			// aapt resource value: 0x7F0900C4
-			public const int masked = 2131296452;
+			public const int main_form = 2131296452;
+			
+			// aapt resource value: 0x7F0900BF
+			public const int main_scrollview = 2131296447;
+			
+			// aapt resource value: 0x7F0900C0
+			public const int main_tablayout = 2131296448;
+			
+			// aapt resource value: 0x7F0900C1
+			public const int main_toolbar = 2131296449;
 			
 			// aapt resource value: 0x7F0900C5
-			public const int media_actions = 2131296453;
+			public const int marker_progress = 2131296453;
 			
 			// aapt resource value: 0x7F0900C6
-			public const int message = 2131296454;
+			public const int masked = 2131296454;
+			
+			// aapt resource value: 0x7F0900C7
+			public const int media_actions = 2131296455;
+			
+			// aapt resource value: 0x7F0900C8
+			public const int message = 2131296456;
 			
 			// aapt resource value: 0x7F090003
 			public const int META = 2131296259;
 			
-			// aapt resource value: 0x7F0900C7
-			public const int middle = 2131296455;
-			
-			// aapt resource value: 0x7F0900C8
-			public const int mini = 2131296456;
-			
 			// aapt resource value: 0x7F0900C9
-			public const int mr_art = 2131296457;
+			public const int middle = 2131296457;
 			
 			// aapt resource value: 0x7F0900CA
-			public const int mr_chooser_list = 2131296458;
+			public const int mini = 2131296458;
 			
 			// aapt resource value: 0x7F0900CB
-			public const int mr_chooser_route_desc = 2131296459;
+			public const int mr_art = 2131296459;
 			
 			// aapt resource value: 0x7F0900CC
-			public const int mr_chooser_route_icon = 2131296460;
+			public const int mr_chooser_list = 2131296460;
 			
 			// aapt resource value: 0x7F0900CD
-			public const int mr_chooser_route_name = 2131296461;
+			public const int mr_chooser_route_desc = 2131296461;
 			
 			// aapt resource value: 0x7F0900CE
-			public const int mr_chooser_title = 2131296462;
+			public const int mr_chooser_route_icon = 2131296462;
 			
 			// aapt resource value: 0x7F0900CF
-			public const int mr_close = 2131296463;
+			public const int mr_chooser_route_name = 2131296463;
 			
 			// aapt resource value: 0x7F0900D0
-			public const int mr_control_divider = 2131296464;
+			public const int mr_chooser_title = 2131296464;
 			
 			// aapt resource value: 0x7F0900D1
-			public const int mr_control_playback_ctrl = 2131296465;
+			public const int mr_close = 2131296465;
 			
 			// aapt resource value: 0x7F0900D2
-			public const int mr_control_subtitle = 2131296466;
+			public const int mr_control_divider = 2131296466;
 			
 			// aapt resource value: 0x7F0900D3
-			public const int mr_control_title = 2131296467;
+			public const int mr_control_playback_ctrl = 2131296467;
 			
 			// aapt resource value: 0x7F0900D4
-			public const int mr_control_title_container = 2131296468;
+			public const int mr_control_subtitle = 2131296468;
 			
 			// aapt resource value: 0x7F0900D5
-			public const int mr_custom_control = 2131296469;
+			public const int mr_control_title = 2131296469;
 			
 			// aapt resource value: 0x7F0900D6
-			public const int mr_default_control = 2131296470;
+			public const int mr_control_title_container = 2131296470;
 			
 			// aapt resource value: 0x7F0900D7
-			public const int mr_dialog_area = 2131296471;
+			public const int mr_custom_control = 2131296471;
 			
 			// aapt resource value: 0x7F0900D8
-			public const int mr_expandable_area = 2131296472;
+			public const int mr_default_control = 2131296472;
 			
 			// aapt resource value: 0x7F0900D9
-			public const int mr_group_expand_collapse = 2131296473;
+			public const int mr_dialog_area = 2131296473;
 			
 			// aapt resource value: 0x7F0900DA
-			public const int mr_media_main_control = 2131296474;
+			public const int mr_expandable_area = 2131296474;
 			
 			// aapt resource value: 0x7F0900DB
-			public const int mr_name = 2131296475;
+			public const int mr_group_expand_collapse = 2131296475;
 			
 			// aapt resource value: 0x7F0900DC
-			public const int mr_playback_control = 2131296476;
+			public const int mr_media_main_control = 2131296476;
 			
 			// aapt resource value: 0x7F0900DD
-			public const int mr_title_bar = 2131296477;
+			public const int mr_name = 2131296477;
 			
 			// aapt resource value: 0x7F0900DE
-			public const int mr_volume_control = 2131296478;
+			public const int mr_playback_control = 2131296478;
 			
 			// aapt resource value: 0x7F0900DF
-			public const int mr_volume_group_list = 2131296479;
+			public const int mr_title_bar = 2131296479;
 			
 			// aapt resource value: 0x7F0900E0
-			public const int mr_volume_item_icon = 2131296480;
+			public const int mr_volume_control = 2131296480;
 			
 			// aapt resource value: 0x7F0900E1
-			public const int mr_volume_slider = 2131296481;
+			public const int mr_volume_group_list = 2131296481;
 			
 			// aapt resource value: 0x7F0900E2
-			public const int multiply = 2131296482;
+			public const int mr_volume_item_icon = 2131296482;
 			
 			// aapt resource value: 0x7F0900E3
-			public const int my_text_view = 2131296483;
+			public const int mr_volume_slider = 2131296483;
 			
 			// aapt resource value: 0x7F0900E4
-			public const int name_squad = 2131296484;
+			public const int multiply = 2131296484;
 			
 			// aapt resource value: 0x7F0900E5
-			public const int navigation_header_container = 2131296485;
+			public const int my_text_view = 2131296485;
 			
 			// aapt resource value: 0x7F0900E6
-			public const int never = 2131296486;
+			public const int name_squad = 2131296486;
 			
 			// aapt resource value: 0x7F0900E7
-			public const int none = 2131296487;
+			public const int navigation_header_container = 2131296487;
 			
 			// aapt resource value: 0x7F0900E8
-			public const int normal = 2131296488;
+			public const int never = 2131296488;
 			
 			// aapt resource value: 0x7F0900E9
-			public const int notification_background = 2131296489;
+			public const int none = 2131296489;
 			
 			// aapt resource value: 0x7F0900EA
-			public const int notification_main_column = 2131296490;
+			public const int normal = 2131296490;
 			
 			// aapt resource value: 0x7F0900EB
-			public const int notification_main_column_container = 2131296491;
+			public const int notification_background = 2131296491;
 			
 			// aapt resource value: 0x7F0900EC
-			public const int parallax = 2131296492;
+			public const int notification_main_column = 2131296492;
 			
 			// aapt resource value: 0x7F0900ED
-			public const int parentPanel = 2131296493;
+			public const int notification_main_column_container = 2131296493;
 			
 			// aapt resource value: 0x7F0900EE
-			public const int parent_matrix = 2131296494;
+			public const int parallax = 2131296494;
 			
 			// aapt resource value: 0x7F0900EF
-			public const int pin = 2131296495;
+			public const int parentPanel = 2131296495;
 			
 			// aapt resource value: 0x7F0900F0
-			public const int preloader = 2131296496;
+			public const int parent_matrix = 2131296496;
 			
 			// aapt resource value: 0x7F0900F1
-			public const int progress_circular = 2131296497;
+			public const int pin = 2131296497;
 			
 			// aapt resource value: 0x7F0900F2
-			public const int progress_horizontal = 2131296498;
+			public const int preloader = 2131296498;
 			
 			// aapt resource value: 0x7F0900F3
-			public const int prozA = 2131296499;
+			public const int progress_circular = 2131296499;
 			
 			// aapt resource value: 0x7F0900F4
-			public const int prozW = 2131296500;
+			public const int progress_horizontal = 2131296500;
 			
 			// aapt resource value: 0x7F0900F5
-			public const int radio = 2131296501;
+			public const int prozA = 2131296501;
 			
 			// aapt resource value: 0x7F0900F6
-			public const int rasmetka = 2131296502;
+			public const int prozW = 2131296502;
 			
 			// aapt resource value: 0x7F0900F7
-			public const int right = 2131296503;
+			public const int radio = 2131296503;
 			
 			// aapt resource value: 0x7F0900F8
-			public const int right_icon = 2131296504;
+			public const int rasmetka = 2131296504;
 			
 			// aapt resource value: 0x7F0900F9
-			public const int right_side = 2131296505;
+			public const int right = 2131296505;
 			
-			// aapt resource value: 0x7F090120
-			public const int satellite = 2131296544;
+			// aapt resource value: 0x7F0900FA
+			public const int right_arrow = 2131296506;
 			
-			// aapt resource value: 0x7F090121
-			public const int save_image_matrix = 2131296545;
+			// aapt resource value: 0x7F0900FB
+			public const int right_icon = 2131296507;
+			
+			// aapt resource value: 0x7F0900FC
+			public const int right_side = 2131296508;
 			
 			// aapt resource value: 0x7F090122
-			public const int save_non_transition_alpha = 2131296546;
+			public const int satellite = 2131296546;
 			
 			// aapt resource value: 0x7F090123
-			public const int save_scale_type = 2131296547;
+			public const int save_image_matrix = 2131296547;
 			
 			// aapt resource value: 0x7F090124
-			public const int screen = 2131296548;
+			public const int save_non_transition_alpha = 2131296548;
 			
 			// aapt resource value: 0x7F090125
-			public const int scroll = 2131296549;
-			
-			// aapt resource value: 0x7F09012A
-			public const int scrollable = 2131296554;
+			public const int save_scale_type = 2131296549;
 			
 			// aapt resource value: 0x7F090126
-			public const int scrollIndicatorDown = 2131296550;
+			public const int screen = 2131296550;
 			
 			// aapt resource value: 0x7F090127
-			public const int scrollIndicatorUp = 2131296551;
-			
-			// aapt resource value: 0x7F090128
-			public const int scrollView = 2131296552;
-			
-			// aapt resource value: 0x7F090129
-			public const int scrollView1 = 2131296553;
-			
-			// aapt resource value: 0x7F09012B
-			public const int search_badge = 2131296555;
+			public const int scroll = 2131296551;
 			
 			// aapt resource value: 0x7F09012C
-			public const int search_bar = 2131296556;
+			public const int scrollable = 2131296556;
+			
+			// aapt resource value: 0x7F090128
+			public const int scrollIndicatorDown = 2131296552;
+			
+			// aapt resource value: 0x7F090129
+			public const int scrollIndicatorUp = 2131296553;
+			
+			// aapt resource value: 0x7F09012A
+			public const int scrollView = 2131296554;
+			
+			// aapt resource value: 0x7F09012B
+			public const int scrollView1 = 2131296555;
 			
 			// aapt resource value: 0x7F09012D
-			public const int search_button = 2131296557;
+			public const int search_badge = 2131296557;
 			
 			// aapt resource value: 0x7F09012E
-			public const int search_close_btn = 2131296558;
+			public const int search_bar = 2131296558;
 			
 			// aapt resource value: 0x7F09012F
-			public const int search_edit_frame = 2131296559;
+			public const int search_button = 2131296559;
 			
 			// aapt resource value: 0x7F090130
-			public const int search_go_btn = 2131296560;
+			public const int search_close_btn = 2131296560;
 			
 			// aapt resource value: 0x7F090131
-			public const int search_mag_icon = 2131296561;
+			public const int search_edit_frame = 2131296561;
 			
 			// aapt resource value: 0x7F090132
-			public const int search_plate = 2131296562;
+			public const int search_go_btn = 2131296562;
 			
 			// aapt resource value: 0x7F090133
-			public const int search_src_text = 2131296563;
+			public const int search_mag_icon = 2131296563;
 			
 			// aapt resource value: 0x7F090134
-			public const int search_voice_btn = 2131296564;
+			public const int search_plate = 2131296564;
 			
 			// aapt resource value: 0x7F090135
-			public const int select_dialog_listview = 2131296565;
+			public const int search_src_text = 2131296565;
 			
 			// aapt resource value: 0x7F090136
-			public const int shellcontent_appbar = 2131296566;
+			public const int search_voice_btn = 2131296566;
 			
 			// aapt resource value: 0x7F090137
-			public const int shellcontent_scrollview = 2131296567;
+			public const int select_dialog_listview = 2131296567;
 			
 			// aapt resource value: 0x7F090138
-			public const int shellcontent_toolbar = 2131296568;
+			public const int shellcontent_appbar = 2131296568;
+			
+			// aapt resource value: 0x7F090139
+			public const int shellcontent_scrollview = 2131296569;
+			
+			// aapt resource value: 0x7F09013A
+			public const int shellcontent_toolbar = 2131296570;
 			
 			// aapt resource value: 0x7F090004
 			public const int SHIFT = 2131296260;
 			
-			// aapt resource value: 0x7F090139
-			public const int shortcut = 2131296569;
-			
-			// aapt resource value: 0x7F09013A
-			public const int showCustom = 2131296570;
-			
 			// aapt resource value: 0x7F09013B
-			public const int showHome = 2131296571;
+			public const int shortcut = 2131296571;
 			
 			// aapt resource value: 0x7F09013C
-			public const int showTitle = 2131296572;
+			public const int showCustom = 2131296572;
 			
 			// aapt resource value: 0x7F09013D
-			public const int smallLabel = 2131296573;
+			public const int showHome = 2131296573;
 			
 			// aapt resource value: 0x7F09013E
-			public const int snackbar_action = 2131296574;
+			public const int showTitle = 2131296574;
 			
 			// aapt resource value: 0x7F09013F
-			public const int snackbar_text = 2131296575;
+			public const int smallLabel = 2131296575;
 			
 			// aapt resource value: 0x7F090140
-			public const int snap = 2131296576;
+			public const int snackbar_action = 2131296576;
 			
 			// aapt resource value: 0x7F090141
-			public const int spacer = 2131296577;
+			public const int snackbar_text = 2131296577;
 			
 			// aapt resource value: 0x7F090142
-			public const int split_action_bar = 2131296578;
+			public const int snap = 2131296578;
 			
 			// aapt resource value: 0x7F090143
-			public const int src_atop = 2131296579;
+			public const int spacer = 2131296579;
 			
 			// aapt resource value: 0x7F090144
-			public const int src_in = 2131296580;
+			public const int split_action_bar = 2131296580;
 			
 			// aapt resource value: 0x7F090145
-			public const int src_over = 2131296581;
+			public const int src_atop = 2131296581;
 			
 			// aapt resource value: 0x7F090146
-			public const int standard = 2131296582;
+			public const int src_in = 2131296582;
 			
 			// aapt resource value: 0x7F090147
-			public const int start = 2131296583;
+			public const int src_over = 2131296583;
 			
 			// aapt resource value: 0x7F090148
-			public const int status_bar_latest_event_content = 2131296584;
+			public const int standard = 2131296584;
 			
 			// aapt resource value: 0x7F090149
-			public const int submenuarrow = 2131296585;
+			public const int start = 2131296585;
 			
 			// aapt resource value: 0x7F09014A
-			public const int submit_area = 2131296586;
+			public const int status_bar_latest_event_content = 2131296586;
 			
 			// aapt resource value: 0x7F09014B
-			public const int surfaceview = 2131296587;
+			public const int submenuarrow = 2131296587;
+			
+			// aapt resource value: 0x7F09014C
+			public const int submit_area = 2131296588;
+			
+			// aapt resource value: 0x7F09014D
+			public const int surfaceview = 2131296589;
 			
 			// aapt resource value: 0x7F090005
 			public const int SYM = 2131296261;
 			
-			// aapt resource value: 0x7F0900FA
-			public const int s_battery = 2131296506;
-			
-			// aapt resource value: 0x7F0900FB
-			public const int s_city = 2131296507;
-			
-			// aapt resource value: 0x7F0900FC
-			public const int s_cost = 2131296508;
-			
 			// aapt resource value: 0x7F0900FD
-			public const int s_date = 2131296509;
+			public const int s_battery = 2131296509;
 			
 			// aapt resource value: 0x7F0900FE
-			public const int s_date_time = 2131296510;
+			public const int s_city = 2131296510;
 			
 			// aapt resource value: 0x7F0900FF
-			public const int s_desc = 2131296511;
+			public const int s_cost = 2131296511;
 			
 			// aapt resource value: 0x7F090100
-			public const int s_email = 2131296512;
+			public const int s_date = 2131296512;
 			
 			// aapt resource value: 0x7F090101
-			public const int s_email_check = 2131296513;
+			public const int s_date_time = 2131296513;
 			
 			// aapt resource value: 0x7F090102
-			public const int s_email_wait = 2131296514;
+			public const int s_desc = 2131296514;
 			
 			// aapt resource value: 0x7F090103
-			public const int s_first_name = 2131296515;
+			public const int s_email = 2131296515;
 			
 			// aapt resource value: 0x7F090104
-			public const int s_humidity = 2131296516;
+			public const int s_email_check = 2131296516;
 			
 			// aapt resource value: 0x7F090105
-			public const int s_last_name = 2131296517;
+			public const int s_email_wait = 2131296517;
 			
 			// aapt resource value: 0x7F090106
-			public const int s_latitude = 2131296518;
+			public const int s_first_name = 2131296518;
 			
 			// aapt resource value: 0x7F090107
-			public const int s_leader = 2131296519;
+			public const int s_humidity = 2131296519;
 			
 			// aapt resource value: 0x7F090108
-			public const int s_light = 2131296520;
+			public const int s_last_name = 2131296520;
 			
 			// aapt resource value: 0x7F090109
-			public const int s_lock_unlock_door = 2131296521;
+			public const int s_latitude = 2131296521;
 			
 			// aapt resource value: 0x7F09010A
-			public const int s_login = 2131296522;
+			public const int s_leader = 2131296522;
 			
 			// aapt resource value: 0x7F09010B
-			public const int s_longitude = 2131296523;
+			public const int s_light = 2131296523;
 			
 			// aapt resource value: 0x7F09010C
-			public const int s_middle_name = 2131296524;
+			public const int s_lock_unlock_door = 2131296524;
 			
 			// aapt resource value: 0x7F09010D
-			public const int s_name = 2131296525;
+			public const int s_login = 2131296525;
 			
 			// aapt resource value: 0x7F09010E
-			public const int s_open_close_container = 2131296526;
+			public const int s_longitude = 2131296526;
 			
 			// aapt resource value: 0x7F09010F
-			public const int s_order_number = 2131296527;
+			public const int s_middle_name = 2131296527;
 			
 			// aapt resource value: 0x7F090110
-			public const int s_pass = 2131296528;
+			public const int s_name = 2131296528;
 			
 			// aapt resource value: 0x7F090111
-			public const int s_pass_check = 2131296529;
+			public const int s_open_close_container = 2131296529;
 			
 			// aapt resource value: 0x7F090112
-			public const int s_payment = 2131296530;
+			public const int s_pass = 2131296530;
 			
 			// aapt resource value: 0x7F090113
-			public const int s_phone = 2131296531;
+			public const int s_pass_check = 2131296531;
 			
 			// aapt resource value: 0x7F090114
-			public const int s_pin_access_code = 2131296532;
+			public const int s_payment = 2131296532;
 			
 			// aapt resource value: 0x7F090115
-			public const int s_rang = 2131296533;
+			public const int s_phone = 2131296533;
 			
 			// aapt resource value: 0x7F090116
-			public const int s_role_name = 2131296534;
+			public const int s_pin_access_code = 2131296534;
 			
 			// aapt resource value: 0x7F090117
-			public const int s_section = 2131296535;
+			public const int s_rang = 2131296535;
 			
 			// aapt resource value: 0x7F090118
-			public const int s_signal_strength = 2131296536;
+			public const int s_role_name = 2131296536;
 			
 			// aapt resource value: 0x7F090119
-			public const int s_situation = 2131296537;
+			public const int s_section = 2131296537;
 			
 			// aapt resource value: 0x7F09011A
-			public const int s_situation_loaded_container = 2131296538;
+			public const int s_signal_strength = 2131296538;
 			
 			// aapt resource value: 0x7F09011B
-			public const int s_social = 2131296539;
+			public const int s_situation = 2131296539;
 			
 			// aapt resource value: 0x7F09011C
-			public const int s_team = 2131296540;
+			public const int s_situation_loaded_container = 2131296540;
 			
 			// aapt resource value: 0x7F09011D
-			public const int s_temperature = 2131296541;
+			public const int s_social = 2131296541;
 			
 			// aapt resource value: 0x7F09011E
-			public const int s_user = 2131296542;
+			public const int s_team = 2131296542;
 			
 			// aapt resource value: 0x7F09011F
-			public const int s_weight = 2131296543;
+			public const int s_temperature = 2131296543;
 			
-			// aapt resource value: 0x7F09014C
-			public const int tabMode = 2131296588;
+			// aapt resource value: 0x7F090120
+			public const int s_user = 2131296544;
 			
-			// aapt resource value: 0x7F09014D
-			public const int tag_transition_group = 2131296589;
+			// aapt resource value: 0x7F090121
+			public const int s_weight = 2131296545;
+			
+			// aapt resource value: 0x7F09014E
+			public const int tabMode = 2131296590;
+			
+			// aapt resource value: 0x7F09014F
+			public const int tag_transition_group = 2131296591;
 			
 			// aapt resource value: 0x7F09000D
 			public const int Temperatur = 2131296269;
@@ -7908,20 +9319,20 @@ namespace GeoGeometry
 			// aapt resource value: 0x7F09000F
 			public const int TemperatureEdit = 2131296271;
 			
-			// aapt resource value: 0x7F09014E
-			public const int terrain = 2131296590;
+			// aapt resource value: 0x7F090150
+			public const int terrain = 2131296592;
 			
 			// aapt resource value: 0x7F090006
 			public const int TEXT = 2131296262;
 			
-			// aapt resource value: 0x7F09014F
-			public const int text = 2131296591;
+			// aapt resource value: 0x7F090151
+			public const int text = 2131296593;
 			
 			// aapt resource value: 0x7F090007
 			public const int TEXT1 = 2131296263;
 			
-			// aapt resource value: 0x7F090150
-			public const int text1 = 2131296592;
+			// aapt resource value: 0x7F090152
+			public const int text1 = 2131296594;
 			
 			// aapt resource value: 0x7F090010
 			public const int Text1 = 2131296272;
@@ -7929,8 +9340,8 @@ namespace GeoGeometry
 			// aapt resource value: 0x7F090008
 			public const int TEXT2 = 2131296264;
 			
-			// aapt resource value: 0x7F090151
-			public const int text2 = 2131296593;
+			// aapt resource value: 0x7F090153
+			public const int text2 = 2131296595;
 			
 			// aapt resource value: 0x7F090011
 			public const int Text2 = 2131296273;
@@ -7956,122 +9367,122 @@ namespace GeoGeometry
 			// aapt resource value: 0x7F09000C
 			public const int TEXT6 = 2131296268;
 			
-			// aapt resource value: 0x7F090152
-			public const int textHeaderSquadSettings = 2131296594;
-			
-			// aapt resource value: 0x7F090153
-			public const int textHeaderTeam = 2131296595;
-			
 			// aapt resource value: 0x7F090154
-			public const int textIdContainer = 2131296596;
-			
-			// aapt resource value: 0x7F09015D
-			public const int textinput_counter = 2131296605;
-			
-			// aapt resource value: 0x7F09015E
-			public const int textinput_error = 2131296606;
+			public const int textHeaderSquadSettings = 2131296596;
 			
 			// aapt resource value: 0x7F090155
-			public const int textLockUnlockDoor = 2131296597;
-			
-			// aapt resource value: 0x7F09015F
-			public const int textlogin = 2131296607;
-			
-			// aapt resource value: 0x7F090160
-			public const int textlogin_desc = 2131296608;
+			public const int textHeaderTeam = 2131296597;
 			
 			// aapt resource value: 0x7F090156
-			public const int textOpenCloseBox = 2131296598;
+			public const int textIdContainer = 2131296598;
+			
+			// aapt resource value: 0x7F09015F
+			public const int textinput_counter = 2131296607;
+			
+			// aapt resource value: 0x7F090160
+			public const int textinput_error = 2131296608;
 			
 			// aapt resource value: 0x7F090157
-			public const int textPinCode = 2131296599;
-			
-			// aapt resource value: 0x7F090158
-			public const int textSituation = 2131296600;
-			
-			// aapt resource value: 0x7F090159
-			public const int textSpacerNoButtons = 2131296601;
-			
-			// aapt resource value: 0x7F09015A
-			public const int textSpacerNoTitle = 2131296602;
+			public const int textLockUnlockDoor = 2131296599;
 			
 			// aapt resource value: 0x7F090161
-			public const int textureView = 2131296609;
-			
-			// aapt resource value: 0x7F09015B
-			public const int textUser = 2131296603;
-			
-			// aapt resource value: 0x7F09015C
-			public const int text_input_password_toggle = 2131296604;
+			public const int textlogin = 2131296609;
 			
 			// aapt resource value: 0x7F090162
-			public const int time = 2131296610;
+			public const int textlogin_desc = 2131296610;
+			
+			// aapt resource value: 0x7F090158
+			public const int textOpenCloseBox = 2131296600;
+			
+			// aapt resource value: 0x7F090159
+			public const int textPinCode = 2131296601;
+			
+			// aapt resource value: 0x7F09015A
+			public const int textSituation = 2131296602;
+			
+			// aapt resource value: 0x7F09015B
+			public const int textSpacerNoButtons = 2131296603;
+			
+			// aapt resource value: 0x7F09015C
+			public const int textSpacerNoTitle = 2131296604;
 			
 			// aapt resource value: 0x7F090163
-			public const int title = 2131296611;
+			public const int textureView = 2131296611;
+			
+			// aapt resource value: 0x7F09015D
+			public const int textUser = 2131296605;
+			
+			// aapt resource value: 0x7F09015E
+			public const int text_input_password_toggle = 2131296606;
 			
 			// aapt resource value: 0x7F090164
-			public const int titleDividerNoCustom = 2131296612;
+			public const int time = 2131296612;
 			
 			// aapt resource value: 0x7F090165
-			public const int title_template = 2131296613;
+			public const int title = 2131296613;
 			
 			// aapt resource value: 0x7F090166
-			public const int top = 2131296614;
+			public const int titleDividerNoCustom = 2131296614;
 			
 			// aapt resource value: 0x7F090167
-			public const int topPanel = 2131296615;
+			public const int title_template = 2131296615;
 			
 			// aapt resource value: 0x7F090168
-			public const int touch_outside = 2131296616;
+			public const int top = 2131296616;
 			
 			// aapt resource value: 0x7F090169
-			public const int transition_current_scene = 2131296617;
+			public const int topPanel = 2131296617;
 			
 			// aapt resource value: 0x7F09016A
-			public const int transition_layout_save = 2131296618;
+			public const int touch_outside = 2131296618;
 			
 			// aapt resource value: 0x7F09016B
-			public const int transition_position = 2131296619;
+			public const int transition_current_scene = 2131296619;
 			
 			// aapt resource value: 0x7F09016C
-			public const int transition_scene_layoutid_cache = 2131296620;
+			public const int transition_layout_save = 2131296620;
 			
 			// aapt resource value: 0x7F09016D
-			public const int transition_transform = 2131296621;
+			public const int transition_position = 2131296621;
 			
 			// aapt resource value: 0x7F09016E
-			public const int uniform = 2131296622;
+			public const int transition_scene_layoutid_cache = 2131296622;
 			
 			// aapt resource value: 0x7F09016F
-			public const int up = 2131296623;
+			public const int transition_transform = 2131296623;
 			
 			// aapt resource value: 0x7F090170
-			public const int uploadLogoBox = 2131296624;
+			public const int uniform = 2131296624;
 			
 			// aapt resource value: 0x7F090171
-			public const int useLogo = 2131296625;
+			public const int up = 2131296625;
 			
 			// aapt resource value: 0x7F090172
-			public const int view_offset_helper = 2131296626;
+			public const int uploadLogoBox = 2131296626;
 			
 			// aapt resource value: 0x7F090173
-			public const int visible = 2131296627;
+			public const int useLogo = 2131296627;
+			
+			// aapt resource value: 0x7F090174
+			public const int view_offset_helper = 2131296628;
+			
+			// aapt resource value: 0x7F090175
+			public const int visible = 2131296629;
 			
 			// aapt resource value: 0x7F090015
 			public const int Vlazhnost = 2131296277;
 			
-			// aapt resource value: 0x7F090174
-			public const int volume_item_container = 2131296628;
-			
-			// aapt resource value: 0x7F090175
-			public const int wide = 2131296629;
-			
 			// aapt resource value: 0x7F090176
-			public const int withText = 2131296630;
+			public const int volume_item_container = 2131296630;
 			
 			// aapt resource value: 0x7F090177
-			public const int wrap_content = 2131296631;
+			public const int wide = 2131296631;
+			
+			// aapt resource value: 0x7F090178
+			public const int withText = 2131296632;
+			
+			// aapt resource value: 0x7F090179
+			public const int wrap_content = 2131296633;
 			
 			static Id()
 			{
@@ -8284,142 +9695,157 @@ namespace GeoGeometry
 			public const int BottomTabLayout = 2131492904;
 			
 			// aapt resource value: 0x7F0C0029
-			public const int design_bottom_navigation_item = 2131492905;
+			public const int calendar_pager_layout = 2131492905;
 			
 			// aapt resource value: 0x7F0C002A
-			public const int design_bottom_sheet_dialog = 2131492906;
+			public const int calendar_picker = 2131492906;
 			
 			// aapt resource value: 0x7F0C002B
-			public const int design_layout_snackbar = 2131492907;
+			public const int design_bottom_navigation_item = 2131492907;
 			
 			// aapt resource value: 0x7F0C002C
-			public const int design_layout_snackbar_include = 2131492908;
+			public const int design_bottom_sheet_dialog = 2131492908;
 			
 			// aapt resource value: 0x7F0C002D
-			public const int design_layout_tab_icon = 2131492909;
+			public const int design_layout_snackbar = 2131492909;
 			
 			// aapt resource value: 0x7F0C002E
-			public const int design_layout_tab_text = 2131492910;
+			public const int design_layout_snackbar_include = 2131492910;
 			
 			// aapt resource value: 0x7F0C002F
-			public const int design_menu_item_action_area = 2131492911;
+			public const int design_layout_tab_icon = 2131492911;
 			
 			// aapt resource value: 0x7F0C0030
-			public const int design_navigation_item = 2131492912;
+			public const int design_layout_tab_text = 2131492912;
 			
 			// aapt resource value: 0x7F0C0031
-			public const int design_navigation_item_header = 2131492913;
+			public const int design_menu_item_action_area = 2131492913;
 			
 			// aapt resource value: 0x7F0C0032
-			public const int design_navigation_item_separator = 2131492914;
+			public const int design_navigation_item = 2131492914;
 			
 			// aapt resource value: 0x7F0C0033
-			public const int design_navigation_item_subheader = 2131492915;
+			public const int design_navigation_item_header = 2131492915;
 			
 			// aapt resource value: 0x7F0C0034
-			public const int design_navigation_menu = 2131492916;
+			public const int design_navigation_item_separator = 2131492916;
 			
 			// aapt resource value: 0x7F0C0035
-			public const int design_navigation_menu_item = 2131492917;
+			public const int design_navigation_item_subheader = 2131492917;
 			
 			// aapt resource value: 0x7F0C0036
-			public const int design_text_input_password_icon = 2131492918;
+			public const int design_navigation_menu = 2131492918;
 			
 			// aapt resource value: 0x7F0C0037
-			public const int FlyoutContent = 2131492919;
+			public const int design_navigation_menu_item = 2131492919;
 			
 			// aapt resource value: 0x7F0C0038
-			public const int fragment_map = 2131492920;
+			public const int design_text_input_password_icon = 2131492920;
 			
 			// aapt resource value: 0x7F0C0039
-			public const int fragment_menu_main = 2131492921;
+			public const int dialog = 2131492921;
 			
 			// aapt resource value: 0x7F0C003A
-			public const int mr_chooser_dialog = 2131492922;
+			public const int FlyoutContent = 2131492922;
 			
 			// aapt resource value: 0x7F0C003B
-			public const int mr_chooser_list_item = 2131492923;
+			public const int fragment_map = 2131492923;
 			
 			// aapt resource value: 0x7F0C003C
-			public const int mr_controller_material_dialog_b = 2131492924;
+			public const int fragment_menu_main = 2131492924;
 			
 			// aapt resource value: 0x7F0C003D
-			public const int mr_controller_volume_item = 2131492925;
+			public const int month = 2131492925;
 			
 			// aapt resource value: 0x7F0C003E
-			public const int mr_playback_control = 2131492926;
+			public const int mr_chooser_dialog = 2131492926;
 			
 			// aapt resource value: 0x7F0C003F
-			public const int mr_volume_control = 2131492927;
+			public const int mr_chooser_list_item = 2131492927;
 			
 			// aapt resource value: 0x7F0C0040
-			public const int my_dialog_layout = 2131492928;
+			public const int mr_controller_material_dialog_b = 2131492928;
 			
 			// aapt resource value: 0x7F0C0041
-			public const int notification_action = 2131492929;
+			public const int mr_controller_volume_item = 2131492929;
 			
 			// aapt resource value: 0x7F0C0042
-			public const int notification_action_tombstone = 2131492930;
+			public const int mr_playback_control = 2131492930;
 			
 			// aapt resource value: 0x7F0C0043
-			public const int notification_media_action = 2131492931;
+			public const int mr_volume_control = 2131492931;
 			
 			// aapt resource value: 0x7F0C0044
-			public const int notification_media_cancel_action = 2131492932;
+			public const int my_dialog_layout = 2131492932;
 			
 			// aapt resource value: 0x7F0C0045
-			public const int notification_template_big_media = 2131492933;
+			public const int notification_action = 2131492933;
 			
 			// aapt resource value: 0x7F0C0046
-			public const int notification_template_big_media_custom = 2131492934;
+			public const int notification_action_tombstone = 2131492934;
 			
 			// aapt resource value: 0x7F0C0047
-			public const int notification_template_big_media_narrow = 2131492935;
+			public const int notification_media_action = 2131492935;
 			
 			// aapt resource value: 0x7F0C0048
-			public const int notification_template_big_media_narrow_custom = 2131492936;
+			public const int notification_media_cancel_action = 2131492936;
 			
 			// aapt resource value: 0x7F0C0049
-			public const int notification_template_custom_big = 2131492937;
+			public const int notification_template_big_media = 2131492937;
 			
 			// aapt resource value: 0x7F0C004A
-			public const int notification_template_icon_group = 2131492938;
+			public const int notification_template_big_media_custom = 2131492938;
 			
 			// aapt resource value: 0x7F0C004B
-			public const int notification_template_lines_media = 2131492939;
+			public const int notification_template_big_media_narrow = 2131492939;
 			
 			// aapt resource value: 0x7F0C004C
-			public const int notification_template_media = 2131492940;
+			public const int notification_template_big_media_narrow_custom = 2131492940;
 			
 			// aapt resource value: 0x7F0C004D
-			public const int notification_template_media_custom = 2131492941;
+			public const int notification_template_custom_big = 2131492941;
 			
 			// aapt resource value: 0x7F0C004E
-			public const int notification_template_part_chronometer = 2131492942;
+			public const int notification_template_icon_group = 2131492942;
 			
 			// aapt resource value: 0x7F0C004F
-			public const int notification_template_part_time = 2131492943;
+			public const int notification_template_lines_media = 2131492943;
 			
 			// aapt resource value: 0x7F0C0050
-			public const int RootLayout = 2131492944;
+			public const int notification_template_media = 2131492944;
 			
 			// aapt resource value: 0x7F0C0051
-			public const int select_dialog_item_material = 2131492945;
+			public const int notification_template_media_custom = 2131492945;
 			
 			// aapt resource value: 0x7F0C0052
-			public const int select_dialog_multichoice_material = 2131492946;
+			public const int notification_template_part_chronometer = 2131492946;
 			
 			// aapt resource value: 0x7F0C0053
-			public const int select_dialog_singlechoice_material = 2131492947;
+			public const int notification_template_part_time = 2131492947;
 			
 			// aapt resource value: 0x7F0C0054
-			public const int ShellContent = 2131492948;
+			public const int RootLayout = 2131492948;
 			
 			// aapt resource value: 0x7F0C0055
-			public const int support_simple_spinner_dropdown_item = 2131492949;
+			public const int select_dialog_item_material = 2131492949;
 			
 			// aapt resource value: 0x7F0C0056
-			public const int tooltip = 2131492950;
+			public const int select_dialog_multichoice_material = 2131492950;
+			
+			// aapt resource value: 0x7F0C0057
+			public const int select_dialog_singlechoice_material = 2131492951;
+			
+			// aapt resource value: 0x7F0C0058
+			public const int ShellContent = 2131492952;
+			
+			// aapt resource value: 0x7F0C0059
+			public const int support_simple_spinner_dropdown_item = 2131492953;
+			
+			// aapt resource value: 0x7F0C005A
+			public const int tooltip = 2131492954;
+			
+			// aapt resource value: 0x7F0C005B
+			public const int week = 2131492955;
 			
 			static Layout()
 			{
@@ -8613,97 +10039,112 @@ namespace GeoGeometry
 			public const int common_signin_button_text_long = 2131623988;
 			
 			// aapt resource value: 0x7F0E0035
-			public const int google_key = 2131623989;
+			public const int day_name_format = 2131623989;
 			
 			// aapt resource value: 0x7F0E0036
-			public const int hello = 2131623990;
+			public const int full_date_format = 2131623990;
+			
+			// aapt resource value: 0x7F0E0037
+			public const int google_key = 2131623991;
+			
+			// aapt resource value: 0x7F0E0038
+			public const int hello = 2131623992;
 			
 			// aapt resource value: 0x7F0E0001
 			public const int Hello = 2131623937;
 			
-			// aapt resource value: 0x7F0E0037
-			public const int mr_button_content_description = 2131623991;
-			
-			// aapt resource value: 0x7F0E0038
-			public const int mr_cast_button_connected = 2131623992;
-			
 			// aapt resource value: 0x7F0E0039
-			public const int mr_cast_button_connecting = 2131623993;
+			public const int invalid_date = 2131623993;
 			
 			// aapt resource value: 0x7F0E003A
-			public const int mr_cast_button_disconnected = 2131623994;
+			public const int library_name = 2131623994;
 			
 			// aapt resource value: 0x7F0E003B
-			public const int mr_chooser_searching = 2131623995;
+			public const int month_name_format = 2131623995;
 			
 			// aapt resource value: 0x7F0E003C
-			public const int mr_chooser_title = 2131623996;
+			public const int mr_button_content_description = 2131623996;
 			
 			// aapt resource value: 0x7F0E003D
-			public const int mr_controller_album_art = 2131623997;
+			public const int mr_cast_button_connected = 2131623997;
 			
 			// aapt resource value: 0x7F0E003E
-			public const int mr_controller_casting_screen = 2131623998;
+			public const int mr_cast_button_connecting = 2131623998;
 			
 			// aapt resource value: 0x7F0E003F
-			public const int mr_controller_close_description = 2131623999;
+			public const int mr_cast_button_disconnected = 2131623999;
 			
 			// aapt resource value: 0x7F0E0040
-			public const int mr_controller_collapse_group = 2131624000;
+			public const int mr_chooser_searching = 2131624000;
 			
 			// aapt resource value: 0x7F0E0041
-			public const int mr_controller_disconnect = 2131624001;
+			public const int mr_chooser_title = 2131624001;
 			
 			// aapt resource value: 0x7F0E0042
-			public const int mr_controller_expand_group = 2131624002;
+			public const int mr_controller_album_art = 2131624002;
 			
 			// aapt resource value: 0x7F0E0043
-			public const int mr_controller_no_info_available = 2131624003;
+			public const int mr_controller_casting_screen = 2131624003;
 			
 			// aapt resource value: 0x7F0E0044
-			public const int mr_controller_no_media_selected = 2131624004;
+			public const int mr_controller_close_description = 2131624004;
 			
 			// aapt resource value: 0x7F0E0045
-			public const int mr_controller_pause = 2131624005;
+			public const int mr_controller_collapse_group = 2131624005;
 			
 			// aapt resource value: 0x7F0E0046
-			public const int mr_controller_play = 2131624006;
+			public const int mr_controller_disconnect = 2131624006;
 			
 			// aapt resource value: 0x7F0E0047
-			public const int mr_controller_stop = 2131624007;
+			public const int mr_controller_expand_group = 2131624007;
 			
 			// aapt resource value: 0x7F0E0048
-			public const int mr_controller_stop_casting = 2131624008;
+			public const int mr_controller_no_info_available = 2131624008;
 			
 			// aapt resource value: 0x7F0E0049
-			public const int mr_controller_volume_slider = 2131624009;
+			public const int mr_controller_no_media_selected = 2131624009;
 			
 			// aapt resource value: 0x7F0E004A
-			public const int mr_system_route_name = 2131624010;
+			public const int mr_controller_pause = 2131624010;
 			
 			// aapt resource value: 0x7F0E004B
-			public const int mr_user_route_category_name = 2131624011;
+			public const int mr_controller_play = 2131624011;
 			
 			// aapt resource value: 0x7F0E004C
-			public const int password_toggle_content_description = 2131624012;
+			public const int mr_controller_stop = 2131624012;
 			
 			// aapt resource value: 0x7F0E004D
-			public const int path_password_eye = 2131624013;
+			public const int mr_controller_stop_casting = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int path_password_eye_mask_strike_through = 2131624014;
+			public const int mr_controller_volume_slider = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int path_password_eye_mask_visible = 2131624015;
+			public const int mr_system_route_name = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int path_password_strike_through = 2131624016;
+			public const int mr_user_route_category_name = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int search_menu_title = 2131624017;
+			public const int password_toggle_content_description = 2131624017;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int status_bar_notification_info_overflow = 2131624018;
+			public const int path_password_eye = 2131624018;
+			
+			// aapt resource value: 0x7F0E0053
+			public const int path_password_eye_mask_strike_through = 2131624019;
+			
+			// aapt resource value: 0x7F0E0054
+			public const int path_password_eye_mask_visible = 2131624020;
+			
+			// aapt resource value: 0x7F0E0055
+			public const int path_password_strike_through = 2131624021;
+			
+			// aapt resource value: 0x7F0E0056
+			public const int search_menu_title = 2131624022;
+			
+			// aapt resource value: 0x7F0E0057
+			public const int status_bar_notification_info_overflow = 2131624023;
 			
 			static String()
 			{
@@ -9232,697 +10673,709 @@ namespace GeoGeometry
 			public const int Base_Widget_Design_TabLayout = 2131689642;
 			
 			// aapt resource value: 0x7F0F00AB
-			public const int CardView = 2131689643;
+			public const int CalendarCell = 2131689643;
 			
 			// aapt resource value: 0x7F0F00AC
-			public const int CardView_Dark = 2131689644;
+			public const int CalendarCell_CalendarDate = 2131689644;
 			
 			// aapt resource value: 0x7F0F00AD
-			public const int CardView_Light = 2131689645;
+			public const int CalendarCell_DayHeader = 2131689645;
 			
 			// aapt resource value: 0x7F0F00AE
-			public const int Dexter_Internal_Theme_Transparent = 2131689646;
+			public const int CalendarTitle = 2131689646;
 			
 			// aapt resource value: 0x7F0F00AF
-			public const int Platform_AppCompat = 2131689647;
+			public const int CardView = 2131689647;
 			
 			// aapt resource value: 0x7F0F00B0
-			public const int Platform_AppCompat_Light = 2131689648;
+			public const int CardView_Dark = 2131689648;
 			
 			// aapt resource value: 0x7F0F00B1
-			public const int Platform_ThemeOverlay_AppCompat = 2131689649;
+			public const int CardView_Light = 2131689649;
 			
 			// aapt resource value: 0x7F0F00B2
-			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131689650;
+			public const int Dexter_Internal_Theme_Transparent = 2131689650;
 			
 			// aapt resource value: 0x7F0F00B3
-			public const int Platform_ThemeOverlay_AppCompat_Light = 2131689651;
+			public const int Platform_AppCompat = 2131689651;
 			
 			// aapt resource value: 0x7F0F00B4
-			public const int Platform_V11_AppCompat = 2131689652;
+			public const int Platform_AppCompat_Light = 2131689652;
 			
 			// aapt resource value: 0x7F0F00B5
-			public const int Platform_V11_AppCompat_Light = 2131689653;
+			public const int Platform_ThemeOverlay_AppCompat = 2131689653;
 			
 			// aapt resource value: 0x7F0F00B6
-			public const int Platform_V14_AppCompat = 2131689654;
+			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131689654;
 			
 			// aapt resource value: 0x7F0F00B7
-			public const int Platform_V14_AppCompat_Light = 2131689655;
+			public const int Platform_ThemeOverlay_AppCompat_Light = 2131689655;
 			
 			// aapt resource value: 0x7F0F00B8
-			public const int Platform_V21_AppCompat = 2131689656;
+			public const int Platform_V11_AppCompat = 2131689656;
 			
 			// aapt resource value: 0x7F0F00B9
-			public const int Platform_V21_AppCompat_Light = 2131689657;
+			public const int Platform_V11_AppCompat_Light = 2131689657;
 			
 			// aapt resource value: 0x7F0F00BA
-			public const int Platform_V25_AppCompat = 2131689658;
+			public const int Platform_V14_AppCompat = 2131689658;
 			
 			// aapt resource value: 0x7F0F00BB
-			public const int Platform_V25_AppCompat_Light = 2131689659;
+			public const int Platform_V14_AppCompat_Light = 2131689659;
 			
 			// aapt resource value: 0x7F0F00BC
-			public const int Platform_Widget_AppCompat_Spinner = 2131689660;
+			public const int Platform_V21_AppCompat = 2131689660;
 			
 			// aapt resource value: 0x7F0F00BD
-			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131689661;
+			public const int Platform_V21_AppCompat_Light = 2131689661;
 			
 			// aapt resource value: 0x7F0F00BE
-			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131689662;
+			public const int Platform_V25_AppCompat = 2131689662;
 			
 			// aapt resource value: 0x7F0F00BF
-			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131689663;
+			public const int Platform_V25_AppCompat_Light = 2131689663;
 			
 			// aapt resource value: 0x7F0F00C0
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131689664;
+			public const int Platform_Widget_AppCompat_Spinner = 2131689664;
 			
 			// aapt resource value: 0x7F0F00C1
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131689665;
+			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131689665;
 			
 			// aapt resource value: 0x7F0F00C2
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131689666;
-			
-			// aapt resource value: 0x7F0F00C8
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131689672;
+			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131689666;
 			
 			// aapt resource value: 0x7F0F00C3
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131689667;
+			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131689667;
 			
 			// aapt resource value: 0x7F0F00C4
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131689668;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131689668;
 			
 			// aapt resource value: 0x7F0F00C5
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131689669;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131689669;
 			
 			// aapt resource value: 0x7F0F00C6
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131689670;
-			
-			// aapt resource value: 0x7F0F00C7
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131689671;
-			
-			// aapt resource value: 0x7F0F00C9
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131689673;
-			
-			// aapt resource value: 0x7F0F00CA
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131689674;
-			
-			// aapt resource value: 0x7F0F00CB
-			public const int SpotsDialogDefault = 2131689675;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131689670;
 			
 			// aapt resource value: 0x7F0F00CC
-			public const int TextAppearance_AppCompat = 2131689676;
+			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131689676;
+			
+			// aapt resource value: 0x7F0F00C7
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131689671;
+			
+			// aapt resource value: 0x7F0F00C8
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131689672;
+			
+			// aapt resource value: 0x7F0F00C9
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131689673;
+			
+			// aapt resource value: 0x7F0F00CA
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131689674;
+			
+			// aapt resource value: 0x7F0F00CB
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131689675;
 			
 			// aapt resource value: 0x7F0F00CD
-			public const int TextAppearance_AppCompat_Body1 = 2131689677;
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131689677;
 			
 			// aapt resource value: 0x7F0F00CE
-			public const int TextAppearance_AppCompat_Body2 = 2131689678;
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131689678;
 			
 			// aapt resource value: 0x7F0F00CF
-			public const int TextAppearance_AppCompat_Button = 2131689679;
+			public const int SpotsDialogDefault = 2131689679;
 			
 			// aapt resource value: 0x7F0F00D0
-			public const int TextAppearance_AppCompat_Caption = 2131689680;
+			public const int TextAppearance_AppCompat = 2131689680;
 			
 			// aapt resource value: 0x7F0F00D1
-			public const int TextAppearance_AppCompat_Display1 = 2131689681;
+			public const int TextAppearance_AppCompat_Body1 = 2131689681;
 			
 			// aapt resource value: 0x7F0F00D2
-			public const int TextAppearance_AppCompat_Display2 = 2131689682;
+			public const int TextAppearance_AppCompat_Body2 = 2131689682;
 			
 			// aapt resource value: 0x7F0F00D3
-			public const int TextAppearance_AppCompat_Display3 = 2131689683;
+			public const int TextAppearance_AppCompat_Button = 2131689683;
 			
 			// aapt resource value: 0x7F0F00D4
-			public const int TextAppearance_AppCompat_Display4 = 2131689684;
+			public const int TextAppearance_AppCompat_Caption = 2131689684;
 			
 			// aapt resource value: 0x7F0F00D5
-			public const int TextAppearance_AppCompat_Headline = 2131689685;
+			public const int TextAppearance_AppCompat_Display1 = 2131689685;
 			
 			// aapt resource value: 0x7F0F00D6
-			public const int TextAppearance_AppCompat_Inverse = 2131689686;
+			public const int TextAppearance_AppCompat_Display2 = 2131689686;
 			
 			// aapt resource value: 0x7F0F00D7
-			public const int TextAppearance_AppCompat_Large = 2131689687;
+			public const int TextAppearance_AppCompat_Display3 = 2131689687;
 			
 			// aapt resource value: 0x7F0F00D8
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131689688;
+			public const int TextAppearance_AppCompat_Display4 = 2131689688;
 			
 			// aapt resource value: 0x7F0F00D9
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131689689;
+			public const int TextAppearance_AppCompat_Headline = 2131689689;
 			
 			// aapt resource value: 0x7F0F00DA
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131689690;
+			public const int TextAppearance_AppCompat_Inverse = 2131689690;
 			
 			// aapt resource value: 0x7F0F00DB
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131689691;
+			public const int TextAppearance_AppCompat_Large = 2131689691;
 			
 			// aapt resource value: 0x7F0F00DC
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131689692;
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131689692;
 			
 			// aapt resource value: 0x7F0F00DD
-			public const int TextAppearance_AppCompat_Medium = 2131689693;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131689693;
 			
 			// aapt resource value: 0x7F0F00DE
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131689694;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131689694;
 			
 			// aapt resource value: 0x7F0F00DF
-			public const int TextAppearance_AppCompat_Menu = 2131689695;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131689695;
 			
 			// aapt resource value: 0x7F0F00E0
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131689696;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131689696;
 			
 			// aapt resource value: 0x7F0F00E1
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131689697;
+			public const int TextAppearance_AppCompat_Medium = 2131689697;
 			
 			// aapt resource value: 0x7F0F00E2
-			public const int TextAppearance_AppCompat_Small = 2131689698;
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131689698;
 			
 			// aapt resource value: 0x7F0F00E3
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131689699;
+			public const int TextAppearance_AppCompat_Menu = 2131689699;
 			
 			// aapt resource value: 0x7F0F00E4
-			public const int TextAppearance_AppCompat_Subhead = 2131689700;
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131689700;
 			
 			// aapt resource value: 0x7F0F00E5
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131689701;
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131689701;
 			
 			// aapt resource value: 0x7F0F00E6
-			public const int TextAppearance_AppCompat_Title = 2131689702;
+			public const int TextAppearance_AppCompat_Small = 2131689702;
 			
 			// aapt resource value: 0x7F0F00E7
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131689703;
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131689703;
 			
 			// aapt resource value: 0x7F0F00E8
-			public const int TextAppearance_AppCompat_Tooltip = 2131689704;
+			public const int TextAppearance_AppCompat_Subhead = 2131689704;
 			
 			// aapt resource value: 0x7F0F00E9
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131689705;
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131689705;
 			
 			// aapt resource value: 0x7F0F00EA
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131689706;
+			public const int TextAppearance_AppCompat_Title = 2131689706;
 			
 			// aapt resource value: 0x7F0F00EB
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131689707;
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131689707;
 			
 			// aapt resource value: 0x7F0F00EC
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131689708;
+			public const int TextAppearance_AppCompat_Tooltip = 2131689708;
 			
 			// aapt resource value: 0x7F0F00ED
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131689709;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131689709;
 			
 			// aapt resource value: 0x7F0F00EE
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131689710;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131689710;
 			
 			// aapt resource value: 0x7F0F00EF
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131689711;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131689711;
 			
 			// aapt resource value: 0x7F0F00F0
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131689712;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131689712;
 			
 			// aapt resource value: 0x7F0F00F1
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131689713;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131689713;
 			
 			// aapt resource value: 0x7F0F00F2
-			public const int TextAppearance_AppCompat_Widget_Button = 2131689714;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131689714;
 			
 			// aapt resource value: 0x7F0F00F3
-			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131689715;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131689715;
 			
 			// aapt resource value: 0x7F0F00F4
-			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131689716;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131689716;
 			
 			// aapt resource value: 0x7F0F00F5
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131689717;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131689717;
 			
 			// aapt resource value: 0x7F0F00F6
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131689718;
+			public const int TextAppearance_AppCompat_Widget_Button = 2131689718;
 			
 			// aapt resource value: 0x7F0F00F7
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131689719;
+			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131689719;
 			
 			// aapt resource value: 0x7F0F00F8
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131689720;
+			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131689720;
 			
 			// aapt resource value: 0x7F0F00F9
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131689721;
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131689721;
 			
 			// aapt resource value: 0x7F0F00FA
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131689722;
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131689722;
 			
 			// aapt resource value: 0x7F0F00FB
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131689723;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131689723;
 			
 			// aapt resource value: 0x7F0F00FC
-			public const int TextAppearance_Compat_Notification = 2131689724;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131689724;
 			
 			// aapt resource value: 0x7F0F00FD
-			public const int TextAppearance_Compat_Notification_Info = 2131689725;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131689725;
 			
 			// aapt resource value: 0x7F0F00FE
-			public const int TextAppearance_Compat_Notification_Info_Media = 2131689726;
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131689726;
 			
 			// aapt resource value: 0x7F0F00FF
-			public const int TextAppearance_Compat_Notification_Line2 = 2131689727;
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131689727;
 			
 			// aapt resource value: 0x7F0F0100
-			public const int TextAppearance_Compat_Notification_Line2_Media = 2131689728;
+			public const int TextAppearance_Compat_Notification = 2131689728;
 			
 			// aapt resource value: 0x7F0F0101
-			public const int TextAppearance_Compat_Notification_Media = 2131689729;
+			public const int TextAppearance_Compat_Notification_Info = 2131689729;
 			
 			// aapt resource value: 0x7F0F0102
-			public const int TextAppearance_Compat_Notification_Time = 2131689730;
+			public const int TextAppearance_Compat_Notification_Info_Media = 2131689730;
 			
 			// aapt resource value: 0x7F0F0103
-			public const int TextAppearance_Compat_Notification_Time_Media = 2131689731;
+			public const int TextAppearance_Compat_Notification_Line2 = 2131689731;
 			
 			// aapt resource value: 0x7F0F0104
-			public const int TextAppearance_Compat_Notification_Title = 2131689732;
+			public const int TextAppearance_Compat_Notification_Line2_Media = 2131689732;
 			
 			// aapt resource value: 0x7F0F0105
-			public const int TextAppearance_Compat_Notification_Title_Media = 2131689733;
+			public const int TextAppearance_Compat_Notification_Media = 2131689733;
 			
 			// aapt resource value: 0x7F0F0106
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131689734;
+			public const int TextAppearance_Compat_Notification_Time = 2131689734;
 			
 			// aapt resource value: 0x7F0F0107
-			public const int TextAppearance_Design_Counter = 2131689735;
+			public const int TextAppearance_Compat_Notification_Time_Media = 2131689735;
 			
 			// aapt resource value: 0x7F0F0108
-			public const int TextAppearance_Design_Counter_Overflow = 2131689736;
+			public const int TextAppearance_Compat_Notification_Title = 2131689736;
 			
 			// aapt resource value: 0x7F0F0109
-			public const int TextAppearance_Design_Error = 2131689737;
+			public const int TextAppearance_Compat_Notification_Title_Media = 2131689737;
 			
 			// aapt resource value: 0x7F0F010A
-			public const int TextAppearance_Design_Hint = 2131689738;
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131689738;
 			
 			// aapt resource value: 0x7F0F010B
-			public const int TextAppearance_Design_Snackbar_Message = 2131689739;
+			public const int TextAppearance_Design_Counter = 2131689739;
 			
 			// aapt resource value: 0x7F0F010C
-			public const int TextAppearance_Design_Tab = 2131689740;
+			public const int TextAppearance_Design_Counter_Overflow = 2131689740;
 			
 			// aapt resource value: 0x7F0F010D
-			public const int TextAppearance_MediaRouter_PrimaryText = 2131689741;
+			public const int TextAppearance_Design_Error = 2131689741;
 			
 			// aapt resource value: 0x7F0F010E
-			public const int TextAppearance_MediaRouter_SecondaryText = 2131689742;
+			public const int TextAppearance_Design_Hint = 2131689742;
 			
 			// aapt resource value: 0x7F0F010F
-			public const int TextAppearance_MediaRouter_Title = 2131689743;
+			public const int TextAppearance_Design_Snackbar_Message = 2131689743;
 			
 			// aapt resource value: 0x7F0F0110
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131689744;
+			public const int TextAppearance_Design_Tab = 2131689744;
 			
 			// aapt resource value: 0x7F0F0111
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131689745;
+			public const int TextAppearance_MediaRouter_PrimaryText = 2131689745;
 			
 			// aapt resource value: 0x7F0F0112
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131689746;
-			
-			// aapt resource value: 0x7F0F0132
-			public const int ThemeOverlay_AppCompat = 2131689778;
-			
-			// aapt resource value: 0x7F0F0133
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131689779;
-			
-			// aapt resource value: 0x7F0F0134
-			public const int ThemeOverlay_AppCompat_Dark = 2131689780;
-			
-			// aapt resource value: 0x7F0F0135
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131689781;
-			
-			// aapt resource value: 0x7F0F0136
-			public const int ThemeOverlay_AppCompat_Dialog = 2131689782;
-			
-			// aapt resource value: 0x7F0F0137
-			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131689783;
-			
-			// aapt resource value: 0x7F0F0138
-			public const int ThemeOverlay_AppCompat_Light = 2131689784;
-			
-			// aapt resource value: 0x7F0F0139
-			public const int ThemeOverlay_MediaRouter_Dark = 2131689785;
-			
-			// aapt resource value: 0x7F0F013A
-			public const int ThemeOverlay_MediaRouter_Light = 2131689786;
+			public const int TextAppearance_MediaRouter_SecondaryText = 2131689746;
 			
 			// aapt resource value: 0x7F0F0113
-			public const int Theme_AppCompat = 2131689747;
+			public const int TextAppearance_MediaRouter_Title = 2131689747;
 			
 			// aapt resource value: 0x7F0F0114
-			public const int Theme_AppCompat_CompactMenu = 2131689748;
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131689748;
 			
 			// aapt resource value: 0x7F0F0115
-			public const int Theme_AppCompat_DayNight = 2131689749;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131689749;
 			
 			// aapt resource value: 0x7F0F0116
-			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131689750;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131689750;
 			
-			// aapt resource value: 0x7F0F0117
-			public const int Theme_AppCompat_DayNight_Dialog = 2131689751;
+			// aapt resource value: 0x7F0F0136
+			public const int ThemeOverlay_AppCompat = 2131689782;
 			
-			// aapt resource value: 0x7F0F011A
-			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131689754;
+			// aapt resource value: 0x7F0F0137
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131689783;
 			
-			// aapt resource value: 0x7F0F0118
-			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131689752;
+			// aapt resource value: 0x7F0F0138
+			public const int ThemeOverlay_AppCompat_Dark = 2131689784;
 			
-			// aapt resource value: 0x7F0F0119
-			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131689753;
+			// aapt resource value: 0x7F0F0139
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131689785;
 			
-			// aapt resource value: 0x7F0F011B
-			public const int Theme_AppCompat_DayNight_NoActionBar = 2131689755;
-			
-			// aapt resource value: 0x7F0F011C
-			public const int Theme_AppCompat_Dialog = 2131689756;
-			
-			// aapt resource value: 0x7F0F011F
-			public const int Theme_AppCompat_DialogWhenLarge = 2131689759;
-			
-			// aapt resource value: 0x7F0F011D
-			public const int Theme_AppCompat_Dialog_Alert = 2131689757;
-			
-			// aapt resource value: 0x7F0F011E
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131689758;
-			
-			// aapt resource value: 0x7F0F0120
-			public const int Theme_AppCompat_Light = 2131689760;
-			
-			// aapt resource value: 0x7F0F0121
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131689761;
-			
-			// aapt resource value: 0x7F0F0122
-			public const int Theme_AppCompat_Light_Dialog = 2131689762;
-			
-			// aapt resource value: 0x7F0F0125
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131689765;
-			
-			// aapt resource value: 0x7F0F0123
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131689763;
-			
-			// aapt resource value: 0x7F0F0124
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131689764;
-			
-			// aapt resource value: 0x7F0F0126
-			public const int Theme_AppCompat_Light_NoActionBar = 2131689766;
-			
-			// aapt resource value: 0x7F0F0127
-			public const int Theme_AppCompat_NoActionBar = 2131689767;
-			
-			// aapt resource value: 0x7F0F0128
-			public const int Theme_Design = 2131689768;
-			
-			// aapt resource value: 0x7F0F0129
-			public const int Theme_Design_BottomSheetDialog = 2131689769;
-			
-			// aapt resource value: 0x7F0F012A
-			public const int Theme_Design_Light = 2131689770;
-			
-			// aapt resource value: 0x7F0F012B
-			public const int Theme_Design_Light_BottomSheetDialog = 2131689771;
-			
-			// aapt resource value: 0x7F0F012C
-			public const int Theme_Design_Light_NoActionBar = 2131689772;
-			
-			// aapt resource value: 0x7F0F012D
-			public const int Theme_Design_NoActionBar = 2131689773;
-			
-			// aapt resource value: 0x7F0F012E
-			public const int Theme_MediaRouter = 2131689774;
-			
-			// aapt resource value: 0x7F0F012F
-			public const int Theme_MediaRouter_Light = 2131689775;
-			
-			// aapt resource value: 0x7F0F0131
-			public const int Theme_MediaRouter_LightControlPanel = 2131689777;
-			
-			// aapt resource value: 0x7F0F0130
-			public const int Theme_MediaRouter_Light_DarkControlPanel = 2131689776;
+			// aapt resource value: 0x7F0F013A
+			public const int ThemeOverlay_AppCompat_Dialog = 2131689786;
 			
 			// aapt resource value: 0x7F0F013B
-			public const int Widget_AppCompat_ActionBar = 2131689787;
+			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131689787;
 			
 			// aapt resource value: 0x7F0F013C
-			public const int Widget_AppCompat_ActionBar_Solid = 2131689788;
+			public const int ThemeOverlay_AppCompat_Light = 2131689788;
 			
 			// aapt resource value: 0x7F0F013D
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131689789;
+			public const int ThemeOverlay_MediaRouter_Dark = 2131689789;
 			
 			// aapt resource value: 0x7F0F013E
-			public const int Widget_AppCompat_ActionBar_TabText = 2131689790;
+			public const int ThemeOverlay_MediaRouter_Light = 2131689790;
+			
+			// aapt resource value: 0x7F0F0117
+			public const int Theme_AppCompat = 2131689751;
+			
+			// aapt resource value: 0x7F0F0118
+			public const int Theme_AppCompat_CompactMenu = 2131689752;
+			
+			// aapt resource value: 0x7F0F0119
+			public const int Theme_AppCompat_DayNight = 2131689753;
+			
+			// aapt resource value: 0x7F0F011A
+			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131689754;
+			
+			// aapt resource value: 0x7F0F011B
+			public const int Theme_AppCompat_DayNight_Dialog = 2131689755;
+			
+			// aapt resource value: 0x7F0F011E
+			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131689758;
+			
+			// aapt resource value: 0x7F0F011C
+			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131689756;
+			
+			// aapt resource value: 0x7F0F011D
+			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131689757;
+			
+			// aapt resource value: 0x7F0F011F
+			public const int Theme_AppCompat_DayNight_NoActionBar = 2131689759;
+			
+			// aapt resource value: 0x7F0F0120
+			public const int Theme_AppCompat_Dialog = 2131689760;
+			
+			// aapt resource value: 0x7F0F0123
+			public const int Theme_AppCompat_DialogWhenLarge = 2131689763;
+			
+			// aapt resource value: 0x7F0F0121
+			public const int Theme_AppCompat_Dialog_Alert = 2131689761;
+			
+			// aapt resource value: 0x7F0F0122
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131689762;
+			
+			// aapt resource value: 0x7F0F0124
+			public const int Theme_AppCompat_Light = 2131689764;
+			
+			// aapt resource value: 0x7F0F0125
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131689765;
+			
+			// aapt resource value: 0x7F0F0126
+			public const int Theme_AppCompat_Light_Dialog = 2131689766;
+			
+			// aapt resource value: 0x7F0F0129
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131689769;
+			
+			// aapt resource value: 0x7F0F0127
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131689767;
+			
+			// aapt resource value: 0x7F0F0128
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131689768;
+			
+			// aapt resource value: 0x7F0F012A
+			public const int Theme_AppCompat_Light_NoActionBar = 2131689770;
+			
+			// aapt resource value: 0x7F0F012B
+			public const int Theme_AppCompat_NoActionBar = 2131689771;
+			
+			// aapt resource value: 0x7F0F012C
+			public const int Theme_Design = 2131689772;
+			
+			// aapt resource value: 0x7F0F012D
+			public const int Theme_Design_BottomSheetDialog = 2131689773;
+			
+			// aapt resource value: 0x7F0F012E
+			public const int Theme_Design_Light = 2131689774;
+			
+			// aapt resource value: 0x7F0F012F
+			public const int Theme_Design_Light_BottomSheetDialog = 2131689775;
+			
+			// aapt resource value: 0x7F0F0130
+			public const int Theme_Design_Light_NoActionBar = 2131689776;
+			
+			// aapt resource value: 0x7F0F0131
+			public const int Theme_Design_NoActionBar = 2131689777;
+			
+			// aapt resource value: 0x7F0F0132
+			public const int Theme_MediaRouter = 2131689778;
+			
+			// aapt resource value: 0x7F0F0133
+			public const int Theme_MediaRouter_Light = 2131689779;
+			
+			// aapt resource value: 0x7F0F0135
+			public const int Theme_MediaRouter_LightControlPanel = 2131689781;
+			
+			// aapt resource value: 0x7F0F0134
+			public const int Theme_MediaRouter_Light_DarkControlPanel = 2131689780;
 			
 			// aapt resource value: 0x7F0F013F
-			public const int Widget_AppCompat_ActionBar_TabView = 2131689791;
+			public const int Widget_AppCompat_ActionBar = 2131689791;
 			
 			// aapt resource value: 0x7F0F0140
-			public const int Widget_AppCompat_ActionButton = 2131689792;
+			public const int Widget_AppCompat_ActionBar_Solid = 2131689792;
 			
 			// aapt resource value: 0x7F0F0141
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131689793;
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131689793;
 			
 			// aapt resource value: 0x7F0F0142
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131689794;
+			public const int Widget_AppCompat_ActionBar_TabText = 2131689794;
 			
 			// aapt resource value: 0x7F0F0143
-			public const int Widget_AppCompat_ActionMode = 2131689795;
+			public const int Widget_AppCompat_ActionBar_TabView = 2131689795;
 			
 			// aapt resource value: 0x7F0F0144
-			public const int Widget_AppCompat_ActivityChooserView = 2131689796;
+			public const int Widget_AppCompat_ActionButton = 2131689796;
 			
 			// aapt resource value: 0x7F0F0145
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131689797;
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131689797;
 			
 			// aapt resource value: 0x7F0F0146
-			public const int Widget_AppCompat_Button = 2131689798;
-			
-			// aapt resource value: 0x7F0F014C
-			public const int Widget_AppCompat_ButtonBar = 2131689804;
-			
-			// aapt resource value: 0x7F0F014D
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131689805;
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131689798;
 			
 			// aapt resource value: 0x7F0F0147
-			public const int Widget_AppCompat_Button_Borderless = 2131689799;
+			public const int Widget_AppCompat_ActionMode = 2131689799;
 			
 			// aapt resource value: 0x7F0F0148
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131689800;
+			public const int Widget_AppCompat_ActivityChooserView = 2131689800;
 			
 			// aapt resource value: 0x7F0F0149
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131689801;
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131689801;
 			
 			// aapt resource value: 0x7F0F014A
-			public const int Widget_AppCompat_Button_Colored = 2131689802;
-			
-			// aapt resource value: 0x7F0F014B
-			public const int Widget_AppCompat_Button_Small = 2131689803;
-			
-			// aapt resource value: 0x7F0F014E
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131689806;
-			
-			// aapt resource value: 0x7F0F014F
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131689807;
+			public const int Widget_AppCompat_Button = 2131689802;
 			
 			// aapt resource value: 0x7F0F0150
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131689808;
+			public const int Widget_AppCompat_ButtonBar = 2131689808;
 			
 			// aapt resource value: 0x7F0F0151
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131689809;
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131689809;
+			
+			// aapt resource value: 0x7F0F014B
+			public const int Widget_AppCompat_Button_Borderless = 2131689803;
+			
+			// aapt resource value: 0x7F0F014C
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131689804;
+			
+			// aapt resource value: 0x7F0F014D
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131689805;
+			
+			// aapt resource value: 0x7F0F014E
+			public const int Widget_AppCompat_Button_Colored = 2131689806;
+			
+			// aapt resource value: 0x7F0F014F
+			public const int Widget_AppCompat_Button_Small = 2131689807;
 			
 			// aapt resource value: 0x7F0F0152
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131689810;
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131689810;
 			
 			// aapt resource value: 0x7F0F0153
-			public const int Widget_AppCompat_EditText = 2131689811;
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131689811;
 			
 			// aapt resource value: 0x7F0F0154
-			public const int Widget_AppCompat_ImageButton = 2131689812;
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131689812;
 			
 			// aapt resource value: 0x7F0F0155
-			public const int Widget_AppCompat_Light_ActionBar = 2131689813;
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131689813;
 			
 			// aapt resource value: 0x7F0F0156
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131689814;
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131689814;
 			
 			// aapt resource value: 0x7F0F0157
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131689815;
+			public const int Widget_AppCompat_EditText = 2131689815;
 			
 			// aapt resource value: 0x7F0F0158
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131689816;
+			public const int Widget_AppCompat_ImageButton = 2131689816;
 			
 			// aapt resource value: 0x7F0F0159
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131689817;
+			public const int Widget_AppCompat_Light_ActionBar = 2131689817;
 			
 			// aapt resource value: 0x7F0F015A
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131689818;
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131689818;
 			
 			// aapt resource value: 0x7F0F015B
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131689819;
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131689819;
 			
 			// aapt resource value: 0x7F0F015C
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131689820;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131689820;
 			
 			// aapt resource value: 0x7F0F015D
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131689821;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131689821;
 			
 			// aapt resource value: 0x7F0F015E
-			public const int Widget_AppCompat_Light_ActionButton = 2131689822;
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131689822;
 			
 			// aapt resource value: 0x7F0F015F
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131689823;
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131689823;
 			
 			// aapt resource value: 0x7F0F0160
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131689824;
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131689824;
 			
 			// aapt resource value: 0x7F0F0161
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131689825;
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131689825;
 			
 			// aapt resource value: 0x7F0F0162
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131689826;
+			public const int Widget_AppCompat_Light_ActionButton = 2131689826;
 			
 			// aapt resource value: 0x7F0F0163
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131689827;
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131689827;
 			
 			// aapt resource value: 0x7F0F0164
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131689828;
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131689828;
 			
 			// aapt resource value: 0x7F0F0165
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131689829;
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131689829;
 			
 			// aapt resource value: 0x7F0F0166
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131689830;
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131689830;
 			
 			// aapt resource value: 0x7F0F0167
-			public const int Widget_AppCompat_Light_PopupMenu = 2131689831;
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131689831;
 			
 			// aapt resource value: 0x7F0F0168
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131689832;
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131689832;
 			
 			// aapt resource value: 0x7F0F0169
-			public const int Widget_AppCompat_Light_SearchView = 2131689833;
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131689833;
 			
 			// aapt resource value: 0x7F0F016A
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131689834;
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131689834;
 			
 			// aapt resource value: 0x7F0F016B
-			public const int Widget_AppCompat_ListMenuView = 2131689835;
+			public const int Widget_AppCompat_Light_PopupMenu = 2131689835;
 			
 			// aapt resource value: 0x7F0F016C
-			public const int Widget_AppCompat_ListPopupWindow = 2131689836;
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131689836;
 			
 			// aapt resource value: 0x7F0F016D
-			public const int Widget_AppCompat_ListView = 2131689837;
+			public const int Widget_AppCompat_Light_SearchView = 2131689837;
 			
 			// aapt resource value: 0x7F0F016E
-			public const int Widget_AppCompat_ListView_DropDown = 2131689838;
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131689838;
 			
 			// aapt resource value: 0x7F0F016F
-			public const int Widget_AppCompat_ListView_Menu = 2131689839;
+			public const int Widget_AppCompat_ListMenuView = 2131689839;
 			
 			// aapt resource value: 0x7F0F0170
-			public const int Widget_AppCompat_PopupMenu = 2131689840;
+			public const int Widget_AppCompat_ListPopupWindow = 2131689840;
 			
 			// aapt resource value: 0x7F0F0171
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131689841;
+			public const int Widget_AppCompat_ListView = 2131689841;
 			
 			// aapt resource value: 0x7F0F0172
-			public const int Widget_AppCompat_PopupWindow = 2131689842;
+			public const int Widget_AppCompat_ListView_DropDown = 2131689842;
 			
 			// aapt resource value: 0x7F0F0173
-			public const int Widget_AppCompat_ProgressBar = 2131689843;
+			public const int Widget_AppCompat_ListView_Menu = 2131689843;
 			
 			// aapt resource value: 0x7F0F0174
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131689844;
+			public const int Widget_AppCompat_PopupMenu = 2131689844;
 			
 			// aapt resource value: 0x7F0F0175
-			public const int Widget_AppCompat_RatingBar = 2131689845;
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131689845;
 			
 			// aapt resource value: 0x7F0F0176
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131689846;
+			public const int Widget_AppCompat_PopupWindow = 2131689846;
 			
 			// aapt resource value: 0x7F0F0177
-			public const int Widget_AppCompat_RatingBar_Small = 2131689847;
+			public const int Widget_AppCompat_ProgressBar = 2131689847;
 			
 			// aapt resource value: 0x7F0F0178
-			public const int Widget_AppCompat_SearchView = 2131689848;
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131689848;
 			
 			// aapt resource value: 0x7F0F0179
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131689849;
+			public const int Widget_AppCompat_RatingBar = 2131689849;
 			
 			// aapt resource value: 0x7F0F017A
-			public const int Widget_AppCompat_SeekBar = 2131689850;
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131689850;
 			
 			// aapt resource value: 0x7F0F017B
-			public const int Widget_AppCompat_SeekBar_Discrete = 2131689851;
+			public const int Widget_AppCompat_RatingBar_Small = 2131689851;
 			
 			// aapt resource value: 0x7F0F017C
-			public const int Widget_AppCompat_Spinner = 2131689852;
+			public const int Widget_AppCompat_SearchView = 2131689852;
 			
 			// aapt resource value: 0x7F0F017D
-			public const int Widget_AppCompat_Spinner_DropDown = 2131689853;
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131689853;
 			
 			// aapt resource value: 0x7F0F017E
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131689854;
+			public const int Widget_AppCompat_SeekBar = 2131689854;
 			
 			// aapt resource value: 0x7F0F017F
-			public const int Widget_AppCompat_Spinner_Underlined = 2131689855;
+			public const int Widget_AppCompat_SeekBar_Discrete = 2131689855;
 			
 			// aapt resource value: 0x7F0F0180
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131689856;
+			public const int Widget_AppCompat_Spinner = 2131689856;
 			
 			// aapt resource value: 0x7F0F0181
-			public const int Widget_AppCompat_Toolbar = 2131689857;
+			public const int Widget_AppCompat_Spinner_DropDown = 2131689857;
 			
 			// aapt resource value: 0x7F0F0182
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131689858;
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131689858;
 			
 			// aapt resource value: 0x7F0F0183
-			public const int Widget_Compat_NotificationActionContainer = 2131689859;
+			public const int Widget_AppCompat_Spinner_Underlined = 2131689859;
 			
 			// aapt resource value: 0x7F0F0184
-			public const int Widget_Compat_NotificationActionText = 2131689860;
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131689860;
 			
 			// aapt resource value: 0x7F0F0185
-			public const int Widget_Design_AppBarLayout = 2131689861;
+			public const int Widget_AppCompat_Toolbar = 2131689861;
 			
 			// aapt resource value: 0x7F0F0186
-			public const int Widget_Design_BottomNavigationView = 2131689862;
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131689862;
 			
 			// aapt resource value: 0x7F0F0187
-			public const int Widget_Design_BottomSheet_Modal = 2131689863;
+			public const int Widget_Compat_NotificationActionContainer = 2131689863;
 			
 			// aapt resource value: 0x7F0F0188
-			public const int Widget_Design_CollapsingToolbar = 2131689864;
+			public const int Widget_Compat_NotificationActionText = 2131689864;
 			
 			// aapt resource value: 0x7F0F0189
-			public const int Widget_Design_CoordinatorLayout = 2131689865;
+			public const int Widget_Design_AppBarLayout = 2131689865;
 			
 			// aapt resource value: 0x7F0F018A
-			public const int Widget_Design_FloatingActionButton = 2131689866;
+			public const int Widget_Design_BottomNavigationView = 2131689866;
 			
 			// aapt resource value: 0x7F0F018B
-			public const int Widget_Design_NavigationView = 2131689867;
+			public const int Widget_Design_BottomSheet_Modal = 2131689867;
 			
 			// aapt resource value: 0x7F0F018C
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131689868;
+			public const int Widget_Design_CollapsingToolbar = 2131689868;
 			
 			// aapt resource value: 0x7F0F018D
-			public const int Widget_Design_Snackbar = 2131689869;
+			public const int Widget_Design_CoordinatorLayout = 2131689869;
 			
 			// aapt resource value: 0x7F0F018E
-			public const int Widget_Design_TabLayout = 2131689870;
+			public const int Widget_Design_FloatingActionButton = 2131689870;
 			
 			// aapt resource value: 0x7F0F018F
-			public const int Widget_Design_TextInputLayout = 2131689871;
+			public const int Widget_Design_NavigationView = 2131689871;
 			
 			// aapt resource value: 0x7F0F0190
-			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131689872;
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131689872;
 			
 			// aapt resource value: 0x7F0F0191
-			public const int Widget_MediaRouter_MediaRouteButton = 2131689873;
+			public const int Widget_Design_Snackbar = 2131689873;
+			
+			// aapt resource value: 0x7F0F0192
+			public const int Widget_Design_TabLayout = 2131689874;
+			
+			// aapt resource value: 0x7F0F0193
+			public const int Widget_Design_TextInputLayout = 2131689875;
+			
+			// aapt resource value: 0x7F0F0194
+			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131689876;
+			
+			// aapt resource value: 0x7F0F0195
+			public const int Widget_MediaRouter_MediaRouteButton = 2131689877;
 			
 			static Style()
 			{
