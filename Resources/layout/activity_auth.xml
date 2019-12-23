@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,6 +6,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical"
+	android:background = "@drawable/activity_stili"
 	android:id="@+id/main_container">
 	
 	<ImageButton
@@ -53,15 +54,15 @@
 			android:layout_height="20dp" 
 			android:layout_marginBottom="5dp" 
 			android:layout_below="@+id/containerAuth" 
-			android:id="@+id/label_login"/> 
-		<EditText
-			android:text="add@mail.ru"
-			android:layout_width="fill_parent"
-			android:layout_height="50dp"
-			android:layout_marginBottom="10dp"
-			android:layout_below="@+id/label_login"
-			android:id="@+id/s_login"
-			android:hint="Логин"/>
+			android:id="@+id/label_login"/>
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/label_login"
+            android:id="@+id/s_login"
+			android:background = "@drawable/edittext_stili"
+            android:hint="Логин"/>
 
 		<TextView 
 			android:text="Пароль" 
@@ -72,14 +73,14 @@
 			android:layout_marginBottom="5dp" 
 			android:layout_below="@+id/s_login" 
 			android:id="@+id/label_pass"/>
-		<EditText
-			android:text="Add11-"
-			android:inputType="textPassword"
-			android:layout_width="fill_parent"
-			android:layout_height="50dp"
-			android:layout_below="@+id/label_pass"
-			android:id="@+id/s_pass"
-			android:hint="Пароль"/>
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/label_pass"
+            android:id="@+id/s_pass"
+			android:background = "@drawable/edittext_stili"
+            android:hint="Пароль"/>
 
 		<CheckBox
 			android:text="Запомнить"
@@ -95,8 +96,7 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="20dp"
 			android:layout_below="@+id/is_remember"
-			android:background="@color/colorMainBlue"
-			android:textColor="@android:color/white"
+			android:background="@drawable/button_stili"
 			android:id="@+id/btn_auth" />
 		
 		<LinearLayout 

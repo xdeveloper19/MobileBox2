@@ -31,17 +31,17 @@ namespace GeoGeometry.Model.Box
         public bool IsOpenedDoor { get; set; }
 
 
-        public double Weight { get; set; }
+        public string Weight { get; set; }
 
 
         public int Light { get; set; }
         public string Code { get; set; }
 
 
-        public double Temperature { get; set; }
+        public string Temperature { get; set; }
 
 
-        public double Wetness { get; set; }
-        public double BatteryPower { get; set; }
+        public string Wetness { get; set; }
+        public string BatteryPower { get; set; }
     }
 }

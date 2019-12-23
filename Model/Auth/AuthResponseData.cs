@@ -22,8 +22,6 @@
         public string LastName { get; set; }
         
         public string Role { get; set; }
-
-        public string Check { get; set; }
     }
 }
      

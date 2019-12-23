@@ -13,6 +13,7 @@ using Android.Widget;
 using GeoGeometry.Model.Auth;
 using GeoGeometry.Model.User;
 using Newtonsoft.Json;
+using Plugin.Settings;
 
 namespace GeoGeometry.Activity.Auth {
 	[Activity(Label = "AuthActivity")]
@@ -76,22 +77,21 @@ namespace GeoGeometry.Activity.Auth {
 
 
 
+
             string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string file_data_remember;
+            string file_data_remember = "";
             // Проверяю запомнил ли пользователя.
-            if (File.Exists(@"" + dir_path + "user_data.txt"))
+            string check = CrossSettings.Current.GetValueOrDefault("check","");
+            
+            if (check == "1")
             {
-                using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.Open, FileAccess.Read))
-                {
-                    // преобразуем строку в байты
-                    byte[] array = new byte[file.Length];
-                    // считываем данные
-                    file.Read(array, 0, array.Length);
-                    // декодируем байты в строку
-                    file_data_remember = Encoding.Default.GetString(array);
-                    file.Close();
-                }
+                s_login.Text = CrossSettings.Current.GetValueOrDefault("login","");
+                s_pass.Text = CrossSettings.Current.GetValueOrDefault("password","");
             }
+
+            is_remember.Checked = true;
+            
+
 
             //        if (file_data_remember.Substring(0, 1) == "1")
             //        {
@@ -159,7 +159,7 @@ namespace GeoGeometry.Activity.Auth {
 
                     
                         //ClearField();
-                        if (response.StatusCode == HttpStatusCode.OK)
+                    if (response.StatusCode == HttpStatusCode.OK)
                     {
                         if (o_data.Status == "0")
                         {
@@ -170,12 +170,13 @@ namespace GeoGeometry.Activity.Auth {
                             
                             if (is_remember.Checked == true)
                             {
-                                o_user_data.Check = "1";
-
+                                CrossSettings.Current.AddOrUpdateValue("check", "1");
+                                CrossSettings.Current.AddOrUpdateValue("login", s_login.Text);                               
+                                CrossSettings.Current.AddOrUpdateValue("password", s_pass.Text);
                             }
                             else
                             {
-                                o_user_data.Check = "0";
+                                CrossSettings.Current.AddOrUpdateValue("check", "0");
                             }
                            
 
@@ -200,7 +201,7 @@ namespace GeoGeometry.Activity.Auth {
                                 //Начинаю собирать информацию о клиенте
                                 preloader.Visibility = Android.Views.ViewStates.Invisible;
                                 // Переход на страницу водителя.
-                                if (o_data.ResponseData.Role == "driver")
+                            if (o_data.ResponseData.Role == "driver")
                             {
                                 Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
                                 StartActivity(Driver);
@@ -227,7 +228,52 @@ namespace GeoGeometry.Activity.Auth {
             };
         }
 
-        
+        //private async void GetInfoAboutUser(string dir_path, string file_data_remember)
+        //{
+        //    if (File.Exists(@"" + dir_path + "user_data.txt"))
+        //    {
+        //        using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.Open, FileAccess.Read))
+        //        {
+        //            // преобразуем строку в байты
+        //            byte[] array = new byte[file.Length];
+        //            // считываем данные
+        //            file.Read(array, 0, array.Length);
+        //            // декодируем байты в строку
+        //            file_data_remember = Encoding.Default.GetString(array);
+        //            file.Close();
+        //        }
+        //        AuthResponseData user = JsonConvert.DeserializeObject<AuthResponseData>(file_data_remember);
+
+        //        var myHttpClient = new HttpClient();
+        //        var uri = new Uri("http://iot.tmc-centert.ru/api/container/getbox?id=" + user.UserId);
+        //        HttpResponseMessage response = await myHttpClient.GetAsync(uri);
+
+        //        AuthApiData<AuthResponseData> o_data = new AuthApiData<AuthResponseData>();
+
+        //        string s_result;
+        //        using (HttpContent responseContent = response.Content)
+        //        {
+        //            s_result = await responseContent.ReadAsStringAsync();
+        //        }
+
+        //        o_data = JsonConvert.DeserializeObject<AuthApiData<AuthResponseData>>(s_result);
+        //        if (response.StatusCode == HttpStatusCode.OK)
+        //        {
+        //            if (o_data.Status == "0")
+        //            {
+        //                Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
+        //                AuthResponseData exported_data = new AuthResponseData();
+        //                exported_data = o_data.ResponseData;
+        //                if (user.Check == "1")
+        //                {
+        //                    s_login.Text = exported_data.
+        //                }
+
+        //            } 
+        //        }
+                
+        //    }
+        //}
         /// <summary>
         /// Removes activity from history after navigating to new activity.
         /// </summary>

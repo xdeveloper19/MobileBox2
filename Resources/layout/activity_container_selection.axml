@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+
     android:padding="5dp">
     <ImageButton
 		android:src="@drawable/btnBack"
@@ -20,24 +21,25 @@
     />
     <AutoCompleteTextView android:id="@+id/box_name1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"/>
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:background = "@drawable/edittext_stili"/>
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id = "@+id/box_selection"
-        android:background="@color/colorMainBlue"
-	    android:textColor="@android:color/white"
+        android:background="@drawable/button_stili"
+        android:layout_marginTop="20dp"
         android:text="Выбрать" 
     />
     
     <Button 
 				android:text="Зарегистрировать контейнер"
 				android:textAppearance="?android:attr/textAppearanceSmall" 
-			    
+			    android:layout_marginTop="10dp"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
-				android:textColor="@color/colorMainBlue"			 
+				android:background = "@drawable/activity_stili"			 
 				android:layout_below="@+id/box_selection"
 				android:id="@+id/btn_box_registr" /> 
     <ProgressBar

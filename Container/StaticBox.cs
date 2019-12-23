@@ -46,17 +46,17 @@ namespace GeoGeometry.Container
         /// <summary>
         /// Температура.
         /// </summary>
-        static public double Temperature { get; set; }
+        static public string Temperature { get; set; }
 
         /// <summary>
         /// Влажность.
         /// </summary>
-        static public double Wetness { get; set; }
+        static public string Wetness { get; set; }
 
         /// <summary>
         /// Заряд батареи.
         /// </summary>
-        static public double BatteryPower { get; set; }
+        static public string BatteryPower { get; set; }
 
         /// <summary>
         /// Состояние контейнера.
@@ -71,7 +71,7 @@ namespace GeoGeometry.Container
         /// <summary>
         /// Вес контейнера.
         /// </summary>
-        static public double Weight { get; set; }
+        static public string Weight { get; set; }
 
         static public double Longitude { get; set; }
 

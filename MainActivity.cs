@@ -13,6 +13,8 @@ using Newtonsoft.Json;
 using GeoGeometry.Model.Auth;
 using Com.Karumi.Dexter.Listener.Multi;
 using System.Collections.Generic;
+using System;
+using Android.Support.V4.App;
 
 namespace GeoGeometry.Activity
 {
@@ -31,70 +33,49 @@ namespace GeoGeometry.Activity
         /// </summary>
         private Button btn_reg_form;
 
-       
+        private int MY_PERMISSIONS_REQUEST_CAMERA = 100;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
-            string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string file_data_remember;
-            if(File.Exists(@"" + dir_path + "user_data.txt"))
+            try
             {
-                using (FileStream file = new FileStream(dir_path + "user_data.txt", FileMode.Open, FileAccess.Read))
-                {
-                    // преобразуем строку в байты
-                    byte[] array = new byte[file.Length];
-                    // считываем данные
-                    file.Read(array, 0, array.Length);
-                    // декодируем байты в строку
-                    file_data_remember = Encoding.Default.GetString(array);
-                    file.Close();
-                }
-                AuthResponseData user = JsonConvert.DeserializeObject<AuthResponseData>(file_data_remember);
-                if (user.Check == "1")
-                {
-                    if (user.Role == "driver")
-                    {
-                        Intent Driver = new Intent(this, typeof(Auth.DriverActivity));
-                        StartActivity(Driver);
-                        this.Finish();
+                base.OnCreate(savedInstanceState);
+                // Set our view from the "main" layout resource
+                SetContentView(Resource.Layout.activity_main);
+                string dir_path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                string file_data_remember;
 
-                    }
-                    else if (user.Role == "user")
-                    {
-                        Intent UserActivity = new Intent(this, typeof(Auth.ActivityUserBox));
-                        StartActivity(UserActivity);
-                        this.Finish();
-                    }
-                }
-            }
-                        
+                btn_auth_form = FindViewById<Button>(Resource.Id.btn_auth_form);
+                btn_reg_form = FindViewById<Button>(Resource.Id.btn_reg_form);
 
-            btn_auth_form = FindViewById<Button>(Resource.Id.btn_auth_form);
-            btn_reg_form = FindViewById<Button>(Resource.Id.btn_reg_form);
+                
 
-            string[] permissions = { Manifest.Permission.AccessFineLocation, Manifest.Permission.WriteExternalStorage };
-            
-            
-            
-            Dexter.WithActivity(this).WithPermissions(permissions).WithListener(new CompositeMultiplePermissionsListener(new SamplePermissionListener(this))).Check();
+                string[] permissions = { Manifest.Permission.AccessFineLocation, Manifest.Permission.WriteExternalStorage };
+                ActivityCompat.RequestPermissions(this, new String[] { Manifest.Permission.Camera }, MY_PERMISSIONS_REQUEST_CAMERA);
+                Dexter.WithActivity(this).WithPermissions(permissions).WithListener(new CompositeMultiplePermissionsListener(new SamplePermissionListener(this))).Check();
+
+
+
                 // Переход к форме регистрации.
-            btn_reg_form.Click += (s, e) =>
-            {
-                Intent registerActivity = new Intent(this, typeof(Auth.RegisterActivity));
-                StartActivity(registerActivity);
-            };
+                btn_reg_form.Click += (s, e) =>
+                {
+                    Intent registerActivity = new Intent(this, typeof(Auth.RegisterActivity));
+                    StartActivity(registerActivity);
+                };
 
                 // Переход к форме авторизация
-            
-            btn_auth_form.Click += (s, e) =>
+
+                btn_auth_form.Click += (s, e) =>
+                {
+                    Intent authActivity = new Intent(this, typeof(Auth.AuthActivity));
+                    StartActivity(authActivity);
+                };
+
+            }
+            catch (Exception ex)
             {
-                Intent authActivity = new Intent(this, typeof(Auth.AuthActivity));
-                StartActivity(authActivity);
-            };
-            
+                Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
+            }
         }
 
         private class SamplePermissionListener : Java.Lang.Object, IMultiplePermissionsListener

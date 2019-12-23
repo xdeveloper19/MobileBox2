@@ -7,6 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{9011765F-F5D8-4758-8A7D-FBA6031BFBBA}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <AndroidUseManagedDesignTimeResourceGenerator>False</AndroidUseManagedDesignTimeResourceGenerator>
     <TemplateGuid>{122416d6-6b49-4ee2-a1e8-b825f31c79fe}</TemplateGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -14,6 +15,7 @@
     <AssemblyName>GeoGeometry</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>True</AndroidApplication>
+    <AndroidUseManagedDesignTimeResourceGenerator>False</AndroidUseManagedDesignTimeResourceGenerator>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
@@ -62,13 +64,18 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity\Auth\ActivityApplication.cs" />
+    <Compile Include="Activity\Auth\ActivityCamera.cs" />
     <Compile Include="Activity\Auth\ActivityUserBox.cs" />
     <Compile Include="Activity\Auth\AuthActivity.cs" />
     <Compile Include="Activity\Auth\ContainerSelection.cs" />
     <Compile Include="Activity\Auth\RegisterActivity.cs" />
     <Compile Include="Activity\Auth\RegisterBoxActivity.cs" />
     <Compile Include="Activity\Auth\DriverActivity.cs" />
-    <Compile Include="Activity\Camera\CameraActivity.cs" />
+    <Compile Include="Activity\Cameraa\CameraActivity.cs" />
+    <Compile Include="Activity\Cameraa\CameraFragment.cs" />
+    <Compile Include="Activity\Cameraa\CameraPictureCallBack.cs" />
+    <Compile Include="Activity\Cameraa\CameraPreview.cs" />
     <Compile Include="Activity\Home\HomeActivity.cs" />
     <Compile Include="Activity\Menu\MainMenuFragment.cs" />
     <Compile Include="Activity\Menu\StaticMenu.cs" />
@@ -181,6 +188,9 @@
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Media">
       <Version>4.0.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
@@ -340,7 +350,37 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_user_box.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\activity_stili.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\button_stili.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\edittext_stili.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\camera_activity.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CameraFragmentLayout.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CameraFragmentLayout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\layout\1aaa.axml" />
+    <AndroidResource Include="Resources\layout\activity_lol.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadXFormsNugetUpgradeInfoBarGeoGeometryHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">

@@ -6,6 +6,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical"
+	android:background = "@drawable/activity_stili"
 	android:id="@+id/main_container">
 	
 	<ImageButton
@@ -60,6 +61,7 @@
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/label_login"
             android:id="@+id/s_login"
+			android:background = "@drawable/edittext_stili"
             android:hint="Логин"/>
 
 		<TextView 
@@ -77,6 +79,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/label_pass"
             android:id="@+id/s_pass"
+			android:background = "@drawable/edittext_stili"
             android:hint="Пароль"/>
 
 		<CheckBox
@@ -93,8 +96,7 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="20dp"
 			android:layout_below="@+id/is_remember"
-			android:background="@color/colorMainBlue"
-			android:textColor="@android:color/white"
+			android:background="@drawable/button_stili"
 			android:id="@+id/btn_auth" />
 		
 		<LinearLayout 

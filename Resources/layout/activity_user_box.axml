@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
@@ -11,7 +12,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.login.LoginActivity">
 
-     <ScrollView
+    <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
         <RelativeLayout
@@ -40,11 +41,12 @@
                     android:id="@+id/s_user"
                     android:layout_width="83dp"
                     android:layout_height="wrap_content"
-                   
                     android:layout_toEndOf="@+id/textUser"
                     android:layout_toRightOf="@+id/textUser"
                     android:inputType="text"
-                    android:padding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:text="Клиент"
                     android:textSize="9sp"
                     android:gravity="center"
@@ -55,14 +57,14 @@
                     android:id="@+id/btn_exit_"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/button_stili"
+                    android:padding = "5dp"
                     android:layout_toEndOf="@+id/s_user"
                     android:layout_toRightOf="@+id/s_user"
-                    android:text="Выйти"
-                    android:background="@color/colorMainBlue"
-                    android:textColor="@color/colorMainLightBlue"
+                    android:text="Выйти"                  
                     android:textSize="8sp"
                   />
 
@@ -73,9 +75,8 @@
                     android:gravity="left|center_vertical"
                     android:layout_below="@+id/textUser"
                     android:layout_marginTop="0dp"
-                 
                     android:padding="10dp"
-                    android:text="Имя контейнера:"
+                    android:text="Номер заказа:"
                     android:textSize="15sp"
                     />
 
@@ -84,12 +85,13 @@
                     android:layout_width="83dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/s_user"
-                    android:layout_marginTop="-6dp"
                     android:layout_toEndOf="@+id/text1"
                     android:layout_toRightOf="@+id/text1"
                     android:gravity="center"
                     android:inputType="text"
-                    android:padding="15dp"
+                    android:layout_marginTop="11dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:textSize="9sp" />
 
                 <Button
@@ -97,17 +99,52 @@
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:layout_below="@+id/btn_exit_"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="13dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/button_stili"
+                    android:padding = "5dp"
                     android:layout_toEndOf="@+id/container_name"
-                    android:layout_toRightOf="@+id/container_name"
-                    android:background="@color/colorMainBlue"
-                    android:text="Другой заказ"
-                    android:textColor="@color/colorMainLightBlue"
+                    android:layout_toRightOf="@+id/container_name"                   
+                    android:text="Другой заказ"                  
                     android:textSize="8sp"
                     tools:ignore="SmallSp" />
-
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:layout_below="@+id/text1"
+                    android:layout_marginTop="0dp"
+                    android:padding="10dp"
+                    android:text="Статус:"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:spinnerMode="dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="9sp"
+                    android:gravity="center"
+                    android:inputType = "text"
+                    android:layout_marginTop="13dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
+                    android:layout_below = "@+id/container_name"
+                    android:id="@+id/s_situation_loaded_container"
+                    android:layout_toEndOf="@+id/text2"
+                    android:layout_toRightOf="@+id/text2"                   
+                    />
+                <Button
+                    android:text="Передать службе доставки"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:textSize="8sp"
+                    android:id="@+id/btn_pass_delivery_service"
+                    android:layout_below = "@+id/s_situation_loaded_container"                   
+                    android:layout_alignParentRight = "true"
+                    android:layout_marginTop = "5dp"
+                    android:background="@drawable/button_stili"
+                    android:padding = "4dp"/>
 
 
             </RelativeLayout>
@@ -123,13 +160,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:layout_marginLeft="95dp"
                     android:padding="10dp"
+                    android:layout_centerHorizontal = "true"
                     android:text="Текущее положение"
-                    android:textSize="15sp"
-                    android:layout_marginStart="100dp" />
+                    android:textSize="15sp" />
 
-                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                <fragment
                     android:id="@+id/fragmentMap"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
@@ -155,8 +191,9 @@
                     android:id="@+id/s_longitude"
                     android:layout_toRightOf = "@+id/Text2"
                     android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:layout_below = "@+id/fragmentMap"
-                    android:padding="10dp"
                     android:layout_toEndOf="@+id/Text2"
                     android:textSize="9sp"
                     android:gravity="center"
@@ -168,11 +205,15 @@
                     android:id="@+id/s_latitude"
                     android:layout_toRightOf = "@+id/s_longitude"
                     android:layout_below = "@+id/fragmentMap"
-                    android:padding="10dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background = "@drawable/edittext_stili"
                     android:layout_toEndOf="@+id/s_longitude"
                     android:textSize="9sp"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
+                    
                     />
 
                 <TextView
@@ -193,7 +234,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:id = "@+id/fioBox2"
-                android:layout_below = "@+id/fioBox1">
+                android:layout_below = "@+id/fioBox1"
+                android:background="@drawable/activity_stili">
 
                 <TextView
                     android:id="@+id/TEXT"
@@ -213,10 +255,11 @@
                     android:id="@+id/s_cost"
                     android:layout_toRightOf = "@+id/TEXT"
                     android:layout_toEndOf="@+id/TEXT"
-                    android:padding="10dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:layout_marginStart="-10dp"
                     android:layout_marginLeft="-10dp"
-                    android:layout_marginTop="3dp"
                     android:textSize="9sp"
                     android:gravity="center"
                     />
@@ -225,14 +268,14 @@
                     android:id="@+id/btn_pay"
                     android:layout_width="50dp"
                     android:layout_height="25dp"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginLeft="1dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/button_stili"
+                    android:padding = "5dp"
                     android:layout_toEndOf="@+id/s_cost"
-                    android:layout_toRightOf="@+id/s_cost"
-                    android:background="@color/colorMainBlue"
-                    android:text="Оплатить"
-                    android:textColor="@color/colorMainLightBlue"
+                    android:layout_toRightOf="@+id/s_cost"                   
+                    android:text="Оплатить"                   
                     android:textSize="6sp" />
 
                 <TextView
@@ -256,9 +299,10 @@
                     android:layout_toEndOf="@+id/TEXT1"
                     android:layout_marginStart="-10dp"
                     android:layout_marginLeft="-10dp"
-                    android:layout_marginTop="3dp"
                     android:textSize="9sp"
-                    android:padding="10dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:gravity="center"
                     />
 
@@ -282,7 +326,9 @@
                     android:layout_toRightOf = "@+id/TEXT2"
                     android:layout_below = "@+id/btn_pay"
                     android:textSize="9sp"
-                    android:padding="17dp"
+                    android:layout_marginTop="12dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:gravity="center"
                     android:layout_toEndOf="@+id/TEXT2" />
 
@@ -302,12 +348,13 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/TEXT2"
-                    android:layout_marginTop="3dp"
                     android:layout_toEndOf="@+id/TEXT3"
                     android:layout_toRightOf="@+id/TEXT3"
                     android:inputType="number"
                     android:textSize="9sp"
-                    android:padding="10dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:gravity="center"
                     />
 
@@ -318,13 +365,12 @@
                     android:layout_below="@+id/s_pin_access_code"
                     android:layout_marginStart="1dp"
                     android:layout_marginLeft="1dp"
-                    android:layout_marginTop="6dp"
-                    android:padding="5dp"
+                   android:layout_marginTop="14dp"
+                    android:background="@drawable/button_stili"
+                    android:padding = "5dp"
                     android:layout_toEndOf="@+id/s_lock_unlock_door"
-                    android:layout_toRightOf="@+id/s_lock_unlock_door"
-                    android:background="@color/colorMainBlue"
-                    android:text="Разблокировать/Заблокировать"
-                    android:textColor="@color/colorMainLightBlue"
+                    android:layout_toRightOf="@+id/s_lock_unlock_door"                    
+                    android:text="Разблокировать/Заблокировать"                    
                     android:textSize="8sp" />
 
                 <TextView
@@ -347,7 +393,9 @@
                     android:layout_toEndOf="@+id/TEXT4"
                     android:layout_toRightOf="@+id/TEXT4"
                     android:textSize="9sp"
-                    android:padding="17dp"
+                    android:layout_marginTop="16dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:gravity="center"
                     android:inputType="numberDecimal"
 
@@ -360,13 +408,13 @@
                     android:id = "@+id/kg"
                     android:layout_below="@+id/s_lock_unlock_door"
                     android:gravity="center"
-                    android:layout_marginLeft="-10dp"
+                    android:layout_marginLeft="-7dp"
                     android:padding="10dp"
                     android:textSize="15sp"
                     android:maxLength = "6"
                     android:layout_toEndOf="@+id/s_weight"
                     android:layout_toRightOf="@+id/s_weight"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="кг"
 
                     />
@@ -382,7 +430,7 @@
                     android:layout_toRightOf = "@+id/kg"
                     android:layout_marginStart="-10dp"
                     android:layout_marginLeft="-10dp"
-                    android:layout_marginTop="17dp"/>
+                    android:layout_marginTop="11dp"/>
                 <EditText
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
@@ -390,7 +438,9 @@
                     android:layout_toRightOf = "@+id/Temperatur"
                     android:layout_below = "@+id/btn_lock_unlock_door"
                     android:textSize="9sp"
-                    android:padding="21dp"
+                    android:layout_marginTop="17dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:gravity="center"
                     android:inputType="numberDecimal"
                     android:layout_toEndOf="@+id/Temperatur"
@@ -402,7 +452,7 @@
                     android:layout_height="wrap_content"
                     android:id = "@+id/grad"
                     android:layout_below="@+id/btn_lock_unlock_door"
-                    android:layout_marginLeft="-10dp"
+                    android:layout_marginLeft="-7dp"
                     android:layout_marginTop="13dp"
                     android:padding="10dp"
                     android:textSize="15sp"
@@ -430,7 +480,11 @@
                     android:layout_toEndOf="@+id/TEXT5"
                     android:layout_toRightOf="@+id/TEXT5"
                     android:inputType="text"
-                    android:padding="13dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginStart="-6dp"
+                    android:layout_marginLeft="-6dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:textSize="9sp"
                     android:gravity="center"
                     />
@@ -444,18 +498,19 @@
                     android:layout_below = "@+id/Temperatur"
                     android:textSize="15sp"
                     android:padding="10dp"
-                    android:layout_marginStart="-10dp"
-                    android:layout_marginLeft="-10dp"
+                    android:layout_marginStart="-6dp"
+                    android:layout_marginLeft="-6dp"
                     android:layout_marginTop="0dp"
                     android:layout_toEndOf="@+id/s_light" />
                 <EditText
-                   
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/s_humidity"
                     android:layout_toRightOf = "@+id/Vlazhnost"
                     android:layout_below = "@+id/s_temperature"
-                    android:padding="13dp"
+                    android:layout_marginTop="14dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
                     android:textSize="9sp"
                     android:gravity="center"
                     android:inputType="numberDecimal"
@@ -466,12 +521,11 @@
                     android:id = "@+id/prozW"
                     android:layout_below="@+id/grad"
                     android:layout_marginTop="3dp"
-                    android:layout_marginLeft="-10dp"
+                    android:layout_marginLeft="-7dp"
                     android:padding="10dp"
                     android:textSize="12sp"
                     android:layout_toEndOf="@+id/s_humidity"
                     android:layout_toRightOf="@+id/s_humidity"
-
                     android:text="%"
 
 
@@ -486,32 +540,20 @@
                     android:padding="10dp"
                     android:gravity="left"
                     />
-                <EditText
-                    android:spinnerMode="dialog"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:padding="13dp"
-                    android:textSize="9sp"
-                    android:gravity="center"
-                    android:inputType = "text"
-                    android:layout_marginTop="6dp"
-                    android:layout_below = "@+id/TEXT6"
-                    android:id="@+id/s_situation_loaded_container"
 
-                    />
-                <Button
-                    android:text="Передать службе доставки"
+                 <Button
+                    android:id="@+id/btn_camera"
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
-                    android:padding="8dp"
-                    android:textSize="8sp"
-                    android:id="@+id/btn_pass_delivery_service"
-                    android:layout_below = "@+id/TEXT6"
-                    android:layout_toRightOf = "@+id/s_situation_loaded_container"
-                    android:layout_toEndOf="@+id/s_situation_loaded_container"
-                    android:background="@color/colorMainBlue"
-                    android:textColor="@color/colorMainLightBlue"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/TEXT6"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/button_stili"
+                    android:padding = "5dp"
+                    android:layout_centerHorizontal = "true"                   
+                    android:text="Открыть камеру"                    
+                    android:textSize="8sp" />
 
             </RelativeLayout>
 
@@ -528,4 +570,3 @@
 
 
 </RelativeLayout>
-

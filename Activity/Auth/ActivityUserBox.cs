@@ -38,11 +38,13 @@ namespace GeoGeometry.Activity.Auth
 
         private Button btn_lock_unlock_door;
 
+        private Button btn_camera;
+
         private EditText s_situation_loaded_container;
 
         private Button btn_pass_delivery_service;
 
-        private EditText s_user;
+        private EditText s_user;       
 
         private EditText container_name;
 
@@ -78,7 +80,7 @@ namespace GeoGeometry.Activity.Auth
 
 
 
-
+            btn_camera = FindViewById<Button>(Resource.Id.btn_camera);
             btn_change_order = FindViewById<Button>(Resource.Id.btn_change_order);
             btn_exit_ = FindViewById<Button>(Resource.Id.btn_exit_);
             btn_pay = FindViewById<Button>(Resource.Id.btn_pay);
@@ -136,6 +138,7 @@ namespace GeoGeometry.Activity.Auth
 
                 if (strok.Length != 0)
                 {
+                    s_payment.Text = "Не оплачено";
                     GetInfoAboutBox(dir_path);
                 }
 
@@ -168,22 +171,28 @@ namespace GeoGeometry.Activity.Auth
             //        break;
             //}
 
-            
+           
+            btn_camera.Click += async delegate
+            {
+                try
+                {
+                    Intent ActivityC = new Intent(this, typeof(Auth.ActivityCamera));
+                    StartActivity(ActivityC);
+                }
+                catch (Exception ex)
+                {
+                    Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
+                }
+            };
+
+
+
             btn_change_order.Click += async delegate
             {
                 try
                 {
-                    Intent ContainerSelectionActivty = new Intent(this, typeof(Auth.ContainerSelection));
-                    StartActivity(ContainerSelectionActivty);
-                    //s_temperature.Text = "****";
-                    //s_light.Text = "****";
-                    //s_humidity.Text = "****";
-                    //s_weight.Text = "****";
-                    //s_pin_access_code.Text = "****";
-                    //s_lock_unlock_door.Text = "****";
-                    //s_cost.Text = "1000";
-                    //s_payment.Text = "Не оплачено";
-
+                    Intent AcrivityApplication = new Intent(this, typeof(Auth.ActivityApplication));
+                    StartActivity(AcrivityApplication);
                 }
                 catch (Exception ex)
                 {
@@ -222,6 +231,7 @@ namespace GeoGeometry.Activity.Auth
                     {
                         s_payment.Text = "Оплачено";
                         Toast.MakeText(this, "Оплата произведена", ToastLength.Long).Show();
+                        GetInfoAboutBox(dir_path);
                     }
                     else
                     {
@@ -300,76 +310,97 @@ namespace GeoGeometry.Activity.Auth
 
                 string name = container.Name;//!!!!
                 
-
-                var myHttpClient = new HttpClient();
-
-                var uri = new Uri("http://iot.tmc-centert.ru/api/container/getbox?id=" + container.SmartBoxId);
-                HttpResponseMessage response = await myHttpClient.GetAsync(uri);
-
-                AuthApiData<BoxDataResponse> o_data = new AuthApiData<BoxDataResponse>();
-
-                string s_result;
-                using (HttpContent responseContent = response.Content)
+              
+                if(s_payment.Text == "Оплачено")
                 {
-                    s_result = await responseContent.ReadAsStringAsync();
-                }
+                    var myHttpClient = new HttpClient();
 
-                o_data = JsonConvert.DeserializeObject<AuthApiData<BoxDataResponse>>(s_result);
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    if (o_data.Status == "0")
+                    var uri = new Uri("http://iot.tmc-centert.ru/api/container/getbox?id=" + container.SmartBoxId);
+                    HttpResponseMessage response = await myHttpClient.GetAsync(uri);
+
+                    AuthApiData<BoxDataResponse> o_data = new AuthApiData<BoxDataResponse>();
+
+                    string s_result;
+                    using (HttpContent responseContent = response.Content)
                     {
-                        Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
-                        BoxDataResponse exported_data = new BoxDataResponse();
-                        exported_data = o_data.ResponseData;
+                        s_result = await responseContent.ReadAsStringAsync();
+                    }
 
-                        StaticBox.AddInfoBox(exported_data);
-                        //добавляем инфу о найденном контейнере
-                        //container_name.Text = exported_data.Name.ToString();
-                        container_name.Text = name;
-                        
-                        s_temperature.Text = exported_data.Temperature.ToString();
-                        s_light.Text = exported_data.Light.ToString();
-                        s_humidity.Text = exported_data.Wetness.ToString();
-                        s_weight.Text = exported_data.Weight.ToString();
-                        s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : exported_data.Code;// !!!!                        
-                        if(exported_data.IsOpenedDoor.ToString() == "true")
+                    o_data = JsonConvert.DeserializeObject<AuthApiData<BoxDataResponse>>(s_result);
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        if (o_data.Status == "0")
                         {
-                            s_lock_unlock_door.Text = "Открыта";
+                            Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
+                            BoxDataResponse exported_data = new BoxDataResponse();
+                            exported_data = o_data.ResponseData;
+
+                            StaticBox.AddInfoBox(exported_data);
+                            //добавляем инфу о найденном контейнере
+                            //container_name.Text = exported_data.Name.ToString();
+                            container_name.Text = name;
+
+                            s_temperature.Text = exported_data.Temperature;
+                            s_light.Text = exported_data.Light.ToString();
+                            s_humidity.Text = exported_data.Wetness;
+                            StaticBox.Longitude = exported_data.Longitude;
+                            StaticBox.Latitude = exported_data.Latitude;
+                            s_longitude.Text = StaticBox.Longitude.ToString();
+                            s_latitude.Text = StaticBox.Latitude.ToString();
+                            //coordinates lat lon
+                            s_weight.Text = exported_data.Weight;
+                            s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : exported_data.Code;// !!!!                        
+                            if (exported_data.IsOpenedDoor.ToString() == "true")
+                            {
+                                s_lock_unlock_door.Text = "разблокирована";
+                            }
+                            else
+                            {
+                                s_lock_unlock_door.Text = "заблокирована";
+                            }
+                            s_cost.Text = "1000";
+
+
+                            //var boxState = s_open_close_container.Text;
+                            //var doorState = s_lock_unlock_door.Text;
+
+                            if (exported_data.BoxState == ContainerState.onBase)
+                            {
+                                s_situation_loaded_container.Text = "На складе";
+                            }
+                            else if (exported_data.BoxState == ContainerState.onCar)
+                            {
+                                s_situation_loaded_container.Text = "На автомобиле";
+                            }
+                            else if (exported_data.BoxState == ContainerState.onConsignee)
+                            {
+                                s_situation_loaded_container.Text = "Выгруженным у грузоотправителя";
+                            }
+                            else if (exported_data.BoxState == ContainerState.onShipper)
+                            {
+                                s_situation_loaded_container.Text = "После разгрузки у грузополучателя";
+                            }
                         }
                         else
                         {
-                            s_lock_unlock_door.Text = "Закрыта";
+                            Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
                         }
-                        s_cost.Text = "1000";
-                        s_payment.Text = "Не оплачено";
-
-
-                        //var boxState = s_open_close_container.Text;
-                        //var doorState = s_lock_unlock_door.Text;
-
-                        if (exported_data.BoxState == ContainerState.onBase)
-                        {
-                            s_situation_loaded_container.Text = "На складе";
-                        }
-                        else if (exported_data.BoxState == ContainerState.onCar)
-                        {
-                            s_situation_loaded_container.Text = "На автомобиле";
-                        }
-                        else if (exported_data.BoxState == ContainerState.onConsignee)
-                        {
-                            s_situation_loaded_container.Text = "Выгруженным у грузоотправителя";
-                        }
-                        else if (exported_data.BoxState == ContainerState.onShipper)
-                        {
-                            s_situation_loaded_container.Text = "После разгрузки у грузополучателя";
-                        }                     
-                    }
-                    else
-                    {
-                        Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
                     }
                 }
+                else if(s_payment.Text == "Не оплачено")
+                {
+                    s_temperature.Text = "****";
+                    s_light.Text = "****";
+                    s_humidity.Text = "****";
+                    s_weight.Text = "****";
+                    s_pin_access_code.Text = "****";
+                    s_lock_unlock_door.Text = "****";
+                    s_cost.Text = "1000";
+                    container_name.Text = name;
+                    s_latitude.Text = "****";
+                    s_longitude.Text = "****";
+                }
+                
             }
             catch (Exception ex)
             {
@@ -410,41 +441,41 @@ namespace GeoGeometry.Activity.Auth
             {
                 base.OnLocationResult(result);
 
-                StaticBox.Latitude = result.LastLocation.Latitude;
-                StaticBox.Longitude = result.LastLocation.Longitude;
+            //    StaticBox.Latitude = result.LastLocation.Latitude;
+            //    StaticBox.Longitude = result.LastLocation.Longitude;
 
-                s_longitude.Text = result.LastLocation.Latitude.ToString();
-                s_latitude.Text = result.LastLocation.Longitude.ToString();
+            //    s_longitude.Text = result.LastLocation.Latitude.ToString();
+            //    s_latitude.Text = result.LastLocation.Longitude.ToString();
 
-                BoxLocation gpsLocation = new BoxLocation
-                {
-                    id = StaticBox.SmartBoxId,
-                    lat1 = StaticBox.Latitude,
-                    lon1 = StaticBox.Longitude,                   
-                };
+            //    BoxLocation gpsLocation = new BoxLocation
+            //    {
+            //        id = StaticBox.SmartBoxId,
+            //        lat1 = StaticBox.Latitude,
+            //        lon1 = StaticBox.Longitude,                   
+            //    };
 
 
 
-                var myHttpClient = new HttpClient();
-                var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/container/setcontainerlocation?id=" + gpsLocation.id + "&lat1=" + gpsLocation.lat1 + "&lon1=" + gpsLocation.lon1);
-                //json структура.
-                var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
-            {
-                { "Id", gpsLocation.id },
-                { "Lon1", gpsLocation.lon1.ToString()},
-                { "Lat1", gpsLocation.lat1.ToString()},              
-            });
+            //    var myHttpClient = new HttpClient();
+            //    var uri = new Uri("http://iot-tmc-cen.1gb.ru/api/container/setcontainerlocation?id=" + gpsLocation.id + "&lat1=" + gpsLocation.lat1 + "&lon1=" + gpsLocation.lon1);
+            //    //json структура.
+            //    var formContent = new FormUrlEncodedContent(new Dictionary<string, string>
+            //{
+            //    { "Id", gpsLocation.id },
+            //    { "Lon1", gpsLocation.lon1.ToString()},
+            //    { "Lat1", gpsLocation.lat1.ToString()},              
+            //});
 
-                HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), formContent);
-                AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
+            //    HttpResponseMessage response = await myHttpClient.PostAsync(uri.ToString(), formContent);
+            //    AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
 
-                string s_result;
-                using (HttpContent responseContent = response.Content)
-                {
-                    s_result = await responseContent.ReadAsStringAsync();
-                }
+            //    string s_result;
+            //    using (HttpContent responseContent = response.Content)
+            //    {
+            //        s_result = await responseContent.ReadAsStringAsync();
+            //    }
 
-                o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
+            //    o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
             }
         }
 

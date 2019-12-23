@@ -5,7 +5,8 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:orientation="vertical" 
 	android:layout_width="match_parent" 
-	android:layout_height="match_parent">
+	android:layout_height="match_parent"
+	android:background = "@drawable/activity_stili">
 
 	<ImageButton
 		android:src="@drawable/btnBack"
@@ -55,6 +56,7 @@
 			android:layout_marginBottom="10dp"
 			android:layout_below="@+id/label_f_name"
 			android:id="@+id/box_name"
+			android:background = "@drawable/edittext_stili"
 			android:hint="Имя"/>
 
 
@@ -62,8 +64,7 @@
             android:text="Создать"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:background="@color/colorMainBlue"
-            android:textColor="@android:color/white"
+            android:background="@drawable/button_stili"
             android:layout_below="@+id/box_name"
             android:id="@+id/btn_registerbox"
             android:layout_marginRight="0.0dp" />
