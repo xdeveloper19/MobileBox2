@@ -96,30 +96,30 @@ namespace GeoGeometry.Activity.Auth
 
             btn_i.Click += (s, e) =>
             {
-                Intent I = new Intent(this, typeof(Reg.RegisterIndividual));
-                StartActivity(I);
-                this.Finish();
+                //Intent I = new Intent(this, typeof(Reg.RegisterIndividual));
+                //StartActivity(I);
+                //this.Finish();
             };
 
             btn_e.Click += (s, e) =>
             {
-                Intent E = new Intent(this, typeof(Reg.RegisterEntity));
-                StartActivity(E);
-                this.Finish();
+                //Intent E = new Intent(this, typeof(Reg.RegisterEntity));
+                //StartActivity(E);
+                //this.Finish();
             };
 
             btn_ri.Click += (s, e) =>
             {
-                Intent I = new Intent(this, typeof(Reg.CustomerRecipientIndividual));
-                StartActivity(I);
-                this.Finish();
+                //Intent I = new Intent(this, typeof(Reg.CustomerRecipientIndividual));
+                //StartActivity(I);
+                //this.Finish();
             };
 
             btn_re.Click += (s, e) =>
             {
-                Intent E = new Intent(this, typeof(Reg.CustomerRecipientEntity));
-                StartActivity(E);
-                this.Finish();
+                //Intent E = new Intent(this, typeof(Reg.CustomerRecipientEntity));
+                //StartActivity(E);
+                //this.Finish();
             };
 
             s_role_name.Prompt = "Выбор роли";

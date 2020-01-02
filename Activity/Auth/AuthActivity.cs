@@ -53,7 +53,10 @@ namespace GeoGeometry.Activity.Auth {
         private ProgressBar preloader;
 
 
-
+        /// <summary>
+        /// Mobile Box New 
+        /// </summary>
+        /// <param name="savedInstanceState"></param>
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

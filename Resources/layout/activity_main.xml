@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="375.5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/top6"
+                android:src = "@drawable/mainbg"
                 android:id="@+id/img_bg"/> 
 	
 			<RelativeLayout

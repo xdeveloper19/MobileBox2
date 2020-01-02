@@ -79,10 +79,6 @@
     <Compile Include="Activity\Home\HomeActivity.cs" />
     <Compile Include="Activity\Menu\MainMenuFragment.cs" />
     <Compile Include="Activity\Menu\StaticMenu.cs" />
-    <Compile Include="Activity\Reg\CustomerRecipientEntity.cs" />
-    <Compile Include="Activity\Reg\CustomerRecipientIndividual.cs" />
-    <Compile Include="Activity\Reg\RegisterEntity.cs" />
-    <Compile Include="Activity\Reg\RegisterIndividual.cs" />
     <Compile Include="Activity\Squad\SquadActivity.cs" />
     <Compile Include="Activity\Squad\SquadListActivity.cs" />
     <Compile Include="Activity\Squad\SquadRegisterActivity.cs" />
@@ -381,12 +377,6 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\activity_main.axml" />
     <AndroidResource Include="Resources\layout\activity_main.xml" />
-    <AndroidResource Include="Resources\layout\register_entity.axml" />
-    <AndroidResource Include="Resources\layout\register_individual.axml" />
-    <AndroidResource Include="Resources\layout\customer_recipient_entity.axml">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\customer_recipient_individual.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
