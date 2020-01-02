@@ -49,6 +49,14 @@ namespace GeoGeometry.Activity.Auth
         /// </summary>
         private Button btn_register;
 
+        private Button btn_i;
+
+        private Button btn_e;
+
+        private Button btn_ri;
+
+        private Button btn_re;
+
         private Spinner s_role_name;
 
         /// <summary>
@@ -66,6 +74,10 @@ namespace GeoGeometry.Activity.Auth
             SetContentView(Resource.Layout.activity_register);
 
             btn_register = FindViewById<Button>(Resource.Id.btn_register);
+            btn_e = FindViewById<Button>(Resource.Id.btn_e);
+            btn_i = FindViewById<Button>(Resource.Id.btn_i);
+            btn_re = FindViewById<Button>(Resource.Id.btn_re);
+            btn_ri = FindViewById<Button>(Resource.Id.btn_ri);
             s_first_name = FindViewById<EditText>(Resource.Id.s_first_name);
             s_last_name = FindViewById<EditText>(Resource.Id.s_last_name);
             s_pass = FindViewById<EditText>(Resource.Id.s_pass);
@@ -80,6 +92,34 @@ namespace GeoGeometry.Activity.Auth
             btn_back_a.Click += (s, e) =>
             {
                 Finish();
+            };
+
+            btn_i.Click += (s, e) =>
+            {
+                Intent I = new Intent(this, typeof(Reg.RegisterIndividual));
+                StartActivity(I);
+                this.Finish();
+            };
+
+            btn_e.Click += (s, e) =>
+            {
+                Intent E = new Intent(this, typeof(Reg.RegisterEntity));
+                StartActivity(E);
+                this.Finish();
+            };
+
+            btn_ri.Click += (s, e) =>
+            {
+                Intent I = new Intent(this, typeof(Reg.CustomerRecipientIndividual));
+                StartActivity(I);
+                this.Finish();
+            };
+
+            btn_re.Click += (s, e) =>
+            {
+                Intent E = new Intent(this, typeof(Reg.CustomerRecipientEntity));
+                StartActivity(E);
+                this.Finish();
             };
 
             s_role_name.Prompt = "Выбор роли";

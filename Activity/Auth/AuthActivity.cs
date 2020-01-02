@@ -178,8 +178,8 @@ namespace GeoGeometry.Activity.Auth {
                             {
                                 CrossSettings.Current.AddOrUpdateValue("check", "0");
                             }
-                           
 
+                            StaticUser.Email = s_login.Text;
                             StaticUser.AddInfoAuth(o_user_data);
 
                                 //пример ContainerSelection

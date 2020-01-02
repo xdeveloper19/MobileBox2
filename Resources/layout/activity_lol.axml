@@ -176,7 +176,7 @@
 
                 <EditText
                     android:id="@+id/s_length"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/TextLength"
                     android:layout_toRightOf="@+id/TextLength"
@@ -217,7 +217,7 @@
 
                 <EditText
                     android:id="@+id/s_width"
-                    android:layout_width="239dp"
+                    android:layout_width="189dp"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/TextWidth"
                     android:layout_toRightOf="@+id/TextWidth"
@@ -259,7 +259,7 @@
 
                 <EditText
                     android:id="@+id/s_height"
-                    android:layout_width="243dp"
+                    android:layout_width="193dp"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/TextHeight"
                     android:layout_toRightOf="@+id/TextHeight"
@@ -302,7 +302,7 @@
 
                 <EditText
                     android:id="@+id/s_size"
-                    android:layout_width="250dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/TextSize"
                     android:layout_toRightOf="@+id/TextSize"
@@ -345,7 +345,7 @@
 
                 <EditText
                     android:id="@+id/s_weight"
-                    android:layout_width="272dp"
+                    android:layout_width="222dp"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/TextWeight"
                     android:layout_toRightOf="@+id/TextWeight"
@@ -388,7 +388,7 @@
 
                 <EditText
                     android:id="@+id/s_sum_seats"
-                    android:layout_width="80dp"
+                    android:layout_width="105dp"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/TextSumSeats"
                     android:layout_toRightOf="@+id/TextSumSeats"

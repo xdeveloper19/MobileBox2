@@ -79,6 +79,10 @@
     <Compile Include="Activity\Home\HomeActivity.cs" />
     <Compile Include="Activity\Menu\MainMenuFragment.cs" />
     <Compile Include="Activity\Menu\StaticMenu.cs" />
+    <Compile Include="Activity\Reg\CustomerRecipientEntity.cs" />
+    <Compile Include="Activity\Reg\CustomerRecipientIndividual.cs" />
+    <Compile Include="Activity\Reg\RegisterEntity.cs" />
+    <Compile Include="Activity\Reg\RegisterIndividual.cs" />
     <Compile Include="Activity\Squad\SquadActivity.cs" />
     <Compile Include="Activity\Squad\SquadListActivity.cs" />
     <Compile Include="Activity\Squad\SquadRegisterActivity.cs" />
@@ -133,9 +137,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -167,6 +168,9 @@
     </PackageReference>
     <PackageReference Include="EDMTDialog">
       <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="MailKit">
+      <Version>2.4.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Net.Http">
       <Version>2.2.29</Version>
@@ -209,6 +213,9 @@
       <Version>60.1142.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Basement">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Drive">
       <Version>60.1142.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Location">
@@ -316,9 +323,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mainbg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\btnBack.png" />
   </ItemGroup>
   <ItemGroup>
@@ -328,9 +332,6 @@
     <AndroidResource Include="Resources\layout\activity_registerbox.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_main.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\Container\" />
@@ -369,11 +370,23 @@
     <AndroidResource Include="Resources\layout\CameraFragmentLayout.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mainbg.png" />
+    <AndroidResource Include="Resources\drawable\activityRR.jpg" />
+    <AndroidResource Include="Resources\drawable\button_stili2.xml" />
+    <AndroidResource Include="Resources\drawable\top6.jpg" />
     <Content Include="Resources\layout\1aaa.axml" />
     <AndroidResource Include="Resources\layout\activity_lol.axml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\activity_main.axml" />
+    <AndroidResource Include="Resources\layout\activity_main.xml" />
+    <AndroidResource Include="Resources\layout\register_entity.axml" />
+    <AndroidResource Include="Resources\layout\register_individual.axml" />
+    <AndroidResource Include="Resources\layout\customer_recipient_entity.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\customer_recipient_individual.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

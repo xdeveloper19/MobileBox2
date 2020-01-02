@@ -26,7 +26,7 @@
 		android:id="@+id/btn_back_a" />
 
 	<TextView
-		android:text="Создать аккаунт"
+		android:text="Регистрация"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="fill_parent"
 		android:gravity="center"
@@ -49,8 +49,11 @@
         android:padding="5dp"
         android:layout_below="@+id/textlogin_desc"
         android:id="@+id/s_role_name"
-				android:background = "@drawable/edittext_stili"
+		android:background = "@drawable/edittext_stili"
         android:entries="@array/a_role"
+		android:layout_marginRight = "19dp"
+        android:layout_marginLeft = "19dp"
+        android:layout_marginStart = "19dp"
      />
 
     <RelativeLayout
@@ -155,6 +158,42 @@
 			android:background="@drawable/button_stili"
 			android:layout_below="@+id/s_pass_check"
 			android:id="@+id/btn_register" />
+
+		<Button
+			android:text="Физ. лицо"
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+		    android:layout_marginTop="20dp"
+			android:background="@drawable/button_stili"
+			android:layout_below="@+id/btn_register"
+			android:id="@+id/btn_i" />
+
+		<Button
+			android:text="Юр. лицо"
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/button_stili"
+			android:layout_below="@+id/btn_i"
+			android:id="@+id/btn_e" />
+
+				<Button
+			android:text="Физ. лицо(Заказчик и Получатель)"
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/button_stili"
+			android:layout_below="@+id/btn_e"
+			android:id="@+id/btn_ri" />
+
+				<Button
+			android:text="Юр. лицо(Заказчик и Получатель)"
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/button_stili"
+			android:layout_below="@+id/btn_ri"
+			android:id="@+id/btn_re" />
         
 	</RelativeLayout>  
 	</RelativeLayout>

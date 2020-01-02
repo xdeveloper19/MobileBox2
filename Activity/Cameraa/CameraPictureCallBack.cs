@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using MimeKit;
+using MailKit.Net.Smtp;
 using Android.App;
 using Android.Content;
 using Android.Hardware;
@@ -12,13 +13,14 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.IO;
-
+using System.IO;
+using GeoGeometry.Model.User;
 
 namespace GeoGeometry.Activity.Cameraa
 {
     public class CameraPictureCallBack : Java.Lang.Object, Android.Hardware.Camera.IPictureCallback
     {
-        const string APP_NAME = "GeoGeometry";
+        const string APP_NAME = "SmartBox";
         Context _context;
 
 
@@ -37,11 +39,53 @@ namespace GeoGeometry.Activity.Cameraa
         {
             try
             {
-                string fileName = Uri.Parse("test.jpg").LastPathSegment;
-                var os = _context.OpenFileOutput(fileName, FileCreationMode.Private);
-                System.IO.BinaryWriter binaryWriter = new System.IO.BinaryWriter(os);
-                binaryWriter.Write(data);
-                binaryWriter.Close();
+                var DateGenerated = System.DateTime.Now;
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress("From", "smartbox2019m@mail.ru"));
+                message.To.Add(new MailboxAddress("To", "smartbox2019m@mail.ru"));
+                if (!string.IsNullOrEmpty(StaticUser.Email))
+                {
+                    message.Cc.Add(new MailboxAddress("CC", StaticUser.Email));
+                }
+                message.Subject = "Снимок объекта за "+ DateGenerated.ToString();
+
+                var body = new TextPart("plain")
+                {
+                    Text = "Снимок объекта подготовлен в " + DateGenerated.ToString()
+                };
+
+                var attachment = new MimePart("image", "jpg")
+                {
+                    Content = new MimeContent(new MemoryStream(data), ContentEncoding.Default),
+                    ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
+                    ContentTransferEncoding = ContentEncoding.Base64,
+                    FileName = "снимок_объекта_"+ DateGenerated.ToString()+".jpg"
+
+                };
+
+                // now create the multipart/mixed container to hold the message text and the
+                // image attachment
+                var multipart = new Multipart("mixed");
+                multipart.Add(body);
+                multipart.Add(attachment);
+                message.Body = multipart;
+
+                using (var client = new SmtpClient())
+                {
+                    // For demo-purposes, accept all SSL certificates (in case the server supports STARTTLS)  
+                    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+                    client.Connect("smtp.mail.ru", 587, false);
+                    // Note: only needed if the SMTP server requires authentication  
+                    client.Authenticate("smartbox2019m@mail.ru", "MKFe5ElR");
+                    client.Send(message);
+                    client.Disconnect(true);
+                }
+
+                //string fileName = Uri.Parse("test.jpg").LastPathSegment;
+                //var os = _context.OpenFileOutput(fileName, FileCreationMode.Private);
+                //System.IO.BinaryWriter binaryWriter = new System.IO.BinaryWriter(os);
+                //binaryWriter.Write(data);
+                //binaryWriter.Close();
 
                 //We start the camera preview back since after taking a picture it freezes
                 camera.StartPreview();
