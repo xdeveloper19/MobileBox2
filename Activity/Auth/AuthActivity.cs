@@ -49,7 +49,9 @@ namespace GeoGeometry.Activity.Auth {
         /// </summary>
         private ImageButton btn_back_a;
 
-
+        /// <summary>
+        /// Кнопка прокрутки.
+        /// </summary>
         private ProgressBar preloader;
 
 
