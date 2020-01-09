@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+	android:background="@android:color/white">
+
+	<ImageButton
+		android:src="@drawable/list32"
+		android:layout_width="0dp" 
+        android:layout_height="50dp" 
+        android:layout_weight=".25"
+		android:background="@android:color/transparent"
+		android:id="@+id/btn_orders" />
+	
+	<ImageButton
+		android:src="@drawable/clipboard"
+		android:layout_width="0dp" 
+        android:layout_height="50dp" 
+        android:layout_weight=".25"
+		android:background="@android:color/transparent"
+		android:id="@+id/btn_tasks" />
+	<ImageButton
+		android:src="@drawable/box"
+		android:layout_width="0dp" 
+        android:layout_height="50dp" 
+        android:layout_weight=".25"
+		android:background="@android:color/transparent"
+		android:id="@+id/btn_boxes" />
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user32"
+        android:layout_weight=".25"
+        android:background="@android:color/transparent"
+        android:id="@+id/btn_driver_page"/>
+</LinearLayout>

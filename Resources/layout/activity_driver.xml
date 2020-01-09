@@ -27,75 +27,75 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                
+
                 >
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/driver_relat"
-                    android:background = "@drawable/activity_stili"                
-                    android:layout_centerHorizontal = "true"> 
-                    
+                    android:background = "@drawable/activity_stili"
+                    android:layout_centerHorizontal = "true">
+
                     <TextView
-                    android:id="@+id/textUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left|center_vertical"
-                    android:padding="10dp"
-                    android:text="Вы вошли как:"
-                    android:textSize="15sp" />
+                        android:id="@+id/textUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:padding="10dp"
+                        android:text="Вы вошли как:"
+                        android:textSize="15sp" />
 
-                <EditText
-                    android:id="@+id/s_user"
-                    android:layout_width="83dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_toEndOf="@+id/textUser"
-                    android:layout_toRightOf="@+id/textUser"
-                    android:editable="false"
-                    android:gravity="center"
-                    android:inputType="text"
-                    android:padding="8dp"
-                    android:text="Водитель"
-                    android:textSize="9sp"
-                    android:background = "@drawable/edittext_stili"
+                    <EditText
+                        android:id="@+id/s_user"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/textUser"
+                        android:layout_toRightOf="@+id/textUser"
+                        android:editable="false"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:text="Водитель"
+                        android:textSize="9sp"
+                        android:background = "@drawable/edittext_stili"
 
-                    />
+                        />
 
 
-                <Button
-                    android:id="@+id/btn_exit_"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_above="@id/container_name"
-                    android:layout_marginLeft="20dp"                  
-                    
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/s_user"
-                    android:layout_toRightOf="@+id/s_user"
-                    android:text="Выйти"
-                    android:background="@drawable/button_stili"
-                    android:padding = "5dp"
-                    android:textSize="8sp"
+                    <Button
+                        android:id="@+id/btn_exit_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_above="@id/container_name"
+                        android:layout_marginLeft="20dp"
 
-                    />
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@+id/s_user"
+                        android:layout_toRightOf="@+id/s_user"
+                        android:text="Выйти"
+                        android:background="@drawable/button_stili"
+                        android:padding = "5dp"
+                        android:textSize="8sp"
 
-                <Button
-                    android:id="@+id/btn_free_for_order"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="20dp"                  
-                    android:layout_marginTop="8dp"
-                    android:layout_toEndOf="@+id/s_user"
-                    android:layout_toRightOf="@+id/s_user"
-                    android:text="Свободен для заказов"
-                    android:background="@drawable/button_stili"
-                    android:layout_below="@+id/btn_exit_"
-                    android:padding = "5dp"
-                    android:textSize="8sp"
-                    />
+                        tools:ignore="NotSibling" />
+
+                    <Button
+                        android:id="@+id/btn_free_for_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@+id/s_user"
+                        android:layout_toRightOf="@+id/s_user"
+                        android:text="Свободен для заказов"
+                        android:background="@drawable/button_stili"
+                        android:layout_below="@+id/btn_exit_"
+                        android:padding = "5dp"
+                        android:textSize="8sp"
+                        />
                 </RelativeLayout>
-                
+
 
 
                 <TextView
@@ -145,12 +145,12 @@
                     android:id="@+id/textState"
                     android:layout_below="@+id/textIdContainer"
                     android:padding="10dp"
-                    android:text="Статус:"
+                    android:text="Заказ:"
                     android:textSize="15sp"
-                />
+                    />
                 <EditText
                     android:id="@+id/s_state"
-                    android:layout_width="250dp"
+                    android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_below="@+id/container_name"
@@ -160,14 +160,58 @@
                     android:editable="false"
                     android:gravity="center"
                     android:inputType="text"
+                    android:text="ea55d401-e2cb-49ca-9db0-adeae9f74774"
                     android:padding="12dp"
                     android:textSize="11sp"/>
+
+                <TextView
+                    android:id="@+id/status1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:layout_below="@+id/textState"
+                    android:layout_marginTop="0dp"
+                    android:padding="10dp"
+                    android:text="Статус:"
+                    android:textSize="15sp"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/s_state"
+                    
+                    android:layout_marginTop="10dp"
+                    android:indeterminate="false"
+                    android:max="8"
+                    android:layout_toRightOf="@+id/status1"
+                    android:layout_toEndOf="@+id/status1"
+                    android:minWidth="130dp"
+                    android:min="0"
+                    
+                    android:maxHeight="4dp"
+                    android:progress="1"
+                     />
+
+                <TextView
+                    android:id="@+id/status_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_below="@+id/progressBar"
+                    android:text="1. Заявка"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    />
+
                 <TextView
                     android:id="@+id/textSituation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_below="@+id/textState"
+                    android:layout_below="@+id/status1"
                     android:padding="10dp"
                     android:text="Положение:"
                     android:textSize="15sp" />
@@ -177,7 +221,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_below="@+id/s_state"
+                    android:layout_below="@+id/status_view"
                     android:layout_toEndOf="@+id/textSituation"
                     android:layout_toRightOf="@+id/textSituation"
                     android:entries="@array/a_situation_loaded_container"
@@ -200,7 +244,7 @@
 
                 <EditText
                     android:id="@+id/s_open_close_container"
-                    android:layout_width="100dp"
+                    android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_below="@+id/s_situation"
@@ -213,19 +257,7 @@
                     android:padding="12dp"
                     android:textSize="11sp" />
 
-                <Button
-                    android:id="@+id/btn_open_close_container"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_above="@id/s_lock_unlock_door"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/button_stili"
-                    android:padding = "5dp"
-                    android:layout_toEndOf="@+id/s_open_close_container"
-                    android:layout_toRightOf="@+id/s_open_close_container"
-                    android:text="Раскрыть/Закрыть"
-                    android:textSize="8sp" />
+                
 
                 <TextView
                     android:id="@+id/textLockUnlockDoor"
@@ -239,7 +271,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/s_lock_unlock_door"                
+                    android:id="@+id/s_lock_unlock_door"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -286,7 +318,7 @@
                     android:layout_below="@id/s_lock_unlock_door"
                     android:gravity="center"
                     android:layout_toEndOf="@+id/textPinCode"
-                    android:layout_toRightOf="@+id/textPinCode"                   
+                    android:layout_toRightOf="@+id/textPinCode"
                     android:inputType="number"
                     android:maxLength="4"
                     android:padding="12dp"
@@ -301,7 +333,7 @@
                     android:layout_marginTop = "10dp"
                     android:gravity="center"
                     android:layout_below="@id/s_pin_access_code"
-                    android:text="Сменить PIN-код"
+                    android:text="Подробно о заказе"
                     android:background="@drawable/button_stili"
                     android:padding = "5dp"
                     android:textSize="8sp" />
@@ -349,6 +381,7 @@
                     android:padding="8dp"
                     android:background = "@drawable/edittext_stili"
                     android:gravity="center"
+                    android:editable="false"
                     android:inputType="numberDecimal"
                     android:textSize="11sp"
                     android:maxLength = "7"
@@ -400,6 +433,7 @@
                     android:padding="8dp"
                     android:background = "@drawable/edittext_stili"
                     android:textSize="11sp"
+                    android:editable="false"
                     android:layout_toEndOf="@+id/Temperature"
                     android:layout_toRightOf="@+id/Temperature"
                     android:inputType="numberDecimal"
@@ -441,6 +475,7 @@
                     android:gravity="center"
                     android:layout_marginTop="8dp"
                     android:padding="8dp"
+                    android:editable="false"
                     android:background = "@drawable/edittext_stili"
                     android:textSize="11sp"
                     android:maxLength = "4"/>
@@ -467,6 +502,7 @@
                     android:padding="8dp"
                     android:background = "@drawable/edittext_stili"
                     android:textSize="11sp"
+                    android:editable="false"
                     android:layout_toEndOf="@+id/Vlazhnost"
                     android:layout_toRightOf="@+id/Vlazhnost"
                     android:inputType="numberDecimal"
@@ -509,10 +545,11 @@
                     android:padding="8dp"
                     android:background = "@drawable/edittext_stili"
                     android:textSize="11sp"
+                    android:editable="false"
                     android:maxLength = "4"
                     android:layout_toEndOf="@+id/Text3"
                     android:layout_toRightOf="@+id/Text3"
-                     />
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -584,20 +621,60 @@
                     android:inputType="text"
                     android:text = "Не оплачено"/>
 
-                <Button
-                    android:id="@+id/btn_change_parameters"
+                <TextView
+                    android:id="@+id/Notifications"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"                    
-                    android:layout_alignParentRight = "true"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Text5"
+                    android:padding="10dp"
+                    android:gravity="left"
+                    android:text="Уведомления:"
+                    android:textSize="15sp"
+                    />
+                <EditText
+                    android:id="@+id/s_notifications"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/s_payment"
-                    android:text="Изменить параметры"
-                    android:textSize="8sp"
-                    android:background="@drawable/button_stili"
-                    android:padding = "5dp"/>
+                    android:gravity="center"
+                    android:editable="false"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
+                    android:textSize="11sp"
+                    android:maxLength = "12"
+                    android:layout_toEndOf="@+id/Notifications"
+                    android:layout_toRightOf="@+id/Notifications"
+                    android:inputType="text"
+                    />
 
+                <TextView
+                    android:id="@+id/Danger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Notifications"
+                    android:padding="10dp"
+                    android:gravity="left"
+                    android:text="Тревога:"
+                    android:textSize="15sp"
+                    />
+                <EditText
+                    android:id="@+id/s_danger"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/s_notifications"
+                    android:gravity="center"
+                    android:editable="false"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:background = "@drawable/edittext_stili"
+                    android:textSize="11sp"
+                    android:maxLength = "12"
+                    android:layout_toEndOf="@+id/Danger"
+                    android:layout_toRightOf="@+id/Danger"
+                    android:inputType="text"
+                    />
 
-
-             
             </RelativeLayout>
 
             <RelativeLayout
@@ -631,7 +708,7 @@
                     android:layout_toRightOf="@+id/TEXT1"
                     android:layout_marginStart="-10dp"
                     android:layout_marginLeft="-10dp"
-                     />
+                    />
 
                 <EditText
                     android:id="@+id/s_latitude"
@@ -646,7 +723,7 @@
                     android:textSize="11sp"
                     android:layout_toEndOf="@+id/s_longitude"
                     android:layout_toRightOf="@+id/s_longitude"
-                     />
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -670,7 +747,7 @@
                     android:textSize="11sp"
                     android:layout_toEndOf="@+id/TEXT2"
                     android:layout_toRightOf="@+id/TEXT2"
-                     />
+                    />
 
                 <TextView
                     android:id="@+id/TEXT3"
@@ -690,7 +767,7 @@
                     android:layout_below="@+id/TEXT3"
                     android:layout_above="@+id/fragmentMainMenu"
                     class="com.google.android.gms.maps.MapFragment"
-	        />
+                    />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
@@ -701,7 +778,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:id="@+id/preloader"
-	/>
+        />
 </RelativeLayout>
 
 

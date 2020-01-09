@@ -13,8 +13,11 @@
     tools:context=".ui.login.LoginActivity">
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+       android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id = "@+id/scrollView1"
+        android:minHeight = "25px"
+        android:minWidth = "25px">
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -64,7 +67,7 @@
                     android:padding = "5dp"
                     android:layout_toEndOf="@+id/s_user"
                     android:layout_toRightOf="@+id/s_user"
-                    android:text="Выйти"                  
+                    android:text="Выйти"
                     android:textSize="8sp"
                   />
 
@@ -76,41 +79,47 @@
                     android:layout_below="@+id/textUser"
                     android:layout_marginTop="0dp"
                     android:padding="10dp"
-                    android:text="Номер заказа:"
+                    android:text="Заказ:"
                     android:textSize="15sp"
                     />
 
                 <EditText
                     android:id="@+id/container_name"
-                    android:layout_width="83dp"
+                    android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/s_user"
                     android:layout_toEndOf="@+id/text1"
                     android:layout_toRightOf="@+id/text1"
                     android:gravity="center"
                     android:inputType="text"
+                    android:text = "ea55d401-e2cb-49ca-9db0-adeae9f74774"
                     android:layout_marginTop="11dp"
                     android:padding="8dp"
                     android:background = "@drawable/edittext_stili"
                     android:textSize="9sp" />
 
+                
+                
+                
                 <Button
-                    android:id="@+id/btn_change_order"
+                    android:text="Подробно о заказе"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_below="@+id/btn_exit_"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="14dp"
+                    android:layout_height="28dp"
+                    android:textSize="8sp"
+                    android:id="@+id/btn_pass_delivery_service"
+                    android:layout_below = "@+id/container_name"
+                    android:layout_alignParentRight = "true"
+                    android:layout_marginTop = "9dp"
                     android:background="@drawable/button_stili"
                     android:padding = "5dp"
-                    android:layout_toEndOf="@+id/container_name"
-                    android:layout_toRightOf="@+id/container_name"                   
-                    android:text="Другой заказ"                  
-                    android:textSize="8sp"
-                    tools:ignore="SmallSp" />
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@+id/progressBar"
+                    android:layout_toRightOf="@+id/progressBar"
+                />
+
+
                 <TextView
-                    android:id="@+id/text2"
+                    android:id="@+id/status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="left|center_vertical"
@@ -118,33 +127,39 @@
                     android:layout_marginTop="0dp"
                     android:padding="10dp"
                     android:text="Статус:"
-                    android:textSize="15sp"/>
-                <EditText
-                    android:spinnerMode="dialog"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="9sp"
-                    android:gravity="center"
-                    android:inputType = "text"
-                    android:layout_marginTop="13dp"
-                    android:padding="8dp"
-                    android:background = "@drawable/edittext_stili"
-                    android:layout_below = "@+id/container_name"
-                    android:id="@+id/s_situation_loaded_container"
-                    android:layout_toEndOf="@+id/text2"
-                    android:layout_toRightOf="@+id/text2"                   
+                    android:textSize="15sp"
                     />
-                <Button
-                    android:text="Передать службе доставки"
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="28dp"
-                    android:textSize="8sp"
-                    android:id="@+id/btn_pass_delivery_service"
-                    android:layout_below = "@+id/s_situation_loaded_container"                   
-                    android:layout_alignParentRight = "true"
-                    android:layout_marginTop = "5dp"
-                    android:background="@drawable/button_stili"
-                    android:padding = "4dp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/container_name"
+                    
+                    android:layout_marginTop="18dp"
+                    android:indeterminate="false"
+                    android:max="8"
+                    android:layout_toRightOf="@+id/status"
+                    android:layout_toEndOf="@+id/status"
+                    android:minWidth="130dp"
+                    android:min="0"
+                    
+                    android:maxHeight="4dp"
+                    android:progress="1"
+                     />
+
+                <TextView
+                    android:id="@+id/status_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_below="@+id/progressBar"
+                    android:text="1. Заявка"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    />
+
 
 
             </RelativeLayout>
@@ -162,7 +177,7 @@
                     android:layout_marginTop="0dp"
                     android:padding="10dp"
                     android:layout_centerHorizontal = "true"
-                    android:text="Текущее положение"
+                    android:text="Положение контейнера"
                     android:textSize="15sp" />
 
                 <fragment
@@ -224,7 +239,7 @@
                     android:layout_marginTop="0dp"
                     android:padding="10dp"
                     android:gravity="left"
-                    android:text = "Данные отобразятся после оплаты и прибытия контейнера к месту прибытия"
+                    android:text = "ПИН-код доступа отобразится по факту прибытия контейнера"
                     android:layout_below = "@+id/Text2"
                     />
             </RelativeLayout>
@@ -274,8 +289,8 @@
                     android:background="@drawable/button_stili"
                     android:padding = "5dp"
                     android:layout_toEndOf="@+id/s_cost"
-                    android:layout_toRightOf="@+id/s_cost"                   
-                    android:text="Оплатить"                   
+                    android:layout_toRightOf="@+id/s_cost"
+                    android:text="Оплатить"
                     android:textSize="6sp" />
 
                 <TextView
@@ -365,12 +380,12 @@
                     android:layout_below="@+id/s_pin_access_code"
                     android:layout_marginStart="1dp"
                     android:layout_marginLeft="1dp"
-                   android:layout_marginTop="14dp"
+                    android:layout_marginTop="14dp"
                     android:background="@drawable/button_stili"
                     android:padding = "5dp"
                     android:layout_toEndOf="@+id/s_lock_unlock_door"
-                    android:layout_toRightOf="@+id/s_lock_unlock_door"                    
-                    android:text="Разблокировать/Заблокировать"                    
+                    android:layout_toRightOf="@+id/s_lock_unlock_door"
+                    android:text="Разблокировать/Заблокировать"
                     android:textSize="8sp" />
 
                 <TextView
@@ -541,19 +556,7 @@
                     android:gravity="left"
                     />
 
-                 <Button
-                    android:id="@+id/btn_camera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="28dp"
-                    android:layout_below="@+id/TEXT6"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/button_stili"
-                    android:padding = "5dp"
-                    android:layout_centerHorizontal = "true"                   
-                    android:text="Открыть камеру"                    
-                    android:textSize="8sp" />
+                
 
             </RelativeLayout>
 
@@ -568,5 +571,12 @@
         android:id="@+id/preloader"
         />
 
+    <fragment 
+		android:name="GeoGeometry.Activity.Menu.UserMenuFragment"
+		android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+		android:id="@+id/fragmentUserMenu" />
 
 </RelativeLayout>

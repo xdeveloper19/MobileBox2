@@ -90,7 +90,7 @@ namespace GeoGeometry.Activity.Auth
 
             box_name1 = FindViewById<AutoCompleteTextView>(Resource.Id.box_name1);
             box_selection = FindViewById<Button>(Resource.Id.box_selection);
-            btn_box_registr = FindViewById<Button>(Resource.Id.btn_box_registr);
+            //btn_box_registr = FindViewById<Button>(Resource.Id.btn_box_registr);
             btn_back_a = FindViewById<ImageButton>(Resource.Id.btn_back_a);
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
 
@@ -110,14 +110,14 @@ namespace GeoGeometry.Activity.Auth
             var role = StaticUser.UserRole;
             //AuthResponseData user = JsonConvert.DeserializeObject<AuthResponseData>(file_data_remember);
 
-            if (role == "user")
-            {
-                btn_box_registr.Visibility = ViewStates.Invisible;
-            }
-            else if(role == "driver")
-            {
-                btn_box_registr.Visibility = ViewStates.Visible;
-            }
+            //if (role == "user")
+            //{
+            //    btn_box_registr.Visibility = ViewStates.Invisible;
+            //}
+            //else if(role == "driver")
+            //{
+            //    btn_box_registr.Visibility = ViewStates.Visible;
+            //}
 
             //string array used for displayling AutoComplete Suggestion   
             /*var names = new string[] { "Anoop", "Arjit", "Akshay", "Ankit", "Rakesh" };
@@ -301,12 +301,12 @@ namespace GeoGeometry.Activity.Auth
                 //этот запрос делать в драйаавер активити
             };
 
-            btn_box_registr.Click += async delegate
-            {
-                Intent ContainerRegisterActivity = new Intent(this, typeof(Auth.RegisterBoxActivity));
-                StartActivity(ContainerRegisterActivity);
-                this.Finish();
-            };
+            //btn_box_registr.Click += async delegate
+            //{
+            //    Intent ContainerRegisterActivity = new Intent(this, typeof(Auth.RegisterBoxActivity));
+            //    StartActivity(ContainerRegisterActivity);
+            //    this.Finish();
+            //};
 
             btn_back_a.Click += async delegate
             {

@@ -26,6 +26,8 @@ using Android.Gms.Maps;
 using static GeoGeometry.Model.Box.SmartBox;
 using Android.Gms.Maps.Model;
 using System.Globalization;
+using GeoGeometry.Activity.Menu;
+
 namespace GeoGeometry.Activity.Auth
 {
 
@@ -52,6 +54,10 @@ namespace GeoGeometry.Activity.Auth
 
         private EditText s_user;
 
+        private EditText s_danger;
+
+        private EditText s_notifications;
+
         private EditText s_state;
 
         private EditText container_name;
@@ -74,6 +80,10 @@ namespace GeoGeometry.Activity.Auth
 
         private EditText s_battery;
 
+        private ProgressBar progressBar;
+
+        private TextView status_view;
+
         private static EditText s_signal_strength;
 
         private static EditText s_longitude;
@@ -88,19 +98,24 @@ namespace GeoGeometry.Activity.Auth
 
         private ProgressBar preloader;
 
+        private RelativeLayout driver_container;
+
         GoogleMap _googleMap;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            
 
             SetContentView(Resource.Layout.activity_driver);
+            StaticMenu.id_page = 8;
 
+            driver_container = FindViewById<RelativeLayout>(Resource.Id.main_driver);
             btn_change_container = FindViewById<Button>(Resource.Id.btn_change_container);
             btn_exit_ = FindViewById<Button>(Resource.Id.btn_exit_);
-            btn_open_close_container = FindViewById<Button>(Resource.Id.btn_open_close_container);
+            progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar);
+            status_view = FindViewById<TextView>(Resource.Id.status_view);
             btn_lock_unlock_door = FindViewById<Button>(Resource.Id.btn_lock_unlock_door);
-            btn_change_parameters = FindViewById<Button>(Resource.Id.btn_change_parameters);
             btn_transfer_access = FindViewById<Button>(Resource.Id.btn_transfer_access);
             btn_change_pin_code = FindViewById<Button>(Resource.Id.btn_change_pin_code);
             btn_free_for_order = FindViewById<Button>(Resource.Id.btn_free_for_order);
@@ -108,6 +123,8 @@ namespace GeoGeometry.Activity.Auth
             s_state = FindViewById<EditText>(Resource.Id.s_state);
             container_name = FindViewById<EditText>(Resource.Id.container_name);
             s_situation = FindViewById<Spinner>(Resource.Id.s_situation);
+            s_danger = FindViewById<EditText>(Resource.Id.s_danger);
+            s_notifications = FindViewById<EditText>(Resource.Id.s_notifications);
             s_open_close_container = FindViewById<EditText>(Resource.Id.s_open_close_container);
             s_lock_unlock_door = FindViewById<EditText>(Resource.Id.s_lock_unlock_door);
             s_pin_access_code = FindViewById<EditText>(Resource.Id.s_pin_access_code);
@@ -125,9 +142,23 @@ namespace GeoGeometry.Activity.Auth
             
             MapFragment mapFragment = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.fragmentMap);
             mapFragment.GetMapAsync(this);
-
+            
             s_state.Focusable = false;
             s_state.LongClickable = false;
+            s_weight.Focusable = false;
+            s_weight.LongClickable = false;
+            s_temperature.Focusable = false;
+            s_temperature.LongClickable = false;
+            s_light.Focusable = false;
+            s_light.LongClickable = false;
+            s_humidity.LongClickable = false;
+            s_humidity.Focusable = false;
+            s_battery.LongClickable = false;
+            s_battery.Focusable = false;
+            s_notifications.LongClickable = false;
+            s_notifications.Focusable = false;
+            s_danger.LongClickable = false;
+            s_danger.Focusable = false;
             s_signal_strength.Focusable = false;
             s_signal_strength.LongClickable = false;
             s_user.Focusable = false;
@@ -137,6 +168,8 @@ namespace GeoGeometry.Activity.Auth
             s_open_close_container.Focusable = false;
             s_open_close_container.LongClickable = false;
             s_lock_unlock_door.Focusable = false;
+            s_pin_access_code.Focusable = false;
+            s_pin_access_code.LongClickable = false;
             s_lock_unlock_door.LongClickable = false;           
             s_payment.Focusable = false;
             s_payment.LongClickable = false;
@@ -149,6 +182,7 @@ namespace GeoGeometry.Activity.Auth
             container_name.Focusable = false;
             container_name.LongClickable = false;
 
+            s_payment.Text = "Оплачен";
             s_situation.Prompt = "Выбор роли";
             s_situation.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner_ItemSelected);
             var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.a_situation_loaded_container, Android.Resource.Layout.SimpleSpinnerItem);
@@ -200,7 +234,10 @@ namespace GeoGeometry.Activity.Auth
 
             btn_free_for_order.Click += async delegate
             {
-                Toast.MakeText(this, "Ваш статус: «Свободен для закозов»", ToastLength.Long).Show();
+                Toast.MakeText(this, "Ваш статус: «Свободен для заказов»", ToastLength.Long).Show();
+                progressBar.Progress = 8;
+                s_open_close_container.Text = "Закрыт";
+                status_view.Text = "8. Завершение использования";
             };
 
             //переход на форму выбора контейнера
@@ -226,20 +263,20 @@ namespace GeoGeometry.Activity.Auth
                 };
 
             //изменение состояния контейнера
-            btn_open_close_container.Click += async delegate
-            {
-                try
-                {
-                    if (s_open_close_container.Text == "закрыт")
-                        s_open_close_container.Text = "раскрыт";
-                    else
-                        s_open_close_container.Text = "закрыт";
-                }
-                catch(Exception ex)
-                {
-                    Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
-                }
-            };
+            //btn_open_close_container.Click += async delegate
+            //{
+            //    try
+            //    {
+            //        if (s_open_close_container.Text == "закрыт")
+            //            s_open_close_container.Text = "раскрыт";
+            //        else
+            //            s_open_close_container.Text = "закрыт";
+            //    }
+            //    catch(Exception ex)
+            //    {
+            //        Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
+            //    }
+            //};
 
             //изменение состояния дверей
             btn_lock_unlock_door.Click += async delegate
@@ -271,106 +308,106 @@ namespace GeoGeometry.Activity.Auth
             };
 
             //редактирование данных контейнера
-            btn_change_parameters.Click += async delegate
-            {
-                try
-                {
-                    if(a_situation == "Отсутствует")
-                    {
-                        Toast.MakeText(this, "Выберите состояние контейнера",ToastLength.Long).Show();
-                    }
-                    else
-                    {
-                        preloader.Visibility = Android.Views.ViewStates.Visible;
+            //btn_change_parameters.Click += async delegate
+            //{
+            //    try
+            //    {
+            //        if(a_situation == "Отсутствует")
+            //        {
+            //            Toast.MakeText(this, "Выберите состояние контейнера",ToastLength.Long).Show();
+            //        }
+            //        else
+            //        {
+            //            preloader.Visibility = Android.Views.ViewStates.Visible;
                         
-                        StaticBox.Temperature = s_temperature.Text;
-                        StaticBox.Weight = s_weight.Text;
-                        StaticBox.Light = Convert.ToInt32(s_light.Text);
-                        StaticBox.Wetness = s_humidity.Text;
-                        StaticBox.Code = s_pin_access_code.Text;
-                        StaticBox.Name = container_name.Text;
-                        StaticBox.IsOpenedBox = (s_open_close_container.Text == "раскрыт") ? true : false;
-                        //Situation = s_situation.Text,
-                        StaticBox.IsOpenedDoor = (s_lock_unlock_door.Text == "разблокирована") ? true : false;
-                        StaticBox.BatteryPower = s_battery.Text;
+            //            StaticBox.Temperature = s_temperature.Text;
+            //            StaticBox.Weight = s_weight.Text;
+            //            StaticBox.Light = Convert.ToInt32(s_light.Text);
+            //            StaticBox.Wetness = s_humidity.Text;
+            //            StaticBox.Code = s_pin_access_code.Text;
+            //            StaticBox.Name = container_name.Text;
+            //            StaticBox.IsOpenedBox = (s_open_close_container.Text == "раскрыт") ? true : false;
+            //            //Situation = s_situation.Text,
+            //            StaticBox.IsOpenedDoor = (s_lock_unlock_door.Text == "разблокирована") ? true : false;
+            //            StaticBox.BatteryPower = s_battery.Text;
 
-                        if (a_situation == "На складе")
-                        {
-                            StaticBox.BoxState = ContainerState.onBase;
-                        }
-                        else if (a_situation == "На автомобиле")
-                        {
-                            StaticBox.BoxState = ContainerState.onCar;
-                        }
-                        else if (a_situation == "Выгруженным у грузоотправителя")
-                        {
-                            StaticBox.BoxState = ContainerState.onConsignee;
-                        }
-                        else if (a_situation == "После разгрузки у грузополучателя")
-                        {
-                            StaticBox.BoxState = ContainerState.onShipper;
-                        }
-
-                       
-
-                        SmartBox container = new SmartBox
-                        {
-                            Id = StaticBox.SmartBoxId,
-                            Temperature = StaticBox.Temperature,
-                            Name = StaticBox.Name,
-                            // Weight = StaticBox.Weight,
-                            Weight = StaticBox.Weight,
-                            Light = StaticBox.Light,
-                            Wetness = StaticBox.Wetness,
-                            Code = StaticBox.Code,
-                            IsOpenedBox = StaticBox.IsOpenedBox,
-                            BoxState = StaticBox.BoxState,
-                            IsOpenedDoor = StaticBox.IsOpenedDoor,
-                            BatteryPower = StaticBox.BatteryPower
-                        };
+            //            if (a_situation == "На складе")
+            //            {
+            //                StaticBox.BoxState = ContainerState.onBase;
+            //            }
+            //            else if (a_situation == "На автомобиле")
+            //            {
+            //                StaticBox.BoxState = ContainerState.onCar;
+            //            }
+            //            else if (a_situation == "Выгруженным у грузоотправителя")
+            //            {
+            //                StaticBox.BoxState = ContainerState.onConsignee;
+            //            }
+            //            else if (a_situation == "После разгрузки у грузополучателя")
+            //            {
+            //                StaticBox.BoxState = ContainerState.onShipper;
+            //            }
 
                        
 
-                        var myHttpClient = new HttpClient();
+            //            SmartBox container = new SmartBox
+            //            {
+            //                Id = StaticBox.SmartBoxId,
+            //                Temperature = StaticBox.Temperature,
+            //                Name = StaticBox.Name,
+            //                // Weight = StaticBox.Weight,
+            //                Weight = StaticBox.Weight,
+            //                Light = StaticBox.Light,
+            //                Wetness = StaticBox.Wetness,
+            //                Code = StaticBox.Code,
+            //                IsOpenedBox = StaticBox.IsOpenedBox,
+            //                BoxState = StaticBox.BoxState,
+            //                IsOpenedDoor = StaticBox.IsOpenedDoor,
+            //                BatteryPower = StaticBox.BatteryPower
+            //            };
 
-                        var uri = ("http://iot-tmc-cen.1gb.ru/api/container/editbox?id=" + container.Id + "&IsOpenedBox=" + container.IsOpenedBox + "&Name=" + container.Name + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower + "&BoxState=" + container.BoxState);
-                        var uri2 = ("http://81.177.136.11:8003/sensor?id=" + container.Id + "&IsOpenedBox=" + container.IsOpenedBox + "&Name=" + container.Name + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower + "&BoxState=" + container.BoxState);
+                       
+
+            //            var myHttpClient = new HttpClient();
+
+            //            var uri = ("http://iot-tmc-cen.1gb.ru/api/container/editbox?id=" + container.Id + "&IsOpenedBox=" + container.IsOpenedBox + "&Name=" + container.Name + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower + "&BoxState=" + container.BoxState);
+            //            var uri2 = ("http://81.177.136.11:8003/sensor?id=" + container.Id + "&IsOpenedBox=" + container.IsOpenedBox + "&Name=" + container.Name + "&IsOpenedDoor=" + container.IsOpenedDoor + "&Weight=" + container.Weight + "&Light=" + container.Light + "&Code=" + container.Code + "&Temperature=" + container.Temperature + "&Wetness=" + container.Wetness + "&BatteryPower=" + container.BatteryPower + "&BoxState=" + container.BoxState);
 
 
-                        HttpResponseMessage response = await myHttpClient.PutAsync(uri.ToString(), new StringContent(JsonConvert.SerializeObject(container), Encoding.UTF8, "application/json"));
-                        HttpResponseMessage responseFromAnotherServer = await myHttpClient.PutAsync(uri2.ToString(), new StringContent(JsonConvert.SerializeObject(container), Encoding.UTF8, "application/json"));
+            //            HttpResponseMessage response = await myHttpClient.PutAsync(uri.ToString(), new StringContent(JsonConvert.SerializeObject(container), Encoding.UTF8, "application/json"));
+            //            HttpResponseMessage responseFromAnotherServer = await myHttpClient.PutAsync(uri2.ToString(), new StringContent(JsonConvert.SerializeObject(container), Encoding.UTF8, "application/json"));
 
-                        AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
+            //            AuthApiData<BaseResponseObject> o_data = new AuthApiData<BaseResponseObject>();
 
-                        string s_result;
-                        using (HttpContent responseContent = response.Content)
-                        {
-                            s_result = await responseContent.ReadAsStringAsync();
-                        }
+            //            string s_result;
+            //            using (HttpContent responseContent = response.Content)
+            //            {
+            //                s_result = await responseContent.ReadAsStringAsync();
+            //            }
 
-                        string s_result_from_server;
-                        using (HttpContent responseContent = responseFromAnotherServer.Content)
-                        {
-                            s_result_from_server = await responseContent.ReadAsStringAsync();
-                        }
+            //            string s_result_from_server;
+            //            using (HttpContent responseContent = responseFromAnotherServer.Content)
+            //            {
+            //                s_result_from_server = await responseContent.ReadAsStringAsync();
+            //            }
 
-                        o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
+            //            o_data = JsonConvert.DeserializeObject<AuthApiData<BaseResponseObject>>(s_result);
 
-                        if (response.StatusCode == HttpStatusCode.OK)
-                        {
-                            Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
-                        }
-                        Intent.PutExtra("idAction", "2");
-                        //перезапуск страницы
+            //            if (response.StatusCode == HttpStatusCode.OK)
+            //            {
+            //                Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
+            //            }
+            //            Intent.PutExtra("idAction", "2");
+            //            //перезапуск страницы
 
-                        Recreate();
-                    }                   
-                }
-                catch (Exception ex)
-                {
-                    Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
-                }
-            };
+            //            Recreate();
+            //        }                   
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
+            //    }
+            //};
 
             btn_exit_.Click += async delegate
             {
@@ -435,13 +472,16 @@ namespace GeoGeometry.Activity.Auth
                         BoxDataResponse exported_data = new BoxDataResponse();
                         exported_data = o_data.ResponseData;
 
+
                         StaticBox.AddInfoBox(exported_data);
                         //добавляем инфу о найденном контейнере
                         container_name.Text = container.Name;
-                        s_open_close_container.Text = (exported_data.IsOpenedBox == false) ? "закрыт" : "раскрыт";
-                        s_weight.Text = exported_data.Weight.Replace(",",".");
+                        s_open_close_container.Text = /*(exported_data.IsOpenedBox == false) ? "закрыт" : "раскрыт";*/"открыт";
+                        //s_weight.Text = exported_data.Weight.Replace(",",".");
+                        s_weight.Text = "100.0";
                         s_lock_unlock_door.Text = (exported_data.IsOpenedDoor == false) ? "заблокирована" : "разблокирована";
-
+                        //progressBar.Progress = 6;
+                        //status_view.Text = "6. Ожидание выгрузки";
                         var boxState = s_open_close_container.Text;
                         var doorState = s_lock_unlock_door.Text;
 
@@ -464,7 +504,7 @@ namespace GeoGeometry.Activity.Auth
 
                         s_temperature.Text = exported_data.Temperature.Replace(",", ".");
                         s_light.Text = exported_data.Light.ToString();
-                        s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : exported_data.Code;
+                        s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : "1324";
                         s_humidity.Text = exported_data.Wetness.Replace(",", ".");
                         s_battery.Text = exported_data.BatteryPower.Replace(",", ".");
                         btn_lock_unlock_door.Text = "Заблокировать/Разблокировать";
@@ -552,10 +592,10 @@ namespace GeoGeometry.Activity.Auth
                     StaticBox.Longitude = result.LastLocation.Longitude;
                     StaticBox.Signal = 0;
                     StaticBox.Date = DateTime.Now;
-
+                    
                     s_longitude.Text = result.LastLocation.Latitude.ToString();
                     s_latitude.Text = result.LastLocation.Longitude.ToString();
-                    s_date_time.Text = DateTime.Now.ToString();
+                    s_date_time.Text = "07.12.2020 13:00";
                     s_signal_strength.Text = "Хороший";
 
                     // Получаю информацию о клиенте.

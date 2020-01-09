@@ -56,8 +56,7 @@ namespace GeoGeometry.Activity.Menu
                 btn_squad = main_menu.FindViewById<AppCompatImageButton>(Resource.Id.btn_squad);
                 btn_squad.Click += (s, e) =>
                 {
-                    Intent squadActivity = new Intent(Activity, typeof(Auth.ContainerSelection));
-                    StartActivity(squadActivity);
+                    //Some to do...
                 };
             }
 

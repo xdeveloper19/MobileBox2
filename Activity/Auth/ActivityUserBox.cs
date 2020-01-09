@@ -24,6 +24,7 @@ using Android.Gms.Location;
 using GeoGeometry.Model.GPSLocation;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
+using GeoGeometry.Activity.Menu;
 
 namespace GeoGeometry.Activity.Auth
 {
@@ -40,6 +41,8 @@ namespace GeoGeometry.Activity.Auth
 
         private Button btn_camera;
 
+        private Button btn_pass_delivery_order;
+
         private EditText s_situation_loaded_container;
 
         private Button btn_pass_delivery_service;
@@ -50,6 +53,8 @@ namespace GeoGeometry.Activity.Auth
 
         private EditText s_cost;
 
+        private TextView status;
+
         private EditText s_pin_access_code;
 
         private EditText s_lock_unlock_door;
@@ -58,9 +63,15 @@ namespace GeoGeometry.Activity.Auth
 
         private EditText s_temperature;
 
+        private ProgressBar progressBar;
+
+        private TextView status_view;
+
         private EditText s_light;
 
         private EditText s_humidity;
+
+        private TextView Text3;
 
         private static EditText s_longitude;
 
@@ -70,6 +81,8 @@ namespace GeoGeometry.Activity.Auth
 
         private ProgressBar preloader;
 
+        private RelativeLayout auth_container;
+
         GoogleMap _googleMap;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -78,14 +91,26 @@ namespace GeoGeometry.Activity.Auth
 
             SetContentView(Resource.Layout.activity_user_box);
 
+            StaticMenu.id_page = 4;
 
+            auth_container = FindViewById<RelativeLayout>(Resource.Id.container);
+            //var builder = new Android.App.AlertDialog.Builder(this);
+            //builder.SetTitle("Operation confirmation");
+            //builder.SetMessage("Continue with " + "" + " command?");
+            //builder.SetPositiveButton("Yes", (sender, args) => { /* do stuff on OK */ });
+            //builder.SetNegativeButton("No", (sender, args) => { cmd = "cancel"; });
+            //builder.SetCancelable(false);
+            //builder.Show();
 
+            
+            Text3 = FindViewById<TextView>(Resource.Id.Text3);
             btn_camera = FindViewById<Button>(Resource.Id.btn_camera);
-            btn_change_order = FindViewById<Button>(Resource.Id.btn_change_order);
+            progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar);
+            status_view = FindViewById<TextView>(Resource.Id.status_view);
             btn_exit_ = FindViewById<Button>(Resource.Id.btn_exit_);
             btn_pay = FindViewById<Button>(Resource.Id.btn_pay);
             btn_lock_unlock_door = FindViewById<Button>(Resource.Id.btn_lock_unlock_door);
-            s_situation_loaded_container = FindViewById<EditText>(Resource.Id.s_situation_loaded_container);
+            status = FindViewById<TextView>(Resource.Id.status1);
             btn_pass_delivery_service = FindViewById<Button>(Resource.Id.btn_pass_delivery_service);
             s_user = FindViewById<EditText>(Resource.Id.s_user);
             container_name = FindViewById<EditText>(Resource.Id.container_name);
@@ -100,6 +125,7 @@ namespace GeoGeometry.Activity.Auth
             s_longitude = FindViewById<EditText>(Resource.Id.s_longitude);
             s_latitude = FindViewById<EditText>(Resource.Id.s_latitude);
             preloader = FindViewById<ProgressBar>(Resource.Id.preloader);
+
             MapFragment mapFragment = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.fragmentMap);
             mapFragment.GetMapAsync(this);
 
@@ -115,8 +141,7 @@ namespace GeoGeometry.Activity.Auth
             s_payment.LongClickable = false;
             s_cost.Focusable = false;
             s_cost.LongClickable = false;
-            s_situation_loaded_container.Focusable = false;
-            s_situation_loaded_container.LongClickable = false;
+            
             s_pin_access_code.Focusable = false;
             s_pin_access_code.LongClickable = false;
             s_lock_unlock_door.Focusable = false;
@@ -170,73 +195,99 @@ namespace GeoGeometry.Activity.Auth
             //        }
             //        break;
             //}
-
-           
-            btn_camera.Click += async delegate
-            {
-                try
-                {
-                    Intent ActivityC = new Intent(this, typeof(Auth.ActivityCamera));
-                    StartActivity(ActivityC);
-                }
-                catch (Exception ex)
-                {
-                    Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
-                }
-            };
+            
+            
 
 
 
-            btn_change_order.Click += async delegate
-            {
-                try
-                {
-                    Intent AcrivityApplication = new Intent(this, typeof(Auth.ActivityApplication));
-                    StartActivity(AcrivityApplication);
-                }
-                catch (Exception ex)
-                {
-                    Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
-                }
-            };
+            //btn_change_order.Click += async delegate
+            //{
+            //    try
+            //    {
+            //        Intent AcrivityApplication = new Intent(this, typeof(Auth.ActivityApplication));
+            //        StartActivity(AcrivityApplication);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
+            //    }
+            //};
 
             //изменение состояния дверей
             btn_lock_unlock_door.Click += async delegate
             {
-                if(s_payment.Text == "Оплачено")
-                {
+                
                     try
                     {
-                        if (s_lock_unlock_door.Text == "заблокирована")
-                            s_lock_unlock_door.Text = "разблокирована";
-                        else
-                            s_lock_unlock_door.Text = "заблокирована";
+                        Android.Support.V7.App.AlertDialog alertDialog;
+                        List<string> Item = new List<string>();
+                        Item.Add("Выгрузка завершена. Контейнер готов к отправке.");
+
+
+                        var builder = new Android.Support.V7.App.AlertDialog.Builder(this);
+                        builder.SetTitle("Вы действительно хотите открыть замок контейнера?");
+
+                        bool[] toDownload = { false};
+                        builder.SetMultiChoiceItems(Item.ToArray(), toDownload, (sender, e) =>
+                        {
+                            int index = e.Which;
+
+                            toDownload[index] = e.IsChecked;
+                        });
+
+                    //builder.SetSingleChoiceItems(Item.ToArray(), -1, (object sender, DialogClickEventArgs e) =>
+                    //    {
+                    //        if ((int)e.Which == 0)
+                    //        {
+                    //            btn_pay.Text = "Okay";
+                    //            //					StartActivityFromFragment(this.FragmentManager.GetFragment(), takePicture, 0);
+                    //            //					alertDialog.Dismiss();
+                    //        }
+                    //        else if ((int)e.Which == -1)
+                    //        {
+                    //            btn_pay.Text = "NotOkay";
+                    //            //					StartActivityFromFragment(this.FragmentManager.GetFragment(), pickPhoto, 1);
+                    //            //					alertDialog.Dismiss();
+                    //        }
+                    //    })
+                        builder.SetNegativeButton("Отмена", delegate
+                        {
+                            //Some to do...
+                        })
+                        .SetPositiveButton("Открыть", delegate
+                        {
+                            if (toDownload[0] == true)
+                            {
+                                //to do...
+                            }
+                            if (s_lock_unlock_door.Text == "заблокирована")
+                                s_lock_unlock_door.Text = "разблокирована";
+                            else
+                                s_lock_unlock_door.Text = "заблокирована";
+                        });
+                        
+                        alertDialog = builder.Create();
+                        alertDialog.Show();
                     }
                     catch (Exception ex)
                     {
                         Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
                     }
-                }
-                else
-                {
-                    Toast.MakeText(this, "Не произведена оплата", ToastLength.Long).Show();
-                }                
+                            
             };
 
             btn_pay.Click += async delegate
             {
                 if(s_payment.Text != "Оплачено")
                 {
-                    if (s_cost.Text == "1000")
-                    {
-                        s_payment.Text = "Оплачено";
-                        Toast.MakeText(this, "Оплата произведена", ToastLength.Long).Show();
-                        GetInfoAboutBox(dir_path);
-                    }
-                    else
-                    {
-                        Toast.MakeText(this, "Контейнер не выбран", ToastLength.Long).Show();
-                    }
+                    progressBar.Progress = 8;
+                    status_view.Text = "8. Завершение использования";
+
+                    s_pin_access_code.Text = "1324";
+                    s_payment.Text = "Оплачено";
+                    Toast.MakeText(this, "Оплата произведена", ToastLength.Long).Show();
+                    GetInfoAboutBox(dir_path);
+                    
                 }
                 else
                 {
@@ -245,6 +296,43 @@ namespace GeoGeometry.Activity.Auth
                 
             };
 
+            btn_pass_delivery_service.Click += async delegate
+            {
+                Android.Support.V7.App.AlertDialog alertDialog;
+                List<string> Item = new List<string>();
+                Item.Add("Выгрузка завершена. Контейнер готов к отправке.");
+
+
+                var builder = new Android.Support.V7.App.AlertDialog.Builder(this);
+                builder.SetTitle("Вы действительно хотите закрыть замок контейнера?");
+
+                bool[] toDownload = { false };
+                builder.SetMultiChoiceItems(Item.ToArray(), toDownload, (sender, e) =>
+                {
+                    int index = e.Which;
+
+                    toDownload[index] = e.IsChecked;
+                });
+
+                builder.SetNegativeButton("Отмена", delegate
+                {
+                    //Some to do...
+                })
+                .SetPositiveButton("Закрыть", delegate
+                {
+                    if (toDownload[0] == true)
+                    {
+                                //to do...
+                            }
+                    if (s_lock_unlock_door.Text == "заблокирована")
+                        s_lock_unlock_door.Text = "разблокирована";
+                    else
+                        s_lock_unlock_door.Text = "заблокирована";
+                });
+
+                alertDialog = builder.Create();
+                alertDialog.Show();
+            };
 
             btn_exit_.Click += async delegate
             {
@@ -311,8 +399,8 @@ namespace GeoGeometry.Activity.Auth
                 string name = container.Name;//!!!!
                 
               
-                if(s_payment.Text == "Оплачено")
-                {
+                //if(s_payment.Text == "Оплачено")
+                //{
                     var myHttpClient = new HttpClient();
 
                     var uri = new Uri("http://iot.tmc-centert.ru/api/container/getbox?id=" + container.SmartBoxId);
@@ -338,7 +426,7 @@ namespace GeoGeometry.Activity.Auth
                             StaticBox.AddInfoBox(exported_data);
                             //добавляем инфу о найденном контейнере
                             //container_name.Text = exported_data.Name.ToString();
-                            container_name.Text = name;
+                            //container_name.Text = name;
 
                             s_temperature.Text = exported_data.Temperature;
                             s_light.Text = exported_data.Light.ToString();
@@ -348,8 +436,16 @@ namespace GeoGeometry.Activity.Auth
                             s_longitude.Text = StaticBox.Longitude.ToString();
                             s_latitude.Text = StaticBox.Latitude.ToString();
                             //coordinates lat lon
-                            s_weight.Text = exported_data.Weight;
-                            s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : exported_data.Code;// !!!!                        
+                            s_weight.Text = "100.0";
+                            //progressBar.Progress = 6;
+                        
+                        Text3.Text = "ПИН-код доступа отобразится после оплаты";
+
+                        //status_view.Text = "6. Ожидание выгрузки";
+                        if (s_payment.Text == "Оплачено")
+                            s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : "1324";// !!!!  
+                        else
+                            s_pin_access_code.Text = "****";
                             if (exported_data.IsOpenedDoor.ToString() == "true")
                             {
                                 s_lock_unlock_door.Text = "разблокирована";
@@ -358,48 +454,33 @@ namespace GeoGeometry.Activity.Auth
                             {
                                 s_lock_unlock_door.Text = "заблокирована";
                             }
-                            s_cost.Text = "1000";
+                            s_cost.Text = "39537.5";
 
 
                             //var boxState = s_open_close_container.Text;
                             //var doorState = s_lock_unlock_door.Text;
 
-                            if (exported_data.BoxState == ContainerState.onBase)
-                            {
-                                s_situation_loaded_container.Text = "На складе";
-                            }
-                            else if (exported_data.BoxState == ContainerState.onCar)
-                            {
-                                s_situation_loaded_container.Text = "На автомобиле";
-                            }
-                            else if (exported_data.BoxState == ContainerState.onConsignee)
-                            {
-                                s_situation_loaded_container.Text = "Выгруженным у грузоотправителя";
-                            }
-                            else if (exported_data.BoxState == ContainerState.onShipper)
-                            {
-                                s_situation_loaded_container.Text = "После разгрузки у грузополучателя";
-                            }
+                            
                         }
                         else
                         {
                             Toast.MakeText(this, o_data.Message, ToastLength.Long).Show();
                         }
                     }
-                }
-                else if(s_payment.Text == "Не оплачено")
-                {
-                    s_temperature.Text = "****";
-                    s_light.Text = "****";
-                    s_humidity.Text = "****";
-                    s_weight.Text = "****";
-                    s_pin_access_code.Text = "****";
-                    s_lock_unlock_door.Text = "****";
-                    s_cost.Text = "1000";
-                    container_name.Text = name;
-                    s_latitude.Text = "****";
-                    s_longitude.Text = "****";
-                }
+                
+                //else if(s_payment.Text == "Не оплачено")
+                //{
+                //    s_temperature.Text = "****";
+                //    s_light.Text = "****";
+                //    s_humidity.Text = "****";
+                //    s_weight.Text = "****";
+                //    s_pin_access_code.Text = "****";
+                //    s_lock_unlock_door.Text = "****";
+                //    s_cost.Text = "1000";
+                //    container_name.Text = name;
+                //    s_latitude.Text = "****";
+                //    s_longitude.Text = "****";
+                //}
                 
             }
             catch (Exception ex)

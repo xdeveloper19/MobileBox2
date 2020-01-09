@@ -77,8 +77,10 @@
     <Compile Include="Activity\Cameraa\CameraPictureCallBack.cs" />
     <Compile Include="Activity\Cameraa\CameraPreview.cs" />
     <Compile Include="Activity\Home\HomeActivity.cs" />
+    <Compile Include="Activity\Menu\DriverMenuFragment.cs" />
     <Compile Include="Activity\Menu\MainMenuFragment.cs" />
     <Compile Include="Activity\Menu\StaticMenu.cs" />
+    <Compile Include="Activity\Menu\UserMenuFragment.cs" />
     <Compile Include="Activity\Squad\SquadActivity.cs" />
     <Compile Include="Activity\Squad\SquadListActivity.cs" />
     <Compile Include="Activity\Squad\SquadRegisterActivity.cs" />
@@ -370,6 +372,12 @@
     <AndroidResource Include="Resources\drawable\activityRR.jpg" />
     <AndroidResource Include="Resources\drawable\button_stili2.xml" />
     <AndroidResource Include="Resources\drawable\top6.jpg" />
+    <AndroidResource Include="Resources\drawable\progress_bar_drawable.xml" />
+    <AndroidResource Include="Resources\drawable\menu32.png" />
+    <AndroidResource Include="Resources\drawable\plus.jpg" />
+    <AndroidResource Include="Resources\drawable\list32.png" />
+    <AndroidResource Include="Resources\drawable\box.png" />
+    <AndroidResource Include="Resources\drawable\clipboard.png" />
     <Content Include="Resources\layout\1aaa.axml" />
     <AndroidResource Include="Resources\layout\activity_lol.axml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
@@ -377,6 +385,11 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\activity_main.axml" />
     <AndroidResource Include="Resources\layout\activity_main.xml" />
+    <AndroidResource Include="Resources\layout\activity_container_selection.xml" />
+    <AndroidResource Include="Resources\layout\fragment_menu_user.xml" />
+    <AndroidResource Include="Resources\layout\fragment_menu_driver.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
