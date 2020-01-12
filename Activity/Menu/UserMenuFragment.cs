@@ -46,7 +46,7 @@ namespace GeoGeometry.Activity.Menu
                 btn_list_orders = main_menu.FindViewById<AppCompatImageButton>(Resource.Id.btn_list_orders);
                 btn_list_orders.Click += (s, e) =>
                 {
-                    Intent squadActivity = new Intent(Activity, typeof(Auth.ContainerSelection));
+                    Intent squadActivity = new Intent(Activity, typeof(Auth.ActivityHistoryOrder));
                     StartActivity(squadActivity);
                 };
             }

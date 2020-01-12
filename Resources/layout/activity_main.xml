@@ -26,9 +26,9 @@
 		android:orientation="vertical">
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="375.5dp"
+                android:layout_height="310dp"
                 android:scaleType="centerCrop"
-                android:src = "@drawable/mainbg"
+                android:src = "@drawable/activityrr"
                 android:id="@+id/img_bg"/> 
 	
 			<RelativeLayout
@@ -50,30 +50,44 @@
 			     android:padding = "10dp"
 				 android:gravity="center"
 				 android:textStyle="bold"
-					
+				 android:layout_centerHorizontal = "true"	
 				 android:background = "@drawable/edittext_stili"
-				 android:text = "Имитатор движения контейнера-трансформера"
+				 android:text = "ООО ИКЦ «Мысль» НГТУ
+SmartBox "
 				/>
 
-
+            <Button
+				android:text="Калькулятор стоимости перевозки"
+				android:layout_width="fill_parent"
+			    android:padding = "5dp"
+				android:layout_height="45dp"
+				android:textSize = "16dp"
+				android:layout_marginTop="20dp"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:background="@drawable/button_stili"
+				android:layout_below="@+id/Text"
+				android:id="@+id/btn_calculator" />
 			<Button
-				android:text="Войти"
+				android:text="Войти в приложение"
 				android:layout_width="fill_parent"
 				android:layout_height="45dp"
 				android:layout_marginTop="20dp"
-				android:layout_below = "@+id/Text"
+				android:textSize = "16dp"
+				android:layout_below = "@+id/btn_calculator"
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:background="@drawable/button_stili"
 				android:id="@+id/btn_auth_form" />
 			<Button
-				android:text="Зарегистрироваться"
+				android:text="Регистрация"
 				android:layout_width="fill_parent"
 				android:layout_height="45dp"
+		     	android:textSize = "16dp"
 				android:layout_marginTop="20dp"
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:background="@drawable/button_stili"
 				android:layout_below="@+id/btn_auth_form"
 				android:id="@+id/btn_reg_form" />
+		   
         
       
 	</RelativeLayout>
@@ -82,4 +96,5 @@
 
   
 </RelativeLayout>
+
 

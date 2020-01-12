@@ -33,6 +33,8 @@ namespace GeoGeometry.Activity
         /// </summary>
         private Button btn_reg_form;
 
+        private Button btn_calculator;
+
         private int MY_PERMISSIONS_REQUEST_CAMERA = 100;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -47,8 +49,10 @@ namespace GeoGeometry.Activity
 
                 btn_auth_form = FindViewById<Button>(Resource.Id.btn_auth_form);
                 btn_reg_form = FindViewById<Button>(Resource.Id.btn_reg_form);
+                btn_calculator = FindViewById<Button>(Resource.Id.btn_calculator);
 
-                
+
+
 
                 string[] permissions = { Manifest.Permission.AccessFineLocation, Manifest.Permission.WriteExternalStorage };
                 ActivityCompat.RequestPermissions(this, new String[] { Manifest.Permission.Camera }, MY_PERMISSIONS_REQUEST_CAMERA);
@@ -69,6 +73,12 @@ namespace GeoGeometry.Activity
                 {
                     Intent authActivity = new Intent(this, typeof(Auth.AuthActivity));
                     StartActivity(authActivity);
+                };
+
+                btn_calculator.Click += (s, e) =>
+                {
+                    Intent activityApplication = new Intent(this, typeof(Auth.ActivityApplication));
+                    StartActivity(activityApplication);
                 };
 
             }

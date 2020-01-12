@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical" 
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+			android:id = "@+id/fio"
+			android:orientation="horizontal"
+			android:background = "@drawable/stili1">
+			
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+			    android:text = "Список задач"
+				android:id = "@+id/text"
+				android:textSize = "20dp"
+				android:layout_centerHorizontal = "true"				
+				android:textColor = "#4682B4"
+				android:layout_marginTop = "20dp"
+			/>
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+			    android:text = "Заказ :"
+				android:id = "@+id/text1"
+				android:textSize = "20dp"
+				android:layout_marginRight = "10dp"
+			    android:layout_marginStart = "10dp"
+				android:layout_below = "@+id/text"
+				android:textColor = "#4682B4"
+				android:layout_marginTop = "20dp"
+			/>
+				<EditText
+			android:layout_width="250dp"
+			android:layout_height="40dp"
+			android:layout_marginTop = "13dp"
+			android:layout_marginRight = "14dp"
+			android:layout_marginStart = "14dp"
+			android:layout_below="@+id/text"
+		    android:layout_toEndOf="@+id/text1"
+            android:layout_toRightOf="@+id/text1"
+			android:background = "@drawable/edittext_stili"
+			android:id="@+id/s_order"
+			/>
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+			    android:text = "Задача :"
+				android:id = "@+id/text2"
+				android:textSize = "20dp"
+				android:layout_marginRight = "10dp"
+			    android:layout_marginStart = "10dp"
+				android:layout_below = "@+id/text1"				
+				android:textColor = "#4682B4"
+				android:layout_marginTop = "40dp"
+			/>
+				<EditText
+			android:layout_width="250dp"
+			android:layout_height="80dp"
+			android:layout_marginTop = "13dp"
+			android:layout_marginRight = "3dp"
+			android:layout_marginStart = "3dp"
+			android:layout_below="@+id/s_order"
+		    android:layout_toEndOf="@+id/text2"
+            android:layout_toRightOf="@+id/text2"
+			android:background = "@drawable/edittext_stili"
+			android:id="@+id/s_task"
+			/>
+				<Button
+			android:text="Прервать"
+			android:layout_width="130dp"
+			android:layout_height="40dp"	
+			android:layout_marginRight = "25dp"
+			android:layout_marginStart = "25dp"
+			android:layout_marginTop = "20dp"
+			android:background="@drawable/button_stili"
+			android:layout_below="@+id/s_task"
+			android:id="@+id/btn_abort_order" />
+
+				<Button
+			android:text="Выполнил"
+			android:layout_width="130dp"
+			android:layout_height="40dp"				
+			android:layout_marginTop = "20dp"
+			android:layout_marginRight = "35dp"
+			android:layout_marginStart = "35dp"		
+            android:layout_toEndOf="@+id/btn_abort_order"
+            android:layout_toRightOf="@+id/btn_abort_order"
+			android:background="@drawable/button_stili"
+			android:layout_below="@+id/s_task"
+			android:id="@+id/btn_performed" />
+			</RelativeLayout>
+			<fragment
+                    android:id="@+id/fragmentMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+				    android:layout_marginTop = "5dp"
+                    android:layout_below="@+id/fio"
+                    android:layout_above="@+id/fragmentMainMenu"
+                    class="com.google.android.gms.maps.MapFragment"
+             />
+		
+
+	</RelativeLayout>
+</ScrollView>
+</RelativeLayout>

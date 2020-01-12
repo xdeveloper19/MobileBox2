@@ -80,20 +80,7 @@
 
                         tools:ignore="NotSibling" />
 
-                    <Button
-                        android:id="@+id/btn_free_for_order"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_toEndOf="@+id/s_user"
-                        android:layout_toRightOf="@+id/s_user"
-                        android:text="Свободен для заказов"
-                        android:background="@drawable/button_stili"
-                        android:layout_below="@+id/btn_exit_"
-                        android:padding = "5dp"
-                        android:textSize="8sp"
-                        />
+                   
                 </RelativeLayout>
 
 
@@ -206,37 +193,14 @@
                     android:textColor="@android:color/black"
                     />
 
-                <TextView
-                    android:id="@+id/textSituation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_below="@+id/status1"
-                    android:padding="10dp"
-                    android:text="Положение:"
-                    android:textSize="15sp" />
-
-                <Spinner
-                    android:id="@+id/s_situation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_below="@+id/status_view"
-                    android:layout_toEndOf="@+id/textSituation"
-                    android:layout_toRightOf="@+id/textSituation"
-                    android:entries="@array/a_situation_loaded_container"
-                    android:background = "@drawable/edittext_stili"
-                    android:inputType="text"
-                    android:padding="10dp"
-                    android:spinnerMode="dialog"
-                    android:textSize="8sp" />
+                
 
                 <TextView
                     android:id="@+id/textOpenCloseBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_below="@+id/textSituation"
+                    android:layout_below="@+id/status_view"
                     android:gravity="left"
                     android:padding="10dp"
                     android:text="Контейнер:"
@@ -247,7 +211,7 @@
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_below="@+id/s_situation"
+                    android:layout_below="@+id/status_view"
                     android:layout_toEndOf="@+id/textOpenCloseBox"
                     android:layout_toRightOf="@+id/textOpenCloseBox"
                     android:background = "@drawable/edittext_stili"
@@ -283,12 +247,11 @@
                     android:inputType="text"
                     android:padding="12dp"
                     android:textSize="11sp" />
-
-                <Button
+                 <Button
                     android:id="@+id/btn_lock_unlock_door"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_above="@id/textPinCode"
+                    android:layout_below = "@+id/s_open_close_container"
                     android:layout_marginLeft="20dp"
                     android:layout_marginBottom="2dp"
                     android:layout_toEndOf="@+id/s_lock_unlock_door"
@@ -296,33 +259,35 @@
                     android:text="Разблокировать/Заблокировать"
                     android:background="@drawable/button_stili"
                     android:padding = "5dp"
+                    android:layout_marginTop="11dp"
                     android:textSize="8sp" />
-
                 <TextView
-                    android:id="@+id/textPinCode"
+                    android:id="@+id/textSituation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_below="@id/textLockUnlockDoor"
-                    android:gravity="left"
+                    android:layout_below="@+id/textLockUnlockDoor"
                     android:padding="10dp"
-                    android:text="PIN-код доступа к контейнеру:"
+                    android:text="Положение:"
                     android:textSize="15sp" />
 
-                <EditText
-                    android:id="@+id/s_pin_access_code"
-                    android:layout_width="84.0dp"
+                <Spinner
+                    android:id="@+id/s_situation"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_below="@+id/s_lock_unlock_door"
+                    android:layout_toEndOf="@+id/textSituation"
+                    android:layout_toRightOf="@+id/textSituation"
+                    android:entries="@array/a_situation_loaded_container"
                     android:background = "@drawable/edittext_stili"
-                    android:layout_below="@id/s_lock_unlock_door"
-                    android:gravity="center"
-                    android:layout_toEndOf="@+id/textPinCode"
-                    android:layout_toRightOf="@+id/textPinCode"
-                    android:inputType="number"
-                    android:maxLength="4"
-                    android:padding="12dp"
-                    android:textSize="11sp" />
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:spinnerMode="dialog"
+                    android:textSize="8sp" />
+
+               
+
 
                 <Button
                     android:id="@+id/btn_change_pin_code"
@@ -332,22 +297,13 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop = "10dp"
                     android:gravity="center"
-                    android:layout_below="@id/s_pin_access_code"
+                    android:layout_below="@+id/textSituation"
                     android:text="Подробно о заказе"
                     android:background="@drawable/button_stili"
                     android:padding = "5dp"
                     android:textSize="8sp" />
 
-                <Button
-                    android:id="@+id/btn_transfer_access"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:layout_toLeftOf="@+id/btn_change_pin_code"
-                    android:layout_alignTop="@+id/btn_change_pin_code"
-                    android:text="Передать доступ клиенту"
-                    android:background="@drawable/button_stili"
-                    android:padding = "5dp"
-                    android:textSize="8sp" />
+              
             </RelativeLayout>
 
             <RelativeLayout
@@ -779,6 +735,14 @@
         android:visibility="gone"
         android:id="@+id/preloader"
         />
+
+<fragment 
+		android:name="GeoGeometry.Activity.Menu.DriverMenuFragment"
+		android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+		android:id="@+id/fragmentDriverMenu" />
 </RelativeLayout>
 
 

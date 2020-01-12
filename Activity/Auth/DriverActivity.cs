@@ -38,8 +38,6 @@ namespace GeoGeometry.Activity.Auth
 
         private Button btn_exit_;
 
-        private Button btn_free_for_order;
-
         private Button btn_change_container;
 
         private Button btn_open_close_container;
@@ -47,10 +45,6 @@ namespace GeoGeometry.Activity.Auth
         private Button btn_lock_unlock_door;
 
         private Button btn_change_parameters;
-
-        private Button btn_transfer_access;
-
-        private Button btn_change_pin_code;
 
         private EditText s_user;
 
@@ -67,8 +61,6 @@ namespace GeoGeometry.Activity.Auth
         private EditText s_open_close_container;
 
         private EditText s_lock_unlock_door;
-
-        private EditText s_pin_access_code;
 
         private EditText s_weight;
 
@@ -116,9 +108,6 @@ namespace GeoGeometry.Activity.Auth
             progressBar = FindViewById<ProgressBar>(Resource.Id.progressBar);
             status_view = FindViewById<TextView>(Resource.Id.status_view);
             btn_lock_unlock_door = FindViewById<Button>(Resource.Id.btn_lock_unlock_door);
-            btn_transfer_access = FindViewById<Button>(Resource.Id.btn_transfer_access);
-            btn_change_pin_code = FindViewById<Button>(Resource.Id.btn_change_pin_code);
-            btn_free_for_order = FindViewById<Button>(Resource.Id.btn_free_for_order);
             s_user = FindViewById<EditText>(Resource.Id.s_user);
             s_state = FindViewById<EditText>(Resource.Id.s_state);
             container_name = FindViewById<EditText>(Resource.Id.container_name);
@@ -127,7 +116,6 @@ namespace GeoGeometry.Activity.Auth
             s_notifications = FindViewById<EditText>(Resource.Id.s_notifications);
             s_open_close_container = FindViewById<EditText>(Resource.Id.s_open_close_container);
             s_lock_unlock_door = FindViewById<EditText>(Resource.Id.s_lock_unlock_door);
-            s_pin_access_code = FindViewById<EditText>(Resource.Id.s_pin_access_code);
             s_weight = FindViewById<EditText>(Resource.Id.s_weight);
             s_temperature = FindViewById<EditText>(Resource.Id.TemperatureEdit);
             s_light = FindViewById<EditText>(Resource.Id.s_light);
@@ -168,8 +156,6 @@ namespace GeoGeometry.Activity.Auth
             s_open_close_container.Focusable = false;
             s_open_close_container.LongClickable = false;
             s_lock_unlock_door.Focusable = false;
-            s_pin_access_code.Focusable = false;
-            s_pin_access_code.LongClickable = false;
             s_lock_unlock_door.LongClickable = false;           
             s_payment.Focusable = false;
             s_payment.LongClickable = false;
@@ -232,13 +218,6 @@ namespace GeoGeometry.Activity.Auth
             }
 
 
-            btn_free_for_order.Click += async delegate
-            {
-                Toast.MakeText(this, "Ваш статус: «Свободен для заказов»", ToastLength.Long).Show();
-                progressBar.Progress = 8;
-                s_open_close_container.Text = "Закрыт";
-                status_view.Text = "8. Завершение использования";
-            };
 
             //переход на форму выбора контейнера
             btn_change_container.Click += async delegate
@@ -255,12 +234,6 @@ namespace GeoGeometry.Activity.Auth
                     Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
                 }
             };
-
-            btn_transfer_access.Click += async delegate
-                {
-                    Intent mapActivity = new Intent(this, typeof(Auth.DriverActivity));
-                    StartActivity(mapActivity);
-                };
 
             //изменение состояния контейнера
             //btn_open_close_container.Click += async delegate
@@ -294,21 +267,7 @@ namespace GeoGeometry.Activity.Auth
                 }
             };
 
-            //изменение ПИН-кода, очистка полей
-            btn_change_pin_code.Click += async delegate
-            {
-                try
-                {
-                    s_pin_access_code.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    Toast.MakeText(this, "" + ex.Message, ToastLength.Long).Show();
-                }
-            };
-
-            //редактирование данных контейнера
-            //btn_change_parameters.Click += async delegate
+         //btn_change_parameters.Click += async delegate
             //{
             //    try
             //    {
@@ -449,6 +408,7 @@ namespace GeoGeometry.Activity.Auth
                 }
 
                 container = JsonConvert.DeserializeObject<ContainerResponse>(file_data_remember);
+                
 
                 var myHttpClient = new HttpClient();
                 
@@ -504,7 +464,6 @@ namespace GeoGeometry.Activity.Auth
 
                         s_temperature.Text = exported_data.Temperature.Replace(",", ".");
                         s_light.Text = exported_data.Light.ToString();
-                        s_pin_access_code.Text = (exported_data.Code == null) ? "0000" : "1324";
                         s_humidity.Text = exported_data.Wetness.Replace(",", ".");
                         s_battery.Text = exported_data.BatteryPower.Replace(",", ".");
                         btn_lock_unlock_door.Text = "Заблокировать/Разблокировать";
@@ -687,7 +646,6 @@ namespace GeoGeometry.Activity.Auth
             //s_situation.Text = "";
             s_open_close_container.Text = "";
             s_lock_unlock_door.Text = "";
-            s_pin_access_code.Text = "";
             s_weight.Text = "";
             s_temperature.Text = "";
             s_light.Text = "";

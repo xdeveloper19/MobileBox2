@@ -69,15 +69,14 @@
                     android:layout_toRightOf="@+id/s_user"
                     android:text="Выйти"
                     android:textSize="8sp"
-                  />
-
+                  />       
                 <TextView
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="left|center_vertical"
-                    android:layout_below="@+id/textUser"
-                    android:layout_marginTop="0dp"
+                    android:layout_below="@+id/s_user"
+                    android:layout_marginTop="5dp"
                     android:padding="10dp"
                     android:text="Заказ:"
                     android:textSize="15sp"
@@ -231,17 +230,7 @@
                     
                     />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id = "@+id/Text3"
-                    android:textSize="15sp"
-                    android:layout_marginTop="0dp"
-                    android:padding="10dp"
-                    android:gravity="left"
-                    android:text = "ПИН-код доступа отобразится по факту прибытия контейнера"
-                    android:layout_below = "@+id/Text2"
-                    />
+              
             </RelativeLayout>
 
             <RelativeLayout
@@ -556,10 +545,10 @@
                     android:gravity="left"
                     />
 
-                
+         
 
             </RelativeLayout>
-
+            
         </RelativeLayout>
     </ScrollView>
     <ProgressBar
@@ -570,14 +559,14 @@
         android:visibility="gone"
         android:id="@+id/preloader"
         />
-
-    <fragment 
+     <fragment 
 		android:name="GeoGeometry.Activity.Menu.UserMenuFragment"
 		android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:gravity="center"
 		android:id="@+id/fragmentUserMenu" />
+   
 
 
 </RelativeLayout>

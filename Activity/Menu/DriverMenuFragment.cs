@@ -46,8 +46,8 @@ namespace GeoGeometry.Activity.Menu
                 btn_list_orders = main_menu.FindViewById<AppCompatImageButton>(Resource.Id.btn_orders);
                 btn_list_orders.Click += (s, e) =>
                 {
-                    //Intent squadActivity = new Intent(Activity, typeof(Auth.ContainerSelection));
-                    //StartActivity(squadActivity);
+                    Intent squadActivity = new Intent(Activity, typeof(Auth.ActivityOrderList));
+                    StartActivity(squadActivity);
                 };
             }
 
@@ -55,10 +55,11 @@ namespace GeoGeometry.Activity.Menu
             {
                 StaticMenu.id_page = 5;
                 // Переход к Главная.
-                btn_tasks = main_menu.FindViewById<AppCompatImageButton>(Resource.Id.btn_tasks);
+                btn_tasks = main_menu.FindViewById<AppCompatImageButton>(Resource.Id.btn_tasks); 
                 btn_tasks.Click += (s, e) =>
                 {
-                    //Some to do...
+                    Intent squadActivity = new Intent(Activity, typeof(Auth.ActivityOrderListDriver));
+                    StartActivity(squadActivity);
                 };
             }
 

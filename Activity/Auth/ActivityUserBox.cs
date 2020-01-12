@@ -195,8 +195,8 @@ namespace GeoGeometry.Activity.Auth
             //        }
             //        break;
             //}
-            
-            
+
+
 
 
 
@@ -213,6 +213,7 @@ namespace GeoGeometry.Activity.Auth
             //    }
             //};
 
+        
             //изменение состояния дверей
             btn_lock_unlock_door.Click += async delegate
             {
@@ -281,6 +282,7 @@ namespace GeoGeometry.Activity.Auth
                 if(s_payment.Text != "Оплачено")
                 {
                     progressBar.Progress = 8;
+                    
                     status_view.Text = "8. Завершение использования";
 
                     s_pin_access_code.Text = "1324";
